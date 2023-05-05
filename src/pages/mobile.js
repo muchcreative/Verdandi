@@ -12,7 +12,6 @@ export default function Mobile() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script src="scripts/removePopup.js'"/>
       <main>
         <div className={styles.formContainer}>
           <div id="bg-block" className={styles.bgBlock}>
