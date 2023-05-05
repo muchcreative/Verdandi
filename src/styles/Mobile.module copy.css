@@ -1,0 +1,14 @@
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-block {
+    /* Double check might need to change hex code to rgb color */
+    background: rgba(var(--main-bg-color), 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+}
