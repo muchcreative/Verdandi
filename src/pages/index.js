@@ -1,10 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Divider from "../../public/divider.svg"
 
-import styles from '../styles/Desktop.module.css'
+import MainDivider from "../../public/main_divider.svg"
+import TextDivider from "../../public/text_divider.svg"
 
-const divider = () => <Divider />; 
+import styles from '../styles/Day/Day.module.css'
+import svg from '../styles/Day/SVG.module.css'
+import pageSelector from '../scripts/pageSelector.js'
+
+// const nice = pageSelector();
+const mainDivider = () => <MainDivider />; 
+const textDidiver = () => <TextDivider />;
 
 import { Allura } from 'next/font/google'
 const allura = Allura({
@@ -32,13 +38,17 @@ export default function Desktop() {
             className={styles.cutlery}
           />
           <div className={`${allura.className} ${styles.text}`}>
-            <h1 className={styles.line1}>I&#39;m <em>shy</em> on big screens.</h1>
-            <p className={styles.line2}>Let&#39;s meet on your mobile phone!</p> 
-            <p className={styles.line3}>Can you forgive me?</p>
+            <div classname={svg.textDividers}>
+              <TextDivider className={svg.textLine} />
+              <TextDivider className={svg.textLine} />
+            </div>
+            <h1 className={styles.line1}>I&#39;m <em>shy</em> in the daytime.</h1>
+            <p className={styles.line2}>M</p> 
+            <p className={styles.line3}>Can we meet again at 6pm?</p>
           </div>
         </div>
-        <div className={styles.dividerContainer}>
-          <Divider className={styles.svgLine} />
+        <div className={svg.dividerContainer}>
+          <MainDivider className={svg.mainLine} />
         </div>
         <div className={styles.whiteContainer}>
           <div className={styles.whiteLeft}></div>

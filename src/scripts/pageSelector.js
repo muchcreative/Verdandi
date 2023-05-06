@@ -1,13 +1,6 @@
 export default function pageSelector() {
-  return (
-    <>
-      <script>
-        function pageSelector() {
-          
-        }
-      </script>
-    </>
-  )
+  let currentTime = new Date().getTime();
+  return currentTime
 }
 
 // yeah ok if you reduce the screen sized
@@ -22,3 +15,5 @@ export default function pageSelector() {
 // function closeForm() {
 //   document.getElementById("myForm").style.display = "none";
 // }
+
+// it has to automatically detect it

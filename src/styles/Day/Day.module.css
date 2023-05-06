@@ -1,0 +1,104 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    height: 90vh;
+}
+
+.cutlery {
+    position: absolute;
+    left: 60%;
+    z-index: 4;
+    width: clamp(100px * 1.5, 30vw, 300px * 1.5);
+    height: clamp(100px, 30vw, 300px);
+    animation: slide-in 2s ease 1.7s forwards;
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(-150%);
+    }
+}
+
+.text {
+    position: absolute;
+    left: 35%;
+    z-index: 1;
+    font-size: 2em;
+    animation: slide-in-partial 1.5s ease-in 4s forwards,
+               propogate,
+               slide-in-rest;
+}
+
+.line2,
+.line3 {
+    display: visible;
+}
+
+@keyframes slide-in-partial {
+    from {
+    }
+
+    to {
+        transform: translateX(70%);
+    }
+}
+
+@keyframes propagate {
+    from {
+
+    }
+
+}
+
+@keyframes slide-in-rest {
+    to {
+        transform: translate(40%);
+        opacity: 100%;
+    }
+}
+
+
+
+.whiteContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.whiteLeft {
+    background-color: var(--main-bg-color);
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    animation: left-reduce-z 0.2s ease-in 3.9s forwards;
+}
+
+@keyframes left-reduce-z {
+    to {
+        z-index: 2;
+    }
+}
+
+.whiteRight {
+    background-color: var(--main-bg-color);
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    /* 1px added to accomadate SVG width */
+    left: calc(50% + 1px);
+    width: calc(50% - 1px);
+    height: 100%;
+    animation: right-reduce-z 0.2s linear 3.9s forwards;
+}
+
+@keyframes right-reduce-z {
+    to {
+        z-index: 0;
+    }
+}
+
+/* Adjust z indexes bring down one for each */
