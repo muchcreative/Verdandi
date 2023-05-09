@@ -1,12 +1,12 @@
 
-.dividerContainer {
+.mainDividerContainer {
     z-index: 100;
     position: absolute;
     left: 50%;
     top: 0%;
 }
 
-.mainLine {
+.mainDivider {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: draw 2.5s ease-in 0.5s forwards;
@@ -18,12 +18,32 @@
     }
 }
 
-.textDividers {
-    display: none;
-}
-
-.textLine {
+/* What positioning do i need on these lines? */
+.textDivider {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: draw 2.5s ease-in 0.5s forwards;
+}
+
+.textDivider:first-child {
+    display: none;
+    animation: draw 2.5s ease-in 0.5s forwards,
+               up 2.5s ease-in 1s forwards; 
+}
+
+@keyframes up {
+    to {
+        transform: translateY(-40px);
+    }
+}
+
+.textDivider:nth-child(2) {
+    display: none;
+    animation: draw 2.5s ease-in 0.5s forwards,
+               down 2.5s ease-in 1s forwards;
+}
+
+@keyframes down {
+    to {
+        transform: translateY(40px);
+    }
 }
