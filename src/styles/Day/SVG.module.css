@@ -1,4 +1,5 @@
-
+/* Main SVG Line
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .mainDividerContainer {
     z-index: 100;
     position: absolute;
@@ -18,32 +19,35 @@
     }
 }
 
-/* What positioning do i need on these lines? */
+/* Two Text Division Lines
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .textDivider {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    z-index: 0;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
 }
 
 .textDivider:first-child {
-    display: none;
     animation: draw 2.5s ease-in 0.5s forwards,
-               up 2.5s ease-in 1s forwards; 
+               up 2.5s ease-in 6s forwards; 
 }
 
 @keyframes up {
     to {
-        transform: translateY(-40px);
+        transform: translateY(-200px);
     }
 }
 
 .textDivider:nth-child(2) {
-    display: none;
     animation: draw 2.5s ease-in 0.5s forwards,
-               down 2.5s ease-in 1s forwards;
+               down 2.5s ease-in 6s forwards;
 }
 
 @keyframes down {
     to {
-        transform: translateY(40px);
+        transform: translateY(200px);
     }
 }

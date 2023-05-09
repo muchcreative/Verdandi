@@ -1,16 +1,14 @@
-'use client';
-
 import Head from 'next/head';
 import Image from 'next/image';
 
-import LiveClock from './LiveClock.js';
+import Clock from '../components/clock.js';
 import MainDivider from "../../public/main_divider.svg";
 import TextDivider from "../../public/text_divider.svg";
 
 import styles from '../styles/Day/Day.module.css';
 import svg from '../styles/Day/SVG.module.css';
 
-const liveClock = () => <LiveClock />;
+const clock = () => <Clock />;
 const mainDivider = () => <MainDivider />; 
 const textDidiver = () => <TextDivider />;
 
@@ -40,13 +38,10 @@ export default function Day() {
               className={styles.cutlery}
             />
             <div className={`${allura.className} ${styles.text}`}>
-              <div className={svg.textDividers}>
-                <TextDivider className={svg.textDivider} />
-                <TextDivider className={svg.textDivider} />
-              </div>
               <h1 className={styles.line1}>I&#39;m <em>shy</em> in the daytime.</h1>
-              <LiveClock />
-              <p className={styles.line2}>Can we meet again at 6pm?</p>
+              <p className={styles.line2}>Can we meet again past 6pm?</p>
+              <TextDivider className={svg.textDivider} />
+              <TextDivider className={svg.textDivider} />
             </div>
           </div>
           <div className={svg.mainDividerContainer}>

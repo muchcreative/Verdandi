@@ -31,10 +31,6 @@
                slide-in-rest;
 }
 
-.line2 {
-    display: visible;
-}
-
 @keyframes slide-in-partial {
     from {
     }
