@@ -11,7 +11,7 @@ const night = () => <Night />;
 function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
-    return <Day />;
+    return <Night />;
 
     // return (currentHour > 6 && currentHour < 18 ?
     //     <Day /> : <Night />);

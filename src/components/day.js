@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Clock from '../components/clock.js';
-import MainDivider from "../../public/main_divider.svg";
-import TextDivider from "../../public/text_divider.svg";
+import MainDivider from "../../public/svgs/main_divider.svg";
+import TextDivider from "../../public/svgs/text_divider.svg";
 
 import styles from '../styles/Day/Day.module.css';
 import svg from '../styles/Day/SVG.module.css';
@@ -25,13 +25,13 @@ export default function Day() {
           <title>Verdandi</title>
           <meta name="description" content="Personal website" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon_day.ico" />
+          <link rel="icon" href="/favicons/tree.jpg" />
         </Head>
         <main>
           <div className={styles.mainContainer}>
             <Image
               priority
-              src="/extra_large.jpg"
+              src="/images/extra_large.jpg"
               alt="cutlery"
               width={2400}
               height={1600}

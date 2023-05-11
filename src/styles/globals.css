@@ -1,5 +1,6 @@
 :root {
-  --main-bg-color: #faf9f6;
+  --day-bg-color: #faf9f6;
+  --night-bg-color: #212121;
 }
 
 * {
@@ -13,14 +14,15 @@ body{
   height: 100%;
   width: 100%;
   max-width: 100vw;
-  background-color: var(--main-bg-color);
+  background-color: var(--day-bg-color);
   overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color: #fff;
-    background-color: #1e1e1e;
+  html, 
+  body {
+    color: var(--day-bg-color);
+    background-color: var(--night-bg-color);
   }
 }
 
@@ -35,9 +37,4 @@ em {
   font-style: normal;  
   text-decoration: underline rgba(0, 0, 0, 0.65) solid 1px;
   text-underline-offset: 3px;
-}
-
-svg {
-  height: 100vh;
-  width: 100%;
 }

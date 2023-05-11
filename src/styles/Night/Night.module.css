@@ -1,14 +1,30 @@
-.formContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.scrollSection {
+    height: 300vw;
+    text-align: center;
+    background-color: var(--day-bg-color);
+    color: var(--night-bg-color);
 }
 
-.bg-block {
-    /* Double check might need to change hex code to rgb color */
-    background: rgba(var(--main-bg-color), 0.8);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 99;
+.scrollLineContainer {
+    position: relative;
+    left: 5%;
+    z-index: 100;
 }
+
+.scrollLine {
+    height: 100%;
+    width: 100vw;
+}
+
+
+.h1 {
+    font-size: 5em;
+    text-align: center;
+    color: var(--day-bg-color);
+}
+
+.main {
+    height: 1000px;
+}
+
+

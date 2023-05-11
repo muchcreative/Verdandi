@@ -1,27 +1,40 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-// import ScrollLine from "../../public/scroll_line.svg";
-// scrollLine = () => <ScrollLine />;
+import nightStyles from '../styles/night/Night.module.css';
+import NightGlobals from '../components/night_globals.js';
+const nightGlobals = () => <NightGlobals />;
 
-export default function Day() {
+import ScrollLine from "../../public/svgs/scroll_line.svg";
+const scrollLine = () => <ScrollLine />;
+
+export default function Night() {
     return (
       <>
         <Head>
-          <title>Verdandi | Night Vr.</title>
+          <title>Verdandi | Night</title>
           <meta name="description" content="Personal website" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon_night.ico" />
+          <link rel="icon" href="/favicons/tree.jpg" />
         </Head>
-        <section>
-          <h2>Scroll Down to Start</h2>
+        <NightGlobals />
+        <section className={nightStyles.scrollSection}>
+          <div className={nightStyles.scrollLineContainer}>
+            <ScrollLine className={nightStyles.scrollLine}/>
+          </div>
         </section>
-        <main>  
-            <h1>Sheesh</h1>
-        </main>
+        <header className={nightStyles.main}>  
+            <h1 className={nightStyles.hookLine1}>Because boring ideas</h1>
+            <h1 className={nightStyles.hookLine2}> make boring&nbsp;
+              <em className={nightStyles.productsAnimation}>products</em>
+            </h1>
+        </header>
       </>
     )
 }
+
+
+// add font-family
 
 {/* 
 - Need down arrows svg for the start to point down
