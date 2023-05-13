@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEffect, useState } from 'react'
 
 import { format } from 'date-fns';
@@ -11,14 +10,12 @@ const night = () => <Night />;
 function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
-    return <Night />;
-
-    // return (currentHour > 6 && currentHour < 18 ?
-    //     <Day /> : <Night />);
+    return (currentHour > 6 && currentHour < 18 ?
+        <Night /> : <Night />);
 }
 
 export default function Home() {
-  const [page, setPage] = useState(<Day />);
+  const [page, setPage] = useState(<Night />);
   useEffect(() => { setPage(setDayNight()) }, []);
   return (page);
 };

@@ -8,6 +8,9 @@ const nightGlobals = () => <NightGlobals />;
 import ScrollLine from "../../public/svgs/scroll_line.svg";
 const scrollLine = () => <ScrollLine />;
 
+import ScrollDraw from "../scripts/scroll_draw.js";
+const scrollDraw = () => <ScrollDraw />; 
+
 export default function Night() {
     return (
       <>
@@ -15,12 +18,13 @@ export default function Night() {
           <title>Verdandi | Night</title>
           <meta name="description" content="Personal website" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicons/tree.jpg" />
+          <link rel="icon" href="/favicons/tree.jpg" />  
         </Head>
         <NightGlobals />
+        <ScrollDraw strategy="lazyOnload"/>
         <section className={nightStyles.scrollSection}>
           <div className={nightStyles.scrollLineContainer}>
-            <ScrollLine className={nightStyles.scrollLine}/>
+            <ScrollLine id="scroll-svg" className={nightStyles.scrollLine}/>
           </div>
         </section>
         <header className={nightStyles.main}>  
