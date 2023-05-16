@@ -1,6 +1,5 @@
 'use client';
 
-import clock from '../styles/day/Clock.module.css';
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react'
 
@@ -10,7 +9,7 @@ const inter = Inter({
                 weight: ['400']
               });
 
-export default function Clock() {
+export default function LiveClock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -21,8 +20,8 @@ export default function Clock() {
   }, []);
 
   return (
-    <div className={`${inter.className} ${clock.clock}`}>
-      {format(time, 'h:mm:ss a')}
+    <div className={inter.className}>
+      { format(time, 'h:mm:ss a') }
     </div>
   );
 }

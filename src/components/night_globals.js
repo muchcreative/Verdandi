@@ -8,11 +8,16 @@ export default function nightGlobals() {
             body {
                 color: var(--night-bg-color);
                 background-color: var(--day-bg-color);
-                overflow-y: visible;
             }
 
             main {
-                height: 100%;
+                background-color: #212121;
+                color: #fff;
+                height: 400vh;
+            }
+
+            header {
+                padding-top: 400px
             }
 
             h1 {

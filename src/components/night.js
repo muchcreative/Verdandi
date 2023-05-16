@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
 import nightStyles from '../styles/night/Night.module.css';
 import NightGlobals from '../components/night_globals.js';
@@ -11,6 +10,9 @@ const scrollLine = () => <ScrollLine />;
 import ScrollDraw from "../scripts/scroll_draw.js";
 const scrollDraw = () => <ScrollDraw />; 
 
+// Add scroll trigger css animation on headers
+// or test it 
+
 export default function Night() {
     return (
       <>
@@ -21,25 +23,25 @@ export default function Night() {
           <link rel="icon" href="/favicons/tree.jpg" />  
         </Head>
         <NightGlobals />
-        <ScrollDraw strategy="lazyOnload"/>
+        <ScrollDraw />
         <section className={nightStyles.scrollSection}>
           <div className={nightStyles.scrollLineContainer}>
-            <ScrollLine id="scroll-svg" className={nightStyles.scrollLine}/>
+            <ScrollLine id="scroll-line" className={nightStyles.scrollLine}/>
           </div>
         </section>
-        <header className={nightStyles.main}>  
+        <main>
+          <header>
             <h1 className={nightStyles.hookLine1}>Because boring ideas</h1>
-            <h1 className={nightStyles.hookLine2}> make boring&nbsp;
-              <em className={nightStyles.productsAnimation}>products</em>
+            <h1 className={nightStyles.hookLine2}>make boring&nbsp;
+              <em className={nightStyles.products}>products</em>
             </h1>
-        </header>
+          </header>
+        </main>
       </>
     )
 }
 
-
 // add font-family
-
 {/* 
 - Need down arrows svg for the start to point down
 - Again look to some night or dark websites for inspiration

@@ -1,5 +1,6 @@
 <svg width="647" height="3003" viewBox="0 0 647 3003" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
+      id="cool-path"
       d="M0.5 0.5C0.5 382.628 0.5 596.872 0.5 979C0.5 1087 197.269 1132.22 355.5 1150.5C671.5 1187 645 1321.5 645 1487V3003"
       fill="transparent"
       stroke-width="1"

@@ -16,14 +16,14 @@
     width: 100vw;
 }
 
-.h1 {
-    font-size: 5em;
-    text-align: center;
-    color: var(--day-bg-color);
+.hookLine2 {
+    margin-left: 15%;
 }
 
-.main {
-    height: 1000px;
+.products {
+    color: #84a8ee;
+    text-decoration: #84a8ee 3px underline;
+    text-underline-offset: 3px;
 }
 
 

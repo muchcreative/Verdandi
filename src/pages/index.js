@@ -11,11 +11,11 @@ function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
     return (currentHour > 6 && currentHour < 18 ?
-        <Night /> : <Night />);
+        <Day /> : <Day />);
 }
 
 export default function Home() {
-  const [page, setPage] = useState(<Night />);
+  const [page, setPage] = useState(<Day />);
   useEffect(() => { setPage(setDayNight()) }, []);
   return (page);
 };
