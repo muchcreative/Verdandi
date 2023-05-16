@@ -26,9 +26,23 @@
 /* Two Text Division Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .topTextDivider {
+    animation: slide-up 1s ease 6s forwards;
+}
+
+@keyframes slide-up {
+    100% {
+        transform: translateY(-180%);
+    }
 }
 
 .botTextDivider {
+    animation: slide-down 1s ease 6s forwards;
+}
+
+@keyframes slide-down {
+    100% {
+        transform: translateY(180%);
+    }
 }
 
 .textDivider {

@@ -37,8 +37,28 @@
 }
 
 @keyframes slide-in-right {
-    100% {
+    to {
         transform: translateX(133%);
+    }
+}
+
+.line1 {
+    animation: slide-up 1s ease 6s forwards;
+}
+
+@keyframes slide-up {
+    100% {
+        transform: translateY(-80%);
+    }
+}
+
+.line2 {
+    animation: slide-down 1s ease 6s forwards;
+}
+
+@keyframes slide-down {
+    100% {
+        transform: translateY(80%);
     }
 }
 

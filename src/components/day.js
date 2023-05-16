@@ -7,7 +7,6 @@ import TextDivider from "../../public/svgs/text_divider.svg";
 
 import styles from '../styles/Day/Day.module.css';
 import svg from '../styles/Day/SVG.module.css';
-import clock from '../styles/day/Clock.module.css';
 
 const liveClock = () => <LiveClock />;
 const mainDivider = () => <MainDivider />; 
@@ -20,6 +19,8 @@ const allura = Allura({
               });
 
 // remove clock jitter on movement, font selection
+// Lora, maybe Roboto Mono clock font options
+// can we remove the client error?
 // clamp for responsive design here?
 
 export default function Day() {
@@ -44,9 +45,9 @@ export default function Day() {
             <div className={`${allura.className} ${styles.rightContent}`}>
               <h1 className={styles.line1}>I&#39;m <em>shy</em> in the daytime.</h1>
               <TextDivider className={`${svg.textDivider} ${svg.topTextDivider}`} />
-              <LiveClock className={clock.liveClock}/>
+              <LiveClock />
               <TextDivider className={`${svg.textDivider} ${svg.botTextDivider}`} />
-              <p className={styles.line2}>Can we meet again past 6pm?</p>
+              <p className={styles.line2}>Can we meet again from 6pm to 6am?</p>
             </div>
           </div>
           <div className={svg.mainDividerContainer}>

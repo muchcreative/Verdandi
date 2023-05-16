@@ -2,6 +2,7 @@
 
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react'
+import clock from '../styles/day/Clock.module.css';
 
 import { Inter } from 'next/font/google'
 const inter = Inter({
@@ -20,7 +21,7 @@ export default function LiveClock() {
   }, []);
 
   return (
-    <div className={inter.className}>
+    <div className={`${inter.className} ${clock.liveClock}`}>
       { format(time, 'h:mm:ss a') }
     </div>
   );

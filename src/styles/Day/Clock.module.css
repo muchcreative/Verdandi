@@ -1,7 +1,16 @@
 .liveClock {
-    position: relative;
-    left: 50%;
-    font-size: 2em;
+    position: absolute;
+    top: 20%;
+    opacity: 0%;
+    place-self: center;
+    font-size: 1.6em;
+    animation: fade-in 0.5s ease-in 7.2s forwards;
 }
 
-/* Lora, maybe Roboto Mono */
+@keyframes fade-in {
+    to {
+        opacity: 100%;
+    }
+
+} 
+
