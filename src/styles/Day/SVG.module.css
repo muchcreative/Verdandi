@@ -26,7 +26,7 @@
 /* Two Text Division Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .topTextDivider {
-    animation: slide-up 1s ease 6s forwards;
+    animation: slide-up 1s ease 7.2s forwards;
 }
 
 @keyframes slide-up {
@@ -36,7 +36,7 @@
 }
 
 .botTextDivider {
-    animation: slide-down 1s ease 6s forwards;
+    animation: slide-down 1s ease 7.2s forwards;
 }
 
 @keyframes slide-down {

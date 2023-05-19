@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { Allura } from 'next/font/google'
 
 import LiveClock from './live_clock.js';
 import MainDivider from "../../public/svgs/main_divider.svg";
@@ -12,14 +13,11 @@ const liveClock = () => <LiveClock />;
 const mainDivider = () => <MainDivider />; 
 const textDidiver = () => <TextDivider />;
 
-import { Allura } from 'next/font/google'
 const allura = Allura({
                 subsets: ['latin'], 
                 weight: ['400']
               });
 
-// remove clock jitter on movement, font selection
-// Lora, maybe Roboto Mono clock font options
 // can we remove the client error?
 // clamp for responsive design here?
 
@@ -43,7 +41,7 @@ export default function Day() {
               className={styles.cutlery}
             />
             <div className={`${allura.className} ${styles.rightContent}`}>
-              <h1 className={styles.line1}>I&#39;m <em>shy</em> in the daytime.</h1>
+              <h1 className={styles.line1}>I&#39;m shy in the daytime.</h1>
               <TextDivider className={`${svg.textDivider} ${svg.topTextDivider}`} />
               <LiveClock />
               <TextDivider className={`${svg.textDivider} ${svg.botTextDivider}`} />

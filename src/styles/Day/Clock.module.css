@@ -1,10 +1,13 @@
+/* Live Clock Component
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .liveClock {
     position: absolute;
     top: 20%;
     opacity: 0%;
     place-self: center;
     font-size: 1.6em;
-    animation: fade-in 0.5s ease-in 7.2s forwards;
+    font-variant-numeric: tabular-nums;
+    animation: fade-in 0.5s ease-in 8.4s forwards;
 }
 
 @keyframes fade-in {
@@ -12,5 +15,4 @@
         opacity: 100%;
     }
 
-} 
-
+}

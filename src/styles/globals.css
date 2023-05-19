@@ -1,6 +1,7 @@
 :root {
   --day-bg-color: #faf9f6;
   --night-bg-color: #212121;
+  --night-special-color: #84a8ee;
 }
 
 * {
@@ -32,6 +33,6 @@ p {
 em {
   font-size: inherit;
   font-style: normal;  
-  text-decoration: underline rgba(0, 0, 0, 0.65) solid 1px;
-  text-underline-offset: 3px;
+  text-decoration: underline var(--night-special-color) solid 2px;
+  text-underline-offset: 4px;
 }

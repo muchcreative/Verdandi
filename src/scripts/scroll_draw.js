@@ -1,12 +1,6 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 
-
-// you need to have an offset added here
-// or least something to tell others to scroll here
-// works at different zooms... there must bed a media query you can add to fix this.
-// Reminder to remove the console.logging
-
 export default function ScrollDraw() {
     return (
       <>

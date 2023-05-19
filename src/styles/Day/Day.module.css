@@ -1,3 +1,5 @@
+/* Main Content
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .content {
     display: flex;
     align-items: center;
@@ -10,7 +12,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .cutlery {
     position: absolute;
-    left: 60%;
+    left: 59%;
     z-index: 4;
     width: clamp(100px * 1.5, 30vw, 300px * 1.5);
     height: clamp(100px, 30vw, 300px);
@@ -30,7 +32,7 @@
     flex-direction: column;
     position: absolute;
 
-    left: 25%;
+    left: 15%;
     z-index: 1;
     font-size: 2em;
     animation: slide-in-right 2s ease 3.4s forwards;
@@ -43,7 +45,7 @@
 }
 
 .line1 {
-    animation: slide-up 1s ease 6s forwards;
+    animation: slide-up 1s ease 7.2s forwards;
 }
 
 @keyframes slide-up {
@@ -53,7 +55,7 @@
 }
 
 .line2 {
-    animation: slide-down 1s ease 6s forwards;
+    animation: slide-down 1s ease 7.2s forwards;
 }
 
 @keyframes slide-down {

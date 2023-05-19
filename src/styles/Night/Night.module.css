@@ -1,29 +1,45 @@
-.scrollSection {
-    height: 300vw;
-    text-align: center;
-    background-color: var(--day-bg-color);
-    color: var(--night-bg-color);
+/* Main Content
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.hookContainer {
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
-.scrollLineContainer {
-    position: relative;
-    left: 5%;
-    z-index: 100;
+.hookLine {
+    margin:0 0 10% 5%;
+    
+    /* Add text indent for second line*/
+    padding-left: 2.5em; 
+    text-indent: -2.5em;
 }
 
-.scrollLine {
-    height: 100%;
-    width: 100vw;
-}
-
-.hookLine2 {
-    margin-left: 15%;
-}
-
-.products {
-    color: #84a8ee;
-    text-decoration: #84a8ee 3px underline;
+.underline {
+    color: var(--night-special-color);
+    text-decoration: var(--night-special-color) 3px underline;
     text-underline-offset: 3px;
 }
 
+/* About Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.about {
+    height: 100vh;
+}
 
+/* Work Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.work {
+    height: 100vh;
+}
+
+/* Project Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.project {
+    height: 100vh;
+}
+
+/* Contact Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.contact {
+    height: 100vh;
+}
