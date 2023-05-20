@@ -15,7 +15,7 @@ function setDayNight() {
 }
 
 export default function Home() {
-  const [page, setPage] = useState(<Day />);
+  const [page, setPage] = useState(<Night />);
   useEffect(() => { setPage(setDayNight()) }, []);
   return (page);
 };

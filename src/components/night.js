@@ -1,17 +1,23 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { EB_Garamond, Lora } from 'next/font/google'
 
-import NightGlobals from '../components/night_globals.js';
+import NightGlobals from '../styles/night/night_globals.js';
 import nightStyles from '../styles/night/Night.module.css';
+import scrollStyles from '../styles/night/Scroll.module.css';
 
+// import LiveClock from './live_clock.js';
 import ScrollLine from "../../public/svgs/scroll_line.svg";
 import ScrollDraw from "../scripts/scroll_draw.js";
 import ContactForm from "../components/contact_form";
+import GitHubLogo from "../../public/svgs/github_logo.svg";
 
 const nightGlobals = () => <NightGlobals />;
+// const liveClock = () => <LiveClock />;
 const scrollLine = () => <ScrollLine />;
 const scrollDraw = () => <ScrollDraw />; 
 const contactForm = () => <ContactForm />; 
+const githubLogo = () => <GitHubLogo />;
 
 const ebGaramond = EB_Garamond({
                     subsets: ['latin'], 
@@ -32,12 +38,17 @@ export default function Night() {
           <link rel="icon" href="/favicons/tree.jpg" />  
         </Head>
         <NightGlobals />
-        {/* <ScrollDraw /> */}
-        {/* <section className={nightStyles.scrollSection}>
-          <div className={nightStyles.scrollLineContainer}>
-            <ScrollLine id="scroll-line" className={nightStyles.scrollLine}/>
+        <ScrollDraw />
+        <section className={scrollStyles.scrollSection}>
+          <div className={`${ebGaramond.className} ${scrollStyles.scrollText}`}>
+            <h1>Night</h1>
+            <p>6pm - 6am</p>
+            {/* <LiveClock className={scrollStyles.clock} /> */}
           </div>
-        </section> */}
+          <div className={scrollStyles.scrollLineContainer}>
+            <ScrollLine id="scroll-line" className={scrollStyles.scrollLine} />
+          </div>
+        </section>
         <main className={ebGaramond.className}>
           <header className={nightStyles.hookContainer}>
             <h1 className={nightStyles.hookLine}>
@@ -49,14 +60,22 @@ export default function Night() {
             {/* Moutains SVG */}
           </div>
         </main>
-        <section className={`${lora.className} ${nightStyles.about}`}>
+        <section className={`${ebGaramond.className} ${nightStyles.about}`}>
           <h2>Who Am I?</h2>
         </section>
-        <section className={`${lora.className} ${nightStyles.work}`}>
+        <section className={`${ebGaramond.className} ${nightStyles.work}`}>
           <h2>Recent Work</h2>
         </section>
-        <section classnName={`${lora.className} ${nightStyles.project}`}>
+        <section className={`${ebGaramond.className} ${nightStyles.project}`}>
           <h2>Current Project</h2>
+          <div className={nightStyles.flowDescription}>
+            <h3>Flow - Electronnic Data Capture System</h3>
+            <p>
+              Built in Rust , Diesel, and PostgreSQL. Flow is expected to be the fastest and most secure EDC on the market. 
+              Aimed for small to medium sized human clinical trials along with an aggressive pricing strategy and a user 
+              experience focused design philosophy. Flow will completely change the way EDCs are used.
+            </p>
+          </div>
         </section>
         <section className={nightStyles.contact}>
           <h3 className={nightStyles.contactHeader}>
@@ -65,7 +84,14 @@ export default function Night() {
           <ContactForm />
         </section>
         <footer>
-          {/*LinkedIn + Github*/}
+          <div className={nightStyles.logos}>
+            <Link href="https://www.linkedin.com/in/robby-lem-14ab97158/">
+              in
+            </Link>
+            <Link href="https://github.com/muchcreative">
+              <GitHubLogo className={nightStyles.githubLogo}/>
+            </Link>
+          </div>
         </footer>
       </>
     )

@@ -8,6 +8,7 @@ export default function nightGlobals() {
             body {
                 color: var(--day-bg-color);
                 background-color: var(--night-bg-color);
+                overflow-x: hidden;
             }
 
             main {
@@ -36,6 +37,33 @@ export default function nightGlobals() {
                 margin-left: 1em;
                 padding-left: 2.3em; 
                 text-indent: -2.3em;
+            }
+
+            a {
+                color: inherit;
+                font-family: 'Times New Roman';
+                font-size: 1em;
+                text-decoration: inherit;
+            }
+
+            input {
+                color: inherit;
+                background-color: inherit;
+                border: 1px solid var(--day-bg-color);
+            }
+
+            input::placeholder {
+                color: inherit;
+                margin-left: 10px;
+            }
+
+            input:active {
+                border: 1px solid var(--day-bg-color);
+                border-radius: 0;
+            }
+
+            footer {
+                font-size: 3em;
             }
         `}
         </style>

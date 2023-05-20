@@ -2,7 +2,8 @@
 
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react'
-import clock from '../styles/day/Clock.module.css';
+
+import clockStyles from '../styles/day/Clock.module.css';
 
 import { Lora } from 'next/font/google'
 const lora = Lora({
@@ -21,7 +22,7 @@ export default function LiveClock() {
   }, []);
 
   return (
-    <div className={`${lora.className} ${clock.liveClock}`}>
+    <div className={`${lora.className} ${clockStyles.liveClock}`}>
       { format(time, 'h:mm:ss a') }
     </div>
   );

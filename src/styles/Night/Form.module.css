@@ -1,0 +1,35 @@
+/* Contact Form
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.form {
+    display: grid;
+    grid: 1fr 1fr / 
+          1fr 1fr;
+    grid-template-areas: 
+      "name email"
+      "msg msg";
+    gap: 5px;
+  
+    margin: 0 auto;
+    max-width: 880px;
+    height: 450px;
+    text-align: left;
+    padding: 10px 0;
+  }
+  
+.name {
+  grid-area: name;
+}
+  
+.email {
+  grid-area: email;
+}
+  
+.msg {
+  grid-area: msg;
+}
+
+.button {
+  display: block;
+}
+
+  

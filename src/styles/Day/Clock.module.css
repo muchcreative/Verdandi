@@ -7,7 +7,7 @@
     place-self: center;
     font-size: 1.6em;
     font-variant-numeric: tabular-nums;
-    animation: fade-in 0.5s ease-in 8.4s forwards;
+    animation: fade-in 0.5s ease-in 8.3s forwards;
 }
 
 @keyframes fade-in {
