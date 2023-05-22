@@ -6,17 +6,22 @@ import NightGlobals from '../styles/night/night_globals.js';
 import nightStyles from '../styles/night/Night.module.css';
 import scrollStyles from '../styles/night/Scroll.module.css';
 
-// import LiveClock from './live_clock.js';
-import ScrollLine from "../../public/svgs/scroll_line.svg";
-import ScrollDraw from "../scripts/scroll_draw.js";
-import ContactForm from "../components/contact_form";
-import GitHubLogo from "../../public/svgs/github_logo.svg";
+import ScrollDraw from '../scripts/scroll_draw.js';
+import NavMenu from '../components/nav_menu.js';
+import ContactForm from '../components/contact_form.js';
+
+import ScrollLine from '../../public/svgs/scroll_line.svg';
+import GitHubLogo from '../../public/svgs/github_logo.svg';
 
 const nightGlobals = () => <NightGlobals />;
-// const liveClock = () => <LiveClock />;
+const scrollDraw = () => <ScrollDraw />;
+
+// Do you need to put components in an arrow function or 
+// is it just SVGs?, because you are already releasing it as a function
+const navMenu = () => <NavMenu />;
+const contactForm = () => <ContactForm />;
+
 const scrollLine = () => <ScrollLine />;
-const scrollDraw = () => <ScrollDraw />; 
-const contactForm = () => <ContactForm />; 
 const githubLogo = () => <GitHubLogo />;
 
 const ebGaramond = EB_Garamond({
@@ -28,6 +33,8 @@ const lora = Lora({
               weight: ['400']
             });
 
+// if its only night thath as issues we can add a delay on it
+
 export default function Night() {
     return (
       <>
@@ -35,20 +42,21 @@ export default function Night() {
           <title>Verdandi | Night</title>
           <meta name="description" content="Personal website" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicons/tree.jpg" />  
+          <link rel='icon' href="/favicons/tree.jpg" />  
         </Head>
         <NightGlobals />
         <ScrollDraw />
-        <section className={scrollStyles.scrollSection}>
+        <section id='beginning' className={scrollStyles.scrollSection}>
           <div className={`${ebGaramond.className} ${scrollStyles.scrollText}`}>
             <h1>Night</h1>
             <p>6pm - 6am</p>
             {/* <LiveClock className={scrollStyles.clock} /> */}
           </div>
           <div className={scrollStyles.scrollLineContainer}>
-            <ScrollLine id="scroll-line" className={scrollStyles.scrollLine} />
+            <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
           </div>
         </section>
+        <NavMenu />
         <main className={ebGaramond.className}>
           <header className={nightStyles.hookContainer}>
             <h1 className={nightStyles.hookLine}>
@@ -60,24 +68,24 @@ export default function Night() {
             {/* Moutains SVG */}
           </div>
         </main>
-        <section className={`${ebGaramond.className} ${nightStyles.about}`}>
+        <section id='skills' className={`${ebGaramond.className} ${nightStyles.about}`}>
           <h2>Who Am I?</h2>
         </section>
-        <section className={`${ebGaramond.className} ${nightStyles.work}`}>
+        <section id='experience' className={`${ebGaramond.className} ${nightStyles.work}`}>
           <h2>Recent Work</h2>
         </section>
-        <section className={`${ebGaramond.className} ${nightStyles.project}`}>
+        <section id='projects' className={`${ebGaramond.className} ${nightStyles.project}`}>
           <h2>Current Project</h2>
           <div className={nightStyles.flowDescription}>
             <h3>Flow - Electronnic Data Capture System</h3>
-            <p>
+            <p className={lora.className}>
               Built in Rust , Diesel, and PostgreSQL. Flow is expected to be the fastest and most secure EDC on the market. 
               Aimed for small to medium sized human clinical trials along with an aggressive pricing strategy and a user 
               experience focused design philosophy. Flow will completely change the way EDCs are used.
             </p>
           </div>
         </section>
-        <section className={nightStyles.contact}>
+        <section id='contact' className={nightStyles.contact}>
           <h3 className={nightStyles.contactHeader}>
             Together,<br></br>let&#39;s build something different
           </h3>

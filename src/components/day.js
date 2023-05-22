@@ -2,16 +2,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Allura } from 'next/font/google'
 
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 const LiveClock = dynamic(() => import('../components/live_clock.js'), {ssr: false});
 
-import MainDivider from "../../public/svgs/main_divider.svg";
-import TextDivider from "../../public/svgs/text_divider.svg";
+import MainDivider from '../../public/svgs/main_divider.svg';
+import TextDivider from '../../public/svgs/text_divider.svg';
 
 import styles from '../styles/Day/Day.module.css';
 import svgStyles from '../styles/Day/SVG.module.css';
 
-const liveClock = () => <LiveClock />;
 const mainDivider = () => <MainDivider />; 
 const textDidiver = () => <TextDivider />;
 
@@ -20,29 +19,26 @@ const allura = Allura({
                 weight: ['400']
               });
 
-// can we remove the client error?
-// clamp for responsive design here?
-
 export default function Day() {
     return (
       <>
         <Head>
           <title>Verdandi</title>
-          <meta name="description" content="Personal website" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicons/ps_tree.png" />
+          <meta name='description' content='Personal website' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <link rel='icon' href='/favicons/ps_tree.png' />
         </Head>
         <main>
           <div className={styles.content}>
             <Image
               priority
-              src="/images/large.jpg"
-              alt="cutlery"
+              src='/images/large.jpg'
+              alt='cutlery'
               width={2400}
               height={1600}
               className={styles.cutlery}
             />
-            <div id="cool" className={`${allura.className} ${styles.rightContent}`}>
+            <div className={`${allura.className} ${styles.rightContent}`}>
               <h1 className={styles.line1}>I&#39;m shy in the daytime.</h1>
               <TextDivider className={`${svgStyles.textDivider} ${svgStyles.topTextDivider}`} />
               <LiveClock />

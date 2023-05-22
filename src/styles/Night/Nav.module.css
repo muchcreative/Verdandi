@@ -1,0 +1,10 @@
+/* Navigation Menu
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.navBars {
+  text-align: right;
+  color: black;
+}
+
+.navMenu {
+  display: none;
+}

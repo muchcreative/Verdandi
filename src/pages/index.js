@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import { format } from 'date-fns';
-import Day from "../components/day.js";
-import Night from "../components/night.js";
+import Day from '../components/day.js';
+import Night from '../components/night.js';
 
 const day = () => <Day />;
 const night = () => <Night />;
