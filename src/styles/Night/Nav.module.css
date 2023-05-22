@@ -2,9 +2,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .navBars {
   text-align: right;
-  color: black;
 }
 
 .navMenu {
   display: none;
+}
+
+.navMenu[data-toggle=true] {
+  display: visible;
 }

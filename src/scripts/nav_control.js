@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 
-export default function toggleNavBar() {
+export default function ToggleNavBar() {
     return (
         <>
           <Script id='nav-bar-toggle'> {
             useEffect(() => {
               navMenu = document.querySelector('.navMenu');
-              navMenu.style.display = 'visible';
+              navMenu.style.display = 'block';
             }, [])
           } </Script>
       </>

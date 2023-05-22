@@ -16,8 +16,6 @@ import GitHubLogo from '../../public/svgs/github_logo.svg';
 const nightGlobals = () => <NightGlobals />;
 const scrollDraw = () => <ScrollDraw />;
 
-// Do you need to put components in an arrow function or 
-// is it just SVGs?, because you are already releasing it as a function
 const navMenu = () => <NavMenu />;
 const contactForm = () => <ContactForm />;
 
@@ -32,8 +30,6 @@ const lora = Lora({
               subsets: ['latin'], 
               weight: ['400']
             });
-
-// if its only night thath as issues we can add a delay on it
 
 export default function Night() {
     return (
@@ -56,8 +52,8 @@ export default function Night() {
             <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
           </div>
         </section>
-        <NavMenu />
         <main className={ebGaramond.className}>
+          <NavMenu />
           <header className={nightStyles.hookContainer}>
             <h1 className={nightStyles.hookLine}>
               Because boring ideas<br></br>make boring&nbsp;<em className={nightStyles.underline}>products</em>
@@ -104,16 +100,3 @@ export default function Night() {
       </>
     )
 }
-
-// Scroll Section Design Ideas:
-// - Tell others to scroll here
-// - Down arrows pointing down
-// - Add clock to add suspicion instead of just an empty screen
-// - Add night indicator for the website
-// - Add overhang or some part of the SVG
-// - Have to compensate for auto-scroll
-
-// Font color might be little too white
-
-// works at different zooms... there must a media query you can add to fix this that includes diff offsets.
-// Try Lora Vs Times New Roman Complimenting font.
