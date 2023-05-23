@@ -11,6 +11,7 @@ import NavMenu from '../components/nav_menu.js';
 import ContactForm from '../components/contact_form.js';
 
 import ScrollLine from '../../public/svgs/scroll_line.svg';
+import Knob from '../../public/svgs/knob.svg';
 import GitHubLogo from '../../public/svgs/github_logo.svg';
 
 const nightGlobals = () => <NightGlobals />;
@@ -20,6 +21,7 @@ const navMenu = () => <NavMenu />;
 const contactForm = () => <ContactForm />;
 
 const scrollLine = () => <ScrollLine />;
+const knob = () => <Knob />;
 const githubLogo = () => <GitHubLogo />;
 
 const ebGaramond = EB_Garamond({
@@ -51,6 +53,7 @@ export default function Night() {
           <div className={scrollStyles.scrollLineContainer}>
             <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
           </div>
+          <div className={nightStyles.bgChanger}></div>
         </section>
         <main className={ebGaramond.className}>
           <NavMenu />
@@ -75,7 +78,7 @@ export default function Night() {
           <div className={nightStyles.flowDescription}>
             <h3>Flow - Electronnic Data Capture System</h3>
             <p className={lora.className}>
-              Built in Rust , Diesel, and PostgreSQL. Flow is expected to be the fastest and most secure EDC on the market. 
+              Backend in Rust , Diesel, and PostgreSQL. Flow is expected to be the fastest and most secure EDC on the market. 
               Aimed for small to medium sized human clinical trials along with an aggressive pricing strategy and a user 
               experience focused design philosophy. Flow will completely change the way EDCs are used.
             </p>
@@ -89,10 +92,10 @@ export default function Night() {
         </section>
         <footer>
           <div className={nightStyles.logos}>
-            <Link href="https://www.linkedin.com/in/robby-lem-14ab97158/">
+            <Link href='https://www.linkedin.com/in/robby-lem-14ab97158/'>
               in
             </Link>
-            <Link href="https://github.com/muchcreative">
+            <Link href='https://github.com/muchcreative'>
               <GitHubLogo className={nightStyles.githubLogo}/>
             </Link>
           </div>
