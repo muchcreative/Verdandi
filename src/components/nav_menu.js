@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-import NavBars from '../../public/svgs/nav_bars.svg';
 import navStyles from '../styles/night/Nav.module.css';
+import NavBars from '../../public/svgs/nav_bars.svg';
 
 const navBars = () => <NavBars />; 
 

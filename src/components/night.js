@@ -1,24 +1,22 @@
+// Next.js
 import Head from 'next/head';
 import Link from 'next/link';
 import { EB_Garamond, Lora } from 'next/font/google'
 
+// CSS
 import NightGlobals from '../styles/night/night_globals.js';
 import nightStyles from '../styles/night/Night.module.css';
 import scrollStyles from '../styles/night/Scroll.module.css';
 
+// Components
 import ScrollDraw from '../scripts/scroll_draw.js';
 import NavMenu from '../components/nav_menu.js';
 import ContactForm from '../components/contact_form.js';
 
+// SVGs
 import ScrollLine from '../../public/svgs/scroll_line.svg';
 import Knob from '../../public/svgs/knob.svg';
 import GitHubLogo from '../../public/svgs/github_logo.svg';
-
-const nightGlobals = () => <NightGlobals />;
-const scrollDraw = () => <ScrollDraw />;
-
-const navMenu = () => <NavMenu />;
-const contactForm = () => <ContactForm />;
 
 const scrollLine = () => <ScrollLine />;
 const knob = () => <Knob />;

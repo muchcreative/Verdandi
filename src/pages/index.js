@@ -4,9 +4,6 @@ import { format } from 'date-fns';
 import Day from '../components/day.js';
 import Night from '../components/night.js';
 
-const day = () => <Day />;
-const night = () => <Night />;
-
 function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
