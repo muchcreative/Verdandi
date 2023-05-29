@@ -29,10 +29,3 @@ p {
   font-size: 1em;
   font-weight: normal;
 }
-
-em {
-  font-size: inherit;
-  font-style: normal;  
-  text-decoration: underline var(--night-special-color) solid 2px;
-  text-underline-offset: 4px;
-}

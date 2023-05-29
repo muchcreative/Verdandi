@@ -3,7 +3,6 @@
 .scrollSection {
     height: 2900px;
     background-color: var(--day-bg-color);
-    color: var(--night-bg-color);
 }
 
 .scrollText {

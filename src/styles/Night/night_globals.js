@@ -9,10 +9,12 @@ export default function nightGlobals() {
                 color: var(--day-bg-color);
                 background-color: var(--night-bg-color);
                 overflow-x: hidden;
+                overflow-y: scroll;
             }
 
             main {
                 height: 200vh;
+                z-index: 2;
             }
 
             h1 {
@@ -29,14 +31,27 @@ export default function nightGlobals() {
             }
 
             h3 {
+                font-size: 2.8em;
+                font-weight: normal;
+            }
+
+            h4 {
                 font-family: "Times New Roman";
                 font-weight: normal;
 
-                font-size: 2.5em;
+                font-size: 2.6em;
                 line-height: 1.7em;
-                margin-left: 1em;
-                padding-left: 2.3em; 
-                text-indent: -2.3em;
+                margin-left: 3em;
+                padding-left: 2.5em; 
+                text-indent: -2.5em;
+            }
+
+            em {
+                font-size: inherit;
+                font-style: normal;  
+                color: var(--night-special-color);
+                text-decoration: var(--night-special-color) 3px underline;
+                text-underline-offset: 3px;
             }
 
             a {
@@ -47,19 +62,39 @@ export default function nightGlobals() {
             }
 
             input {
-                color: inherit;
+                font-family: "Times New Roman";
+                color: #ffffffe6;
                 background-color: inherit;
-                border: 1px solid var(--day-bg-color);
+                font-size: 1.2em;
             }
 
             input::placeholder {
                 color: inherit;
-                margin-left: 10px;
             }
 
-            input:active {
-                border: 1px solid var(--day-bg-color);
-                border-radius: 0;
+            textarea {
+                background: inherit;
+                color: #ffffffe6;
+                font: inherit;
+                border: none;
+                overflow: auto;
+                outline: none;
+                box-shadow: none;
+                resize: none;
+            }
+
+            textarea::placeholder {
+                color: inherit;
+            }
+
+            button {
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
             }
 
             footer {

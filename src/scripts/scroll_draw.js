@@ -6,7 +6,7 @@ export default function ScrollDraw() {
       <>
         <Script id='scroll-draw'> {
             useEffect(() => {
-                const onScroll = () => {
+                const drawOnScroll = () => {
                     const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
                       / ((document.documentElement.scrollHeight - headStart) - document.documentElement.clientHeight);
 
@@ -23,12 +23,16 @@ export default function ScrollDraw() {
                 }
 
                 var headStart = 500
+                // it seems to be somewhat dependent on how long the entire page is
+                // should return current coordinates using svgElement.getPointAtLength
+                // then constantly set the new location of the knob
+
                 const svgElement = document.querySelector('#scroll-line');
                 const svgPath = svgElement.firstChild; // indexes SVG path
                 var length = svgPath.getTotalLength() - headStart; // 500 head start for scroll hint
                 svgElement.style.strokeDasharray = length + headStart; // Add back 500 to ensure dash array is equal to original length
                 svgElement.style.strokeDashoffset = length;        
-                document.addEventListener("scroll", onScroll);
+                document.addEventListener("scroll", drawOnScroll);
             }, [])
         } </Script>
       </>
