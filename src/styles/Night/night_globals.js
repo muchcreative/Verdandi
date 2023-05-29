@@ -14,7 +14,6 @@ export default function nightGlobals() {
 
             main {
                 height: 200vh;
-                z-index: 2;
             }
 
             h1 {

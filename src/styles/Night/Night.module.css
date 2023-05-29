@@ -1,12 +1,11 @@
 .bgChanger {
     position: relative;
     top: 70%;
-    height: 100vh;
-    z-index: 0;
-
+    height: 80vh;
+    
     background-image: linear-gradient(to bottom, var(--night-bg-color) 50%, transparent 50%);
     background-size: 100% 200%;
-    transition: background-position 0.5s ease-in-out,
+    transition: background-position 0.5s ease-in,
 }
 
 
@@ -21,7 +20,7 @@
 .hookLine {
     margin:0 0 10% 5%;
     
-    /* Add text indent for second line*/
+    /* Adds text indent for second line*/
     padding-left: 2.5em; 
     text-indent: -2.5em;
 }
@@ -31,41 +30,27 @@
     width: 1000px;
 }
 
-/* About Section
+
+/* Experience Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.about {
+.experience {
     height: 100vh;
 }
 
-/* Work Section
+
+/* Skills Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.work {
+.skills {
     height: 100vh;
 }
 
-/* Project Section
+
+/* More Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.project {
+.more {
     height: 75vh;
 }
 
-.flowContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2%;
-}
-
-.flowTitle {
-    margin-bottom: 2%;
-}
-
-.flowDescription {
-    width: 50%;
-    font-size: 1em;
-    line-height: 1.7em;
-    text-align: center;
-}
 
 /* Contact Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -73,6 +58,7 @@
     height: 92vh;
     overflow-y: hidden;
 }
+
 
 /* Footer
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

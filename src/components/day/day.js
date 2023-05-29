@@ -4,16 +4,16 @@ import Image from 'next/image';
 import { Allura } from 'next/font/google'
 
 // CSS
-import styles from '../styles/Day/Day.module.css';
-import svgStyles from '../styles/Day/SVG.module.css';
+import styles from 'src/styles/day/Day.module.css';
+import svgStyles from 'src/styles/day/SVG.module.css';
 
 // Components
 import dynamic from 'next/dynamic';
-const LiveClock = dynamic(() => import('../components/live_clock.js'), {ssr: false});
+const LiveClock = dynamic(() => import('src/components/day/live_clock.js'), {ssr: false});
 
 // SVGs
-import MainDivider from '../../public/svgs/main_divider.svg';
-import TextDivider from '../../public/svgs/text_divider.svg';
+import MainDivider from 'public/day/main_divider.svg';
+import TextDivider from 'public/day/text_divider.svg';
 
 const mainDivider = () => <MainDivider />; 
 const textDidiver = () => <TextDivider />;
@@ -36,7 +36,7 @@ export default function Day() {
           <div className={styles.content}>
             <Image
               priority
-              src='/images/large.jpg'
+              src='/day/large.jpg'
               alt='cutlery'
               width={2400}
               height={1600}

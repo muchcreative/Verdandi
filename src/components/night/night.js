@@ -1,24 +1,30 @@
 // Next.js
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { EB_Garamond, Lora } from 'next/font/google'
 
 // CSS
-import NightGlobals from '../styles/night/night_globals.js';
-import nightStyles from '../styles/night/Night.module.css';
-import scrollStyles from '../styles/night/Scroll.module.css';
+import NightGlobals from 'src/styles/night/night_globals.js';
+import nightStyles from 'src/styles/night/Night.module.css';
+import scrollStyles from 'src/styles/night/Scroll.module.css';
 
-// Components
-import ScrollDraw from '../scripts/scroll_draw.js';
-import BackgroundChange from '../scripts/background_change.js';
-import NavMenu from '../components/nav_menu.js';
-import ContactForm from '../components/contact_form.js';
+// Scripts
+import ScrollDraw from 'src/scripts/night/scroll_draw.js';
+import BackgroundChange from 'src/scripts/night/background_change.js';
+
+// Page Components
+import NavMenu from 'src/components/night/nav_menu.js';
+import Experience from 'src/components/night/experience.js';
+import Skills from 'src/components/night/skills.js';
+import More from 'src/components/night/more.js';
+import ContactForm from 'src/components/night/contact_form.js';
 
 // SVGs
-import ScrollLine from '../../public/svgs/scroll_line.svg';
-import LineBreak from '../../public/svgs/line_break.svg';
-import Knob from '../../public/svgs/knob.svg';
-import GitHubLogo from '../../public/svgs/github_logo.svg';
+import ScrollLine from 'public/night/scroll_line.svg';
+import LineBreak from 'public/night/line_break.svg';
+import Knob from 'public/night/knob.svg';
+import GitHubLogo from 'public/night/github_logo.svg';
 
 const scrollLine = () => <ScrollLine />;
 const lineBreak = () => <LineBreak />;
@@ -34,12 +40,9 @@ const lora = Lora({
               weight: ['400']
             });
 
-// consider changing tagline
-// have you ever conisdered an overall theme
-// what is the sites narrative?
-// Not a fan of the site delivery, feels to linear
-
 // debate psudeo element vs full background change
+// Remove forced heights on sections let it be auto sized is
+// probably more accurate
 
 export default function Night() {
     return (
@@ -57,41 +60,36 @@ export default function Night() {
           <div className={`${ebGaramond.className} ${scrollStyles.scrollText}`}>
             <h1>Night</h1>
             <p>6pm - 6am</p>
-            {/* <LiveClock className={scrollStyles.clock} /> */}
           </div>
           <div className={scrollStyles.scrollLineContainer}>
             <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
           </div>
           <div id='bg-changer' className={nightStyles.bgChanger}></div>
         </section>
+        <NavMenu />
         <main className={ebGaramond.className}>
-          <NavMenu />
           <header className={nightStyles.hookContainer}>
             <h1 className={nightStyles.hookLine}>
               Because boring ideas<br></br>make boring&nbsp;<em>products</em>
             </h1>
           </header>
           <div>
-            {/* Moon SVG */}
-            {/* Moutains SVG */}
+            <Image
+              src='/night/moon.png'
+              alt='Moon'
+              height={298}
+              width={302}
+            />
           </div>
         </main>
-        <section id='skills' className={`${ebGaramond.className} ${nightStyles.about}`}>
-          <h2>Who Am I?</h2>
+        <section id='experience' className={`${ebGaramond.className} ${nightStyles.experience}`}>
+          <Experience />
         </section>
-        <section id='experience' className={`${ebGaramond.className} ${nightStyles.work}`}>
-          <h2>Recent Work</h2>
+        <section id='skills' className={`${ebGaramond.className} ${nightStyles.skills}`}>
+          <Skills />
         </section>
-        <section id='projects' className={`${ebGaramond.className} ${nightStyles.project}`}>
-          <h2>Current Project</h2>
-          <div className={nightStyles.flowContainer}>
-            <h3 className={nightStyles.flowTitle}>Flow - Electronic Data Capture System</h3>
-            <p className={`${lora.className} ${nightStyles.flowDescription}`}>
-              Backend in Rust , Diesel, and PostgreSQL. Flow is expected to be the <em>fastest</em> and most <em>secure</em> EDC on the market. 
-              Aimed for small to medium sized human clinical trials along with an aggressive pricing strategy and a user 
-              experience focused design philosophy. Flow will completely change the way EDCs are used.
-            </p>
-          </div>
+        <section id='more' className={`${ebGaramond.className} ${nightStyles.more}`}>
+          <More />
         </section>
         <LineBreak className={nightStyles.lineBreak} />
         <section id='contact' className={nightStyles.contact}>

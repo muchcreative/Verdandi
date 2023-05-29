@@ -3,7 +3,7 @@
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react'
 
-import clockStyles from '../styles/day/Clock.module.css';
+import clockStyles from '../../styles/day/Clock.module.css';
 
 import { Lora } from 'next/font/google'
 const lora = Lora({

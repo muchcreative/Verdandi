@@ -40,7 +40,7 @@
 
 @keyframes slide-in-right {
     to {
-        transform: translateX(133%);
+        transform: translateX(145%);
     }
 }
 
