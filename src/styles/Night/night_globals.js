@@ -22,15 +22,13 @@ export default function nightGlobals() {
             }
 
             h2 {
-                color: var(--night-special-color);
-                font-size: 2.8em;
+                font-size: 3.2em;
                 font-weight: normal;
-                text-align: center;
-                text-decoration: var(--night-special-color) 2px underline;
             }
 
             h3 {
-                font-size: 2.8em;
+                color: var(--night-special-color);
+                font-size: 2.3em;
                 font-weight: normal;
             }
 

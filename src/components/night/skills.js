@@ -1,6 +1,8 @@
 import nightStyles from 'src/styles/night/Night.module.css';
-import HorizontalBreak from 'public/night/line_break.svg';
-const horizontalBreak = () => <HorizontalBreak />;
+import skillsStyles from 'src/styles/night/Skills.module.css';
+
+import VerticalBreak from 'public/night/vertical_break.svg';
+const verticalBreak = () => <VerticalBreak />;
 
 export default function Skills() {
     return (
@@ -13,7 +15,7 @@ export default function Skills() {
             <h4>Libraries / Frameworks</h4>
             <p>React / Next.js</p>
         </div>
-        <HorizontalBreak className={nightStyles.lineBreak} />
+        <VerticalBreak className={nightStyles.lineBreak} />
         <div>
             <h4>Data Analytics</h4>
             <p>Python</p>
@@ -25,7 +27,7 @@ export default function Skills() {
             <p>Numpy / Pandas / Polars</p>
             <p>Plotly / Seaborn / MatPlotLib</p>
         </div>
-        <HorizontalBreak className={nightStyles.lineBreak} />
+        <VerticalBreak className={nightStyles.lineBreak} />
         <div>
             <h4>Back-End</h4>
             <p>Rust</p>

@@ -22,12 +22,12 @@ import ContactForm from 'src/components/night/contact_form.js';
 
 // SVGs
 import ScrollLine from 'public/night/scroll_line.svg';
-import LineBreak from 'public/night/line_break.svg';
+import HorizontalBreak from 'public/night/horizontal_break.svg';
 import Knob from 'public/night/knob.svg';
 import GitHubLogo from 'public/night/github_logo.svg';
 
 const scrollLine = () => <ScrollLine />;
-const lineBreak = () => <LineBreak />;
+const horiztonalBreak = () => <HorizontalBreak />;
 const knob = () => <Knob />; // Go for a different unique object instead
 const githubLogo = () => <GitHubLogo />;
 
@@ -91,7 +91,7 @@ export default function Night() {
         <section id='more' className={`${ebGaramond.className} ${nightStyles.more}`}>
           <More />
         </section>
-        <LineBreak className={nightStyles.lineBreak} />
+        <HorizontalBreak className={nightStyles.lineBreak} />
         <section id='contact' className={nightStyles.contact}>
           <h4 className={nightStyles.contactHeader}>
             Together,<br></br>let&#39;s build something different

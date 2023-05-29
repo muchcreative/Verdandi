@@ -1,6 +1,6 @@
 import nightStyles from 'src/styles/night/Night.module.css';
-import LineBreak from 'public/night/line_break.svg';
-const lineBreak = () => <LineBreak />;
+import HorizontalBreak from 'public/night/horizontal_break.svg';
+const horizontalBreak = () => <HorizontalBreak />;
 
 export default function More() {
     return (
@@ -12,7 +12,7 @@ export default function More() {
             <button>Back-End</button>
             <button>RenderLabs</button>
         </div>
-        <LineBreak />
+        <HorizontalBreak />
         <div>
             <p>Blurb 1</p>
             <p>Blurb 2</p>
