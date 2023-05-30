@@ -1,7 +1,6 @@
 /* SVG Forced Scroll, Draw, and BG Transition
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .scrollSection {
-    height: 2900px;
     background-color: var(--day-bg-color);
 }
 
@@ -29,12 +28,19 @@
 }
 
 .scrollLineContainer {
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    overflow: hidden;
+    margin-left: 5%;
 }
 
 .scrollLine {
     height: 100%;
+}
+
+.bgChanger {
+    position: relative;
+    top: 70%;
+    height: 80vh;
+    
+    background-image: linear-gradient(to bottom, var(--night-bg-color) 50%, transparent 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.3s ease-in,
 }

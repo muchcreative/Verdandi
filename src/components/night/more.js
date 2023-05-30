@@ -1,19 +1,38 @@
+import React, { useState, useEffect } from 'react';
+
 import moreStyles from 'src/styles/night/More.module.css';
 import HorizontalBreak from 'public/night/horizontal_break.svg';
 const horizontalBreak = () => <HorizontalBreak />;
 
-// Options to useState and useEffect to address on click motions
-// Start with something simple, highligh on click
+// overthinking right now
+// let's trying hiding the paragraphs and 
+// brining them in
+
+
+function swapDescriptions(newEle) {
+}
+
 
 export default function More() {
+    // const [description, setDesc] = useState(0);
+
+    // useEffect(() => {
+    //   const descElements = [document.querySelector('#front-desc'),
+    //                       document.querySelector('#data-desc'),
+    //                       document.querySelector('#back-desc'),
+    //                       document.querySelector('#rl-desc')]
+    //   let newEle = descElements[description]
+    //   swapDescriptions(newEle);
+    // }, [description])
+
     return (
       <>
         <h2 className={moreStyles.title}>Read More</h2>
         <div className={moreStyles.buttons}>
-            <button>Front-End</button>
-            <button>Data Analytics</button>
-            <button>Back-End</button>
-            <button>RenderLabs</button>
+            <button onClick={() => setDesc(0)}>Front-End</button>
+            <button onClick={() => setDesc(1)}>Data Analytics</button>
+            <button onClick={() => setDesc(2)}>Back-End</button>
+            <button onClick={() => setDesc(3)}>RenderLabs</button>
         </div>
         <HorizontalBreak className={moreStyles.horizontalBreak}/>
         <div className={moreStyles.descriptions}>
@@ -40,19 +59,20 @@ export default function More() {
               Blurb
             </p>
         </div>
-        <div>
+        <div className={moreStyles.otherSkills}>
             <h5>Other Practicals</h5>
-            <ol>
+            <ol className={moreStyles.list}>
                 <li>Git</li>
                 <li>Hugging Face</li>
+                <li>Neptune</li>
                 <li>Figma</li>
                 <li>Solidworks</li>
                 <li>Azure App Deployment</li>
             </ol>
         </div>
-        <div>
+        <div className={moreStyles.goals}>
             <h5>This Year</h5>
-            <p>
+            <p className={moreStyles.goalDesc}>
               Focus on back-end development especially in Rust proficiency. 
               Get AWS certified in Application Architecture. Network with 
               coders through events. Currently help out coders on the weekend 
@@ -60,6 +80,7 @@ export default function More() {
               events in Toronto.
             </p>
         </div>
+        <HorizontalBreak className={moreStyles.horizontalBreak2} />
       </>
     )
 }

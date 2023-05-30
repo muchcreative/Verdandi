@@ -1,7 +1,9 @@
-import Image from 'next/image';
 import mainStyles from 'src/styles/night/Main.module.css';
 
+import Moon from 'public/night/moon.svg'
 import Mountains from 'public/night/mountains.svg'
+
+const moon = () => <Moon />;
 const mountains = () => <Mountains />;
 
 export default function Main() {
@@ -13,13 +15,7 @@ export default function Main() {
             </h1>
         </header>
         <div className={mainStyles.art}>
-            <Image
-              className={mainStyles.moon}
-              src='/night/moon.png'
-              alt='Moon'
-              height={298}
-              width={302}
-            />
+            <Moon className={mainStyles.moon}/>
             <Mountains className={mainStyles.mountains} />
         </div>
       </>

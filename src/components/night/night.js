@@ -1,11 +1,9 @@
 // Next.js
 import Head from 'next/head';
-import Link from 'next/link';
 import { EB_Garamond, Lora } from 'next/font/google'
 
 // CSS
 import NightGlobals from 'src/styles/night/night_globals.js';
-import nightStyles from 'src/styles/night/Night.module.css';
 import scrollStyles from 'src/styles/night/Scroll.module.css';
 
 // Scripts
@@ -18,18 +16,14 @@ import Main from 'src/components/night/main.js';
 import Experience from 'src/components/night/experience.js';
 import Skills from 'src/components/night/skills.js';
 import More from 'src/components/night/more.js';
-import ContactForm from 'src/components/night/contact_form.js';
+import Contact from 'src/components/night/contact.js';
 
 // SVGs
 import ScrollLine from 'public/night/scroll_line.svg';
-import HorizontalBreak from 'public/night/horizontal_break.svg';
 import Knob from 'public/night/knob.svg';
-import GitHubLogo from 'public/night/github_logo.svg';
 
 const scrollLine = () => <ScrollLine />;
-const horiztonalBreak = () => <HorizontalBreak />;
-const knob = () => <Knob />; // Go for a different unique object instead
-const githubLogo = () => <GitHubLogo />;
+const knob = () => <Knob />;
 
 const ebGaramond = EB_Garamond({
                     subsets: ['latin'], 
@@ -44,6 +38,7 @@ const lora = Lora({
 // debate psudeo element vs full background change
 // Remove forced heights on sections let it be auto sized is
 // probably more accurate
+// Go for a different unique object instead
 // still deciding on fonts
 // the chagning background seems kinda lame, you might
 // need to tie in other changes with it
@@ -64,17 +59,17 @@ export default function Night() {
           <link rel='icon' href='/favicons/tree.jpg' />  
         </Head>
         <NightGlobals />
-        <ScrollDraw />
-        <BackgroundChange />
         <section id='beginning' className={scrollStyles.scrollSection}>
+            <ScrollDraw />
+            <BackgroundChange />
+            <div className={scrollStyles.scrollLineContainer}>
+                <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
+            </div>
             <div className={`${ebGaramond.className} ${scrollStyles.scrollText}`}>
                 <h1>Night</h1>
                 <p>6pm - 6am</p>
             </div>
-            <div className={scrollStyles.scrollLineContainer}>
-                <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
-            </div>
-            <div id='bg-changer' className={nightStyles.bgChanger}></div>
+            <div id='bg-changer' className={scrollStyles.bgChanger}></div>
         </section>
         <NavMenu />
         <main className={ebGaramond.className}>
@@ -89,23 +84,9 @@ export default function Night() {
         <section id='more' className={ebGaramond.className}>
             <More />
         </section>
-        <HorizontalBreak className={nightStyles.horizontalBreak} />
         <section id='contact'>
-            <h6>
-                Together,<br></br>let&#39;s build something different
-            </h6>
-            <ContactForm />
+           <Contact />
         </section>
-        <footer>
-            <div className={nightStyles.logos}>
-              <Link href='https://www.linkedin.com/in/robby-lem-14ab97158/'>
-                  <p className={nightStyles.linkedinText}>in</p>
-              </Link>
-              <Link href='https://github.com/muchcreative'>
-                  <GitHubLogo className={nightStyles.githubLogo}/>
-              </Link>
-            </div>
-        </footer>
       </>
     )
 }

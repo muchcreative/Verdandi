@@ -22,7 +22,7 @@ export default function ScrollDraw() {
                     svgElement.style.strokeDashoffset = length - draw;
                 }
 
-                var headStart = 500
+                var headStart = 50
                 // it seems to be somewhat dependent on how long the entire page is
                 // should return current coordinates using svgElement.getPointAtLength
                 // then constantly set the new location of the knob

@@ -4,7 +4,7 @@ import formStyles from 'src/styles/night/Form.module.css';
 // rewrite onFocus or Active pseudo element styles for borders
 // Look into autocomplete styles
 
-export default function ContactForm() {
+export default function Form() {
   return (
     <>
       <form action='/api/form' id='contact-form' method='post'>

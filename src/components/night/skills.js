@@ -13,6 +13,7 @@ export default function Skills() {
               <p>CSS</p>
               <h4>Libraries / Frameworks</h4>
               <p>React / Next.js</p>
+              <p>CSS Modules</p>
           </div>
           <VerticalBreak className={skillsStyles.vline1} />
           <div className={skillsStyles.data}>
