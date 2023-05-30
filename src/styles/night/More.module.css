@@ -1,0 +1,107 @@
+/* More Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.title {
+    text-decoration: 2px underline;
+    text-underline-offset: 4px;
+    text-align: center;
+    font-size: 2.5em; 
+}
+
+.buttons {
+    margin: 4% 0 1% 0;
+    font-size: 1.8em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.horizontalBreak {
+    width: 70%;
+    height: 10%;
+    margin-left: 15%;
+}
+
+.buttons button:hover {
+    color: var(--night-special-color);
+    transition: 0.2s;
+}
+
+.buttons button:focus {
+    color: var(--night-special-color);
+    transition: 0.2s;
+}
+
+.buttons button:active {
+    color: var(--night-special-color); 
+    text-decoration: var(--night-special-color) 1px underline;
+    text-underline-offset: 4px;
+    transition: 0.2s;
+}
+
+@keyframes transOut {
+    from {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+
+    to {
+      transform: translateY(10%);
+      opacity: 0%;
+    }
+}
+
+.descriptions {
+    width: 50%;
+    font-size: 1.2em;
+    margin: 4% 5% 15% 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.frontDesc {
+    position: absolute;
+}
+
+.dataDesc {
+    position: absolute;
+    top: -10%;
+}
+
+.backDesc {
+    position: absolute;
+    top: -10%;
+}
+
+.rlDesc {
+    position: absolute;
+    top: -10%;
+}
+
+.other {
+    margin: 10% 10% 10% 10%;
+}
+
+.list {
+    margin: 3% 0 0 10%;
+    font-size: 1.7em;
+    list-style-type: circle;
+    column-count: 2;
+    column-gap: 40%;
+}
+
+.goals {
+    margin: 5% 10% 7% 10%;
+}
+
+.goalDesc {
+    margin: 5% 0 0 10%;
+    font-size: 1.7em;
+}
+
+.horizontalBreak2 {
+    width: 80%;
+    height: 10%;
+    margin: 0 0 7% 10%;
+}

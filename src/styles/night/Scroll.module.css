@@ -1,0 +1,46 @@
+/* SVG Forced Scroll, Draw, and BG Transition
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.scrollSection {
+    background-color: var(--day-bg-color);
+}
+
+.scrollText {
+    text-align: right;
+    opacity: 0%;
+    margin: 5% 20% 0 0;
+    animation: fade-in 0.5s ease-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+        transform: translateY(-4%);
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateY(4%);
+    }
+} 
+
+.scrollText p {
+    font-size: 2.1em;
+}
+
+.scrollLineContainer {
+    margin-left: 5%;
+}
+
+.scrollLine {
+    height: 100%;
+}
+
+.bgChanger {
+    position: relative;
+    top: 70%;
+    height: 80vh;
+    
+    background-image: linear-gradient(to bottom, var(--night-bg-color) 50%, transparent 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.3s ease-in,
+}

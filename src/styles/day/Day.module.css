@@ -1,0 +1,107 @@
+/* Main Content
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    height: 90vh;
+}
+
+/* Cutlery Main Image
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.cutlery {
+    position: absolute;
+    left: 59%;
+    z-index: 4;
+    width: clamp(100px * 1.5, 30vw, 300px * 1.5);
+    height: clamp(100px, 30vw, 300px);
+    animation: slide-in-left 1.7s ease 1.7s forwards;
+}
+
+@keyframes slide-in-left {
+    to {
+        transform: translateX(-145%);
+    }
+}
+
+/* Text Block
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    left: 15%;
+    z-index: 1;
+    font-size: 2em;
+    animation: slide-in-right 2s ease 3.4s forwards;
+}
+
+@keyframes slide-in-right {
+    to {
+        transform: translateX(145%);
+    }
+}
+
+.line1 {
+    animation: slide-up 1s ease 7.2s forwards;
+}
+
+@keyframes slide-up {
+    100% {
+        transform: translateY(-80%);
+    }
+}
+
+.line2 {
+    animation: slide-down 1s ease 7.2s forwards;
+}
+
+@keyframes slide-down {
+    100% {
+        transform: translateY(80%);
+    }
+}
+
+/* White Containers for CSS Animations
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.whiteContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.whiteLeft {
+    background-color: var(--day-bg-color);
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    animation: left-reduce-z 0.2s ease-in 3.4s forwards;
+}
+
+@keyframes left-reduce-z {
+    to {
+        z-index: 2;
+    }
+}
+
+.whiteRight {
+    background-color: var(--day-bg-color);
+    position: absolute;
+    z-index: 5;
+    top: 0%;
+    /* 1px added to accomadate SVG width */
+    left: calc(50% + 1px);
+    width: calc(50% - 1px);
+    height: 100%;
+    animation: right-reduce-z 0.2s linear 3.4s forwards;
+}
+
+@keyframes right-reduce-z {
+    to {
+        z-index: 0;
+    }
+}

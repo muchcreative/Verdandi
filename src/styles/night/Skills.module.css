@@ -1,0 +1,79 @@
+/* Skills Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.skillsContainer {
+  display: grid;
+  grid: 25% 20% 25% 20% 15% / 
+        35% 3% 30% 3% 30%;
+  grid-template-areas: 
+    "front   .      .    .       ."
+    "front vline1 data   .       ."
+    "front vline1 data vline2 back"
+    ".     vline1 data vline2 back"
+    ".       .      .  vline2 back";
+  margin: 0% 5% 15% 5%;
+}
+
+.front {
+  grid-area: front;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.front > p {
+  line-height: 3.4em;
+  font-size: 1.5em;
+}
+
+.libTitle {
+    font-size: 2em;
+    text-decoration: 1px underline;
+    text-underline-offset: 3px;
+}
+
+.vline1 {
+  grid-area: vline1;
+  height: 75%;
+  width: 4%;
+  margin-left: 30%;
+}
+
+.data {
+  grid-area: data;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.data > p {
+  line-height: 3.4em;
+  font-size: 1.5em;
+}
+
+.vline2 {
+  grid-area: vline2;
+  height: 75%;
+  width: 4%;
+  margin-left: 70%;
+}
+
+.back {
+  grid-area: back;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.back > p {
+  line-height: 3.4em;
+  font-size: 1.5em;
+}

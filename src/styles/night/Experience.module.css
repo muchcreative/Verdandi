@@ -1,0 +1,47 @@
+/* Experience Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.flow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 10% 3% 10%;
+  gap: 10%;
+}
+
+.title {
+  text-align: center;
+  width: 30%;
+}
+
+.desc {
+  font-size: 1.3em;
+  text-align: center;
+  width: 70%;
+}
+
+.pi {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 10% 3% 10%;
+  gap: 4%;
+}
+
+.pi > .title {
+  width: 40%;
+}
+
+.dt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 10% 30% 10%;
+  gap: 5%;
+}
+
+.horizontalBreak {
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
+}

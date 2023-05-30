@@ -1,0 +1,72 @@
+/* Contact Form
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.formGrid {
+    display: grid;
+    grid: 12% 45% 400px / 
+          23% 23%;
+    grid-template-areas: 
+      "name email"
+      "message message"
+      ". button";
+    
+    margin-top: 4%;
+    column-gap: 3%;
+    justify-content: center;
+  }
+  
+.nameArea {
+  grid-area: name;
+  padding: 0 5% 0 0;
+}
+
+.emailArea {
+  grid-area: email;
+  padding: 0 5% 0 0;
+}
+
+.messageArea {
+  grid-area: message;
+  margin-top: 5%;
+}
+
+.buttonArea {
+  grid-area: button;
+  font-size: 1.3em;
+  place-self: start end;
+  margin-top: 5%;
+}
+
+.nameInput {
+  width: 100%;
+  height: 100%;
+  padding: 1% 2% 1% 4%;
+  border: 1px solid var(--day-bg-color);
+}
+  
+.emailInput {
+  width: 100%;
+  height: 100%;
+  padding: 1% 2% 1% 4%;
+  border: 1px solid var(--day-bg-color);
+}
+  
+.messageInput {
+  border: 1px solid var(--day-bg-color);
+  padding: 2% 2% 2% 2%;
+  font-size: 1.2em;
+  width: 100%;
+  height: 100%;
+}
+
+/* .buttons button:hover {
+  color: var(--night-special-color);
+  transition: 0.2s;
+}
+
+.buttons button:focus {
+
+}
+
+.buttons button:active {
+
+} */
