@@ -11,7 +11,7 @@ export default function Skills() {
               <p>JavaScript</p>
               <p>HTML</p>
               <p>CSS</p>
-              <h4>Libraries / Frameworks</h4>
+              <h4 className={skillsStyles.libTitle}>Libraries / Frameworks</h4>
               <p>React / Next.js</p>
               <p>CSS Modules</p>
           </div>
@@ -22,7 +22,7 @@ export default function Skills() {
               <p>SQL / PostgreSQL</p>
               <p>MATLAB</p>
               <p>R</p>
-              <h4>Libraries</h4>
+              <h4 className={skillsStyles.libTitle}>Libraries</h4>
               <p>Tensorflow / PyTorch</p>
               <p>Numpy / Pandas / Polars</p>
               <p>Dash / Seaborn / MatPlotLib</p>
@@ -32,7 +32,7 @@ export default function Skills() {
               <h4><em>Back-End</em></h4>
               <p>Rust</p>
               <p>C</p>
-              <h4>Crates</h4>
+              <h4 className={skillsStyles.libTitle}>Crates</h4>
               <p>Diseal</p>
               <p>Tokio</p>
               <p>Crossbeam</p>

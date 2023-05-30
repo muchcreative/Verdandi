@@ -59,7 +59,7 @@ export default function More() {
               Blurb
             </p>
         </div>
-        <div className={moreStyles.otherSkills}>
+        <div className={moreStyles.other}>
             <h5>Other Practicals</h5>
             <ol className={moreStyles.list}>
                 <li>Git</li>

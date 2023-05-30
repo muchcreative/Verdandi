@@ -1,9 +1,8 @@
 /* More Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .title {
-    color: var(--night-special-color);
-    text-decoration: var(--night-special-color) 2px underline;
-    text-underline-offset: 3px;
+    text-decoration: 2px underline;
+    text-underline-offset: 4px;
     text-align: center;
     font-size: 2.5em; 
 }
@@ -80,12 +79,12 @@
     top: -10%;
 }
 
-.otherSkills {
+.other {
     margin: 10% 10% 10% 10%;
 }
 
 .list {
-    margin: 5% 0 0 10%;
+    margin: 3% 0 0 10%;
     font-size: 1.7em;
     list-style-type: circle;
     column-count: 2;
@@ -93,7 +92,7 @@
 }
 
 .goals {
-    margin: 10% 10% 7% 10%;
+    margin: 5% 10% 7% 10%;
 }
 
 .goalDesc {

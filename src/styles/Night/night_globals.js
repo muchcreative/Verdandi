@@ -12,10 +12,6 @@ export default function nightGlobals() {
                 overflow-y: scroll;
             }
 
-            main {
-                margin-bottom: 10%;
-            }
-
             h1 {
                 font-size: 4.9em;
                 font-weight: normal;
@@ -33,7 +29,6 @@ export default function nightGlobals() {
             }
 
             h4 {
-                color: var(--night-special-color);
                 margin-bottom: 2%;
                 font-size: 2.4em;
                 font-weight: normal;

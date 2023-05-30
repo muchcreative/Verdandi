@@ -28,6 +28,12 @@
   font-size: 1.5em;
 }
 
+.libTitle {
+    font-size: 2em;
+    text-decoration: 1px underline;
+    text-underline-offset: 3px;
+}
+
 .vline1 {
   grid-area: vline1;
   height: 75%;

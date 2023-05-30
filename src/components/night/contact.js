@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <>
       <h6>
-        Together,<br></br>let&#39;s build something different
+        Together,<br></br>let&#39;s build something <em>different</em>
       </h6>
       <Form />
       <footer>
