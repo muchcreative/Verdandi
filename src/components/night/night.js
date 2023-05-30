@@ -1,6 +1,5 @@
 // Next.js
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import { EB_Garamond, Lora } from 'next/font/google'
 
@@ -15,6 +14,7 @@ import BackgroundChange from 'src/scripts/night/background_change.js';
 
 // Page Components
 import NavMenu from 'src/components/night/nav_menu.js';
+import Main from 'src/components/night/main.js';
 import Experience from 'src/components/night/experience.js';
 import Skills from 'src/components/night/skills.js';
 import More from 'src/components/night/more.js';
@@ -40,9 +40,19 @@ const lora = Lora({
               weight: ['400']
             });
 
+// Add more spacing. Experience section feels a little cramped
 // debate psudeo element vs full background change
 // Remove forced heights on sections let it be auto sized is
 // probably more accurate
+// still deciding on fonts
+// the chagning background seems kinda lame, you might
+// need to tie in other changes with it
+
+// change moon to full svg..
+// change lines to be fuller for the horizontal breaks
+// Adjust PI title to fit in one line
+
+// Add stars to mountains and appropriate effects
 
 export default function Night() {
     return (
@@ -57,56 +67,44 @@ export default function Night() {
         <ScrollDraw />
         <BackgroundChange />
         <section id='beginning' className={scrollStyles.scrollSection}>
-          <div className={`${ebGaramond.className} ${scrollStyles.scrollText}`}>
-            <h1>Night</h1>
-            <p>6pm - 6am</p>
-          </div>
-          <div className={scrollStyles.scrollLineContainer}>
-            <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
-          </div>
-          <div id='bg-changer' className={nightStyles.bgChanger}></div>
+            <div className={`${ebGaramond.className} ${scrollStyles.scrollText}`}>
+                <h1>Night</h1>
+                <p>6pm - 6am</p>
+            </div>
+            <div className={scrollStyles.scrollLineContainer}>
+                <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
+            </div>
+            <div id='bg-changer' className={nightStyles.bgChanger}></div>
         </section>
         <NavMenu />
         <main className={ebGaramond.className}>
-          <header className={nightStyles.hookContainer}>
-            <h1 className={nightStyles.hookLine}>
-              Because boring ideas<br></br>make boring&nbsp;<em>products</em>
-            </h1>
-          </header>
-          <div>
-            <Image
-              src='/night/moon.png'
-              alt='Moon'
-              height={298}
-              width={302}
-            />
-          </div>
+            <Main />
         </main>
-        <section id='experience' className={`${ebGaramond.className} ${nightStyles.experience}`}>
-          <Experience />
+        <section id='experience' className={ebGaramond.className}>
+            <Experience />
         </section>
-        <section id='skills' className={`${ebGaramond.className} ${nightStyles.skills}`}>
-          <Skills />
+        <section id='skills' className={ebGaramond.className}>
+            <Skills />
         </section>
-        <section id='more' className={`${ebGaramond.className} ${nightStyles.more}`}>
-          <More />
+        <section id='more' className={ebGaramond.className}>
+            <More />
         </section>
-        <HorizontalBreak className={nightStyles.lineBreak} />
-        <section id='contact' className={nightStyles.contact}>
-          <h4 className={nightStyles.contactHeader}>
-            Together,<br></br>let&#39;s build something different
-          </h4>
-          <ContactForm />
+        <HorizontalBreak className={nightStyles.horizontalBreak} />
+        <section id='contact'>
+            <h6>
+                Together,<br></br>let&#39;s build something different
+            </h6>
+            <ContactForm />
         </section>
         <footer>
-          <div className={nightStyles.logos}>
-            <Link href='https://www.linkedin.com/in/robby-lem-14ab97158/'>
-              <p className={nightStyles.linkedinText}>in</p>
-            </Link>
-            <Link href='https://github.com/muchcreative'>
-              <GitHubLogo className={nightStyles.githubLogo}/>
-            </Link>
-          </div>
+            <div className={nightStyles.logos}>
+              <Link href='https://www.linkedin.com/in/robby-lem-14ab97158/'>
+                  <p className={nightStyles.linkedinText}>in</p>
+              </Link>
+              <Link href='https://github.com/muchcreative'>
+                  <GitHubLogo className={nightStyles.githubLogo}/>
+              </Link>
+            </div>
         </footer>
       </>
     )

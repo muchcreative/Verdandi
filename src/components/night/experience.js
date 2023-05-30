@@ -1,4 +1,3 @@
-import nightStyles from 'src/styles/night/Night.module.css';
 import experienceStyles from 'src/styles/night/Experience.module.css';
 
 import HorizontalBreak from 'public/night/horizontal_break.svg';
@@ -21,7 +20,7 @@ export default function Experience() {
                 </p>
             </div>
         </div>
-        <HorizontalBreak className={nightStyles.lineBreak} />
+        <HorizontalBreak className={experienceStyles.horizontalBreak} />
         <div className={experienceStyles.pi}>
             <div className={experienceStyles.title}>
                 <h2>Portable Intelligence</h2>
@@ -37,7 +36,7 @@ export default function Experience() {
                 </p>
             </div>
         </div>
-        <HorizontalBreak className={nightStyles.lineBreak} />
+        <HorizontalBreak className={experienceStyles.horizontalBreak} />
         <div className={experienceStyles.dt}>
             <div className={experienceStyles.title}>
                 <h2>Derivative Trader</h2>

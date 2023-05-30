@@ -1,0 +1,28 @@
+/* Main Content
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.hookContainer {
+    display: flex;
+    align-items: center;
+}
+
+.hookLine {
+    margin: 0 0 5% 5%;
+    padding-left: 2.5em; /* Adds text indent for second line*/
+    text-indent: -2.5em;
+}
+
+.art {
+    display: flex;
+    flex-direction: column;
+}
+
+.moon {
+    width: 13%;
+    height: 13%;
+    margin-right: 10%;
+    align-self: flex-end;
+}
+
+.mountains {
+    align-self: center;
+}

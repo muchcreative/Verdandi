@@ -1,0 +1,44 @@
+/* More Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.title {
+    color: var(--night-special-color);
+    text-decoration: var(--night-special-color) 2px underline;
+    text-underline-offset: 3px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.buttons {
+  margin: 4% 0 1% 0;
+  font-size: 1.8em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.horizontalBreak {
+  width: 70%;
+  height: 10%;
+  margin-left: 15%;
+}
+
+.descriptions {
+  display: flex;
+  width: 50%;
+  font-size: 1.2em;
+  margin: 4% 20% 5% 20%;
+}
+
+.dataDesc {
+  display: none;
+}
+
+.backDesc {
+  display: none;
+}
+
+.rlDesc {
+  display: none;
+}

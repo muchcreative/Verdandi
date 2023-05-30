@@ -8,7 +8,7 @@ export default function ScrollDraw() {
             useEffect(() => {
                 const drawOnScroll = () => {
                     const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
-                      / ((document.documentElement.scrollHeight - headStart) - document.documentElement.clientHeight);
+                      / (5800 - document.documentElement.clientHeight);
 
                     console.log(
                       "Scroll Percent", scrollPercent,

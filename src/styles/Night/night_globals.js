@@ -13,7 +13,7 @@ export default function nightGlobals() {
             }
 
             main {
-                height: 200vh;
+                margin-bottom: 10%;
             }
 
             h1 {
@@ -33,10 +33,22 @@ export default function nightGlobals() {
             }
 
             h4 {
-                font-family: "Times New Roman";
+                color: var(--night-special-color);
+                margin-bottom: 2%;
+                font-size: 2.4em;
                 font-weight: normal;
+            }
 
-                font-size: 2.6em;
+            h5 {
+                color: var(--night-special-color);
+                font-size: 2em;
+                font-weight: normal;
+            }
+
+            h6 {
+                font-color: inherit;
+                font-size: 3em;
+                font-weight: normal;
                 line-height: 1.7em;
                 margin-left: 3em;
                 padding-left: 2.5em; 
@@ -47,8 +59,8 @@ export default function nightGlobals() {
                 font-size: inherit;
                 font-style: normal;  
                 color: var(--night-special-color);
-                text-decoration: var(--night-special-color) 3px underline;
-                text-underline-offset: 3px;
+                text-decoration: var(--night-special-color) 2px underline;
+                text-underline-offset: 4px;
             }
 
             a {

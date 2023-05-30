@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10% 5% 10%;
+  margin: 0 10% 3% 10%;
+  gap: 10%;
 }
 
 .title {
@@ -23,12 +24,24 @@
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  margin: 0 10% 5% 10%;
+  margin: 3% 10% 3% 10%;
+  gap: 4%;
+}
+
+.pi > .title {
+  width: 40%;
 }
 
 .dt {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10% 5% 10%;
+  margin: 3% 10% 30% 10%;
+  gap: 5%;
+}
+
+.horizontalBreak {
+  width: 80%;
+  height: 10%;
+  margin-left: 10%;
 }

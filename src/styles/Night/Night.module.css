@@ -5,59 +5,14 @@
     
     background-image: linear-gradient(to bottom, var(--night-bg-color) 50%, transparent 50%);
     background-size: 100% 200%;
-    transition: background-position 0.5s ease-in,
+    transition: background-position 0.3s ease-in,
 }
 
-
-/* Main Content
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.hookContainer {
-    display: flex;
-    align-items: center;
-    height: 100vh;
+.horizontalBreak {
+    width: 80%;
+    height: 10%;
+    margin-left: 10%;
 }
-
-.hookLine {
-    margin:0 0 10% 5%;
-    
-    /* Adds text indent for second line*/
-    padding-left: 2.5em; 
-    text-indent: -2.5em;
-}
-
-.lineBreak {
-    height: 100px;
-    width: 1000px;
-}
-
-
-/* Experience Section
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.experience {
-}
-
-
-/* Skills Section
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.skills {
-    height: 100vh;
-}
-
-
-/* More Section
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.more {
-    height: 75vh;
-}
-
-
-/* Contact Section
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.contact {
-    height: 92vh;
-    overflow-y: hidden;
-}
-
 
 /* Footer
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

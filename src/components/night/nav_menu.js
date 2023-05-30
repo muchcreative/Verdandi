@@ -17,9 +17,9 @@ export default function NavMenu() {
       <nav data-toggle={open} className={navStyles.navMenu}>
         <ul>
           <li><Link href='#beginning'>Beginning</Link></li>
-          <li><Link href='#skills'>Skills</Link></li>
           <li><Link href='#experience'>Experience</Link></li>
-          <li><Link href='#projects'>Projects</Link></li>
+          <li><Link href='#skills'>Skills</Link></li>
+          <li><Link href='#more'>Read More</Link></li>
           <li><Link href='#contact'>Contact</Link></li>
         </ul>
       </nav>
