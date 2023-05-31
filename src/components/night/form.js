@@ -1,3 +1,4 @@
+// CSS
 import formStyles from 'src/styles/night/Form.module.css';
 
 // Form must send out a post request and email confirmation as well

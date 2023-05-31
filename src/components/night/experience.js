@@ -1,5 +1,7 @@
+// CSS
 import experienceStyles from 'src/styles/night/Experience.module.css';
 
+//SVGs
 import HorizontalBreak from 'public/night/horizontal_break.svg';
 const horizontalBreak = () => <HorizontalBreak />;
 

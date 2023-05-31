@@ -30,7 +30,7 @@ export default function Day() {
           <title>Verdandi</title>
           <meta name='description' content='Personal website' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <link rel='icon' href='/favicons/ps_tree.png' />
+          <link rel='icon' href='/favicons/day_tree.png' />
         </Head>
         <main>
           <div className={styles.content}>

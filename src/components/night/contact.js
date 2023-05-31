@@ -1,8 +1,11 @@
+// Next.js
 import Link from 'next/link';
 
+// CSS
 import contactStyles from 'src/styles/night/Contact.module.css';
 import Form from 'src/components/night/form.js';
 
+// SVGs
 import GitHubLogo from 'public/night/github_logo.svg';
 const githubLogo = () => <GitHubLogo />;
 

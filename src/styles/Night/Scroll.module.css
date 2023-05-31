@@ -1,9 +1,5 @@
 /* SVG Forced Scroll, Draw, and BG Transition
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.scrollSection {
-    background-color: var(--day-bg-color);
-}
-
 .scrollText {
     text-align: right;
     opacity: 0%;

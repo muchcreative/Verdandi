@@ -1,9 +1,12 @@
+// Next.js
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+// CSS
 import navStyles from 'src/styles/night/Nav.module.css';
-import NavBars from 'public/night/nav_bars.svg';
 
+// SVGs
+import NavBars from 'public/night/nav_bars.svg';
 const navBars = () => <NavBars />; 
 
 export default function NavMenu() {

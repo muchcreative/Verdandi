@@ -1,5 +1,7 @@
+// CSS
 import mainStyles from 'src/styles/night/Main.module.css';
 
+// SVGs
 import Moon from 'public/night/moon.svg'
 import Mountains from 'public/night/mountains.svg'
 

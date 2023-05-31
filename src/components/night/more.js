@@ -1,6 +1,10 @@
+// Next.js
 import React, { useState, useEffect } from 'react';
 
+// CSS
 import moreStyles from 'src/styles/night/More.module.css';
+
+// SVGs
 import HorizontalBreak from 'public/night/horizontal_break.svg';
 const horizontalBreak = () => <HorizontalBreak />;
 
@@ -68,6 +72,7 @@ export default function More() {
                 <li>Figma</li>
                 <li>Solidworks</li>
                 <li>Azure App Deployment</li>
+                <li>Wix</li>
             </ol>
         </div>
         <div className={moreStyles.goals}>

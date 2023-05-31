@@ -1,4 +1,7 @@
+// CSS
 import skillsStyles from 'src/styles/night/Skills.module.css';
+
+// SVGs
 import VerticalBreak from 'public/night/vertical_break.svg';
 const verticalBreak = () => <VerticalBreak />;
 
