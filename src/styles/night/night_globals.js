@@ -12,6 +12,9 @@ export default function nightGlobals() {
                 overflow-y: scroll;
             }
 
+            @media (prefers-reduced-motion) {
+            }
+
             h1 {
                 font-size: 4.9em;
                 font-weight: normal;

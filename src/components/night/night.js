@@ -23,6 +23,16 @@ const lora = Lora({
               weight: ['400']
             });
 
+
+// Looking into loading using infinite scrolling...
+// Probably will speed up website
+
+// Something about it still feels slight unfinished.
+// Feels like something is missing, would be good to ask
+// for an opinion
+// maybe not enough divison? Some of the spaces  feel to open
+// on a black background might be punished for it.
+
 export default function Night() {
     return (
       <>
@@ -36,7 +46,9 @@ export default function Night() {
         <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
           <Scroll />
         </section>
-        <NavMenu />
+        <div className={lora.className}>
+            <NavMenu />
+        </div>
         <main className={ebGaramond.className}>
             <Main />
         </main>
@@ -55,6 +67,10 @@ export default function Night() {
       </>
     )
 }
+
+// Adding stagnation between the explanations 
+// Along with pictures will definetly help
+
 
 // Add more spacing. Experience section feels a little cramped
 // debate psudeo element vs full background change

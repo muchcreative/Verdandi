@@ -5,31 +5,58 @@ import { useState, useEffect } from 'react';
 // CSS
 import navStyles from 'src/styles/night/Nav.module.css';
 
-// SVGs
-import NavBars from 'public/night/nav_bars.svg';
-const navBars = () => <NavBars />; 
+// External Libs
+import { clsx } from 'clsx';
+
+// Animation Options,
+// Each option should fade in followed by a slower slide in
+// Change to translate
 
 export default function NavMenu() {
-  const [open, toggleOpenClose ] = useState(false);
+    const [toggled, toggleMenu ] = useState(false);
 
-  return (
-    <>
-      <NavBars
-        className={navStyles.navBars}
-        onClick={() => toggleOpenClose(!open)} />
-      <nav data-toggle={open} className={navStyles.navMenu}>
-        <ul>
-          <li><Link href='#beginning'>Beginning</Link></li>
-          <li><Link href='#experience'>Experience</Link></li>
-          <li><Link href='#skills'>Skills</Link></li>
-          <li><Link href='#more'>Read More</Link></li>
-          <li><Link href='#contact'>Contact</Link></li>
-        </ul>
-      </nav>
-    </>
-  )
-}
+    useEffect(() => {
+        const menu = document.querySelector('#hamburger')
+        menu.addEventListener('blur', () => {
+            toggleMenu(!toggled);});
+    }, [toggled])
 
-// on click open nav bars
-// defaults closed
-// how do you want to do this?
+    return (
+      <>
+        <div>
+          <button id='hamburger'
+            onClick={() => toggleMenu(!toggled)}
+            className={clsx({
+              [navStyles.hamburger] : true,
+              [navStyles.hamburgerOpen] : toggled})}>
+              <div className={navStyles.bar}></div>
+          </button>
+          <nav
+            id='menu'
+            className={clsx({
+              [navStyles.menu] : true,
+              [navStyles.menuOpen] : toggled,
+              [navStyles.menuClosed] : toggled === false})}>
+            <button
+                className={navStyles.close}
+                onClick={() => toggleMenu(!toggled)}>
+              <div className={navStyles.closeBar}></div>
+            </button>
+            <ul className={navStyles.linkList}>
+              <li><Link href='#beginning'>Beginning</Link></li>
+              <hr></hr>
+              <li><Link href='#experience'>Experience</Link></li>
+              <hr></hr>
+              <li><Link href='#skills'>Skills</Link></li>
+              <hr></hr>
+              <li><Link href='#more'>More</Link></li>
+              <hr></hr>
+              <li><Link href='#contact'>Contact</Link></li>
+              <hr></hr>
+            </ul>
+          </nav>
+          
+        </div>
+      </>
+    )
+  }

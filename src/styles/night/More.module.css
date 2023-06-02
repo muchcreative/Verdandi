@@ -1,6 +1,7 @@
 /* More Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .title {
+    color: var(--night-special-color);
     text-decoration: 2px underline;
     text-underline-offset: 4px;
     text-align: center;
@@ -9,7 +10,7 @@
 
 .buttons {
     margin: 4% 0 1% 0;
-    font-size: 1.8em;
+    font-size: 2em;
 
     display: flex;
     justify-content: center;
@@ -25,61 +26,81 @@
 
 .buttons button:hover {
     color: var(--night-special-color);
-    transition: 0.2s;
 }
 
 .buttons button:focus {
     color: var(--night-special-color);
-    transition: 0.2s;
 }
 
-.buttons button:active {
+.button {
+    transition: all 0.4s;
+}
+
+.activeButton {
     color: var(--night-special-color); 
     text-decoration: var(--night-special-color) 1px underline;
     text-underline-offset: 4px;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
-@keyframes transOut {
+
+/* Descriptions
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.descriptions {
+    width: 50%;
+    font-size: 1.6em;
+}
+
+.frontDesc {
+    position: relative;
+    left: 50%;
+}
+
+.frontDescShow {
+    animation: transIn 0.4s linear forwards;
+}
+
+@keyframes transIn {
     from {
       transform: translateY(0%);
-      opacity: 100%;
+      opacity: 0%;
     }
 
     to {
       transform: translateY(10%);
-      opacity: 0%;
+      opacity: 100%;
     }
 }
 
-.descriptions {
-    width: 50%;
-    font-size: 1.2em;
-    margin: 4% 5% 15% 5%;
-    text-align: center;
-    overflow: hidden;
-}
 
-.frontDesc {
-    position: absolute;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 .dataDesc {
-    position: absolute;
-    top: -10%;
+    display: none;
 }
 
 .backDesc {
-    position: absolute;
-    top: -10%;
+    display: none;
 }
 
 .rlDesc {
-    position: absolute;
-    top: -10%;
+    display: none;
 }
 
-.other {
+
+/* Other Practicals
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.practicals {
     margin: 10% 10% 10% 10%;
 }
 

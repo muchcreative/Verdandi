@@ -1,13 +1,112 @@
-/* Navigation Menu
+/* Hamburger Icon
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.navBars {
-  text-align: right;
+.hamburger {
+    position: fixed;
+    top: 5%;
+    right: 4%;
+    display: block;
+    height: 50px;
+    width: 35px;
+    transition: 0.4s;
 }
 
-.navMenu {
-  display: none;
+.hamburger .bar, .hamburger::after, .hamburger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--day-bg-color);
+    margin: 9px;
+    transition: 0.4s;
 }
 
-.navMenu[data-toggle=true] {
-  display: visible;
+.hamburger:hover .bar {
+    opacity: 0%;
+}
+
+.hamburger:hover::before {
+    transform: translateY(10px);
+}
+
+.hamburger:hover::after {
+    transform: translateY(-10px) rotate(90deg); 
+}
+
+.hamburgerOpen {
+    opacity: 0%;
+}
+
+
+/* Navigtion Menu
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.menu {
+    position: fixed;
+    width: 40%; 
+
+    background-color: #212121CC;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.menuOpen {
+    top: 0%;
+    left: 80%;
+}
+
+.menuClosed {
+    top: 0%;
+    left: 120%;
+}
+
+/* Menu Close Icon
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.close {
+    position: fixed;
+    top: 0%;
+    left: 120%;
+    height: 50px;
+    width: 35px;
+    z-index: 2;
+}
+
+.closeBars {
+    color: var(--day-bg-color);
+    rotate: 30%;
+}
+
+.close::after {
+    content: '';
+    color: var(--day-bg-color);
+    
+}
+
+
+/* Link List
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.linkList {
+    list-style-type: none;
+    font-size: 1.7em;
+}
+
+.linkList li {
+    margin: 10% 3% 2% 5%;
+}
+
+.linkList li:hover {
+    color: var(--night-special-color);
+    transition: 0.4s;
+}
+
+.linkList li:hover + hr {
+    background-color: var(--night-special-color);
+    transition: 0.4s;
+}
+
+.linkList hr {
+    border: none;
+    height: 1px;
+
+    background-color: var(--day-bg-color);
+    margin: 0 55% 0 5%;
 }

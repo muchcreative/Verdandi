@@ -1,5 +1,5 @@
 // Next.js
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // CSS
 import moreStyles from 'src/styles/night/More.module.css';
@@ -8,39 +8,41 @@ import moreStyles from 'src/styles/night/More.module.css';
 import HorizontalBreak from 'public/night/horizontal_break.svg';
 const horizontalBreak = () => <HorizontalBreak />;
 
-// overthinking right now
-// let's trying hiding the paragraphs and 
-// brining them in
+// External Libs
+import { clsx } from 'clsx';
 
 
-function swapDescriptions(newEle) {
-}
-
+// button moreStyles at true
 
 export default function More() {
-    // const [description, setDesc] = useState(0);
-
-    // useEffect(() => {
-    //   const descElements = [document.querySelector('#front-desc'),
-    //                       document.querySelector('#data-desc'),
-    //                       document.querySelector('#back-desc'),
-    //                       document.querySelector('#rl-desc')]
-    //   let newEle = descElements[description]
-    //   swapDescriptions(newEle);
-    // }, [description])
+    const [description, setDesc] = useState(0);
 
     return (
       <>
         <h2 className={moreStyles.title}>Read More</h2>
         <div className={moreStyles.buttons}>
-            <button onClick={() => setDesc(0)}>Front-End</button>
-            <button onClick={() => setDesc(1)}>Data Analytics</button>
-            <button onClick={() => setDesc(2)}>Back-End</button>
-            <button onClick={() => setDesc(3)}>RenderLabs</button>
+            <button className={clsx({
+              [moreStyles.button] : true,
+              [moreStyles.activeButton] : (description === 0)})}
+            onClick={() => setDesc(0)}>Front-End</button>
+            <button className={clsx({
+              [moreStyles.button] : true,
+              [moreStyles.activeButton] : (description === 1)})}
+            onClick={() => setDesc(1)}>Data Analytics</button>
+            <button className={clsx({
+              [moreStyles.button] : true,
+              [moreStyles.activeButton] : (description === 2)})}
+            onClick={() => setDesc(2)}>Back-End</button>
+            <button className={clsx({
+              [moreStyles.button] : true,
+              [moreStyles.activeButton] : (description === 3)})}
+            onClick={() => setDesc(3)}>RenderLabs</button>
         </div>
         <HorizontalBreak className={moreStyles.horizontalBreak}/>
         <div className={moreStyles.descriptions}>
-            <p id='front-desc' className={moreStyles.frontDesc}>
+            <p id='front-desc' className={clsx({
+              [moreStyles.frontDesc] : true,
+              [moreStyles.frontDescShow] : (description === 0)})}>
               Website built in Next.js and assets designed in Figma. Built and 
               lead the design on the analytics dashboard for Portable Intelligence. 
               Currently building the dashboard and later the website for Flow DB. 
@@ -63,7 +65,7 @@ export default function More() {
               Blurb
             </p>
         </div>
-        <div className={moreStyles.other}>
+        <div className={moreStyles.practicals}>
             <h5>Other Practicals</h5>
             <ol className={moreStyles.list}>
                 <li>Git</li>
