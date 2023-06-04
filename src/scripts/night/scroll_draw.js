@@ -22,14 +22,14 @@ export default function ScrollDraw() {
                     svgElement.style.strokeDashoffset = length - draw;
                 }
 
-                var headStart = 50
+                const headStart = 50
                 // it seems to be somewhat dependent on how long the entire page is
                 // should return current coordinates using svgElement.getPointAtLength
                 // then constantly set the new location of the knob
 
                 const svgElement = document.querySelector('#scroll-line');
                 const svgPath = svgElement.firstChild; // indexes SVG path
-                var length = svgPath.getTotalLength() - headStart; // 500 head start for scroll hint
+                const length = svgPath.getTotalLength() - headStart; // 500 head start for scroll hint
                 svgElement.style.strokeDasharray = length + headStart; // Add back 500 to ensure dash array is equal to original length
                 svgElement.style.strokeDashoffset = length;        
                 document.addEventListener("scroll", drawOnScroll);

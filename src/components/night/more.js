@@ -14,9 +14,40 @@ import { clsx } from 'clsx';
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
 
-    // you need to add some sort of use effect
-    // it will trigger once to close the line animation
-    // and the other will open it
+    useEffect(() => {
+        const descDivider = document.querySelector('#desc-divider');
+        
+        // ok I think i see what is happening
+        // the forwards forces it to 0 and so when the animation
+        // goes again it fails
+        
+        const draw = [
+          { strokeDashoffset : 0 },
+        ];
+
+        const drawOutOptions = {
+          duration: 1000,
+          direction: 'reverse',
+          iteratons: 1,
+        };
+        
+        const drawInOptions = {
+          duration: 1000,
+          fill: 'forwards',
+        };
+    
+        descDivider.animate(draw, drawOutOptions);
+        setTimeout(() => {
+          descDivider.animate(draw, drawInOptions);
+        }, 1200);
+
+    }, [desc])
+
+    // apply a useeffect and provide the close animation
+    // then apply the open animation for the line
+    // also go for a query selector on the id to add class names
+    // dont think you can add classnames, they all get changed with
+    // css modules to avoid overlaps
 
     return (
       <>
@@ -39,12 +70,7 @@ export default function More() {
               [moreStyles.activeButton] : (desc.curr === 3)})}
             onClick={() => setDesc({curr: 3, prev: desc.curr})}>RenderLabs</button>
         </div>
-        <HorizontalBreak className={clsx({
-            [moreStyles.horizontalBreak1] : true,
-            [moreStyles.drawLine0] : desc.curr === 0,
-            [moreStyles.drawLine1] : desc.curr === 1,
-            [moreStyles.drawLine2] : desc.curr === 2,
-            [moreStyles.drawLine3] : desc.curr === 3})} />
+        <HorizontalBreak id='desc-divider' className={moreStyles.horizontalBreak1} />
         <div className={moreStyles.descContainer}>
             <p id='front-desc' className={clsx({
               [moreStyles.desc] : true,

@@ -16,7 +16,7 @@ export default function nightGlobals() {
             }
 
             h1 {
-                font-size: 4.9em;
+                font-size: 6em;
                 font-weight: normal;
             }
 

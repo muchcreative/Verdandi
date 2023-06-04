@@ -5,6 +5,10 @@ import experienceStyles from 'src/styles/night/Experience.module.css';
 import HorizontalBreak from 'public/night/horizontal_break.svg';
 const horizontalBreak = () => <HorizontalBreak />;
 
+// If you don't use the Horizontal Breaks
+// You should use <hr> elements
+// adjust margining
+
 export default function Experience() {
     return (
       <>

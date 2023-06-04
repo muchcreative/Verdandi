@@ -23,26 +23,33 @@ const lora = Lora({
               weight: ['400']
             });
 
-// Looking into loading using infinite scrolling...
-// Probably will speed up website
+// timings on those animations can be fixed up
+// Should be starting responsive design this week
 
 // Feels like something is missing, would be good to ask
 // for an opinion
 // maybe not enough divison? Some of the spaces  feel to open
+// font sizing can be more consistent
 // on a black background might be punished for it.
+// ok lets do the re-design of the main now
+
+// right now feels like too much text
+// can you adjust spacing
+// use bullet points
+// fill space
 
 export default function Night() {
     return (
       <>
         <Head>
-          <title>Verdandi | Night</title>
-          <meta name='description' content='Personal website' />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <link rel='icon' href='/favicons/night_tree.png' />  
+            <title>Verdandi | Night</title>
+            <meta name='description' content='Personal website' />
+            <meta name='viewport' content='width=device-width, initial-scale=1' />
+            <link rel='icon' href='/favicons/night_tree.png' />  
         </Head>
         <NightGlobals />
         <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
-          <Scroll />
+            <Scroll />
         </section>
         <div className={lora.className}>
             <NavMenu />
@@ -60,7 +67,7 @@ export default function Night() {
             <More />
         </section>
         <section id='contact'>
-           <Contact />
+            <Contact />
         </section>
       </>
     )
