@@ -12,6 +12,8 @@ const scrollLine = () => <ScrollLine />;
 export default function Scroll() {
   return (
     <>
+      <ScrollDraw />
+      <BackgroundChange />
       <div className={scrollStyles.scrollLineContainer}>
           <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
       </div>
@@ -19,9 +21,7 @@ export default function Scroll() {
           <h1>Night</h1>
           <p>6pm - 6am</p>
       </div>
-      <div id='bg-changer' className={scrollStyles.bgChanger}></div>
-      <ScrollDraw />
-      <BackgroundChange />
+      <div id='bg-changer' className={scrollStyles.bgChanger}></div>    
     </>
   )
 }

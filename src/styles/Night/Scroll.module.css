@@ -1,21 +1,27 @@
-/* SVG Forced Scroll, Draw, and BG Transition
+/* SVG Scroll Draw and BG Transition
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .scrollText {
-    text-align: right;
-    opacity: 0%;
-    margin: 5% 20% 0 0;
+    position: absolute;
+    top: 5%;
+    right: 20%;
+
+
+    color: var(--night-bg-color);
+
+    opacity: 1;
+    font-size: 1em;
     animation: fade-in 0.5s ease-in 0.5s forwards;
 }
 
 @keyframes fade-in {
     from {
         opacity: 0%;
-        transform: translateY(-4%);
+        transform: translateY(0%);
     }
 
     to {
         opacity: 100%;
-        transform: translateY(4%);
+        transform: translateY(10%);
     }
 } 
 

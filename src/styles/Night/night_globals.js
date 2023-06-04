@@ -39,7 +39,7 @@ export default function nightGlobals() {
 
             h5 {
                 color: var(--night-special-color);
-                font-size: 2.5em;
+                font-size: 2.3em;
                 font-weight: normal;
             }
 

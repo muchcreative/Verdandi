@@ -18,12 +18,6 @@
     gap: 10%;
 }
 
-.horizontalBreak {
-    width: 70%;
-    height: 10%;
-    margin-left: 15%;
-}
-
 .buttons button:hover {
     color: var(--night-special-color);
 }
@@ -37,92 +31,148 @@
 }
 
 .activeButton {
-    color: var(--night-special-color); 
+    color: var(--night-special-color);
     text-decoration: var(--night-special-color) 1px underline;
     text-underline-offset: 4px;
     transition: 0.4s;
 }
 
-
-/* Descriptions
+/* Horizontal Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.descriptions {
-    width: 50%;
-    font-size: 1.6em;
+.horizontalBreak1 {
+    width: 70%;
+    height: 10%;
+    margin-left: 15%;
 }
 
-.frontDesc {
-    position: relative;
-    left: 50%;
+.drawLine0 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; 
+    animation: 
+        /* drawOut 1.5s ease-in forwards, */
+        drawIn 1.5s ease-in forwards;
 }
 
-.frontDescShow {
-    animation: transIn 0.4s linear forwards;
+
+.drawLine1 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; 
+    animation: 
+        /* drawOut 1.5s ease-in forwards, */
+        drawIn 1.5s ease-in forwards;
 }
 
-@keyframes transIn {
+.drawLine2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; 
+    animation: 
+        /* drawOut 1.5s ease-in forwards, */
+        drawIn 1.5s ease-in forwards;
+}
+
+.drawLine3 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000; 
+    animation: 
+        /* drawOut 1.5s ease-in forwards, */
+        drawIn 1.5s ease-in forwards;
+}
+
+
+@keyframes drawOut {
     from {
-      transform: translateY(0%);
-      opacity: 0%;
+        stroke-dashoffset: -1000; 
     }
 
     to {
-      transform: translateY(10%);
-      opacity: 100%;
+        stroke-dashoffset: 0;
     }
 }
 
+@keyframes drawIn {
+    from {
+        stroke-dashoffset: 1000;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.dataDesc {
-    display: none;
-}
-
-.backDesc {
-    display: none;
-}
-
-.rlDesc {
-    display: none;
-}
-
-
-/* Other Practicals
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.practicals {
-    margin: 10% 10% 10% 10%;
-}
-
-.list {
-    margin: 3% 0 0 10%;
-    font-size: 1.7em;
-    list-style-type: circle;
-    column-count: 2;
-    column-gap: 40%;
-}
-
-.goals {
-    margin: 5% 10% 7% 10%;
-}
-
-.goalDesc {
-    margin: 5% 0 0 10%;
-    font-size: 1.7em;
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .horizontalBreak2 {
     width: 80%;
     height: 10%;
     margin: 0 0 7% 10%;
+}
+
+
+/* Descriptions
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.descContainer {
+    margin-bottom: 15%;
+    font-size: 1.4em;
+}
+
+.desc {
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    margin-top: 2%;
+}
+
+.descShow {
+    animation: showDesc 0.6s ease 0.4s forwards;
+}
+
+.descHide {
+    animation: hideDesc 0.3s ease forwards;
+}
+
+@keyframes showDesc {
+    from {
+      transform: translateX(-40%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(5%);
+      opacity: 1;
+    }
+}
+
+@keyframes hideDesc {
+    from {
+      transform: translateX(5%);
+      opacity: 1;
+    }
+
+    to {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+}
+
+
+/* Other Practicals
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.practicals {
+    margin: 10% 15% 10% 15%;
+}
+
+.list {
+    margin: 3% 0 0 10%;
+    font-size: 1.6em;
+    list-style-type: circle;
+    column-count: 2;
+    column-gap: 40%;
+}
+
+.goals {
+    margin: 5% 15% 7% 15%;
+}
+
+.goalDesc {
+    margin: 3% 0 0 10%;
+    font-size: 1.6em;
 }

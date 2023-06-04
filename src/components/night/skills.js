@@ -69,7 +69,7 @@ export default function Skills() {
                   [skillsStyles.showSkills] : show})}>Libraries</h4>
                 <p className={showSkills}>Tensorflow / PyTorch</p>
                 <p className={showSkills}>Numpy / Pandas / Polars</p>
-                <p className={showSkills}>Dash / Seaborn / MatPlotLib</p>
+                <p className={showSkills}>Plotly / Seaborn / MatPlotLib</p>
             </div>
             <VerticalBreak id='vline2' className={clsx({
               [skillsStyles.vline2] : true,

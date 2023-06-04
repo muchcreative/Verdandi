@@ -1,5 +1,5 @@
 // Next.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // CSS
 import moreStyles from 'src/styles/night/More.module.css';
@@ -11,11 +11,12 @@ const horizontalBreak = () => <HorizontalBreak />;
 // External Libs
 import { clsx } from 'clsx';
 
-
-// button moreStyles at true
-
 export default function More() {
-    const [description, setDesc] = useState(0);
+    const [desc, setDesc] = useState({curr: 0, prev: null});
+
+    // you need to add some sort of use effect
+    // it will trigger once to close the line animation
+    // and the other will open it
 
     return (
       <>
@@ -23,45 +24,60 @@ export default function More() {
         <div className={moreStyles.buttons}>
             <button className={clsx({
               [moreStyles.button] : true,
-              [moreStyles.activeButton] : (description === 0)})}
-            onClick={() => setDesc(0)}>Front-End</button>
+              [moreStyles.activeButton] : (desc.curr === 0)})}
+            onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-End</button>
             <button className={clsx({
               [moreStyles.button] : true,
-              [moreStyles.activeButton] : (description === 1)})}
-            onClick={() => setDesc(1)}>Data Analytics</button>
+              [moreStyles.activeButton] : (desc.curr === 1)})}
+            onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data Analytics</button>
             <button className={clsx({
               [moreStyles.button] : true,
-              [moreStyles.activeButton] : (description === 2)})}
-            onClick={() => setDesc(2)}>Back-End</button>
+              [moreStyles.activeButton] : (desc.curr === 2)})}
+            onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
             <button className={clsx({
               [moreStyles.button] : true,
-              [moreStyles.activeButton] : (description === 3)})}
-            onClick={() => setDesc(3)}>RenderLabs</button>
+              [moreStyles.activeButton] : (desc.curr === 3)})}
+            onClick={() => setDesc({curr: 3, prev: desc.curr})}>RenderLabs</button>
         </div>
-        <HorizontalBreak className={moreStyles.horizontalBreak}/>
-        <div className={moreStyles.descriptions}>
+        <HorizontalBreak className={clsx({
+            [moreStyles.horizontalBreak1] : true,
+            [moreStyles.drawLine0] : desc.curr === 0,
+            [moreStyles.drawLine1] : desc.curr === 1,
+            [moreStyles.drawLine2] : desc.curr === 2,
+            [moreStyles.drawLine3] : desc.curr === 3})} />
+        <div className={moreStyles.descContainer}>
             <p id='front-desc' className={clsx({
-              [moreStyles.frontDesc] : true,
-              [moreStyles.frontDescShow] : (description === 0)})}>
+              [moreStyles.desc] : true,
+              [moreStyles.descShow] : (desc.curr === 0),
+              [moreStyles.descHide] : (desc.prev === 0)})}>
               Website built in Next.js and assets designed in Figma. Built and 
               lead the design on the analytics dashboard for Portable Intelligence. 
               Currently building the dashboard and later the website for Flow DB. 
               Over 1 year of experience in front-end development.
             </p>
-            <p id='data-desc' className={moreStyles.dataDesc}>
+            <p id='data-desc' className={clsx({
+              [moreStyles.desc] : true,
+              [moreStyles.descShow] : (desc.curr === 1),
+              [moreStyles.descHide] : (desc.prev === 1)})}>
               Starting learning and competition in Kaggle competitions in university. 
               Multiple data scientist certificates and courses taken. Lead multiple 
               teams in machine learning related projects. Built front facing client 
               dashboards at Portable Intelligence. Over 3-4 years of experience 
               building models.
             </p>
-            <p id='back-desc' className={moreStyles.backDesc}>
+            <p id='back-desc' className={clsx({
+              [moreStyles.desc] : true,
+              [moreStyles.descShow] : (desc.curr === 2),
+              [moreStyles.descHide] : (desc.prev === 2)})}>
               Started back-end development with a university project, leading a team 
               to develop a robot navigation algorithm in C++ to a 90% score. Currently 
               developing a SQL database interaction with Rust using Diseal for Flow DB. 
               1 year of experience in back-end development.
             </p>
-            <p id='rl-desc' className={moreStyles.rlDesc}>
+            <p id='rl-desc' className={clsx({
+              [moreStyles.desc] : true,
+              [moreStyles.descShow] : (desc.curr === 3),
+              [moreStyles.descHide] : (desc.prev === 3)})}>
               Blurb
             </p>
         </div>

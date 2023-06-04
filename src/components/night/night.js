@@ -23,11 +23,9 @@ const lora = Lora({
               weight: ['400']
             });
 
-
 // Looking into loading using infinite scrolling...
 // Probably will speed up website
 
-// Something about it still feels slight unfinished.
 // Feels like something is missing, would be good to ask
 // for an opinion
 // maybe not enough divison? Some of the spaces  feel to open
