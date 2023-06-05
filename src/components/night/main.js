@@ -16,8 +16,10 @@ const verticalBreak = () => <VerticalBreak />;
 const moon = () => <Moon />;
 const mountains = () => <Mountains />;
 
-// think of a clean way to implement this
-// right you want no white space
+// scroll part needs to be centered
+// Remove white space
+// Allow for back and forth transitions
+// add a transition to the products to delay it
 
 // you need 100vh
 // can you prevent overflow so as to not see it
@@ -27,7 +29,12 @@ const mountains = () => <Mountains />;
 // or make it a large space
 
 // i can change single styles
+// the dark part has to cover the entire screen 
 // but you can also apply a mass style
+
+// you should probably put both the moon and mountain together
+// with the stars
+// is everything loading at the same time?
 
 export default function Main() {
     const [hidden, setHidden] = useState(true);
@@ -36,12 +43,10 @@ export default function Main() {
       const bgChangeOnScroll = () => {
           if (elementLoc.top - headStart <= window.scrollY) {
               bgChanger.style.backgroundPosition = 'top';
-              // I think you should add a timeout
-              // let the line draw, then set all visbilities
-
               setHidden(false);
           } else {
               bgChanger.style.backgroundPosition = 'bottom';
+              setHidden(true);
           }
       }
 
@@ -53,21 +58,22 @@ export default function Main() {
 
     return (
       <>
-        <header id='hook-container' className={mainStyles.hookContainer}>
-            <div className={mainStyles.verticalContainer}>
-                <VerticalBreak className={clsx({
-                  [mainStyles.verticalBreak] : true,
-                  [mainStyles.animateBreak] : hidden})} />
-            </div>
-            <h1 className={clsx({
-              [mainStyles.hook] : true,
-              [mainStyles.hookHidden] : hidden})}>
-                Because boring ideas<br></br>make boring&nbsp;<em>products</em>
-            </h1>
-        </header>
-        <div className={clsx({
-              [mainStyles.art] : true,
-              [mainStyles.artHidden] : hidden})}>
+        <div>
+          <div className={mainStyles.verticalContainer}>
+              <VerticalBreak className={clsx({
+                [mainStyles.verticalBreak] : true,
+                [mainStyles.animateBreak] : !hidden})} />
+          </div>
+          <header id='hook-container' className={mainStyles.hookContainer}>
+              <h1 className={clsx({
+                [mainStyles.hook] : true,
+                [mainStyles.hookHidden] : hidden})}>
+                  Because boring ideas<br></br>make boring&nbsp;<em>products</em>
+              </h1>
+          </header>
+        </div>
+        <h2 className={mainStyles.expHeader}>Experience</h2>
+        <div className={mainStyles.art}>
             <Moon className={mainStyles.moon}/>
             <Mountains className={mainStyles.mountains} />
         </div>

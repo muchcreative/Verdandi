@@ -13,50 +13,48 @@ import { clsx } from 'clsx';
 // Change to translate
 
 export default function NavMenu() {
-    const [toggled, toggleMenu ] = useState(false);
-
+    const [open, openMenu ] = useState(false);
+    
     useEffect(() => {
-        const menu = document.querySelector('#hamburger')
-        menu.addEventListener('blur', () => {
-            toggleMenu(!toggled);});
-    }, [toggled])
+        const invisible = document.querySelector('#invisible-bg')
+        invisible.addEventListener('click', () => {
+            openMenu(false);
+        });
+    }, [open])
 
     return (
       <>
-        <div>
-          <button id='hamburger'
-            onClick={() => toggleMenu(!toggled)}
+        <button id='hamburger'
+            onClick={() => openMenu(!open)}
             className={clsx({
               [navStyles.hamburger] : true,
-              [navStyles.hamburgerOpen] : toggled})}>
+              [navStyles.hamburgerOpen] : open})}>
               <div className={navStyles.bar}></div>
-          </button>
-          <nav
-            id='menu'
-            className={clsx({
-              [navStyles.menu] : true,
-              [navStyles.menuOpen] : toggled,
-              [navStyles.menuClosed] : toggled === false})}>
-            <button
-                className={navStyles.close}
-                onClick={() => toggleMenu(!toggled)}>
-              <div className={navStyles.closeBar}></div>
-            </button>
-            <ul className={navStyles.linkList}>
-              <li><Link href='#beginning'>Beginning</Link></li>
-              <hr></hr>
-              <li><Link href='#experience'>Experience</Link></li>
-              <hr></hr>
-              <li><Link href='#skills'>Skills</Link></li>
-              <hr></hr>
-              <li><Link href='#more'>More</Link></li>
-              <hr></hr>
-              <li><Link href='#contact'>Contact</Link></li>
-              <hr></hr>
-            </ul>
-          </nav>
-          
+        </button>
+        <div 
+          id='invisible-bg' 
+          className={clsx({
+            [navStyles.invisibleBgClosed] : !open,
+            [navStyles.invisibleBgOpen] : open})}>
         </div>
+        <nav
+          className={clsx({
+            [navStyles.menu] : true,
+            [navStyles.menuOpen] : open,
+            [navStyles.menuClosed] : !open})}>
+                <ul className={navStyles.linkList}>
+                    <li><Link onClick={() => openMenu(false)} href='#beginning'>Beginning</Link></li>
+                    <hr></hr>
+                    <li><Link onClick={() => openMenu(false)} href='#experience'>Experience</Link></li>
+                    <hr></hr>
+                    <li><Link onClick={() => openMenu(false)} href='#skills'>Skills</Link></li>
+                    <hr></hr>
+                    <li><Link onClick={() => openMenu(false)} href='#more'>More</Link></li>
+                    <hr></hr>
+                    <li><Link onClick={() => openMenu(false)} href='#contact'>Contact</Link></li>
+                    <hr></hr>
+                </ul>
+            </nav>
       </>
     )
   }

@@ -44,8 +44,8 @@
     width: 40%; 
 
     background-color: #212121CC;
-    z-index: 2;
-    transition: 0.4s;
+    z-index: 50;
+    transition: .7s;
 }
 
 .menuOpen {
@@ -58,27 +58,20 @@
     left: 120%;
 }
 
-/* Menu Close Icon
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.invisibleBgClosed {
+    visibility: hidden;
+}
 
-.close {
+.invisibleBgOpen {
     position: fixed;
     top: 0%;
-    left: 120%;
-    height: 50px;
-    width: 35px;
-    z-index: 2;
-}
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    z-index: 49;
 
-.closeBars {
-    color: var(--day-bg-color);
-    rotate: 30%;
-}
-
-.close::after {
-    content: '';
-    color: var(--day-bg-color);
-    
+    visibility: visible;
+    opacity: 0;
 }
 
 

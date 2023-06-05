@@ -51,7 +51,7 @@ export default function Night() {
         <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Scroll />
         </section>
-        <div className={lora.className}>
+        <div className={lora.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <NavMenu />
         </div>
         <main className={ebGaramond.className}>

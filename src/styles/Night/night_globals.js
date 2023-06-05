@@ -8,11 +8,16 @@ export default function nightGlobals() {
             body {
                 color: var(--day-bg-color);
                 background-color: var(--night-bg-color);
+                scroll-behavior: smooth;
                 overflow-x: hidden;
                 overflow-y: scroll;
             }
 
             @media (prefers-reduced-motion) {
+                html
+                body {
+                    scroll-behavior: auto;
+                }
             }
 
             h1 {
