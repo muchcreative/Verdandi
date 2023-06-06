@@ -15,7 +15,7 @@ export default function Experience() {
         <div className={experienceStyles.flow}>
             <div className={experienceStyles.title}>
                 <h2>Flow DB</h2>
-                <h3>Full Stack Developer</h3>
+                <h3>Lead Developer</h3>
             </div>
             <div className={experienceStyles.desc}>
                 <p>
@@ -46,7 +46,7 @@ export default function Experience() {
         <div className={experienceStyles.dt}>
             <div className={experienceStyles.title}>
                 <h2>Derivative Trader</h2>
-                <h3>Data Scientist</h3>
+                <h3>Lead Data Scientist</h3>
             </div>
             <div className={experienceStyles.desc}>
                 <p>

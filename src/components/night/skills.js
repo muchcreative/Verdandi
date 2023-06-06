@@ -83,7 +83,7 @@ export default function Skills() {
                 <h4 className={clsx({
                   [skillsStyles.libTitle] : true,
                   [skillsStyles.showSkills] : show})}>Crates</h4>
-                <p className={showSkills}>Diseal</p>
+                <p className={showSkills}>Diesel</p>
                 <p className={showSkills}>Tokio</p>
                 <p className={showSkills}>Crossbeam</p>
             </div>

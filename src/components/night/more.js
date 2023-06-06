@@ -95,10 +95,10 @@ export default function More() {
               [moreStyles.desc] : true,
               [moreStyles.descShow] : (desc.curr === 2),
               [moreStyles.descHide] : (desc.prev === 2)})}>
-              Started back-end development with a university project, leading a team 
+              `Started back-end development with a university project, leading a team 
               to develop a robot navigation algorithm in C++ to a 90% score. Currently 
               developing a SQL database interaction with Rust using Diseal for Flow DB. 
-              1 year of experience in back-end development.
+              1 year of experience in back-end development.`
             </p>
             <p id='rl-desc' className={clsx({
               [moreStyles.desc] : true,
