@@ -2,13 +2,13 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .scrollText {
     position: absolute;
-    top: 5%;
+    top: 8%;
     right: 20%;
     color: var(--night-bg-color);
 
     opacity: 1;
-    font-size: 1em;
-    animation: fade-in 0.5s ease-in forwards;
+    font-size: 0.6em;
+    animation: fade-in 0.7s ease-in forwards;
 }
 
 @keyframes fade-in {
@@ -24,7 +24,8 @@
 }
 
 .scrollText p {
-    font-size: 2.1em;
+    font-size: 4em;
+    text-align: center;
 }
 
 .scrollLineContainer {

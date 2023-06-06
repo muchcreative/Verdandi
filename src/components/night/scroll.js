@@ -8,6 +8,9 @@ import ScrollDraw from 'src/scripts/night/scroll_draw.js';
 import ScrollLine from 'public/night/scroll_line.svg';
 const scrollLine = () => <ScrollLine />;
 
+// Scroll line is loaded as a full line first
+// how can we prevent this?
+
 export default function Scroll() {
   return (
     <>
