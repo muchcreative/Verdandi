@@ -23,8 +23,13 @@ const lora = Lora({
               weight: ['400']
             });
 
+// Should blow up scroll event listeners after you are done with them
+// Watch out for initial zoom, probably should be designing at 100%
+
 // timings on those animations can be fixed up
 // Should be starting responsive design this week
+
+// is there any way to make our svg smaller?
 
 // Feels like something is missing, would be good to ask
 // for an opinion

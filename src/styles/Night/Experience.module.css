@@ -1,4 +1,4 @@
-/* Header and SVG Art
+/* Experience and SVG Art
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expHeader {
     font-size: 4.5em;
@@ -73,4 +73,55 @@
     width: 80%;
     height: 10%;
     margin-left: 10%;
+}
+
+
+/* Expandable Descriptions
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.expander {
+    color: var(--night-special-color);
+    text-decoration: var(--night-special-color) 1px underline;
+    text-underline-offset: 2px;
+}
+
+.expandContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    font-size: 1.3em;
+}
+
+.show {
+    text-align: left;
+    margin: 5% 15% 3% 15%;
+}
+
+.hidden {
+    height: 0;
+    visibility: hidden;
+}
+
+.motif {
+    width: 40%;
+    height: 40%;
+}
+
+.animateMotif {
+    animation: rotation 1.5s infinite linear;
+}
+
+@media (prefers-reduced-motion) {
+    .animateMotif {
+        animation: none;
+    }
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }

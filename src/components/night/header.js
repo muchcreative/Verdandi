@@ -21,21 +21,22 @@ export default function Main() {
     const [hidden, setHidden] = useState(true);
 
     useEffect(() => {
-      const bgChangeOnScroll = () => {
-          if (bgChangeLoc.top - preStart <= window.scrollY) {
-              setTimeout(() => {
-                bgChange.style.backgroundPosition = 'top';
-                setHidden(false);
-              }, 200);
-          } else {
-              bgChange.style.backgroundPosition = 'bottom';
-              setHidden(true);
-          }
-      }
-
       const preStart = 50;
       const bgChange = document.querySelector('#bg-change');
       const bgChangeLoc = bgChange.getBoundingClientRect();
+
+      const bgChangeOnScroll = () => {
+        if (bgChangeLoc.top - preStart <= window.scrollY) {
+            setTimeout(() => {
+              bgChange.style.backgroundPosition = 'top';
+              setHidden(false);
+            }, 200);
+        } else {
+            bgChange.style.backgroundPosition = 'bottom';
+            setHidden(true);
+        }
+      }
+      
       document.addEventListener("scroll", bgChangeOnScroll);
     }, [])
 

@@ -10,13 +10,13 @@ export default function ScrollDraw() {
                     const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
                       / (5800 - document.documentElement.clientHeight);
 
-                    console.log(
-                      "Scroll Percent", scrollPercent,
-                      "\nCurrent Scroll", window.scrollY,
-                      "\nScroll Top", document.documentElement.scrollTop,
-                      "\nScroll Height", document.documentElement.scrollHeight,
-                      "\nClient Height", document.documentElement.clientHeight,              
-                    );
+                    // console.log(
+                    //   "Scroll Percent", scrollPercent,
+                    //   "\nCurrent Scroll", window.scrollY,
+                    //   "\nScroll Top", document.documentElement.scrollTop,
+                    //   "\nScroll Height", document.documentElement.scrollHeight,
+                    //   "\nClient Height", document.documentElement.clientHeight,              
+                    // );
 
                     const draw = length * scrollPercent;
                     svgElement.style.strokeDashoffset = length - draw;

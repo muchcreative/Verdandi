@@ -17,7 +17,7 @@
     word-spacing: 3px;
     padding-left: 3.4em; /* Adds text indent for second line*/
     text-indent: -3.4em;
-    transition: opacity 0.1s linear 1.2s;
+    transition: opacity 0.3s linear 1.2s;
 }
 
 .hookHidden {

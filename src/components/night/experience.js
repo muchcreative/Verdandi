@@ -1,17 +1,42 @@
+// Next.js
+import { useState, useEffect } from 'react';
+
 // CSS
 import expStyles from 'src/styles/night/Experience.module.css';
 
 //SVGs
 import Moon from 'public/night/moon.svg'
 import Mountains from 'public/night/mountains.svg'
+import ExpMotif from 'public/night/exp_motif.svg'
+
+// External Libs
+import { clsx } from 'clsx';
 
 const moon = () => <Moon />;
 const mountains = () => <Mountains />;
+const expMotif = () => <ExpMotif />;
 
 // Can the hr breaks be a little thinner?
-// consider running experience through the mountain and overlaying it?
+// can we add better alignments between divs
+// Care because it animates them all
 
 export default function Experience() {
+    const [selection, setSelection] = useState(null)
+
+    useEffect(() => {
+        const scrollLag = 50;
+        const secondHr = document.querySelector('#second-hr');
+        const secondHrLoc = secondHr.getBoundingClientRect();
+
+        const initialExpand = () => {
+            if ((secondHrLoc.top + scrollLag <= window.scrollY) && (selection === null)) {
+                setSelection(0);
+            }
+        }
+
+        document.addEventListener("scroll", initialExpand);
+    }, [selection])
+    
     return (
       <>
         <h2 className={expStyles.expHeader}>Experience</h2>
@@ -19,51 +44,101 @@ export default function Experience() {
             <Moon className={expStyles.moon}/>
             <Mountains className={expStyles.mountains} />
         </div>
-        <div className={expStyles.flow}>
-            <div className={expStyles.title}>
-                <h2>Flow DB</h2>
-                <h3>Lead Developer</h3>
+        <div>
+            <div className={expStyles.flow}>
+                <div className={expStyles.title}>
+                    <h2>Flow DB</h2>
+                    <h3>Developer</h3>
+                </div>
+                <div className={expStyles.desc}>
+                    <p>
+                      Flow is a cloud database for small to medium-sized human clinical trials. Flow aims to innovate from 
+                      traditional EDCs (Electronic Data Capture Systems) through an aggressive subscription-based pricing 
+                      structure and a modern approach to the user-client experience design philosophy.&nbsp;&nbsp;
+                      <button className={expStyles.expander} onClick={() => {setSelection(0)}}>How do we accomplish this?</button>
+                    </p>
+                </div> 
             </div>
-            <div className={expStyles.desc}>
+            <div className={clsx({
+              [expStyles.expandContainer] : true,
+              [expStyles.hidden] : selection != 0,
+              [expStyles.show] : selection === 0})}>
+                <ExpMotif className={clsx({
+                  [expStyles.motif] : true,
+                  [expStyles.animateMotif] : selection === 0})}/>
                 <p>
-                  EDC system for human clinical trials. SQL database with a focus on speed and 
-                  cloud security built in Rust. Currently working on the company dashboard design 
-                  back-end web server. Expected to query the SQL database 2x-3x faster than EDC 
-                  competitors.
-                </p>
+                  Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
+                  compared to other leading competitors and benchmarks. An example of Rust&#39;s natural speed comparison 
+                  and GPU concurrency with other top software products is Polars with a 10x speed boost and SWC with a 20x 
+                  speed boost over their leading competitors. With a modern UI and a well-designed database, Flow will 
+                  completely change the way EDCs are used.
+                </p>                 
             </div>
         </div>
         <hr className={expStyles.horizontalBreak}></hr>
-        <div className={expStyles.pi}>
-            <div className={expStyles.title}>
-                <h2>Portable Intelligence</h2>
-                <h3>Lead Data Analyst</h3>
+        <div>
+            <div className={expStyles.pi}>
+                <div className={expStyles.title}>
+                    <h2>Portable Intelligence</h2>
+                    <h3>Lead Data Analyst</h3>
+                </div>
+                <div className={expStyles.desc}>
+                    <p>
+                      Wanting to utilize machine learning to help stand out amongst competitors, I was brought in to consult 
+                      on machine learning paths and complete early product data analysis. During my time there I was provided 
+                      with a team of developers to consult with and speak on starting machine learning and data analysis within 
+                      their company. The goal was that in 3 months we would have a product to showcase for Chicago&#39;s 
+                      ProMat 2023.&nbsp;&nbsp;
+                      <button className={expStyles.expander} onClick={() => {setSelection(1)}}>Here was our solution.</button>
+                    </p>
+                </div>
             </div>
-            <div className={expStyles.desc}>
+            <div className={clsx({
+              [expStyles.expandContainer] : true,
+              [expStyles.hidden] : selection != 1,
+              [expStyles.show] : selection === 1})}>
                 <p>
-                  Early product data analysis on Kumi Canada&#39;s forklift drivers and task management 
-                  for warehousing. Created a full data processing pipeline and client facing analysis 
-                  dashboard. Dashboard enables managers to make keys decisions on task and driver 
-                  productivity during quarterly reports. Recently, the dashboard was Portable 
-                  Intelligence&#39;s main attraction showcased at Chicago&#39;s ProMat 2023.
+                  Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, a tier-1 
+                  automotive supplier. Created a full data processing pipeline and client-facing analysis dashboard. The dashboard 
+                  enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
+                </p>
+                <ExpMotif className={clsx({
+                  [expStyles.motif] : true,
+                  [expStyles.animateMotif] : selection === 1})}/>
+            </div>
+        </div>
+        <hr id='second-hr' className={expStyles.horizontalBreak}></hr>
+        <div>
+            <div className={expStyles.dt}>
+                <div className={expStyles.title}>
+                    <h2>Derivative Trader</h2>
+                    <h3>Lead Data Scientist</h3>
+                </div>
+                <div className={expStyles.desc}>
+                    <p>
+                      Lead a team of 3 data scientists for a derivative market trader. Created a NoSQL database set up for over 15mm 
+                      data points on a Google Cloud Bucket server. Utilized Neptune model tracking and tested over 20 different machine 
+                      learning and statistical algorithms.&nbsp;&nbsp;
+                      <button className={expStyles.expander} onClick={() => {setSelection(2)}}>Results.</button>
+                    </p>
+                </div>
+            </div>
+            <div className={clsx({
+              [expStyles.hidden] : selection != 2,
+              [expStyles.show] : selection === 2})}>
+                <ExpMotif className={clsx({
+                  [expStyles.motif] : true,
+                  [expStyles.animateMotif] : selection === 2})}/>
+                <p>
+                  The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
+                  Competition winners. Data leakage and survivorship bias was cleared out during the post-processing of the 
+                  data and using time-series validation splits. The ending model had 0.8 AUC and was successful in clearing 
+                  in-house developed backtesting software. However, I was skeptical about overfitting during certain time 
+                  periods due to a lack of data among the SP500. This along with consistent unusually high-weight activations 
+                  on the first and last-time timestamps, lead to the project being scrapped.
                 </p>
             </div>
         </div>
-        <hr className={expStyles.horizontalBreak}></hr>
-        <div className={expStyles.dt}>
-            <div className={expStyles.title}>
-                <h2>Derivative Trader</h2>
-                <h3>Lead Data Scientist</h3>
-            </div>
-            <div className={expStyles.desc}>
-                <p>
-                  Lead a team of 3 data scientists for a derivative market trader. Setup 15mm data points 
-                  on a Google Cloud Bucket server using NoSQL. Utilized Neptune model tracking and tested 
-                  over 20 different machine learning and statistical algorithms. Large models included LGBM, 
-                  Convolutions, Autoencoders, and Attention ensembles.
-                </p>
-            </div>
-        </div>  
       </>
     )
 }

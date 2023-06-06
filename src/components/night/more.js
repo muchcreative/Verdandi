@@ -71,29 +71,36 @@ export default function More() {
               [moreStyles.desc] : true,
               [moreStyles.descShow] : (desc.curr === 0),
               [moreStyles.descHide] : (desc.prev === 0)})}>
-              Website built in Next.js and assets designed in Figma. Built and 
-              lead the design on the analytics dashboard for Portable Intelligence. 
-              Currently building the dashboard and later the website for Flow DB. 
-              Over 1 year of experience in front-end development.
+              This portfolio website was built in Next.js and all SVG assets were designed in Figma. 
+              Additionally, built two other websites for an Ontario-based materials handling company 
+              and the Renderlabs website. Regarding dashboards, built and lead the design of the 
+              data analytics dashboard for Portable Intelligence. Currently, designing the dashboard 
+              and later the website for Flow DB. Over 1 year of experience in front-end development.
             </p>
             <p id='data-desc' className={clsx({
               [moreStyles.desc] : true,
               [moreStyles.descShow] : (desc.curr === 1),
               [moreStyles.descHide] : (desc.prev === 1)})}>
-              Starting learning and competition in Kaggle competitions in university. 
-              Multiple data scientist certificates and courses taken. Lead multiple 
-              teams in machine learning related projects. Built front facing client 
-              dashboards at Portable Intelligence. Over 3-4 years of experience 
-              building models.
+              Multiple data scientist certificates and courses. Lead multiple teams in machine 
+              learning-related projects. Consulted for machine learning opportunities at Portable 
+              Intelligence and created a client-facing analytics dashboard with easy-to-understand 
+              graphics and data report summaries for users without a background in data. Notable 
+              ML models trained, condominium blueprint summary, and room selection with convolutions 
+              with data augmentation specific to the blueprints. Market derivative trader time-series 
+              model. Code and markup understanding NLP model. Top game models copied include 
+              Connect-4, Go, and Chess. Over 4-5 years of experience building ML and statistical models.
             </p>
             <p id='back-desc' className={clsx({
               [moreStyles.desc] : true,
               [moreStyles.descShow] : (desc.curr === 2),
               [moreStyles.descHide] : (desc.prev === 2)})}>
-              `Started back-end development with a university project, leading a team 
-              to develop a robot navigation algorithm in C++ to a 90% score. Currently 
-              developing a SQL database interaction with Rust using Diseal for Flow DB. 
-              1 year of experience in back-end development.`
+              Started back-end development with a university project, leading a team 
+              to develop a robot navigation algorithm in C++ to a 90% score. Developed 
+              backtesting software for market derivatives and the aggregation/post-processing 
+              data pipeline to store market data over the Cloud. Currently developing 
+              a SQL database ORM system with Rust using Diesel. Designing for multi-threaded 
+              concurrency for page navigation and API requests. Over 1 year of experience in 
+              back-end development.
             </p>
         </div>
         <div className={moreStyles.practicals}>
@@ -102,10 +109,14 @@ export default function More() {
                 <li>Git</li>
                 <li>Hugging Face</li>
                 <li>Neptune</li>
+                <li>GPU Cloud Optimization</li>
                 <li>Figma</li>
+                
                 <li>Solidworks</li>
-                <li>Azure App Deployment</li>
+                <li>Bluebeam</li>
                 <li>Wix</li>
+                <li>Excel</li>
+                <li>Azure Deployment</li>
             </ol>
         </div>
         <div className={moreStyles.goals}>
