@@ -1,0 +1,57 @@
+/* Hook
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.bgChange {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    height: 140vh;
+    background-image: linear-gradient(to bottom, var(--night-bg-color) 50%, var(--day-bg-color) 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.2s ease-in 0.8s;
+}
+
+.hook {
+    margin: 14% 0 20% 10%;
+    line-height: 1.7em;
+    word-spacing: 3px;
+    padding-left: 3.4em; /* Adds text indent for second line*/
+    text-indent: -3.4em;
+    transition: opacity 0.1s linear 1.2s;
+}
+
+.hookHidden {
+    opacity: 0;
+}
+
+/* Vertical Break
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.verticalContainer {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+
+.verticalBreak {
+    height: 140vh;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+.verticalBreak > path {
+    stroke: var(--night-bg-color);
+}
+
+.animateBreak {
+    animation: draw 1s ease-in forwards;
+}
+
+@keyframes draw {
+    75% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

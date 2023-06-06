@@ -8,7 +8,7 @@ import NightGlobals from 'src/styles/night/night_globals.js';
 // Page Components
 import Scroll from 'src/components/night/scroll.js';
 import NavMenu from 'src/components/night/nav_menu.js';
-import Main from 'src/components/night/main.js';
+import Header from 'src/components/night/header.js';
 import Experience from 'src/components/night/experience.js';
 import Skills from 'src/components/night/skills.js';
 import More from 'src/components/night/more.js';
@@ -54,12 +54,12 @@ export default function Night() {
         <div className={lora.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <NavMenu />
         </div>
-        <main className={ebGaramond.className}>
-            <Main />
-        </main>
-        <section id='experience' className={ebGaramond.className}>
+        <header className={ebGaramond.className}>
+            <Header />
+        </header>
+        <main id='experience' className={ebGaramond.className}>
             <Experience />
-        </section>
+        </main>
         <section id='skills' className={ebGaramond.className}>
             <Skills />
         </section>

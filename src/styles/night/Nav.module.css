@@ -8,6 +8,7 @@
     height: 50px;
     width: 35px;
     transition: 0.4s;
+    z-index: 100;
 }
 
 .hamburger .bar, .hamburger::after, .hamburger::before {

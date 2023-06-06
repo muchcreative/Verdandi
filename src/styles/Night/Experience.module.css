@@ -1,47 +1,76 @@
-/* Experience Section
+/* Header and SVG Art
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.expHeader {
+    font-size: 4.5em;
+    margin: 0 0 -9% 15%; 
+    text-decoration: underline 2px var(--night-special-color);
+    text-underline-offset: 2px;
+    z-index: 1;
+}
+
+.art {
+    display: flex;
+    flex-direction: column;
+}
+
+.moon {
+    width: 13%;
+    height: 13%;
+    margin-right: 10%;
+    align-self: flex-end;
+    z-index: 1;
+}
+
+.mountains {
+    align-self: center;
+    z-index: 1;
+}
+
+
+/* Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .flow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5% 15% 3% 10%;
-  gap: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 15% 3% 10%;
+    gap: 10%;
 }
 
 .title {
-  text-align: center;
-  width: 30%;
+    text-align: center;
+    width: 30%;
 }
 
 .desc {
-  font-size: 1.3em;
-  text-align: center;
-  width: 70%;
+    font-size: 1.3em;
+    text-align: center;
+    width: 70%;
 }
 
 .pi {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  margin: 3% 10% 3% 10%;
-  gap: 4%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 10% 3% 10%;
+    gap: 4%;
 }
 
 .pi > .title {
-  width: 40%;
+    width: 40%;
 }
 
 .dt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3% 10% 10% 10%;
-  gap: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 10% 10% 10%;
+    gap: 5%;
 }
 
 .horizontalBreak {
-  width: 80%;
-  height: 10%;
-  margin-left: 10%;
+    width: 80%;
+    height: 10%;
+    margin-left: 10%;
 }

@@ -1,23 +1,30 @@
 // CSS
-import experienceStyles from 'src/styles/night/Experience.module.css';
+import expStyles from 'src/styles/night/Experience.module.css';
 
 //SVGs
-import HorizontalBreak from 'public/night/horizontal_break.svg';
-const horizontalBreak = () => <HorizontalBreak />;
+import Moon from 'public/night/moon.svg'
+import Mountains from 'public/night/mountains.svg'
 
-// If you don't use the Horizontal Breaks
-// You should use <hr> elements
-// adjust margining
+const moon = () => <Moon />;
+const mountains = () => <Mountains />;
+
+// Can the hr breaks be a little thinner?
+// consider running experience through the mountain and overlaying it?
 
 export default function Experience() {
     return (
       <>
-        <div className={experienceStyles.flow}>
-            <div className={experienceStyles.title}>
+        <h2 className={expStyles.expHeader}>Experience</h2>
+        <div className={expStyles.art}>
+            <Moon className={expStyles.moon}/>
+            <Mountains className={expStyles.mountains} />
+        </div>
+        <div className={expStyles.flow}>
+            <div className={expStyles.title}>
                 <h2>Flow DB</h2>
                 <h3>Lead Developer</h3>
             </div>
-            <div className={experienceStyles.desc}>
+            <div className={expStyles.desc}>
                 <p>
                   EDC system for human clinical trials. SQL database with a focus on speed and 
                   cloud security built in Rust. Currently working on the company dashboard design 
@@ -26,13 +33,13 @@ export default function Experience() {
                 </p>
             </div>
         </div>
-        <HorizontalBreak className={experienceStyles.horizontalBreak} />
-        <div className={experienceStyles.pi}>
-            <div className={experienceStyles.title}>
+        <hr className={expStyles.horizontalBreak}></hr>
+        <div className={expStyles.pi}>
+            <div className={expStyles.title}>
                 <h2>Portable Intelligence</h2>
                 <h3>Lead Data Analyst</h3>
             </div>
-            <div className={experienceStyles.desc}>
+            <div className={expStyles.desc}>
                 <p>
                   Early product data analysis on Kumi Canada&#39;s forklift drivers and task management 
                   for warehousing. Created a full data processing pipeline and client facing analysis 
@@ -42,13 +49,13 @@ export default function Experience() {
                 </p>
             </div>
         </div>
-        <HorizontalBreak className={experienceStyles.horizontalBreak} />
-        <div className={experienceStyles.dt}>
-            <div className={experienceStyles.title}>
+        <hr className={expStyles.horizontalBreak}></hr>
+        <div className={expStyles.dt}>
+            <div className={expStyles.title}>
                 <h2>Derivative Trader</h2>
                 <h3>Lead Data Scientist</h3>
             </div>
-            <div className={experienceStyles.desc}>
+            <div className={expStyles.desc}>
                 <p>
                   Lead a team of 3 data scientists for a derivative market trader. Setup 15mm data points 
                   on a Google Cloud Bucket server using NoSQL. Utilized Neptune model tracking and tested 

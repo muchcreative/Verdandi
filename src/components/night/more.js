@@ -40,7 +40,6 @@ export default function More() {
         setTimeout(() => {
           descDivider.animate(draw, drawInOptions);
         }, 1200);
-
     }, [desc])
 
     // apply a useeffect and provide the close animation
@@ -65,10 +64,6 @@ export default function More() {
               [moreStyles.button] : true,
               [moreStyles.activeButton] : (desc.curr === 2)})}
             onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
-            <button className={clsx({
-              [moreStyles.button] : true,
-              [moreStyles.activeButton] : (desc.curr === 3)})}
-            onClick={() => setDesc({curr: 3, prev: desc.curr})}>RenderLabs</button>
         </div>
         <HorizontalBreak id='desc-divider' className={moreStyles.horizontalBreak1} />
         <div className={moreStyles.descContainer}>
@@ -100,12 +95,6 @@ export default function More() {
               developing a SQL database interaction with Rust using Diseal for Flow DB. 
               1 year of experience in back-end development.`
             </p>
-            <p id='rl-desc' className={clsx({
-              [moreStyles.desc] : true,
-              [moreStyles.descShow] : (desc.curr === 3),
-              [moreStyles.descHide] : (desc.prev === 3)})}>
-              Blurb
-            </p>
         </div>
         <div className={moreStyles.practicals}>
             <h5>Other Practicals</h5>
@@ -120,16 +109,22 @@ export default function More() {
             </ol>
         </div>
         <div className={moreStyles.goals}>
-            <h5>This Year</h5>
+            <h5>Focus</h5>
             <p className={moreStyles.goalDesc}>
-              Focus on back-end development especially in Rust proficiency. 
-              Get AWS certified in Application Architecture. Network with 
-              coders through events. Currently help out coders on the weekend 
-              through meetups.com and help run the discord to attend coding 
-              events in Toronto.
+                My pen name is Iris, both the flower and the eye. I am 25 years old and looking to create 
+                something cool. I aim to be top 100 world-ranked in Kaggle.<br></br>
+                However, this year I am currently:
             </p>
+            <ol>
+              <li>Focusing on back-end development, especially in Rust proficiency in my free time.</li>
+              <li>Getting AWS certified in Application Architecture.</li>
+              <li>
+                  Networking with more coders through the event and helping out beginner to intermediate-level coders every Saturday in Toronto through TSE (Toronto Stack Exchange). 
+                  I also help organize members and raise awareness for large coding events in Toronto.
+              </li>
+            </ol>
         </div>
-        <HorizontalBreak className={moreStyles.horizontalBreak2} />
+        <hr className={moreStyles.horizontalBreak2}></hr>
       </>
     )
 }

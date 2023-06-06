@@ -10,6 +10,7 @@ const scrollLine = () => <ScrollLine />;
 
 // Scroll line is loaded as a full line first
 // how can we prevent this?
+// Centralize scroll section at end of section
 
 export default function Scroll() {
   return (
