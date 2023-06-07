@@ -3,8 +3,8 @@
 .expHeader {
     font-size: 4.5em;
     margin: 0 0 -9% 15%; 
-    text-decoration: underline 2px var(--night-special-color);
-    text-underline-offset: 2px;
+    text-decoration: underline 3px var(--night-special-color);
+    text-underline-offset: 3px;
     z-index: 1;
 }
 
@@ -105,14 +105,13 @@
 .motif {
     width: 40%;
     height: 40%;
-}
-
-.animateMotif {
-    animation: rotation 1.5s infinite linear;
+    animation: rotation 4s infinite linear;
 }
 
 @media (prefers-reduced-motion) {
     .animateMotif {
+        width: 40%;
+        height: 40%;
         animation: none;
     }
 }

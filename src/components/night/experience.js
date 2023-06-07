@@ -16,9 +16,18 @@ const moon = () => <Moon />;
 const mountains = () => <Mountains />;
 const expMotif = () => <ExpMotif />;
 
+
+// SVG Art or something has to be animated
+// You have to follow up with that introduction
+
 // Can the hr breaks be a little thinner?
 // can we add better alignments between divs
+// Still feels very congested, font-sizing or what not
+// Can use more spacing?
 // Care because it animates them all
+// ensure that flow's button is on the same line, prefer no line splitting
+
+// First things first lets set only one as the changing slide
 
 export default function Experience() {
     const [selection, setSelection] = useState(null)
@@ -63,9 +72,7 @@ export default function Experience() {
               [expStyles.expandContainer] : true,
               [expStyles.hidden] : selection != 0,
               [expStyles.show] : selection === 0})}>
-                <ExpMotif className={clsx({
-                  [expStyles.motif] : true,
-                  [expStyles.animateMotif] : selection === 0})}/>
+                <ExpMotif className={expStyles.motif}/>
                 <p>
                   Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
                   compared to other leading competitors and benchmarks. An example of Rust&#39;s natural speed comparison 
@@ -102,9 +109,7 @@ export default function Experience() {
                   automotive supplier. Created a full data processing pipeline and client-facing analysis dashboard. The dashboard 
                   enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
                 </p>
-                <ExpMotif className={clsx({
-                  [expStyles.motif] : true,
-                  [expStyles.animateMotif] : selection === 1})}/>
+                <ExpMotif className={expStyles.motif}/>
             </div>
         </div>
         <hr id='second-hr' className={expStyles.horizontalBreak}></hr>
@@ -126,9 +131,7 @@ export default function Experience() {
             <div className={clsx({
               [expStyles.hidden] : selection != 2,
               [expStyles.show] : selection === 2})}>
-                <ExpMotif className={clsx({
-                  [expStyles.motif] : true,
-                  [expStyles.animateMotif] : selection === 2})}/>
+                <ExpMotif className={expStyles.motif}/>
                 <p>
                   The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
                   Competition winners. Data leakage and survivorship bias was cleared out during the post-processing of the 

@@ -124,7 +124,7 @@
     margin: 25% 15% 10% 15%;
 }
 
-.list {
+.pracicalsList {
     margin: 3% 0 0 10%;
     font-size: 1.6em;
     list-style-type: circle;
@@ -132,11 +132,21 @@
     column-gap: 40%;
 }
 
-.goals {
+.focus {
     margin: 5% 15% 7% 15%;
 }
 
-.goalDesc {
-    margin: 3% 0 0 10%;
+.about {
+    margin: 3% 5% 0 8%;
     font-size: 1.6em;
+}
+
+.goals {
+    margin: 3% 5% 0 14%;
+    list-style-type: circle;
+    font-size: 1.6em;
+}
+
+.goals li {
+    line-height: 40px;
 }

@@ -16,6 +16,8 @@ const verticalBreak = () => <VerticalBreak />;
 // Add a transition to the products to delay it from showing up so fast?
 // Dark part must cover full screen
 // Moon, mountain, and stars together. Each star to have own grouping
+// You can try a bolder SVG. I want to make it a little more dramatic
+// Think about it
 
 export default function Main() {
     const [hidden, setHidden] = useState(true);
