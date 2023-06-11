@@ -11,6 +11,7 @@ const scrollLine = () => <ScrollLine />;
 // Scroll line is loaded as a full line first
 // how can we prevent this?
 // Centralize scroll section at end of section
+// Scroll motion or draw path has to be slightly more captivating to pause the user
 
 export default function Scroll() {
   return (

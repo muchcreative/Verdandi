@@ -12,49 +12,57 @@ import { clsx } from 'clsx';
 
 const verticalBreak = () => <VerticalBreak />;
 
-// Allow for back and forth transitions
-// Add a transition to the products to delay it from showing up so fast?
-// Dark part must cover full screen
-// Moon, mountain, and stars together. Each star to have own grouping
-// You can try a bolder SVG. I want to make it a little more dramatic
-// Think about it
+// jumping to the scroll location
+// what happens if you set the users scroll location?
+// More dramatic effect
+// Play with SVG line break size
+// Add emphasis on hook
 
 export default function Main() {
-    const [hidden, setHidden] = useState(true);
+    const [visible, setVisibility] = useState(false);
 
     useEffect(() => {
-      const preStart = 50;
+      const whiteSpace = document.querySelector('#float');
       const bgChange = document.querySelector('#bg-change');
-      const bgChangeLoc = bgChange.getBoundingClientRect();
 
-      const bgChangeOnScroll = () => {
-        if (bgChangeLoc.top - preStart <= window.scrollY) {
-            setTimeout(() => {
-              bgChange.style.backgroundPosition = 'top';
-              setHidden(false);
-            }, 200);
+      const preStart = 50;
+      const whiteSpaceLoc = whiteSpace.getBoundingClientRect();
+
+      const bgTransition = () => {
+        if (whiteSpaceLoc.top - preStart <= window.scrollY) {
+            setVisibility(true);
+            bgChange.style.backgroundPosition = 'top';            
         } else {
+            setVisibility(false);
             bgChange.style.backgroundPosition = 'bottom';
-            setHidden(true);
         }
       }
-      
-      document.addEventListener("scroll", bgChangeOnScroll);
+
+      document.addEventListener('scroll', bgTransition);
     }, [])
 
     return (
       <>
-        <div id='bg-change' className={headerStyles.bgChange}>
-            <h1 className={clsx({
-              [headerStyles.hook] : true,
-              [headerStyles.hookHidden] : hidden})}>
-                Because boring ideas<br></br>make boring&nbsp;<em>products</em>
-            </h1>
-            <div className={headerStyles.verticalContainer}>
-                <VerticalBreak className={clsx({
-                  [headerStyles.verticalBreak] : true,
-                  [headerStyles.animateBreak] : !hidden})} />
+        <div id='float' className={clsx({
+          [headerStyles.visibleFloat] : visible,
+          [headerStyles.hideFloat] : !visible})}>
+            <div id='bg-change' className={headerStyles.bgChange}>
+                <div className={headerStyles.verticalContainer}>
+                    <VerticalBreak className={clsx({
+                      [headerStyles.verticalBreak] : true,
+                      [headerStyles.animateBreak] : visible})} />
+                </div>
             </div>
+        </div>
+        <div className={clsx({
+          [headerStyles.hookContainer] : true,
+          [headerStyles.showContainer] : visible, 
+          [headerStyles.hideContainer] :!visible})}>
+          <h1 id='hook' className={clsx({
+            [headerStyles.hook] : true,
+            [headerStyles.hideHook] : !visible})}>
+              Because boring ideas<br></br>make boring&nbsp;<em>products</em>
+          </h1>
         </div>
       </>
     )   

@@ -23,25 +23,28 @@ const lora = Lora({
               weight: ['400']
             });
 
-// Should blow up scroll event listeners after you are done with them
-// Watch out for initial zoom, probably should be designing at 100%
+// Header Section
+// Fixed div + fixed scroll position at end so they also end up
+// at location
+// Try additional spacing between the experiences
 
-// timings on those animations can be fixed up
-// Should be starting responsive design this week
+// Experience Section
+// - Fade out on click and compress
+// - And appropriate setting for initial opening
 
-// is there any way to make our svg smaller?
+// More Section
+// - Larger description div to expand
+// - SVG line animation if possible, can use workaround temprorily if needed
 
-// Feels like something is missing, would be good to ask
-// for an opinion
-// maybe not enough divison? Some of the spaces  feel to open
-// font sizing can be more consistent
-// on a black background might be punished for it.
-// ok lets do the re-design of the main now
+// Contact Section
+// - Adjust form height
+// - Send message to email
 
-// right now feels like too much text
-// can you adjust spacing
-// use bullet points
-// fill space
+// Overall 
+// - Font sizing can be more consistent
+// - Make buttons look more clickable
+// - Consider better font mixups
+// - Clean up event listeners after you are done with them
 
 export default function Night() {
     return (
@@ -59,7 +62,7 @@ export default function Night() {
         <div className={lora.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <NavMenu />
         </div>
-        <header className={ebGaramond.className}>
+        <header className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Header />
         </header>
         <main id='experience' className={ebGaramond.className}>

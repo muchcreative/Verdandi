@@ -21,7 +21,7 @@ export default function Skills() {
         let options = {
           root: null,
           rootMargin: "0px",
-          threshold: 0.25,
+          threshold: 0.4,
         };
 
         const callback = (entries) => {

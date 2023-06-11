@@ -30,6 +30,18 @@
 
 .scrollLineContainer {
     margin-left: 5%;
+    opacity: 0;
+    animation: line-in 0.7s ease-in forwards;
+}
+
+@keyframes line-in {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
 
 .scrollLine {
