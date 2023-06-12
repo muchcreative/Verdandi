@@ -1,5 +1,5 @@
 // Next.js
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // CSS
 import moreStyles from 'src/styles/night/More.module.css';
@@ -14,33 +14,8 @@ import { clsx } from 'clsx';
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
 
-    useEffect(() => {
-        const descDivider = document.querySelector('#desc-divider');
-        
-        // ok I think i see what is happening
-        // the forwards forces it to 0 and so when the animation
-        // goes again it fails
-        
-        const draw = [
-          { strokeDashoffset : 0 },
-        ];
-
-        const drawOutOptions = {
-          duration: 1000,
-          direction: 'reverse',
-          iteratons: 1,
-        };
-        
-        const drawInOptions = {
-          duration: 1000,
-          fill: 'forwards',
-        };
-    
-        descDivider.animate(draw, drawOutOptions);
-        setTimeout(() => {
-          descDivider.animate(draw, drawInOptions);
-        }, 1200);
-    }, [desc])
+    // ok not even drawing right now
+    // can we nail it drawing the other way first?
 
     // apply a useeffect and provide the close animation
     // then apply the open animation for the line
@@ -65,7 +40,11 @@ export default function More() {
               [moreStyles.activeButton] : (desc.curr === 2)})}
             onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
         </div>
-        <HorizontalBreak id='desc-divider' className={moreStyles.horizontalBreak1} />
+
+        {/* Ok so on desc change, you need to run this animation */}
+        <HorizontalBreak className={clsx({
+          [moreStyles.horizontalBreak1]: true,
+          [moreStyles.animateHB] : desc.curr === 1 })} />
         <div className={moreStyles.descContainer}>
             <p id='front-desc' className={clsx({
               [moreStyles.desc] : true,

@@ -44,23 +44,33 @@
     height: 10%;
     margin-left: 15%;
     stroke-dasharray: 1000;
-    stroke-dashoffset: 1000; 
+    stroke-dashoffset: 0; 
 }
 
-@keyframes drawOut {
-    from {
-        stroke-dashoffset: -1000; 
+.animateHB {
+    animation: drawOutIn 3s ease-in 0.2s forwards;
+}
+
+@keyframes drawOutIn {
+    0% {
+        stroke-dashoffset: 0; 
     }
 
-    to {
+    40% {
+        stroke-dashoffset: -1000;
+    }
+
+    75% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
         stroke-dashoffset: 0;
     }
 }
 
 @keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
+    
 }
 
 .horizontalBreak2 {
