@@ -47,32 +47,6 @@
     stroke-dashoffset: 0; 
 }
 
-.animateHB {
-    animation: drawOutIn 3s ease-in 0.2s forwards;
-}
-
-@keyframes drawOutIn {
-    0% {
-        stroke-dashoffset: 0; 
-    }
-
-    40% {
-        stroke-dashoffset: -1000;
-    }
-
-    75% {
-        stroke-dashoffset: 1000;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes draw {
-    
-}
-
 .horizontalBreak2 {
     width: 75%;
     height: 10%;
@@ -96,11 +70,11 @@
 }
 
 .descShow {
-    animation: showDesc 0.6s ease 0.4s forwards;
+    animation: showDesc 0.5s ease 0.6s forwards !important;
 }
 
 .descHide {
-    animation: hideDesc 0.3s ease forwards;
+    animation: hideDesc 0.5s ease forwards;
 }
 
 @keyframes showDesc {

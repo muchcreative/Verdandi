@@ -9,6 +9,8 @@ import Form from 'src/components/night/form.js';
 import GitHubLogo from 'public/night/github_logo.svg';
 const githubLogo = () => <GitHubLogo />;
 
+// We are making sure the contact API form will be ready today
+
 export default function Contact() {
   return (
     <>

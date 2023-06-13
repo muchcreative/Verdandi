@@ -23,6 +23,11 @@ const lora = Lora({
               weight: ['400']
             });
 
+
+// SVG Changes
+// Clump moon and mountain svg with stars svg and <g> element
+// Put gap in motif to exaggerate rotation
+
 // Header Section
 // Fixed div + fixed scroll position at end so they also end up
 // at location

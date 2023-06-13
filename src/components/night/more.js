@@ -1,5 +1,5 @@
 // Next.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // CSS
 import moreStyles from 'src/styles/night/More.module.css';
@@ -14,37 +14,67 @@ import { clsx } from 'clsx';
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
 
-    // ok not even drawing right now
-    // can we nail it drawing the other way first?
+    useEffect(() => {
+      const buttons = [document.querySelector('#front-btn'),
+                       document.querySelector('#data-btn'),
+                       document.querySelector('#back-btn')]
+      const hb = document.querySelector('#hb');
+      
+      const drawOut = [
+        { strokeDashoffset : 0 },
+        { strokeDashoffset : -1000 },
+      ];
+      
+      const drawOutTiming = {        
+        duration: 500,
+        easing: 'ease-in',
+        fill: 'forwards',
+        iterations: 1
+      };
 
-    // apply a useeffect and provide the close animation
-    // then apply the open animation for the line
-    // also go for a query selector on the id to add class names
-    // dont think you can add classnames, they all get changed with
-    // css modules to avoid overlaps
+      const drawIn = [
+        { strokeDashoffset : 1000 },
+        { strokeDashoffset : 0 },
+      ];
+      
+      const drawInTiming = {        
+        duration: 500,
+        easing: 'ease-in',
+        delay: 600,
+        fill: 'forwards',
+        iterations: 1
+      };
+
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          hb.animate(drawOut, drawOutTiming);
+          hb.animate(drawIn, drawInTiming);
+        })
+      })
+    }, [])
 
     return (
       <>
         <h2 className={moreStyles.title}>Read More</h2>
         <div className={moreStyles.buttons}>
-            <button className={clsx({
+            <button id='front-btn' className={clsx({
               [moreStyles.button] : true,
               [moreStyles.activeButton] : (desc.curr === 0)})}
             onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-End</button>
-            <button className={clsx({
+            <button id='data-btn' className={clsx({
               [moreStyles.button] : true,
               [moreStyles.activeButton] : (desc.curr === 1)})}
             onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data Analytics</button>
-            <button className={clsx({
+            <button id='back-btn' className={clsx({
               [moreStyles.button] : true,
               [moreStyles.activeButton] : (desc.curr === 2)})}
             onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
         </div>
-
-        {/* Ok so on desc change, you need to run this animation */}
-        <HorizontalBreak className={clsx({
+        <HorizontalBreak id='hb' className={clsx({
           [moreStyles.horizontalBreak1]: true,
-          [moreStyles.animateHB] : desc.curr === 1 })} />
+          [moreStyles.animateHB0] : desc.curr === 0, 
+          [moreStyles.animateHB1] : desc.curr === 1, 
+          [moreStyles.animateHB2] : desc.curr === 2})} />
         <div className={moreStyles.descContainer}>
             <p id='front-desc' className={clsx({
               [moreStyles.desc] : true,

@@ -16,11 +16,34 @@ const moon = () => <Moon />;
 const mountains = () => <Mountains />;
 const expMotif = () => <ExpMotif />;
 
-// Clump moon and mountain svg with stars svg and <g> element
-// Slow down the animation timing
+// Has to feel like a slide
+// Remove initial selection pi for some reason?
+// spacing somewhat off
 
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
+    
+    useEffect(() => {
+      const dtDesc = document.querySelector('#dt');
+      
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
+      };
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              setSelected(0); 
+              observer.unobserve(dtDesc);
+          }
+        })
+      }
+
+      let observer = new IntersectionObserver(callback, options);
+      observer.observe(dtDesc);
+    }, [])
 
     return (
       <>
@@ -30,7 +53,7 @@ export default function Experience() {
             <Mountains className={expStyles.mountains} />
         </div>
         <div>
-            <div className={expStyles.flow}>
+            <div id='flow' className={expStyles.flow}>
                 <div className={expStyles.title}>
                     <h2>Flow DB</h2>
                     <h3>Developer</h3>
@@ -64,7 +87,7 @@ export default function Experience() {
           [expStyles.horizontalBreak] : true,
           [expStyles.expandBreak] : selected === 0 })}></hr>
         <div>
-            <div className={clsx({
+            <div id='pi' className={clsx({
               [expStyles.pi] : true,
               [expStyles.piSelected] : selected === 1,
               [expStyles.piDown] : selected === 0})}>
@@ -102,7 +125,7 @@ export default function Experience() {
           [expStyles.horizontalBreak] : true,
           [expStyles.expandBreak] : selected != 2})}></hr>
         <div>
-            <div className={clsx({
+            <div id='dt' className={clsx({
               [expStyles.dt] : true,              
               [expStyles.dtSelected] : selected === 2,
               [expStyles.dtDown] : selected != 2})}>
