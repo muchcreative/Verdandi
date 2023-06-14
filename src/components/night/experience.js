@@ -19,6 +19,9 @@ const expMotif = () => <ExpMotif />;
 // Has to feel like a slide
 // Remove initial selection pi for some reason?
 // spacing somewhat off
+// we have to fix the motif sizing
+// so flex grow is a thing
+// i think you should focus on some uniform descriptions
 
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
@@ -36,7 +39,7 @@ export default function Experience() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
               setSelected(0); 
-              observer.unobserve(dtDesc);
+              observer.unobserve(dtDesc);  // Close observer after done
           }
         })
       }
@@ -102,7 +105,7 @@ export default function Experience() {
                       with a team of developers to consult with and speak on starting machine learning and data analysis within 
                       their company. The goal was that in 3 months we would have a product to showcase for Chicago&#39;s 
                       ProMat 2023.&nbsp;&nbsp;
-                      <button id='button-1' className={expStyles.expander} onClick={() => setSelected(1)}>Here was our solution.</button>
+                      <button className={expStyles.expander} onClick={() => setSelected(1)}>Here was our solution.</button>
                     </p>
                 </div>
                 <div className={clsx({
@@ -138,7 +141,7 @@ export default function Experience() {
                       Lead a team of 3 data scientists for a derivative market trader. Created a NoSQL database set up for over 15mm 
                       data points on a Google Cloud Bucket server. Utilized Neptune model tracking and tested over 20 different machine 
                       learning and statistical algorithms.&nbsp;&nbsp;
-                      <button id='button-2' className={expStyles.expander} onClick={() => setSelected(2)}>These were our results.</button>
+                      <button className={expStyles.expander} onClick={() => setSelected(2)}>These were our results.</button>
                     </p>
                 </div>
                 <div className={clsx({

@@ -170,7 +170,7 @@
 }
 
 .selectedMotif {
-    animation: rotation 3s infinite linear;
+    animation: rotation 10s infinite linear;
 }
    
 @media (prefers-reduced-motion) {

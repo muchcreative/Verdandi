@@ -10,6 +10,9 @@ import { clsx } from 'clsx';
 // Form must send out a post request and email confirmation as well
 // rewrite onFocus or Active pseudo element styles for input borders
 // Look into autocomplete styles
+// Will have to connect to a database to pick up the API requests
+// check the api key number
+// set to an environment label
 
 export default function Form() {
     const [submitted, setSubmitted] = useState(false);
