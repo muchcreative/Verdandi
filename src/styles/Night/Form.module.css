@@ -2,7 +2,8 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .formGrid {
     display: grid;
-    grid: 12% 45% 400px / 
+    height: 450px;
+    grid: 0.15fr 0.6fr 0.25fr / 
           23% 23%;
     grid-template-areas: 
       "name email"
@@ -36,6 +37,11 @@
     margin-top: 5%;
 }
 
+.submitButton:hover {
+    color: var(--night-special-color);
+    transition: 0.3s;
+}
+
 .nameInput {
     width: 100%;
     height: 100%;
@@ -58,17 +64,21 @@
     height: 100%;
 }
 
-/* Miscellaneous
+/* Submit Message
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.submitButton:hover {
+.submitMessage {
+    position: relative;
+    margin-top: -2%;
+    left: 26%;
+    font-size: 1.2em;
     color: var(--night-special-color);
-    transition: 0.3s;
+    transition: opacity 0.7s ease-in;
 }
 
 .showSubmitMessage {
-    visibility: visible;
+    opacity: 1;
 }
 
 .hideSubmitMessage {
-    visibility: hidden;
+    opacity: 0;
 }

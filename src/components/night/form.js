@@ -1,5 +1,5 @@
 // Next.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // CSS
 import formStyles from 'src/styles/night/Form.module.css';
@@ -13,15 +13,20 @@ import { clsx } from 'clsx';
 // Will have to connect to a database to pick up the API requests
 // check the api key number
 // set to an environment label
+// i think the message is pushing the github and linkedin logos down
 
 export default function Form() {
     const [submitted, setSubmitted] = useState(false);
+
+    useEffect(() => {
+      setTimeout(() => {setSubmitted(false);}, 5000);
+    }, [submitted])
 
     return (
       <>
         <form
           id='contact-form'
-          action='/api/form'
+          action='/api/email'
           onSubmit={() => setSubmitted(true)}
           method='post'>
             <div className={formStyles.formGrid}>
@@ -62,6 +67,7 @@ export default function Form() {
             </div>
           </div>
           <div className={clsx({
+            [formStyles.submitMessage] : true,
             [formStyles.showSubmitMessage] : submitted,
             [formStyles.hideSubmitMessage] : !submitted})}>
               <p>Thank you for your message. I will get back to you as soon as I can.</p>

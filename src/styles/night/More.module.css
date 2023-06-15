@@ -70,11 +70,11 @@
 }
 
 .descShow {
-    animation: showDesc 0.5s ease 0.6s forwards !important;
+    animation: showDesc 0.8s ease 0.9s forwards !important;
 }
 
 .descHide {
-    animation: hideDesc 0.5s ease forwards;
+    animation: hideDesc 0.65s ease forwards;
 }
 
 @keyframes showDesc {

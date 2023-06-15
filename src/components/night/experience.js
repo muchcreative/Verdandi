@@ -16,13 +16,6 @@ const moon = () => <Moon />;
 const mountains = () => <Mountains />;
 const expMotif = () => <ExpMotif />;
 
-// Has to feel like a slide
-// Remove initial selection pi for some reason?
-// spacing somewhat off
-// we have to fix the motif sizing
-// so flex grow is a thing
-// i think you should focus on some uniform descriptions
-
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
     
@@ -62,7 +55,7 @@ export default function Experience() {
                     <h3>Developer</h3>
                 </div>
                 <div className={expStyles.desc}>
-                    <p className={expStyles.initialDesc}>
+                    <p>
                       Flow is a cloud database for small to medium-sized human clinical trials. Flow aims to innovate from 
                       traditional EDCs (Electronic Data Capture Systems) through an aggressive subscription-based pricing 
                       structure and a modern approach to the user-client experience design philosophy.&nbsp;&nbsp;
@@ -71,12 +64,13 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addonContainer] : true,
-                  [expStyles.openContainer] : selected === 0,
                   [expStyles.closeContainer] : selected != 0})}>
                     <ExpMotif className={clsx({
                       [expStyles.motif] : true,
                       [expStyles.selectedMotif] : selected === 0})}/>
-                    <p className={expStyles.addonDesc}>
+                    <p className={clsx({
+                      [expStyles.addonDesc]: true,
+                      [expStyles.selectedDesc] : selected === 0})}>
                       Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
                       compared to other leading competitors and benchmarks. An example of Rust&#39;s natural speed comparison 
                       and GPU concurrency with other top software products is Polars with a 10x speed boost and SWC with a 20x 
@@ -99,7 +93,7 @@ export default function Experience() {
                     <h3>Lead Data Analyst</h3>
                 </div>
                 <div className={expStyles.desc}>
-                    <p className={expStyles.initialDesc}>
+                    <p>
                       Wanting to utilize machine learning to help stand out amongst competitors, I was brought in to consult 
                       on machine learning paths and complete early product data analysis. During my time there I was provided 
                       with a team of developers to consult with and speak on starting machine learning and data analysis within 
@@ -110,34 +104,35 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addonContainer] : true,
-                  [expStyles.openContainer] : selected === 1,
                   [expStyles.closeContainer] : selected != 1})}>
-                    <ExpMotif className={clsx({
-                      [expStyles.motif] : true,
-                      [expStyles.selectedMotif] : selected === 1})}/>
-                    <p className={expStyles.addonDesc}>
+                    <p className={clsx({
+                      [expStyles.addonDesc]: true,
+                      [expStyles.selectedDesc] : selected === 1})}>
                       Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
                       a tier-1 automotive supplier. Created a full data processing pipeline and client-facing analysis 
                       dashboard. The dashboard enables managers to make key decisions on tasks and driver productivity 
                       during quarterly reports.
-                    </p>                 
+                    </p>             
+                    <ExpMotif className={clsx({
+                      [expStyles.motif] : true,
+                      [expStyles.selectedMotif] : selected === 1})}/>    
                 </div>
             </div>
         </div>
         <hr className={clsx({
           [expStyles.horizontalBreak] : true,
-          [expStyles.expandBreak] : selected != 2})}></hr>
+          [expStyles.expandBreak] : [0, 1].includes(selected)})}></hr>
         <div>
             <div id='dt' className={clsx({
               [expStyles.dt] : true,              
               [expStyles.dtSelected] : selected === 2,
-              [expStyles.dtDown] : selected != 2})}>
+              [expStyles.dtDown] : [0, 1].includes(selected)})}>
                 <div className={expStyles.title}>
                     <h2>Derivative Trader</h2>
                     <h3>Lead Data Scientist</h3>
                 </div>
                 <div className={expStyles.desc}>
-                    <p className={expStyles.initialDesc}>
+                    <p>
                       Lead a team of 3 data scientists for a derivative market trader. Created a NoSQL database set up for over 15mm 
                       data points on a Google Cloud Bucket server. Utilized Neptune model tracking and tested over 20 different machine 
                       learning and statistical algorithms.&nbsp;&nbsp;
@@ -146,12 +141,13 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addonContainer] : true,
-                  [expStyles.openContainer] : selected === 2,
-                  [expStyles.closeContainer] : selected != 2})}>
+                  [expStyles.closeContainer] : [0, 1].includes(selected)})}>
                     <ExpMotif className={clsx({
                       [expStyles.motif] : true,
                       [expStyles.selectedMotif] : selected === 2})}/>
-                    <p className={expStyles.addonDesc}>
+                    <p className={clsx({
+                      [expStyles.addonDesc]: true,
+                      [expStyles.selectedDesc] : selected === 2})}>
                       The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
                       Competition winners. Data leakage and survivorship bias was cleared out during the post-processing of the 
                       data and using time-series validation splits. The ending model had 0.8 AUC and was successful in clearing 

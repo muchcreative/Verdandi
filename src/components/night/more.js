@@ -26,8 +26,8 @@ export default function More() {
       ];
       
       const drawOutTiming = {        
-        duration: 500,
-        easing: 'ease-in',
+        duration: 700,
+        easing: 'ease',
         fill: 'forwards',
         iterations: 1
       };
@@ -38,9 +38,9 @@ export default function More() {
       ];
       
       const drawInTiming = {        
-        duration: 500,
-        easing: 'ease-in',
-        delay: 600,
+        duration: 700,
+        easing: 'ease',
+        delay: 900,
         fill: 'forwards',
         iterations: 1
       };
