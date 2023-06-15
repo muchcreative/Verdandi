@@ -23,33 +23,15 @@ const lora = Lora({
               weight: ['400']
             });
 
-
 // SVG Changes
 // Clump moon and mountain svg with stars svg and <g> element
-// Put gap in motif to exaggerate rotation
+// Scroll Line must end in center of screen how do you do this?
 
 // Header Section
-// Fixed div + fixed scroll position at end so they also end up
-// at location
-// Try additional spacing between the experiences
+// Needs to snap to bold letters
 
-// Experience Section
-// - Fade out on click and compress
-// - And appropriate setting for initial opening
-
-// More Section
-// - Larger description div to expand
-// - SVG line animation if possible, can use workaround temprorily if needed
-
-// Contact Section
-// - Adjust form height
-// - Send message to email
-
-// Overall 
-// - Font sizing can be more consistent
-// - Make buttons look more clickable
-// - Consider better font mixups
-// - Clean up event listeners after you are done with them
+// Experiences Section
+// Try better spacing requriements between the experiences
 
 export default function Night() {
     return (
@@ -85,22 +67,3 @@ export default function Night() {
       </>
     )
 }
-
-// Adding stagnation between the explanations 
-// Along with pictures will definetly help
-
-
-// Add more spacing. Experience section feels a little cramped
-// debate psudeo element vs full background change
-// Remove forced heights on sections let it be auto sized is
-// probably more accurate
-// Go for a different unique object instead
-// still deciding on fonts
-// the chagning background seems kinda lame, you might
-// need to tie in other changes with it
-
-// change moon to full svg..
-// change lines to be fuller for the horizontal breaks
-// Adjust PI title to fit in one line
-
-// Add stars to mountains and appropriate effects

@@ -44,16 +44,16 @@ export default function nightGlobals() {
 
             h5 {
                 color: var(--night-special-color);
-                font-size: 2.3em;
+                font-size: 2.0em;
                 font-weight: normal;
             }
 
             h6 {
                 font-color: inherit;
-                font-size: 3em;
+                font-size: 2.6em;
                 font-weight: normal;
                 line-height: 1.7em;
-                margin-left: 3em;
+                margin-left: 14%;
                 padding-left: 2.5em; 
                 text-indent: -2.5em;
             }

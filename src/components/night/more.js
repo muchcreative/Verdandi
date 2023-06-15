@@ -132,12 +132,11 @@ export default function More() {
         <div className={moreStyles.focus}>
             <h5>Focus</h5>
             <p className={moreStyles.about}>
-                My pen name is Iris. I am 25 years old and looking to create 
-                something cool. I aim to be top 100 world-ranked in Kaggle. 
-                However, this year I am currently:
+                My pen name is Iris. I am 25 years old. I aim to be top 100 world-ranked in Kaggle. 
+                But, this year I am currently:
             </p>
             <ol className={moreStyles.goals}>
-              <li>Focusing on back-end development, especially in Rust proficiency in my free time.</li>
+              <li>Focusing on back-end development, especially in Rust proficiency on my free time.</li>
               <li>Getting AWS certified in Application Architecture.</li>
               <li>
                   Networking with more coders through the event and helping out beginner to intermediate-level coders every Saturday in Toronto through TSE (Toronto Stack Exchange). 

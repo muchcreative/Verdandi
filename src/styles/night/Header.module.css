@@ -87,10 +87,9 @@
 
 .verticalBreak {
     height: 100vh;
-    width: 5px;
 
-    fill: black;
-    color: black;
+    fill: var(--night-bg-color);
+    color: var(--night-bg-color);
     
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
