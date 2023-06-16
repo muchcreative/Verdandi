@@ -5,16 +5,14 @@ import { useState, useEffect } from 'react';
 import expStyles from 'src/styles/night/Experience.module.css';
 
 //SVGs
-import Moon from 'public/night/moon.svg'
-import Mountains from 'public/night/mountains.svg'
+import MMS from 'public/night/mms.svg'
 import ExpMotif from 'public/night/exp_motif.svg'
 
 // External Libs
 import { clsx } from 'clsx';
 
-const moon = () => <Moon />;
-const mountains = () => <Mountains />;
 const expMotif = () => <ExpMotif />;
+const mms = () => <MMS />;
 
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
@@ -45,8 +43,7 @@ export default function Experience() {
       <>
         <h2 className={expStyles.expHeader}>Experience</h2>
         <div className={expStyles.art}>
-            <Moon className={expStyles.moon}/>
-            <Mountains className={expStyles.mountains} />
+            <MMS className={expStyles.mms}/>
         </div>
         <div>
             <div id='flow' className={expStyles.flow}>

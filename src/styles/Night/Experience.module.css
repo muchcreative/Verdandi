@@ -13,15 +13,7 @@
     flex-direction: column;
 }
 
-.moon {
-    width: 13%;
-    height: 13%;
-    margin-right: 10%;
-    align-self: flex-end;
-    z-index: 1;
-}
-
-.mountains {
+.mms {
     align-self: center;
     z-index: 1;
 }
@@ -57,7 +49,7 @@
     align-items: center;
     margin: 3% 10% 3% 10%;
     gap: 4%;
-    transition: all 0.5s ease-in;
+    transition: all 0.6s ease-in-out;
 }
 
 .piDown {
@@ -74,7 +66,7 @@
     align-items: center;
     margin: 3% 10% 10% 10%;
     gap: 5%;
-    transition: all 0.5s ease-in;
+    transition: all 0.6s ease-in-out;
 }
 
 .dtDown {
@@ -88,7 +80,7 @@
     width: 80%;
     height: 10%;
     margin-left: 10%;
-    transition: all 0.5s ease-in;
+    transition: all 0.6s ease-in-out;
 }
 
 .expandBreak {
@@ -175,7 +167,7 @@
 .selectedMotif {
     opacity: 0;
     animation:
-        fade-in-motif 0.3s ease-in 0.5s forwards,
+        fade-in-motif 0.3s ease-in 0.6s forwards,
         rotation 8s infinite linear;
 }
    
