@@ -8,8 +8,6 @@ import scrollStyles from 'src/styles/night/Scroll.module.css';
 import ScrollLine from 'public/night/scroll_line.svg';
 const scrollLine = () => <ScrollLine />;
 
-// You will have to add something different here to make it look cool
-
 export default function Scroll() {
     useEffect(() => {
         const drawOnScroll = () => {

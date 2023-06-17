@@ -24,14 +24,26 @@ const lora = Lora({
             });
 
 // SVG Changes
-// Clump moon and mountain svg with stars svg and <g> element
-// Scroll Line must end in center of screen how do you do this?
+// Scroll Line must end in center of screen, make it so that at 
+// 1920 x 1080 it is fine
+// if the width of the screen is larger you shuld take the inner width
+// and adjust the width of the svg approriately
+// so we can add text or a motif
 
+// Header and Contact Today
 // Header Section
 // Needs to snap to bold letters
+// Make the enterance more dramatic
 
 // Experiences Section
 // Try better spacing requriements between the experiences
+// the addOn descriptions don't feel that great
+
+// Contact Section
+// allow sendGrid to work so you need the API for that
+
+// Can try font
+// BrandonGrotesque-Regular
 
 export default function Night() {
     return (

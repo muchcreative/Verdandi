@@ -14,8 +14,7 @@ import { clsx } from 'clsx';
 // check the api key number
 // set to an environment label
 // i think the message is pushing the github and linkedin logos down
-
-// BrandonGrotesque-Regular
+// Ahh ok the env variable is coming out undefined
 
 export default function Form() {
     const [submitted, setSubmitted] = useState(false);
