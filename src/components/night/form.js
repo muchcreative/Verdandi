@@ -7,15 +7,6 @@ import formStyles from 'src/styles/night/Form.module.css';
 // External Libs
 import { clsx } from 'clsx';
 
-// Form must send out a post request and email confirmation as well
-// rewrite onFocus or Active pseudo element styles for input borders
-// Look into autocomplete styles
-// Will have to connect to a database to pick up the API requests
-// check the api key number
-// set to an environment label
-// i think the message is pushing the github and linkedin logos down
-// Ahh ok the env variable is coming out undefined
-
 export default function Form() {
     const [submitted, setSubmitted] = useState(false);
 
@@ -64,7 +55,11 @@ export default function Form() {
                 </textarea>
             </div>
             <div className={formStyles.buttonArea}>
-                <button className={formStyles.submitButton} type='submit'>Send</button>
+                <button type='submit' className={clsx({
+                  [formStyles.submitButton] : true,
+                  [formStyles.submittedButton] : submitted})}>
+                    Send
+                </button>
             </div>
           </div>
           <div className={clsx({

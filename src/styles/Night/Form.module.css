@@ -37,9 +37,18 @@
     margin-top: 5%;
 }
 
+.submitButton {
+    transition: all 0.3s;
+}
+
 .submitButton:hover {
     color: var(--night-special-color);
-    transition: 0.3s;
+}
+
+.submittedButton {
+    color: var(--night-special-color);
+    text-decoration: var(--night-special-color) 1px underline;
+    text-underline-offset: 1px;
 }
 
 .nameInput {
@@ -49,20 +58,39 @@
     border: 1px solid var(--day-bg-color);
 }
   
+.nameInput:focus,
+.nameInput:active {
+    border: 2px solid var(--night-special-color);
+    border-radius: 4px;
+}
+
 .emailInput {
     width: 100%;
     height: 100%;
     padding: 1% 2% 1% 4%;
     border: 1px solid var(--day-bg-color);
 }
-  
+
+.emailInput:focus,
+.emailInput:active {
+    border: 2px solid var(--night-special-color);
+    border-radius: 4px;
+}
+
 .messageInput {
-    border: 1px solid var(--day-bg-color);
     padding: 2% 2% 2% 2%;
     font-size: 1.2em;
     width: 100%;
     height: 100%;
+    border: 1px solid var(--day-bg-color);
 }
+
+.messageInput:focus,
+.messageInput:active {
+    border: 2px solid var(--night-special-color);
+    border-radius: 4px;
+}
+
 
 /* Submit Message
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

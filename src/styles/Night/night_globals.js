@@ -78,6 +78,7 @@ export default function nightGlobals() {
                 color: #ffffffe6;
                 background-color: inherit;
                 font-size: 1.2em;
+                outline: none;
             }
 
             input::placeholder {
