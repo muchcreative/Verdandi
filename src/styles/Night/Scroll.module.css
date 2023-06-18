@@ -1,4 +1,47 @@
-/* SVG Scroll Draw and BG Transition
+/* Scroll Line
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.scrollLineContainer {
+    margin-left: 5%;
+    opacity: 0;
+    animation: line-in 0.7s ease-in 0.1s forwards;
+}
+
+@keyframes line-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.downArrow {
+    position: absolute;
+    left: 4.3%;
+    top: 390px;
+    transition: all 0.5s;
+    opacity: 0;
+    animation: line-in 0.7s ease-in 0.1s forwards;
+}
+
+.hideDownArrow {
+    opacity: 1;
+    animation: fade-out-marker 0.7s ease-in 0.3s forwards;
+}
+
+@keyframes fade-out-marker {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Scroll Text
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .scrollText {
     position: absolute;
@@ -6,19 +49,19 @@
     right: 20%;
     color: var(--night-bg-color);
 
-    opacity: 1;
+    opacity: 0;
     font-size: 0.6em;
-    animation: fade-in 0.7s ease-in forwards;
+    animation: fade-in 0.7s ease-in 0.1s forwards;
 }
 
 @keyframes fade-in {
     from {
-        opacity: 0%;
+        opacity: 0;
         transform: translateY(0%);
     }
 
     to {
-        opacity: 100%;
+        opacity: 1;
         transform: translateY(10%);
     }
 }
@@ -26,24 +69,4 @@
 .scrollText p {
     font-size: 4em;
     text-align: center;
-}
-
-.scrollLineContainer {
-    margin-left: 5%;
-    opacity: 0;
-    animation: line-in 0.7s ease-in forwards;
-}
-
-@keyframes line-in {
-    from {
-        opacity: 0%;
-    }
-
-    to {
-        opacity: 100%;
-    }
-}
-
-.scrollLine {
-    height: 100%;
 }

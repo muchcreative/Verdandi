@@ -1,7 +1,6 @@
 /* More Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .title {
-    color: var(--night-special-color);
     text-decoration: 2px underline;
     text-underline-offset: 4px;
     text-align: center;
@@ -37,6 +36,7 @@
     transition: 0.4s;
 }
 
+
 /* Horizontal Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .horizontalBreak1 {
@@ -50,7 +50,7 @@
 .horizontalBreak2 {
     width: 75%;
     height: 10%;
-    margin: 0 0 7% 13%;
+    margin: 0 0 12.5% 12.5%;
 }
 
 

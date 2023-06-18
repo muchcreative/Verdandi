@@ -16,7 +16,7 @@ export default function Skills() {
     const showSkills = clsx({ [skillsStyles.showSkills] : show });
 
     useEffect(() => {
-        const frontElement = document.querySelector('#front')
+        const skillsElement = document.querySelector('#skills-grid')
         
         let options = {
           root: null,
@@ -33,13 +33,13 @@ export default function Skills() {
         }
 
         let observer = new IntersectionObserver(callback, options);
-        observer.observe(frontElement);
+        observer.observe(skillsElement);
     }, [])
 
     return (
       <>
-        <div className={skillsStyles.skillsContainer}>
-            <div id='front' className={skillsStyles.front}>
+        <div id='skills-grid' className={skillsStyles.skillsContainer}>
+            <div className={skillsStyles.front}>
                 <h4 className={showSkills}>
                   <em>Front-End</em>
                 </h4>
@@ -56,7 +56,7 @@ export default function Skills() {
             <VerticalBreak id='vline1' className={clsx({
               [skillsStyles.vline1] : true,
               [skillsStyles.vline1Show] : show})} />
-            <div id='data' className={skillsStyles.data}>
+            <div className={skillsStyles.data}>
                 <h4 className={showSkills}>
                   <em>Data Analytics</em>
                 </h4>
@@ -74,7 +74,7 @@ export default function Skills() {
             <VerticalBreak id='vline2' className={clsx({
               [skillsStyles.vline2] : true,
               [skillsStyles.vline2Show] : show})} />
-            <div id='back' className={skillsStyles.back}>
+            <div className={skillsStyles.back}>
                 <h4 className={showSkills}>
                   <em>Back-End</em>
                 </h4>

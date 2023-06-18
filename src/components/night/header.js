@@ -5,36 +5,43 @@ import { useState, useEffect } from 'react';
 import headerStyles from 'src/styles/night/Header.module.css';
 
 // SVGs
-import VerticalBreak from 'public/night/vertical_break.svg';
+import TransitionLine from 'public/night/transition_line.svg';
 
 // External Libs
 import { clsx } from 'clsx';
 
-const verticalBreak = () => <VerticalBreak />;
+const transitionLine = () => <TransitionLine />;
 
-// jumping to the scroll location
-// what happens if you set the users scroll location?
-// More dramatic effect
-// Play with SVG line break size
-// Add emphasis on hook
+// Slow down heavy with night bg
+// delay
+// Fast up with day bg
+// Fast down light with night bg
+
+// Not turning back when you scroll up
 
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 
     useEffect(() => {
       const whiteSpace = document.querySelector('#float');
-      const bgChange = document.querySelector('#bg-change');
-
+      const bgChange1 = document.querySelector('#bg-change-1');
+      const bgChange2 = document.querySelector('#bg-change-2');
+      const bgChange3 = document.querySelector('#bg-change-3');
+  
       const preStart = 50;
       const whiteSpaceLoc = whiteSpace.getBoundingClientRect();
 
       const bgTransition = () => {
         if (whiteSpaceLoc.top - preStart <= window.scrollY) {
             setVisibility(true);
-            bgChange.style.backgroundPosition = 'top';            
+            bgChange1.style.backgroundPosition = 'top';   
+            bgChange2.style.backgroundPosition = 'bottom';    
+            bgChange3.style.backgroundPosition = 'top';           
         } else {
             setVisibility(false);
-            bgChange.style.backgroundPosition = 'bottom';
+            bgChange3.style.backgroundPosition = 'bottom';
+            bgChange2.style.backgroundPosition = 'top';
+            bgChange1.style.backgroundPosition = 'bottom';
         }
       }
 
@@ -46,13 +53,21 @@ export default function Main() {
         <div id='float' className={clsx({
           [headerStyles.visibleFloat] : visible,
           [headerStyles.hideFloat] : !visible})}>
-            <div id='bg-change' className={headerStyles.bgChange}>
+            <div id='bg-change-1' className={headerStyles.bgChange1}>
                 <div className={headerStyles.verticalContainer}>
-                    <VerticalBreak className={clsx({
-                      [headerStyles.verticalBreak] : true,
-                      [headerStyles.animateBreak] : visible})} />
+                    <TransitionLine className={clsx({
+                      [headerStyles.transitionLine] : true,
+                      [headerStyles.animateLine] : visible})} />
                 </div>
             </div>
+            <div id='bg-change-2' className={clsx({
+              [headerStyles.bgChange2] : true,
+              [headerStyles.bgChange2Show] : visible,
+              [headerStyles.bgChange2Hidden] : !visible})}></div>
+            <div id='bg-change-3' className={clsx({
+              [headerStyles.bgChange3] : true,
+              [headerStyles.bgChange3Show] : visible,
+              [headerStyles.bgChange3Hidden] : !visible})}></div>
         </div>
         <div className={clsx({
           [headerStyles.hookContainer] : true,

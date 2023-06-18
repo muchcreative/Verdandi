@@ -23,6 +23,21 @@ const lora = Lora({
               weight: ['400']
             });
 
+// Use of underlines and blue special coloring feels inconsistent
+// Experience
+// Looks too much like a url
+
+// Read More Title
+// Looks like an outbound link if it is underlined
+
+// More
+// Should look clickable
+// SVG line can move like a worm
+
+// Skills and Experience
+// Typograpghy changes
+// Spacing and Font sizing
+
 // SVG Changes
 // Scroll Line must end in center of screen, make it so that at 
 // 1920 x 1080 it is fine
@@ -31,16 +46,11 @@ const lora = Lora({
 // so we can add text or a motif
 
 // Header and Contact Today
-// Header Section
-// Needs to snap to bold letters
 // Make the enterance more dramatic
 
 // Experiences Section
 // Try better spacing requriements between the experiences
 // the addOn descriptions don't feel that great
-
-// Contact Section
-// allow sendGrid to work so you need the API for that
 
 // Can try font
 // BrandonGrotesque-Regular

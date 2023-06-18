@@ -6,7 +6,8 @@
       C 671.5 1187 645 1321.5 645 1487
       V 3003'
       fill='transparent'
-      stroke-width='1'
-      stroke='#21212180'
+      stroke='black'
+      stroke-width='3'
+      stroke-linecap='round'
     />
 </svg>

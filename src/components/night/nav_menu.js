@@ -8,10 +8,6 @@ import navStyles from 'src/styles/night/Nav.module.css';
 // External Libs
 import { clsx } from 'clsx';
 
-// Animation Options,
-// Each option should fade in followed by a slower slide in
-// Change to translate
-
 export default function NavMenu() {
     const [open, openMenu ] = useState(false);
     

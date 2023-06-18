@@ -15,7 +15,7 @@
     height: 100%;
     z-index: 100;
     visibility: visible;
-    animation: make-invisible 0.1s linear 0.6s forwards;
+    animation: make-invisible 0.1s linear 1s forwards;
 }
 
 @keyframes make-invisible {
@@ -30,7 +30,7 @@
     }
 }
 
-.bgChange {
+.bgChange1 {
     position: relative;
     top: 0%;
     left: 0%;
@@ -41,6 +41,68 @@
     background-size: 100% 200%;
     transition: background-position 0.2s ease-in 0.4s;
     z-index: 3;
+}
+
+.bgChange2 {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, var(--night-bg-color) 50%, var(--day-bg-color) 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.2s ease-in 0.6s;
+    z-index: 4;
+}
+
+.bgChange2Hidden {
+    visibility: 0;
+}
+
+.bgChange3 {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+
+    background-image: linear-gradient(to bottom, var(--night-bg-color) 50%, var(--day-bg-color) 50%);
+    background-size: 100% 200%;
+    transition: background-position 0.2s ease-in 0.8s;
+    z-index: 5;
+}
+
+.bgChange3Hidden {
+    visibility: 0;
+}
+
+
+/* Vertical Break
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.verticalContainer {
+    position: relative;
+    top: 0%;
+    left: 50%;
+}
+
+.transitionLine {
+    height: 100vh;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+.animateLine {
+    animation: draw 0.8s ease-in forwards;
+}
+
+@keyframes draw {
+    75% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -67,48 +129,11 @@
     margin: 14% 0 20% 10%;
     line-height: 1.7em;
     word-spacing: 3px;
-    padding-left: 3.4em; /* Adds text indent for second line*/
+    padding-left: 3.4em; /* Adds text indent for second line */
     text-indent: -3.4em;
     transition: opacity 0.4s ease-in 2s;
 }
 
 .hookHidden {
     opacity: 0;
-}
-
-
-/* Vertical Break
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.verticalContainer {
-    position: relative;
-    top: 0%;
-    left: 50%;
-}
-
-.verticalBreak {
-    height: 100vh;
-
-    fill: var(--night-bg-color);
-    color: var(--night-bg-color);
-    
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-.verticalBreak > path {
-    stroke: var(--night-bg-color);
-}
-
-.animateBreak {
-    animation: draw 0.8s ease-in forwards;
-}
-
-@keyframes draw {
-    75% {
-        stroke-dashoffset: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
 }
