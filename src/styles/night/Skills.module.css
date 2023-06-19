@@ -39,8 +39,9 @@
 
 .libTitle {
     font-size: 2em;
-    text-decoration: 1px underline;
-    text-underline-offset: 3px;
+    font-weight: 700;
+    /* text-decoration: 1px underline;
+    text-underline-offset: 3px; */
 }
 
 .front > h4:nth-child(1) { transition-delay: 0.2s; }

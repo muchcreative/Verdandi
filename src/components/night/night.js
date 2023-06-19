@@ -16,16 +16,29 @@ import Contact from 'src/components/night/contact.js';
 
 const ebGaramond = EB_Garamond({
                     subsets: ['latin'], 
-                    weight: ['400']
+                    weight: ['400', '500', '600', '700', '800'],
+                    style: ['normal', 'italic'],
                   });
-const lora = Lora({
-              subsets: ['latin'], 
-              weight: ['400']
-            });
 
+// which one looks better Lora does
+// but still not the font I want to use in the end
+
+// things still feel exceptionally mid
+
+// Justify left
+// One font only
+// skip a font weight
+// Double point sizes
+
+// Themes and elements should feel shared between sections
+// No cohesion between sections
+
+// Feels weird because its all one type size
+    
 // Use of underlines and blue special coloring feels inconsistent
 // Experience
 // Looks too much like a url
+// definetly there are some consistency issues
 
 // Skills and Experience
 // Typograpghy changes
@@ -48,7 +61,7 @@ export default function Night() {
         <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Scroll />
         </section>
-        <div className={lora.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <div className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <NavMenu />
         </div>
         <header className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>

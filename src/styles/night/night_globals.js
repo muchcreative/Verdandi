@@ -58,14 +58,6 @@ export default function nightGlobals() {
                 text-indent: -2.5em;
             }
 
-            em {
-                font-size: inherit;
-                font-style: normal;  
-                color: var(--night-special-color);
-                text-decoration: var(--night-special-color) 2px underline;
-                text-underline-offset: 4px;
-            }
-
             a {
                 color: inherit;
                 font-family: 'Times New Roman';

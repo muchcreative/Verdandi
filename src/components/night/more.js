@@ -4,10 +4,6 @@ import { useState, useEffect } from 'react';
 // CSS
 import moreStyles from 'src/styles/night/More.module.css';
 
-// SVGs
-import HorizontalBreak from 'public/night/horizontal_break.svg';
-const horizontalBreak = () => <HorizontalBreak />;
-
 // External Libs
 import { clsx } from 'clsx';
 
@@ -17,47 +13,12 @@ import { clsx } from 'clsx';
 // Should look clickable
 // SVG line can move like a worm
 
+// the desc fill a little to congested
+
+// align to the grid lines of the first button
+
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
-
-    useEffect(() => {
-      const buttons = [document.querySelector('#front-btn'),
-                       document.querySelector('#data-btn'),
-                       document.querySelector('#back-btn')]
-      const hb = document.querySelector('#hb');
-      
-      const drawOut = [
-        { strokeDashoffset : 0 },
-        { strokeDashoffset : -1000 },
-      ];
-      
-      const drawOutTiming = {        
-        duration: 700,
-        easing: 'ease',
-        fill: 'forwards',
-        iterations: 1
-      };
-
-      const drawIn = [
-        { strokeDashoffset : 1000 },
-        { strokeDashoffset : 0 },
-      ];
-      
-      const drawInTiming = {        
-        duration: 700,
-        easing: 'ease',
-        delay: 900,
-        fill: 'forwards',
-        iterations: 1
-      };
-
-      buttons.forEach(button => {
-        button.addEventListener("click", () => {
-          hb.animate(drawOut, drawOutTiming);
-          hb.animate(drawIn, drawInTiming);
-        })
-      })
-    }, [])
 
     return (
       <>
@@ -76,11 +37,10 @@ export default function More() {
               [moreStyles.activeButton] : (desc.curr === 2)})}
             onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
         </div>
-        <HorizontalBreak id='hb' className={clsx({
-          [moreStyles.horizontalBreak1]: true,
-          [moreStyles.animateHB0] : desc.curr === 0, 
-          [moreStyles.animateHB1] : desc.curr === 1, 
-          [moreStyles.animateHB2] : desc.curr === 2})} />
+        <hr className={clsx({
+          [moreStyles.hrDesc]: true,
+          [moreStyles.hr1] : desc.curr === 1, 
+          [moreStyles.hr2] : desc.curr === 2})} />
         <div className={moreStyles.descContainer}>
             <p id='front-desc' className={clsx({
               [moreStyles.desc] : true,
@@ -150,7 +110,7 @@ export default function More() {
               </li>
             </ol>
         </div>
-        <hr className={moreStyles.horizontalBreak2}></hr>
+        <hr className={moreStyles.contactBreak}></hr>
       </>
     )
 }

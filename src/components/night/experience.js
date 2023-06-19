@@ -14,6 +14,9 @@ import { clsx } from 'clsx';
 const expMotif = () => <ExpMotif />;
 const mms = () => <MMS />;
 
+// would an svg animate better here?
+// why is the final desc (dt) open automatically?
+
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
     

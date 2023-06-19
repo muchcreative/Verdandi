@@ -12,6 +12,10 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
+// the transition should contain different colors
+// still feels boring and uninspired with up and down
+// again line splitting feels better here
+
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 
@@ -67,9 +71,13 @@ export default function Main() {
           <h1 id='hook' className={clsx({
             [headerStyles.hook] : true,
             [headerStyles.hideHook] : !visible})}>
-              Because boring ideas<br></br>make boring&nbsp;<em>products</em>
+              Because nobody wants to<br></br>
+              create the same<br></br>
+              <em className={headerStyles.hookKey}>products</em>
           </h1>
         </div>
       </>
     )   
 }
+
+// the hook feels too long still
