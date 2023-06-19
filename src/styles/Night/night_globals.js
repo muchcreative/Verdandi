@@ -27,13 +27,14 @@ export default function nightGlobals() {
 
             h2 {
                 font-size: 3.2em;
-                font-weight: normal;
+                font-weight: 500;
             }
 
             h3 {
                 color: var(--night-special-color);
-                font-size: 2.3em;
-                font-weight: normal;
+                font-size: 2.4em;
+                font-style: italic;
+                font-weight: 500;
             }
 
             h4 {

@@ -19,29 +19,7 @@ const mms = () => <MMS />;
 
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
-    
-    useEffect(() => {
-      const dtDesc = document.querySelector('#dt');
-      
-      let options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4,
-      };
-
-      const callback = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-              setSelected(0); 
-              observer.unobserve(dtDesc);  // Close observer after done
-          }
-        })
-      }
-
-      let observer = new IntersectionObserver(callback, options);
-      observer.observe(dtDesc);
-    }, [])
-
+  
     return (
       <>
         <h2 className={expStyles.expHeader}>Experience</h2>
@@ -52,7 +30,7 @@ export default function Experience() {
             <div id='flow' className={expStyles.flow}>
                 <div className={expStyles.title}>
                     <h2>Flow DB</h2>
-                    <h3>Developer</h3>
+                    <h3>Full-Stack Developer</h3>
                 </div>
                 <div className={expStyles.desc}>
                     <p>

@@ -2,9 +2,10 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expHeader {
     font-size: 4.5em;
+    font-weight: 500;
     margin: 0 0 -9% 15%; 
     text-decoration: underline 3px var(--night-special-color);
-    text-underline-offset: 3px;
+    text-underline-offset: 4px;
     z-index: 1;
 }
 
@@ -36,8 +37,7 @@
 }
 
 .desc {
-    font-size: 1.3em;
-    text-align: center;
+    text-align: left;
     width: 70%;
     z-index: 2;
 }

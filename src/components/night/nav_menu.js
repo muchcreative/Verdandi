@@ -41,10 +41,10 @@ export default function NavMenu() {
                 <ul className={navStyles.linkList}>
                     <li><Link onClick={() => openMenu(false)} href='#beginning'>Beginning</Link></li>
                     <hr></hr>
-                    <li><Link onClick={() => openMenu(false)} href='#experience'>Experience</Link></li>
-                    <hr></hr>
                     <li><Link onClick={() => openMenu(false)} href='#skills'>Skills</Link></li>
                     <hr></hr>
+                    <li><Link onClick={() => openMenu(false)} href='#experience'>Experience</Link></li>
+                    <hr></hr>                   
                     <li><Link onClick={() => openMenu(false)} href='#more'>More</Link></li>
                     <hr></hr>
                     <li><Link onClick={() => openMenu(false)} href='#contact'>Contact</Link></li>

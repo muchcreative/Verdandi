@@ -167,10 +167,9 @@
 .hookKey {
     color: var(--night-special-color);
     font-style: normal;
-    font-weight: 600;
-    font-size: 1em;
+    font-weight: 800;
 
-    text-decoration: var(--night-special-color) 4px underline;
-    text-underline-offset: 5px;
+    text-decoration: var(--night-special-color) 8px underline;
+    text-underline-offset: 6px;
     margin-left: 10px;
 }

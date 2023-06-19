@@ -20,15 +20,12 @@ const ebGaramond = EB_Garamond({
                     style: ['normal', 'italic'],
                   });
 
-// which one looks better Lora does
-// but still not the font I want to use in the end
-
-// things still feel exceptionally mid
-
 // Justify left
 // One font only
 // skip a font weight
 // Double point sizes
+
+// consider a line draw under the products line to highlight it
 
 // Themes and elements should feel shared between sections
 // No cohesion between sections
@@ -47,6 +44,8 @@ const ebGaramond = EB_Garamond({
 // Experiences Section
 // Try better spacing requriements between the experiences
 // the addOn descriptions don't feel that great
+
+// Add smile animation on send
 
 export default function Night() {
     return (
@@ -67,12 +66,12 @@ export default function Night() {
         <header className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Header />
         </header>
-        <main id='experience' className={ebGaramond.className}>
-            <Experience />
-        </main>
         <section id='skills' className={ebGaramond.className}>
             <Skills />
         </section>
+        <main id='experience' className={ebGaramond.className}>
+            <Experience />
+        </main>
         <section id='more' className={ebGaramond.className}>
             <More />
         </section>
