@@ -11,6 +11,12 @@ const horizontalBreak = () => <HorizontalBreak />;
 // External Libs
 import { clsx } from 'clsx';
 
+// Read More Title
+// Looks like an outbound link if it is underlined
+// More
+// Should look clickable
+// SVG line can move like a worm
+
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
 

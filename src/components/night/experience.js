@@ -14,9 +14,6 @@ import { clsx } from 'clsx';
 const expMotif = () => <ExpMotif />;
 const mms = () => <MMS />;
 
-// Adjust the widths of this
-// Starting has derivative trader open
-
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
     

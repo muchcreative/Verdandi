@@ -12,13 +12,6 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
-// Slow down heavy with night bg
-// delay
-// Fast up with day bg
-// Fast down light with night bg
-
-// Not turning back when you scroll up
-
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 
@@ -36,12 +29,12 @@ export default function Main() {
             setVisibility(true);
             bgChange1.style.backgroundPosition = 'top';   
             bgChange2.style.backgroundPosition = 'bottom';    
-            bgChange3.style.backgroundPosition = 'top';           
+            bgChange3.style.backgroundPosition = 'top';       
         } else {
-            setVisibility(false);
             bgChange3.style.backgroundPosition = 'bottom';
             bgChange2.style.backgroundPosition = 'top';
             bgChange1.style.backgroundPosition = 'bottom';
+            setVisibility(false);
         }
       }
 
@@ -62,12 +55,10 @@ export default function Main() {
             </div>
             <div id='bg-change-2' className={clsx({
               [headerStyles.bgChange2] : true,
-              [headerStyles.bgChange2Show] : visible,
-              [headerStyles.bgChange2Hidden] : !visible})}></div>
+              [headerStyles.bg2Visible] : visible})}></div>
             <div id='bg-change-3' className={clsx({
               [headerStyles.bgChange3] : true,
-              [headerStyles.bgChange3Show] : visible,
-              [headerStyles.bgChange3Hidden] : !visible})}></div>
+              [headerStyles.bg3Visible] : visible})}></div>
         </div>
         <div className={clsx({
           [headerStyles.hookContainer] : true,
