@@ -39,16 +39,26 @@ export default function NavMenu() {
             [navStyles.menuOpen] : open,
             [navStyles.menuClosed] : !open})}>
                 <ul className={navStyles.linkList}>
-                    <li><Link onClick={() => openMenu(false)} href='#beginning'>Beginning</Link></li>
-                    <hr></hr>
-                    <li><Link onClick={() => openMenu(false)} href='#skills'>Skills</Link></li>
-                    <hr></hr>
-                    <li><Link onClick={() => openMenu(false)} href='#experience'>Experience</Link></li>
-                    <hr></hr>                   
-                    <li><Link onClick={() => openMenu(false)} href='#more'>More</Link></li>
-                    <hr></hr>
-                    <li><Link onClick={() => openMenu(false)} href='#contact'>Contact</Link></li>
-                    <hr></hr>
+                    <li>
+                      <Link onClick={() => openMenu(false)} href='#beginning'>Beginning</Link>
+                      <hr></hr>
+                    </li>
+                    <li>
+                      <Link onClick={() => openMenu(false)} href='#skills'>Skills</Link>
+                      <hr></hr>  
+                    </li>
+                    <li><
+                      Link onClick={() => openMenu(false)} href='#experience'>Experience</Link>
+                      <hr></hr>
+                    </li>                                       
+                    <li>
+                      <Link onClick={() => openMenu(false)} href='#more'>More</Link>
+                      <hr></hr>
+                    </li>
+                    <li>
+                      <Link onClick={() => openMenu(false)} href='#contact'>Contact</Link>
+                      <hr></hr>  
+                    </li>                    
                 </ul>
             </nav>
       </>

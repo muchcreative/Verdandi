@@ -93,15 +93,15 @@
     transition: 0.4s;
 }
 
-.linkList li:hover + hr {
+.linkList li:hover hr {
     background-color: var(--night-special-color);
     transition: 0.4s;
 }
 
 .linkList hr {
     border: none;
-    height: 1px;
+    height: 2px;
 
     background-color: var(--day-bg-color);
-    margin: 0 55% 0 5%;
+    margin-right: 5%;
 }
