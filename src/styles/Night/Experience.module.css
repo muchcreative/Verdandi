@@ -1,14 +1,22 @@
-/* Experience and SVG Art
+/* Experience Title
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.expHeader {
-    font-size: 4.5em;
-    font-weight: 500;
-    margin: 0 0 -9% 15%; 
-    text-decoration: underline 3px var(--night-special-color);
-    text-underline-offset: 4px;
-    z-index: 1;
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 -2% 10%;
 }
 
+.titleUnderline {
+    width: 20%;
+    border: none;
+    height: 3px;
+    background-color: var(--night-special-color);
+    margin-top: -10px;
+}
+
+
+/* SVG Art
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .art {
     display: flex;
     flex-direction: column;
@@ -22,11 +30,15 @@
 
 /* Initial Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.expContainer {
+    margin: 5% 10% 20% 10%;
+}
+
 .flow {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% 15% 3% 10%;
+    margin: 5% 0% 3% 0%;
     gap: 10%;
 }
 
@@ -47,7 +59,7 @@
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin: 3% 10% 3% 10%;
+    margin: 3% 0% 3% 0%;
     gap: 4%;
     transition: all 0.6s ease-in-out;
 }
@@ -64,7 +76,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3% 10% 10% 10%;
+    margin: 3% 0% 10% 0%;
     gap: 5%;
     transition: all 0.6s ease-in-out;
 }

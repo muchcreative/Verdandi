@@ -20,27 +20,23 @@ const ebGaramond = EB_Garamond({
                     style: ['normal', 'italic'],
                   });
 
+// How to remove the refresh animation
+// prevent issues when someone edges up and down through the header
+
 // Justify left
 // One font only
 // skip a font weight
 // Double point sizes
 // Consider a line draw under the products line to highlight it
-
 // Themes and elements should feel shared between sections
 // No cohesion between sections
 
-// Feels weird because its all one type size
-    
-// Use of underlines and blue special coloring feels inconsistent
-// Experience
-// Looks too much like a url
-// definetly there are some consistency issues
+// More section feels damp
+// Missing something a line or some sort of what to organize the sections
 
-// Skills and Experience
+// Experience
 // Typograpghy changes
 // Spacing and Font sizing
-
-// Experiences Section
 // Try better spacing requriements between the experiences
 // the addOn descriptions don't feel that great
 

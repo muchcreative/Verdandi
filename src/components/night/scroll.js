@@ -21,7 +21,7 @@ export default function Scroll() {
     useEffect(() => {
       const fadeOutMarker = () => {
         if (window.scrollY === 0) {
-          setScrolled(false);
+          setScrolled(false);          
         } else {
           setScrolled(true);
         }

@@ -7,9 +7,6 @@ import moreStyles from 'src/styles/night/More.module.css';
 // External Libs
 import { clsx } from 'clsx';
 
-// Read More Title
-// Looks like an outbound link if it is underlined
-// More
 // Should look clickable
 // SVG line can move like a worm
 
@@ -22,7 +19,10 @@ export default function More() {
 
     return (
       <>
-        <h2 className={moreStyles.title}>Read More</h2>
+        <div className={moreStyles.titleContainer}>
+          <h2>Read More</h2>
+          <hr className={moreStyles.titleUnderline}></hr>
+        </div>
         <div className={moreStyles.buttons}>
             <button id='front-btn' className={clsx({
               [moreStyles.button] : true,

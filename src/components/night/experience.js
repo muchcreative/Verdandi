@@ -14,19 +14,23 @@ import { clsx } from 'clsx';
 const expMotif = () => <ExpMotif />;
 const mms = () => <MMS />;
 
-// would an svg animate better here?
-// why is the final desc (dt) open automatically?
+// Ok when you start none of them are open
+// The motif will change
+// is that enoug?
 
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
   
     return (
       <>
-        <h2 className={expStyles.expHeader}>Experience</h2>
+        <div className={expStyles.titleContainer}>
+          <h2>Experience</h2>
+          <hr className={expStyles.titleUnderline}></hr>
+        </div>
         <div className={expStyles.art}>
             <MMS className={expStyles.mms}/>
         </div>
-        <div>
+        <div className={expStyles.expContainer}>
             <div id='flow' className={expStyles.flow}>
                 <div className={expStyles.title}>
                     <h2>Flow DB</h2>
@@ -57,11 +61,9 @@ export default function Experience() {
                     </p>                 
                 </div> 
             </div>
-        </div>
-        <hr className={clsx({
-          [expStyles.horizontalBreak] : true,
-          [expStyles.expandBreak] : selected === 0 })}></hr>
-        <div>
+            <hr className={clsx({
+              [expStyles.horizontalBreak] : true,
+              [expStyles.expandBreak] : selected === 0 })}></hr>
             <div id='pi' className={clsx({
               [expStyles.pi] : true,
               [expStyles.piSelected] : selected === 1,
@@ -96,11 +98,9 @@ export default function Experience() {
                       [expStyles.selectedMotif] : selected === 1})}/>    
                 </div>
             </div>
-        </div>
-        <hr className={clsx({
-          [expStyles.horizontalBreak] : true,
-          [expStyles.expandBreak] : [0, 1].includes(selected)})}></hr>
-        <div>
+            <hr className={clsx({
+              [expStyles.horizontalBreak] : true,
+              [expStyles.expandBreak] : [0, 1].includes(selected)})}></hr>
             <div id='dt' className={clsx({
               [expStyles.dt] : true,              
               [expStyles.dtSelected] : selected === 2,

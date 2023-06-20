@@ -7,7 +7,7 @@
 }
 
 .titleUnderline {
-    width: 15%;
+    width: 20%;
     border: none;
     height: 3px;
     background-color: var(--night-special-color);
@@ -27,7 +27,7 @@
       "front vline1 data vline2 dev"
       ".     vline1 data vline2 dev"
       ".       .      .  vline2 dev";
-    margin: 0% 8% 10% 8%;
+    margin: 0% 8% 5% 8%;
 }
 
 .libTitle {

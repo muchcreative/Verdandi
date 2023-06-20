@@ -1,5 +1,13 @@
 /* Footer
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.different {
+    font-weight: 800;
+    font-style: normal;
+    color: var(--night-special-color);
+    text-decoration: var(--night-special-color) 4px underline;
+    text-underline-offset: 3px;
+}
+
 .logos {
     display: flex;
     align-items: center;
@@ -11,8 +19,20 @@
 
 .linkedinText {
     font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-bottom: 5px;
+}
+
+.linkedinText:hover {
+    color: var(--night-special-color);
 }
 
 .githubLogo {
-    width: 2em;
+    width: 2em;   
+}
+
+.githubLogo:hover > path {
+    transition: all 0.3s;
+    fill: var(--day-bg-color);
 }

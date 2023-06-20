@@ -29,7 +29,7 @@ export default function Main() {
             setVisibility(true);
             bgChange1.style.backgroundPosition = 'top';   
             bgChange2.style.backgroundPosition = 'bottom';    
-            bgChange3.style.backgroundPosition = 'top';       
+            bgChange3.style.backgroundPosition = 'top';
         } else {
             bgChange3.style.backgroundPosition = 'bottom';
             bgChange2.style.backgroundPosition = 'top';

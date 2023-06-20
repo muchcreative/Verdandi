@@ -1,12 +1,22 @@
-/* More Section
+/* More Title
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.title {
-    text-decoration: var(--night-special-color) 2px underline;
-    text-underline-offset: 4px;
-    text-align: center;
-    font-size: 2em; 
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0% 10%;
 }
 
+.titleUnderline {
+    width: 20%;
+    border: none;
+    height: 3px;
+    background-color: var(--night-special-color);
+    margin-top: -10px;
+}
+
+
+/* More Section
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .buttons {
     margin: 4% 0 1% 0;
     font-size: 1.9em;
@@ -41,10 +51,10 @@
     width: 12%;
     margin-top: 1%;
     margin-left: 25%;
-    transition: all 0.8s;
     border: none;
     height: 2px;
-    background-color: var(--day-bg-color);
+    background-color: var(--night-special-color);
+    transition: all 0.8s;
 }
 
 /* There has to be some animation here */
@@ -64,7 +74,7 @@
 .contactBreak {
     width: 75%;
     height: 10%;
-    margin: 0 0 12.5% 12.5%;
+    margin: 0 0 5% 12.5%;
 }
 
 
@@ -84,11 +94,11 @@
 }
 
 .descShow {
-    animation: showDesc 0.8s ease 0.9s forwards !important;
+    animation: showDesc 0.8s ease 0.7s forwards !important;
 }
 
 .descHide {
-    animation: hideDesc 0.65s ease forwards;
+    animation: hideDesc 0.8s ease forwards;
 }
 
 @keyframes showDesc {

@@ -13,7 +13,8 @@ export default function Contact() {
   return (
     <>
       <h6>
-        Together,<br></br>let&#39;s build something <em>different</em>
+        Together,<br></br>let&#39;s build something&nbsp;
+        <em className={contactStyles.different}>different.</em>
       </h6>
       <Form />
       <footer>

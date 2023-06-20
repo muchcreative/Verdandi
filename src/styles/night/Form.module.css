@@ -39,6 +39,7 @@
 
 .submitButton {
     transition: all 0.3s;
+    font-weight: 500;
 }
 
 .submitButton:hover {
