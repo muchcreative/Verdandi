@@ -24,8 +24,7 @@ const ebGaramond = EB_Garamond({
 // One font only
 // skip a font weight
 // Double point sizes
-
-// consider a line draw under the products line to highlight it
+// Consider a line draw under the products line to highlight it
 
 // Themes and elements should feel shared between sections
 // No cohesion between sections
@@ -46,6 +45,8 @@ const ebGaramond = EB_Garamond({
 // the addOn descriptions don't feel that great
 
 // Add smile animation on send
+// Consider observer animations on the underlines for the titles
+// And the products hook
 
 export default function Night() {
     return (

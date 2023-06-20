@@ -1,16 +1,54 @@
+/* Skills Title
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5% 10%;
+}
+
+.titleUnderline {
+    width: 15%;
+    border: none;
+    height: 3px;
+    background-color: var(--night-special-color);
+    margin-top: -10px;
+}
+
+
 /* Skills Container
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .skillsContainer {
     display: grid;
-    grid: 25% 20% 25% 20% 15% / 
-          35% 3% 30% 3% 30%;
+    grid: 1fr 1fr 1fr 1fr 1fr / 
+          32% 2% 32% 2% 32%;
     grid-template-areas: 
-      "front   .      .    .       ."
-      "front vline1 data   .       ."
-      "front vline1 data vline2 back"
-      ".     vline1 data vline2 back"
-      ".       .      .  vline2 back";
-    margin: 23% 8% 7% 6%;
+      "front   .      .    .      ."
+      "front vline1 data   .      ."
+      "front vline1 data vline2 dev"
+      ".     vline1 data vline2 dev"
+      ".       .      .  vline2 dev";
+    margin: 0% 8% 10% 8%;
+}
+
+.libTitle {
+    font-size: 2.2em;
+    margin-top: 1%;
+    color: var(--day-bg-color);
+    text-decoration: 2px underline var(--day-bg-color);
+    text-underline-offset: 3px;
+}
+
+.front > h4,
+.data > h4, 
+.dev > h4 {
+    line-height: 1.75em;
+}
+
+.front > p,
+.data > p,
+.dev > p {
+    line-height: 3.5em;
+    font-size: 1.7em;  
 }
 
 
@@ -26,22 +64,10 @@
     text-align: center;
 }
 
-.front > p {
-    line-height: 3.4em;
-    font-size: 1.5em;
-}
-
 .front > * {
     opacity: 0;
     transform: translateY(-40%);
     transition: all 1s ease-in;
-}
-
-.libTitle {
-    font-size: 2em;
-    font-weight: 500;
-    /* text-decoration: 1px underline;
-    text-underline-offset: 3px; */
 }
 
 .front > h4:nth-child(1) { transition-delay: 0.2s; }
@@ -72,11 +98,6 @@
     transition: all 1s ease-in;
 }
 
-.data > p {
-    line-height: 3.4em;
-    font-size: 1.5em;  
-}
-
 /* Animations are from 9th child to 1st child, floating upwards */
 .data > p:nth-child(9) { transition-delay: 0.2s; }
 .data > p:nth-child(8) { transition-delay: 0.4s; }
@@ -89,10 +110,10 @@
 .data > h4:nth-child(1) { transition-delay: 1.8s; }
 
 
-/* Back Column
+/* Dev Column
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.back {
-    grid-area: back;
+.dev {
+    grid-area: dev;
 
     display: flex;
     flex-direction: column;
@@ -101,24 +122,19 @@
     text-align: center;
 }
 
-.back > * {
+.dev > * {
   opacity: 0;
   transform: translateY(-40%);
   transition: all 1s ease-in;
 }
 
-.back > p {
-    line-height: 3.4em;
-    font-size: 1.5em;
-}
-
-.back > h4:nth-child(1) { transition-delay: 0.2s; }
-.back > p:nth-child(2) { transition-delay: 0.4s; }
-.back > p:nth-child(3) { transition-delay: 0.6s; }
-.back > h4:nth-child(4) { transition-delay: 0.8s; }
-.back > p:nth-child(5) { transition-delay: 1.0s; }
-.back > p:nth-child(6) { transition-delay: 1.2s; }
-.back > p:nth-child(7) { transition-delay: 1.4s; }
+.dev > h4:nth-child(1) { transition-delay: 0.2s; }
+.dev > p:nth-child(2) { transition-delay: 0.4s; }
+.dev > p:nth-child(3) { transition-delay: 0.6s; }
+.dev > h4:nth-child(4) { transition-delay: 0.8s; }
+.dev > p:nth-child(5) { transition-delay: 1.0s; }
+.dev > p:nth-child(6) { transition-delay: 1.2s; }
+.dev > p:nth-child(7) { transition-delay: 1.4s; }
 
 
 /* Vertical Line Breaks

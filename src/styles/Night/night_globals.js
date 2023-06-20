@@ -27,7 +27,7 @@ export default function nightGlobals() {
 
             h2 {
                 font-size: 3.2em;
-                font-weight: 500;
+                font-weight: 600;
             }
 
             h3 {
@@ -38,9 +38,10 @@ export default function nightGlobals() {
             }
 
             h4 {
-                margin-bottom: 2%;
+                color: var(--night-special-color);
                 font-size: 2.4em;
-                font-weight: normal;
+                font-weight: 500;
+                font-style: normal;
             }
 
             h5 {
