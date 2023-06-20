@@ -19,10 +19,10 @@ export default function Contact() {
       <Form />
       <footer>
           <div className={contactStyles.logos}>
-              <Link title='Link to my LinkedIn' href='https://www.linkedin.com/in/robby-lem-14ab97158/'>
+              <Link title='To my LinkedIn' href='https://www.linkedin.com/in/robby-lem-14ab97158/'>
                   <p className={contactStyles.linkedinText}>in</p>
               </Link>
-              <Link title='Link to my GitHub' href='https://github.com/muchcreative'>
+              <Link title='To my GitHub' href='https://github.com/muchcreative'>
                   <GitHubLogo className={contactStyles.githubLogo}/>
               </Link>
           </div>

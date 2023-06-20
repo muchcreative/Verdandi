@@ -84,15 +84,15 @@ export default function Skills() {
         </div>
         <div id='skills-grid' className={skillsStyles.skillsContainer}>
             <div id='front-skills' className={skillsStyles.front}>
-                <h4 className={showCol0}>
+                <h3 className={showCol0}>
                     Front-End
-                </h4>
+                </h3>
                 <p className={showCol0}>JavaScript</p>
                 <p className={showCol0}>HTML</p>
                 <p className={showCol0}>CSS</p>
-                <h4 className={clsx({
+                <h3 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show0})}>Libraries / Frameworks</h4>
+                  [skillsStyles.showSkills] : show0})}>Libraries / Frameworks</h3>
                 <p className={showCol0}>React / Next.js</p>
                 <p className={showCol0}>CSS Modules</p>
                 <p className={showCol0}>Dash</p>
@@ -101,16 +101,16 @@ export default function Skills() {
               [skillsStyles.vline1] : true,
               [skillsStyles.vline1Show] : show0})} />
             <div id='data-skills' className={skillsStyles.data}>
-                <h4 className={showCol1}>
+                <h3 className={showCol1}>
                     Data Analytics
-                </h4>
+                </h3>
                 <p className={showCol1}>Python</p>
                 <p className={showCol1}>SQL / PostgreSQL</p>
                 <p className={showCol1}>MATLAB</p>
                 <p className={showCol1}>R</p>
-                <h4 className={clsx({
+                <h3 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show1})}>Libraries</h4>
+                  [skillsStyles.showSkills] : show1})}>Libraries</h3>
                 <p className={showCol1}>Tensorflow / PyTorch</p>
                 <p className={showCol1}>Numpy / Pandas / Polars</p>
                 <p className={showCol1}>Plotly / Seaborn / MatPlotLib</p>
@@ -119,14 +119,14 @@ export default function Skills() {
               [skillsStyles.vline2] : true,
               [skillsStyles.vline2Show] : show1})} />
             <div id='dev-skills' className={skillsStyles.dev}>
-                <h4 className={showCol2}>
+                <h3 className={showCol2}>
                     Development
-                </h4>
+                </h3>
                 <p className={showCol2}>Rust</p>
                 <p className={showCol2}>C</p>
-                <h4 className={clsx({
+                <h3 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show2})}>Crates</h4>
+                  [skillsStyles.showSkills] : show2})}>Crates</h3>
                 <p className={showCol2}>Diesel</p>
                 <p className={showCol2}>Tokio</p>
                 <p className={showCol2}>Crossbeam</p>

@@ -33,17 +33,17 @@ export default function nightGlobals() {
             h3 {
                 color: var(--night-special-color);
                 font-size: 2.4em;
-                font-style: italic;
                 font-weight: 500;
+                font-style: normal;
             }
 
             h4 {
                 color: var(--night-special-color);
                 font-size: 2.4em;
+                font-style: italic;
                 font-weight: 500;
-                font-style: normal;
             }
-
+            
             h5 {
                 color: var(--night-special-color);
                 font-size: 2.0em;

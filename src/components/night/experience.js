@@ -16,7 +16,8 @@ const mms = () => <MMS />;
 
 // Ok when you start none of them are open
 // The motif will change
-// is that enoug?
+// is that enough?
+// Experience is Header 2, the other titles can not be header 2's as well
 
 export default function Experience() {
     const [selected, setSelected] = useState(-1);
@@ -34,7 +35,7 @@ export default function Experience() {
             <div id='flow' className={expStyles.flow}>
                 <div className={expStyles.title}>
                     <h2>Flow DB</h2>
-                    <h3>Full-Stack Developer</h3>
+                    <h4>Full-Stack Developer</h4>
                 </div>
                 <div className={expStyles.desc}>
                     <p>
@@ -70,7 +71,7 @@ export default function Experience() {
               [expStyles.piDown] : selected === 0})}>
                 <div className={expStyles.title}>
                     <h2>Portable Intelligence</h2>
-                    <h3>Lead Data Analyst</h3>
+                    <h4>Lead Data Analyst</h4>
                 </div>
                 <div className={expStyles.desc}>
                     <p>
@@ -107,7 +108,7 @@ export default function Experience() {
               [expStyles.dtDown] : [0, 1].includes(selected)})}>
                 <div className={expStyles.title}>
                     <h2>Derivative Trader</h2>
-                    <h3>Lead Data Scientist</h3>
+                    <h4>Lead Data Scientist</h4>
                 </div>
                 <div className={expStyles.desc}>
                     <p>
