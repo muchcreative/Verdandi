@@ -38,9 +38,8 @@ export default function nightGlobals() {
             }
 
             h4 {
-                color: var(--night-special-color);
+                color: var(--day-bg-color);
                 font-size: 2.4em;
-                font-style: italic;
                 font-weight: 500;
             }
             

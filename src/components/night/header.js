@@ -68,7 +68,7 @@ export default function Main() {
             [headerStyles.hook] : true,
             [headerStyles.hideHook] : !visible})}>
               Because nobody wants to<br></br>
-              create the same<br></br>
+              create the same two<br></br>
               <em className={headerStyles.hookKey}>products.</em>
           </h1>
         </div>

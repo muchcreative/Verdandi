@@ -21,7 +21,7 @@
     font-size: 1em;
     font-weight: 500;
     transition: all 0.3s;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .linkedinText:hover {
@@ -30,9 +30,9 @@
 
 .githubLogo {
     width: 2em;   
+    transition: transform 2.5s linear;
 }
 
-.githubLogo:hover > path {
-    transition: all 0.3s;
-    fill: var(--day-bg-color);
+.githubLogo:hover {
+    transform: rotate(360deg);
 }

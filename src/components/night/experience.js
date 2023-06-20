@@ -34,8 +34,8 @@ export default function Experience() {
         <div className={expStyles.expContainer}>
             <div id='flow' className={expStyles.flow}>
                 <div className={expStyles.title}>
-                    <h2>Flow DB</h2>
-                    <h4>Full-Stack Developer</h4>
+                    <h4>Flow DB</h4>
+                    <p>Full-Stack Developer</p>
                 </div>
                 <div className={expStyles.desc}>
                     <p>
@@ -70,8 +70,8 @@ export default function Experience() {
               [expStyles.piSelected] : selected === 1,
               [expStyles.piDown] : selected === 0})}>
                 <div className={expStyles.title}>
-                    <h2>Portable Intelligence</h2>
-                    <h4>Lead Data Analyst</h4>
+                    <h4>Portable Intelligence</h4>
+                    <p>Lead Data Analyst</p>
                 </div>
                 <div className={expStyles.desc}>
                     <p>
@@ -107,8 +107,8 @@ export default function Experience() {
               [expStyles.dtSelected] : selected === 2,
               [expStyles.dtDown] : [0, 1].includes(selected)})}>
                 <div className={expStyles.title}>
-                    <h2>Derivative Trader</h2>
-                    <h4>Lead Data Scientist</h4>
+                    <h4>Derivative Trader</h4>
+                    <p>Lead Data Scientist</p>
                 </div>
                 <div className={expStyles.desc}>
                     <p>
@@ -120,7 +120,7 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addonContainer] : true,
-                  [expStyles.closeContainer] : [0, 1].includes(selected)})}>
+                  [expStyles.closeContainer] : selected != 2})}>
                     <ExpMotif className={clsx({
                       [expStyles.motif] : true,
                       [expStyles.selectedMotif] : selected === 2})}/>
