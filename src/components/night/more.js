@@ -9,9 +9,7 @@ import { clsx } from 'clsx';
 
 // Should look clickable
 // SVG line can move like a worm
-
 // the desc fill a little to congested
-
 // align to the grid lines of the first button
 
 export default function More() {
@@ -96,7 +94,7 @@ export default function More() {
             </ol>
         </div>
         <div className={moreStyles.focus}>
-            <h5>Focus</h5>
+            <h5>Current</h5>
             <p className={moreStyles.about}>
                 My pen name is Iris. I am 25 years old. I aim to be top 100 world-ranked in Kaggle. 
                 But, this year I am currently:

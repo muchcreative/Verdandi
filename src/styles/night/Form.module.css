@@ -42,7 +42,8 @@
     font-weight: 500;
 }
 
-.submitButton:hover {
+.submitButton:hover,
+.submitButton:focus {
     color: var(--night-special-color);
 }
 

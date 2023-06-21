@@ -21,15 +21,18 @@
     transition: 0.4s;
 }
 
-.hamburger:hover .bar {
+.hamburger:hover .bar,
+.hamburger:focus .bar {
     opacity: 0%;
 }
 
-.hamburger:hover::before {
+.hamburger:hover::before,
+.hamburger:focus::before {
     transform: translateY(10px);
 }
 
-.hamburger:hover::after {
+.hamburger:hover::after,
+.hamburger:focus::after {
     transform: translateY(-10px) rotate(90deg); 
 }
 
@@ -88,12 +91,14 @@
     margin: 10% 3% 2% 5%;
 }
 
-.linkList li:hover {
+.linkList li:hover,
+.linkList li:focus {
     color: var(--night-special-color);
     transition: 0.4s;
 }
 
-.linkList li:hover hr {
+.linkList li:hover hr,
+.linkList li:focus hr {
     background-color: var(--night-special-color);
     transition: 0.4s;
 }

@@ -22,7 +22,7 @@ export default function nightGlobals() {
 
             h1 {
                 font-size: 6em;
-                font-weight: normal;
+                font-weight: 400;
             }
 
             h2 {

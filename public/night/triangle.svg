@@ -1,0 +1,6 @@
+<svg viewBox='0 0 200 200' fill='var(--day-bg-color)' xmlns='http://www.w3.org/2000/svg'>
+    <polygon 
+      style='stroke:var(--day-bg-color);
+             stroke-width:15px;'
+      points='183.138438763306,172 16.8615612366939,172 100,28'/>
+</svg>

@@ -24,7 +24,8 @@
     margin-bottom: 7px;
 }
 
-.linkedinText:hover {
+.linkedinText:hover,
+.linkedinText:focus {
     color: var(--night-special-color);
 }
 
@@ -33,6 +34,7 @@
     transition: transform 2.5s linear;
 }
 
-.githubLogo:hover {
+.githubLogo:hover,
+.githubLogo:focus {
     transform: rotate(360deg);
 }

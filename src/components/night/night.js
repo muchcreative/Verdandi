@@ -27,7 +27,7 @@ const ebGaramond = EB_Garamond({
 // One font only
 // skip a font weight
 // Double point sizes
-// Consider a line draw under the products line to highlight it
+
 // Themes and elements should feel shared between sections
 // No cohesion between sections
 

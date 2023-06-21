@@ -30,6 +30,7 @@ export default function Form() {
                   type='text'
                   name='name'
                   placeholder='Name'
+                  autoComplete='name'
                   required />
             </div>
             <div className={formStyles.emailArea}>
@@ -40,6 +41,7 @@ export default function Form() {
                   type='email'
                   name='email'
                   placeholder='Email'
+                  autoComplete='email'
                   required />
             </div>
             <div className={formStyles.messageArea}>
