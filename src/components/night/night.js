@@ -32,7 +32,8 @@ const ebGaramond = EB_Garamond({
 // No cohesion between sections
 
 // More section feels damp
-// Missing something a line or some sort of what to organize the sections
+// Soft transition between more and experience
+
 
 // Experience
 // Typograpghy changes

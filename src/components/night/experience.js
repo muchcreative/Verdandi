@@ -125,6 +125,31 @@ export default function Experience() {
                             </div>
                         </div>
                     </div>
+                    <div id='dt' className={clsx({
+                      [expStyles.dt] : true,              
+                      [expStyles.showDesc] : desc === 2})}>
+                        <div className={expStyles.title}>
+                            <h4>Derivative Trader</h4>
+                            <p>Lead Data Scientist</p>
+                        </div>
+                        <div className={expStyles.desc}>
+                            <p>
+                              Lead a team of 3 data scientists for a derivative market trader. Created a NoSQL database set up for over 15mm 
+                              data points on a Google Cloud Bucket server. Utilized Neptune model tracking and tested over 20 different machine 
+                              learning and statistical algorithms.                      
+                            </p>
+                            <div className={clsx({
+                                [expStyles.expandContainer]: true,
+                                [expStyles.hideExpander]: showAddOn})}>
+                                <button onClick={() => setShow(true)}>
+                                    <span className={expStyles.expander}>
+                                        <p>These were our results.</p>
+                                        <Triangle className={expStyles.expandTriangle} />
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button
                   name='right-arrow-btn'
@@ -138,57 +163,76 @@ export default function Experience() {
             </div>
             <hr className={expStyles.horizontalBreak}></hr>
             <div className={expStyles.addOns}>
-                <div className={expStyles.flowAddOn}>
-                    <div className={clsx({
-                      [expStyles.addOnContainer] : true,
-                      [expStyles.openContainer] : desc === 0 && showAddOn,
-                      [expStyles.closeContainer] : !showAddOn})}>
-                        <div className={expStyles.addOnGrid}>
-                            <p className={expStyles.addOnDesc}>
-                              Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
-                              compared to other leading competitors and benchmarks. An example of Rust&#39;s natural speed comparison 
-                              and GPU concurrency with other top software products is Polars with a 10x speed boost and SWC with a 20x 
-                              speed boost over their leading competitors. With a modern UI and a well-designed database, Flow will 
-                              completely change the way EDCs are used.
-                            </p>
-                            <ExpMotif className={clsx({
-                              [expStyles.motif] : true,
-                              [expStyles.selectedMotif] : desc === 0 && showAddOn})}/>  
-                            <div className={expStyles.collapseContainer}>
-                                <button onClick={() => setShow(false)}>
-                                    <span className={expStyles.collapser}>
-                                        <p>Collapse</p>
-                                        <Triangle className={expStyles.collapseTriangle} />
-                                    </span>
-                                </button>
-                            </div>
-                        </div>                   
+                <div className={clsx({
+                  [expStyles.addOnContainer] : true,
+                  [expStyles.showAddOnContainer] : desc === 0 && showAddOn})}>
+                    <div className={expStyles.addOnGrid}>
+                        <p className={expStyles.addOnDesc}>
+                          Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
+                          compared to other leading competitors and benchmarks. An example of Rust&#39;s natural speed comparison 
+                          and GPU concurrency with other top software products is Polars with a 10x speed boost and SWC with a 20x 
+                          speed boost over their leading competitors. With a modern UI and a well-designed database, Flow will 
+                          completely change the way EDCs are used.
+                        </p>
+                        <ExpMotif className={clsx({
+                          [expStyles.motif] : true,
+                          [expStyles.selectedMotif] : desc === 0 && showAddOn})}/>  
+                        <div className={expStyles.collapseContainer}>
+                            <button onClick={() => setShow(false)}>
+                                <span className={expStyles.collapser}>
+                                    <p>Collapse</p>
+                                    <Triangle className={expStyles.collapseTriangle} />
+                                </span>
+                            </button>
+                        </div>                 
                     </div>
                 </div>
-                <div className={expStyles.piAddOn}>
-                    <div className={clsx({
-                      [expStyles.addOnContainer] : true,
-                      [expStyles.openContainer] : desc === 1 && showAddOn,
-                      [expStyles.closeContainer] : !showAddOn})}>
-                        <div className={expStyles.addOnGrid}>
-                            <p className={expStyles.addOnDesc}>
-                              Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
-                              a tier-1 automotive supplier. Created a full data processing pipeline and client-facing analysis 
-                              dashboard. The dashboard enables managers to make key decisions on tasks and driver productivity 
-                              during quarterly reports.
-                            </p>             
-                            <ExpMotif className={clsx({
-                              [expStyles.motif] : true,
-                              [expStyles.selectedMotif] : desc === 1 && showAddOn})}/>                            
-                            <div className={expStyles.collapseContainer}>
-                                <button onClick={() => setShow(false)}>
-                                    <span className={expStyles.collapser}>
-                                        <p>Collapse</p>
-                                        <Triangle className={expStyles.collapseTriangle} />
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
+                <div className={clsx({
+                  [expStyles.addOnContainer] : true,
+                  [expStyles.showAddOnContainer] : desc === 1 && showAddOn})}>
+                    <div className={expStyles.addOnGrid}>
+                      <p className={expStyles.addOnDesc}>
+                        Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
+                        a tier-1 automotive supplier. Created a full data processing pipeline and client-facing analysis 
+                        dashboard. The dashboard enables managers to make key decisions on tasks and driver productivity 
+                        during quarterly reports.
+                      </p>             
+                      <ExpMotif className={clsx({
+                        [expStyles.motif] : true,
+                        [expStyles.selectedMotif] : desc === 1 && showAddOn})}/>                            
+                      <div className={expStyles.collapseContainer}>
+                          <button onClick={() => setShow(false)}>
+                              <span className={expStyles.collapser}>
+                                  <p>Collapse</p>
+                                  <Triangle className={expStyles.collapseTriangle} />
+                              </span>
+                          </button>
+                      </div>
+                    </div>
+                </div>
+                <div className={clsx({
+                  [expStyles.addOnContainer] : true,
+                  [expStyles.showAddOnContainer] :  desc === 2 && showAddOn})}>
+                    <div className={expStyles.addOnGrid}>
+                        <p className={expStyles.addOnDesc}>
+                          The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
+                          Competition winners. Data leakage and survivorship bias was cleared out during the post-processing of the 
+                          data and using time-series validation splits. The ending model had 0.8 AUC and was successful in clearing 
+                          in-house developed backtesting software. However, I was skeptical about overfitting during certain time 
+                          periods due to a lack of data among the SP500. This along with consistent unusually high-weight activations 
+                          on the first and last-time timestamps, lead to the project being scrapped.
+                        </p> 
+                        <ExpMotif className={clsx({
+                          [expStyles.motif] : true,
+                          [expStyles.selectedMotif] : desc === 2 && showAddOn})}/>    
+                        <div className={expStyles.collapseContainer}>
+                            <button onClick={() => setShow(false)}>
+                                <span className={expStyles.collapser}>
+                                    <p>Collapse</p>
+                                    <Triangle className={expStyles.collapseTriangle} />
+                                </span>
+                            </button>
+                        </div>           
                     </div>
                 </div>
             </div>
@@ -196,60 +240,3 @@ export default function Experience() {
       </>
     )
 }
-
-{/*
-<div id='dt' className={clsx({
-  [expStyles.dt] : true,              
-  [expStyles.dtSelected] : current.desc2,
-  [expStyles.dtDown] : current.desc0 || current.desc1})}>
-    <div className={expStyles.title}>
-        <h4>Derivative Trader</h4>
-        <p>Lead Data Scientist</p>
-    </div>
-    <div className={expStyles.desc}>
-        <p>
-          Lead a team of 3 data scientists for a derivative market trader. Created a NoSQL database set up for over 15mm 
-          data points on a Google Cloud Bucket server. Utilized Neptune model tracking and tested over 20 different machine 
-          learning and statistical algorithms.                      
-        </p>
-        <div className={clsx({
-            [expStyles.currentContainer]: true,
-            [expStyles.hidecurrenter]: current.desc2})}>
-            <button onClick={() => setCurrent({desc2: !current.desc2})}>
-                <span className={expStyles.currenter}>
-                    <p>These were our results.</p>
-                    <Triangle className={expStyles.currentTriangle} />
-                </span>
-            </button>
-        </div>
-    </div>
-    <div className={clsx({
-      [expStyles.addOnContainer] : true,
-      [expStyles.openContainer] : current.desc2,
-      [expStyles.closeContainer] : !current.desc2})}>
-        <div className={expStyles.addOnFlex}>
-            <p className={expStyles.addOnDesc}>
-              The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
-              Competition winners. Data leakage and survivorship bias was cleared out during the post-processing of the 
-              data and using time-series validation splits. The ending model had 0.8 AUC and was successful in clearing 
-              in-house developed backtesting software. However, I was skeptical about overfitting during certain time 
-              periods due to a lack of data among the SP500. This along with consistent unusually high-weight activations 
-              on the first and last-time timestamps, lead to the project being scrapped.
-            </p> 
-            <ExpMotif className={clsx({
-              [expStyles.motif] : true,
-              [expStyles.selectedMotif] : current.desc2})}/>               
-        </div>
-        <div className={expStyles.collapseContainer}>
-            <button onClick={() => setCurrent({desc2: !current.desc2})}>
-              <span className={expStyles.collapser}>
-                <p>Collapse</p>
-                <Triangle className={expStyles.collapseTriangle} />
-              </span>
-            </button>
-        </div>
-    </div>
-</div>
-<hr className={clsx({
-  [expStyles.horizontalBreak] : true,
-  [expStyles.currentBreak] : current.desc0 || current.desc1 || current.desc2})}></hr> */}

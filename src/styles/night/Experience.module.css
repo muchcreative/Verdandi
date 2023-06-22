@@ -27,7 +27,12 @@
     width: 80%;
 }
 
+.leftArrow {
+    height: 180px;
+}
+
 .rightArrow {
+    height: 180px;
     transform: rotate(180deg);
 }
 
@@ -105,6 +110,8 @@
     justify-content: center;
     align-items: center;
     gap: 10%;
+
+    visibility: 0;
     opacity: 0;
     transition: all 0.6s ease-in-out;
 }
@@ -119,29 +126,34 @@
     align-items: center;
     gap: 4%;
    
+    visibility: 0;
     opacity: 0;
     transition: all 0.6s ease-in-out;
 }
 
 .pi > .title {
-    width: 40%;
+    /* Accomodate for Portable Intelligence's long title */
+    width: 40%; 
+}
+
+.dt {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+
+    visibility: 0;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
 }
 
 .showDesc {
     opacity: 1;
-}
-
-.dt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3% 0% 10% 0%;
-    gap: 5%;
-    transition: all 0.6s ease-in-out;
-}
-
-.dtDown {
-    transform: translateY(200px);
+    visibility: 1;
 }
 
 
@@ -217,16 +229,17 @@
 .addOnContainer {
     position: absolute;
     font-size: 1.3em;
-}
 
-.openContainer {
-    transition: opacity 0.3s linear 1.1s;
-    opacity: 1;
-}
-
-.closeContainer {
-    transition: opacity 0.3s linear;
+    visibility: 0;
     opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.showAddOnContainer {
+    transition: opacity 0.3s linear 1.1s;
+
+    visibility: 1;
+    opacity: 1;
 }
 
 .addOnGrid {
@@ -306,6 +319,7 @@
     height: 10%;
     margin: 3% 0 0 10%;
 }
+
 
 /* Rotating SVG Motif
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

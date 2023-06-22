@@ -3,7 +3,7 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0% 10%;
+    margin: 0 0 8% 10%;
 }
 
 .titleUnderline {
@@ -17,10 +17,24 @@
 
 /* More Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.buttons {
-    margin: 4% 0 1% 0;
-    font-size: 1.9em;
+.moreLayout {
+    display: grid;
+    grid: 30% 1% 1% 68%/ 
+        33% 33% 33% 1%;
+    grid-template-areas:
+        "buttons buttons buttons vline"
+        "hrDesc  hrDesc  hrDesc  vline"
+        "fullHr  fullHr  fullHr  vline"
+        "desc    desc    desc    vline";
+    justify-content: center;
+    width: 100%;
+}
 
+.buttons {
+    grid-area: buttons;
+    font-size: 1.9em;
+    font-weight: 500;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,32 +55,43 @@
     transition: 0.4s;
 }
 
+.verticalBreak {
+    grid-area: vline;
+    height: 100%;
+    width: 1px;
+}
+
 
 /* Horizontal Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hrDesc {
+    grid-area: hrDesc;
     width: 12%;
-    margin-top: 1%;
-    margin-left: 25%;
     border: none;
     height: 2px;
     background-color: var(--night-special-color);
     transition: all 0.8s;
 }
 
-/* There has to be some animation here */
-/* Let's see uniform translation times */
-
-.hr1 {
+.hrDesc1 {
     transform: translateX(290px);
     width: 13%;
 }
 
-.hr2 {
+.hrDesc1 {
     transform: translateX(600px);
     width: 10%;
 }
 
+.fullBreak {
+    grid-area: fullHr;
+    background-color: var(--day-bg-color);
+    border: none;
+    height: 1px;
+
+    width: 60%;
+    margin: 0% 0 0 20%;
+}
 
 .contactBreak {
     width: 75%;
@@ -78,7 +103,7 @@
 /* Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .descContainer {
-    margin-bottom: 18%;
+    grid-area: desc;
     font-size: 1.3em;
 }
 
@@ -126,7 +151,7 @@
 /* Other Practicals
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .practicals {
-    margin: 25% 15% 10% 15%;
+    margin: 10% 15% 10% 15%;
 }
 
 .pracicalsList {
