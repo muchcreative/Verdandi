@@ -20,7 +20,7 @@ export default function NavMenu() {
 
     return (
       <>
-        <button id='hamburger' name='nav-menu-button' aria-label='nav-menu-button'
+        <button id='hamburger' name='nav-menu-btn' aria-label='nav-menu-btn'
             onClick={() => openMenu(!open)}
             className={clsx({
               [navStyles.hamburger] : true,

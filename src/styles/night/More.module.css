@@ -90,12 +90,12 @@
     margin-top: 2%;
 }
 
-.descShow {
-    animation: showDesc 0.8s ease 0.7s forwards !important;
-}
-
 .descHide {
     animation: hideDesc 0.8s ease forwards;
+}
+
+.descShow {
+    animation: showDesc 0.8s ease 0.7s forwards;
 }
 
 @keyframes showDesc {

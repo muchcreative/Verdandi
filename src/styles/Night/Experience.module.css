@@ -15,7 +15,7 @@
 }
 
 
-/* SVG Art
+/* SVGs
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .art {
     display: flex;
@@ -24,20 +24,58 @@
 
 .mms {
     align-self: center;
-    z-index: 1;
+    width: 80%;
+}
+
+.rightArrow {
+    transform: rotate(180deg);
+}
+
+
+/* Dots
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.dotContainer {
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 2px solid var(--day-bg-color);
+    border-radius: 50%;
+
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.selectedDot {
+    background-color: var(--day-bg-color);
 }
 
 
 /* General Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expContainer {
-    margin: 5% 10% 30% 10%;
-    opacity: 1;
+    margin: 2% 10% 30% 10%;
 }
 
-.hideExpander {
-    transition: opacity 0.8s;
-    opacity: 0;
+.mainDescs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.allDesc {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -55,7 +93,7 @@
 
 .desc {
     font-size: 1.3em;
-    width: 70%;
+    width: 50%;
     z-index: 2;
 }
 
@@ -66,26 +104,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% 0% 3% 0%;
     gap: 10%;
-}
-
-.pi {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    margin: 3% 0% 3% 0%;
-    gap: 4%;
+    opacity: 0;
     transition: all 0.6s ease-in-out;
 }
 
-.piDown {
-    transform: translateY(200px);   
+.pi {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+   
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
 }
 
 .pi > .title {
     width: 40%;
+}
+
+.showDesc {
+    opacity: 1;
 }
 
 .dt {
@@ -109,7 +152,12 @@
     justify-content: flex-end;
 
     color: var(--night-special-color);
-    margin-right: 2%;
+    margin: 0.5% 2% 0 0%;
+}
+
+.hideExpander {
+    transition: opacity 0.8s;
+    opacity: 0;
 }
 
 .expander {
@@ -127,7 +175,7 @@
     width: 20px;
     height: 20px;
     transform: rotate(180deg);
-    transition: fill 0.6s;
+    transition: all 0.6s;
 }
 
 
@@ -154,14 +202,20 @@
 .expander:hover .expandTriangle,
 .expander:focus .expandTriangle {
     fill: transparent;
+    transform: rotate(360deg);
 }
+
 
 /* Add-on Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.addOns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
 .addOnContainer {
     position: absolute;
-    width: 80%;
-    margin: 27% 10% 5% 15%;
     font-size: 1.3em;
 }
 
@@ -175,26 +229,28 @@
     opacity: 0;
 }
 
-.addOnFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
+.addOnGrid {
+    display: grid;
+    grid: 60% 40% /
+          70% 30%;
+    grid-template-areas:
+        "addOnDesc motif"
+        "    .     collapser";
+    margin-left: 8%;
+    gap: 3%;
 }
 
 .addOnDesc {
-    width: 60%;
+    grid-area: addOnDesc;
 }
 
 
 /* Collapse Button
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .collapseContainer {
-    display: flex;
-    justify-content: flex-end;
-
+    grid-area: collapser;
+    margin-top: 5%;
     color: var(--night-special-color);
-    margin-right: 2%;
 }
 
 .collapser {
@@ -212,7 +268,7 @@
     width: 20px;
     height: 20px;
     fill: transparent;
-    transition: fill 0.6s;
+    transition: all 0.6s;
 }
 
 
@@ -239,6 +295,7 @@
 .collapser:hover .collapseTriangle,
 .collapser:focus .collapseTriangle {
     fill: var(--day-bg-color);
+    transform: rotate(180deg);
 }
 
 
@@ -247,18 +304,13 @@
 .horizontalBreak {
     width: 80%;
     height: 10%;
-    margin-left: 10%;
-    transition: all 0.6s ease-in-out;
+    margin: 3% 0 0 10%;
 }
-
-.expandBreak {
-    transform: translateY(200px);
-}
-
 
 /* Rotating SVG Motif
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .motif {
+    grid-area: motif;
     height: 100px;
     width: 100px;
     flex-shrink: 0;
