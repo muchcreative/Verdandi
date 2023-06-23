@@ -99,7 +99,6 @@
 .desc {
     font-size: 1.3em;
     width: 50%;
-    z-index: 2;
 }
 
 
@@ -240,6 +239,7 @@
 
     visibility: 1;
     opacity: 1;
+    z-index: 2;
 }
 
 .addOnGrid {

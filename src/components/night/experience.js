@@ -18,6 +18,9 @@ const sideArrow = () => <SideArrow />;
 const expMotif = () => <ExpMotif />;
 const triangle = () => <Triangle />;
 
+
+// Start by affixing everythign together
+
 export default function Experience() {
     const [desc, setDesc] = useState(0);
     const [showAddOn, setShow] = useState(false);

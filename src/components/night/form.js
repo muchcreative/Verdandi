@@ -10,6 +10,29 @@ import { clsx } from 'clsx';
 export default function Form() {
     const [submitted, setSubmitted] = useState(false);
 
+    const handleSubmit = async(event) => {
+      event.preventDefault();
+      setSubmitted(true);
+
+      const data = {
+        name: event.target.name.value,
+        email: event.target.email.value,
+        message: event.target.message.value,
+      }
+
+      const JSONdata = JSON.stringify(data);
+      const endpoint = 'api/email'
+
+      const options = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSONdata,
+      }
+
+      const response = await fetch(endpoint, options);
+      const result = await response.json();
+    }
+
     useEffect(() => {
       setTimeout(() => {setSubmitted(false);}, 5000);
     }, [submitted])
@@ -18,9 +41,7 @@ export default function Form() {
       <>
         <form
           id='contact-form'
-          action='/api/email'
-          onSubmit={() => setSubmitted(true)}
-          method='post'>
+          onSubmit={handleSubmit}>
             <div className={formStyles.formGrid}>
                 <div className={formStyles.nameArea}>
                   <label htmlFor='name' hidden>Name</label>

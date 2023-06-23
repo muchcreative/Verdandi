@@ -34,6 +34,8 @@ const ebGaramond = EB_Garamond({
 // More section feels damp
 // Soft transition between more and experience
 
+// More Section
+// Draw both vertical and horizontal line
 
 // Experience
 // Typograpghy changes

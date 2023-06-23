@@ -2,6 +2,7 @@ import sendgrid from '@sendgrid/mail';
 
 export default async function sendEmail(req, res) {
     sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+
     try {
       const {name, email, message} = req.body;
       await sendgrid.send({
@@ -21,5 +22,5 @@ export default async function sendEmail(req, res) {
       return res.status(error.statusCode || 500).json({ error: error.message });
     }
 
-    return res.status(200).json({ error: '' });
+    res.status(200).json({ error: '' });
 }
