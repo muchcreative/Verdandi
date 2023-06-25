@@ -18,11 +18,11 @@ const sideArrow = () => <SideArrow />;
 const expMotif = () => <ExpMotif />;
 const triangle = () => <Triangle />;
 
-
-// Start by affixing everythign together
+// affix descriptions
+// lets add the animations first
 
 export default function Experience() {
-    const [desc, setDesc] = useState(0);
+    const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);
 
     useEffect(() => {
@@ -39,30 +39,30 @@ export default function Experience() {
             <MMS className={expStyles.mms}/>
         </div>
         <div className={expStyles.dotContainer}>
-          <button
-            name='current-desc-indicator' 
-            aria-label='current-desc-indicator'
-            onClick={() => setDesc(0)}>
-              <span className={clsx({
-                [expStyles.dot]: true,
-                [expStyles.selectedDot] : desc === 0})}></span>
-          </button>
-          <button
-            name='current-desc-indicator'
-            aria-label='current-desc-indicator'
-            onClick={() => setDesc(1)}>
-              <span className={clsx({
-                [expStyles.dot]: true,
-                [expStyles.selectedDot] : desc === 1})}></span>
-          </button>
-          <button
-            name='current-desc-indicator' 
-            aria-label='current-desc-indicator'
-            onClick={() => setDesc(2)}>
-              <span className={clsx({
-                [expStyles.dot]: true,
-                [expStyles.selectedDot] : desc === 2})}></span>
-          </button>
+            <button
+              name='current-desc-indicator' 
+              aria-label='current-desc-indicator'
+              onClick={() => setDesc({curr: 0, prev: desc.curr})}>
+                <span className={clsx({
+                  [expStyles.dot]: true,
+                  [expStyles.selectedDot] : desc.curr === 0})}></span>
+            </button>
+            <button
+              name='current-desc-indicator'
+              aria-label='current-desc-indicator'
+              onClick={() => setDesc({curr: 1, prev: desc.curr})}>
+                <span className={clsx({
+                  [expStyles.dot]: true,
+                  [expStyles.selectedDot] : desc.curr === 1})}></span>
+            </button>
+            <button
+              name='current-desc-indicator'
+              aria-label='current-desc-indicator'
+              onClick={() => setDesc({curr: 2, prev: desc.curr})}>
+                <span className={clsx({
+                  [expStyles.dot]: true,
+                  [expStyles.selectedDot] : desc.curr === 2})}></span>
+            </button>
         </div>
         <div className={expStyles.expContainer}>          
             <div className={expStyles.mainDescs}>
@@ -70,15 +70,15 @@ export default function Experience() {
                   name='left-arrow-btn'
                   aria-label='left-arrow-btn'
                   onClick={() => {
-                  const updated = desc - 1;
-                  updated === -1 ? setDesc(2) : setDesc(updated);
+                  const updated = desc.curr - 1;
+                  updated === -1 ? setDesc({curr: 2, prev: desc.curr}) : setDesc({curr: updated, prev: desc.curr});
                   }}>
                     <SideArrow className={expStyles.leftArrow}/>
                 </button>
                 <div className={expStyles.allDesc}>
                     <div className={clsx({
                       [expStyles.flow] : true,
-                      [expStyles.showDesc] : desc === 0})}>
+                      [expStyles.showDesc] : desc.curr === 0})}>
                         <div className={expStyles.title}>
                             <h4>Flow DB</h4>
                             <p>Full-Stack Developer</p>
@@ -103,7 +103,7 @@ export default function Experience() {
                     </div>
                     <div id='pi' className={clsx({
                       [expStyles.pi] : true,
-                      [expStyles.showDesc] : desc === 1})}>
+                      [expStyles.showDesc] : desc.curr === 1})}>
                         <div className={expStyles.title}>
                             <h4>Portable Intelligence</h4>
                             <p>Lead Data Analyst</p>
@@ -130,7 +130,7 @@ export default function Experience() {
                     </div>
                     <div id='dt' className={clsx({
                       [expStyles.dt] : true,              
-                      [expStyles.showDesc] : desc === 2})}>
+                      [expStyles.showDesc] : desc.curr === 2})}>
                         <div className={expStyles.title}>
                             <h4>Derivative Trader</h4>
                             <p>Lead Data Scientist</p>
@@ -158,8 +158,8 @@ export default function Experience() {
                   name='right-arrow-btn'
                   aria-label='right-arrow-btn'
                   onClick={() => {
-                  const updated = desc + 1;
-                  updated === 3 ? setDesc(0) : setDesc(updated);
+                  const updated = desc.curr + 1;
+                  updated === 3 ? setDesc({curr: 0, prev: desc.curr}) : setDesc({curr: updated, prev: desc.curr});
                   }}>
                     <SideArrow className={expStyles.rightArrow}/>  
                 </button>
@@ -168,7 +168,7 @@ export default function Experience() {
             <div className={expStyles.addOns}>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc === 0 && showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
                           Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
@@ -179,7 +179,7 @@ export default function Experience() {
                         </p>
                         <ExpMotif className={clsx({
                           [expStyles.motif] : true,
-                          [expStyles.selectedMotif] : desc === 0 && showAddOn})}/>  
+                          [expStyles.selectedMotif] : desc.curr === 0 && showAddOn})}/>  
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>
@@ -192,7 +192,7 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc === 1 && showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                       <p className={expStyles.addOnDesc}>
                         Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
@@ -202,7 +202,7 @@ export default function Experience() {
                       </p>             
                       <ExpMotif className={clsx({
                         [expStyles.motif] : true,
-                        [expStyles.selectedMotif] : desc === 1 && showAddOn})}/>                            
+                        [expStyles.selectedMotif] : desc.curr === 1 && showAddOn})}/>                            
                       <div className={expStyles.collapseContainer}>
                           <button onClick={() => setShow(false)}>
                               <span className={expStyles.collapser}>
@@ -215,7 +215,7 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] :  desc === 2 && showAddOn})}>
+                  [expStyles.showAddOnContainer] :  desc.curr === 2 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
                           The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
@@ -227,7 +227,7 @@ export default function Experience() {
                         </p> 
                         <ExpMotif className={clsx({
                           [expStyles.motif] : true,
-                          [expStyles.selectedMotif] : desc === 2 && showAddOn})}/>    
+                          [expStyles.selectedMotif] : desc.curr === 2 && showAddOn})}/>    
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>

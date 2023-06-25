@@ -3,7 +3,7 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 0 8% 10%;
+    margin: 0 0 3% 10%;
 }
 
 .titleUnderline {
@@ -20,14 +20,14 @@
 .moreLayout {
     display: grid;
     grid: 30% 1% 1% 68%/ 
-        33% 33% 33% 1%;
+        32% 32% 32% 4%;
     grid-template-areas:
         "buttons buttons buttons vline"
         "hrDesc  hrDesc  hrDesc  vline"
         "fullHr  fullHr  fullHr  vline"
         "desc    desc    desc    vline";
-    justify-content: center;
-    width: 100%;
+    margin: 0% 0% 0% 21%;
+    width: 60%;
 }
 
 .buttons {
@@ -55,42 +55,41 @@
     transition: 0.4s;
 }
 
-.verticalBreak {
-    grid-area: vline;
-    height: 100%;
-    width: 1px;
-}
 
-
-/* Horizontal Lines
+/* Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hrDesc {
     grid-area: hrDesc;
-    width: 12%;
+    width: 22%;
     border: none;
-    height: 2px;
+    height: 3px;
+    margin: -5% 0 0 12%;
+
     background-color: var(--night-special-color);
     transition: all 0.8s;
 }
 
 .hrDesc1 {
-    transform: translateX(290px);
-    width: 13%;
+    transform: translateX(240px);
 }
 
-.hrDesc1 {
-    transform: translateX(600px);
-    width: 10%;
+.hrDesc2 {
+    transform: translateX(480px);
 }
 
-.fullBreak {
+.fullHr {
     grid-area: fullHr;
     background-color: var(--day-bg-color);
+    
     border: none;
-    height: 1px;
+    height: 2px;
+    width: 90%;
+    margin: -3% 0 0 5%;
+}
 
-    width: 60%;
-    margin: 0% 0 0 20%;
+.verticalBreak {
+    grid-area: vline;
+    width: 3px;
 }
 
 .contactBreak {
@@ -112,7 +111,7 @@
     position: absolute;
     width: 50%;
     left: 24%;
-    margin-top: 2%;
+    margin-top: 0.5%;
 }
 
 .descHide {
@@ -151,7 +150,7 @@
 /* Other Practicals
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .practicals {
-    margin: 10% 15% 10% 15%;
+    margin: 5% 15% 6% 15%;
 }
 
 .pracicalsList {
@@ -162,8 +161,8 @@
     column-gap: 40%;
 }
 
-.focus {
-    margin: 5% 15% 7% 15%;
+.current {
+    margin: 0% 11% 7% 15%;
 }
 
 .about {

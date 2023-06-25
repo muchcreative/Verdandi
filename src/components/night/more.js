@@ -5,14 +5,11 @@ import { useState, useEffect } from 'react';
 import moreStyles from 'src/styles/night/More.module.css';
 
 // SVGs
-import VerticalBreak from 'public/night/vertical_break.svg';
-const verticalBreak = () => <VerticalBreak />;
+import MoreVB from 'public/night/more_vb.svg';
+const more_vb = () => <MoreVB />;
 
 // External Libs
 import { clsx } from 'clsx';
-
-// Should inherit the a motif from above
-// Alternatively can do a cascade
 
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
@@ -38,12 +35,12 @@ export default function More() {
                   [moreStyles.activeButton] : (desc.curr === 2)})}
                 onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
             </div>
-            <VerticalBreak className={moreStyles.verticalBreak}/>
+            <MoreVB className={moreStyles.verticalBreak}/>
             <hr className={clsx({
               [moreStyles.hrDesc]: true,
               [moreStyles.hrDesc1] : desc.curr === 1, 
               [moreStyles.hrDesc2] : desc.curr === 2})} />
-            <hr className={moreStyles.fullBreak}></hr>
+            <hr className={moreStyles.fullHr}></hr>
             <div className={moreStyles.descContainer}>
                 <p id='front-desc' className={clsx({
                   [moreStyles.desc] : true,
@@ -99,7 +96,7 @@ export default function More() {
                 <li>Azure Deployment</li>
             </ol>
         </div>
-        <div className={moreStyles.focus}>
+        <div className={moreStyles.current}>
             <h5>Current</h5>
             <p className={moreStyles.about}>
                 My pen name is Iris. I am 25 years old. I aim to be top 100 world-ranked in Kaggle. 

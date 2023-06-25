@@ -153,6 +153,7 @@
 .showDesc {
     opacity: 1;
     visibility: 1;
+    z-index: 2;
 }
 
 
