@@ -18,9 +18,6 @@ const sideArrow = () => <SideArrow />;
 const expMotif = () => <ExpMotif />;
 const triangle = () => <Triangle />;
 
-// affix descriptions
-// lets add the animations first
-
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);
@@ -44,7 +41,7 @@ export default function Experience() {
               aria-label='current-desc-indicator'
               onClick={() => setDesc({curr: 0, prev: desc.curr})}>
                 <span className={clsx({
-                  [expStyles.dot]: true,
+                  [expStyles.dot] : true,
                   [expStyles.selectedDot] : desc.curr === 0})}></span>
             </button>
             <button
@@ -52,7 +49,7 @@ export default function Experience() {
               aria-label='current-desc-indicator'
               onClick={() => setDesc({curr: 1, prev: desc.curr})}>
                 <span className={clsx({
-                  [expStyles.dot]: true,
+                  [expStyles.dot] : true,
                   [expStyles.selectedDot] : desc.curr === 1})}></span>
             </button>
             <button
@@ -60,7 +57,7 @@ export default function Experience() {
               aria-label='current-desc-indicator'
               onClick={() => setDesc({curr: 2, prev: desc.curr})}>
                 <span className={clsx({
-                  [expStyles.dot]: true,
+                  [expStyles.dot] : true,
                   [expStyles.selectedDot] : desc.curr === 2})}></span>
             </button>
         </div>
@@ -78,7 +75,8 @@ export default function Experience() {
                 <div className={expStyles.allDesc}>
                     <div className={clsx({
                       [expStyles.flow] : true,
-                      [expStyles.showDesc] : desc.curr === 0})}>
+                      [expStyles.showDesc] : desc.curr === 0,
+                      [expStyles.hideDesc] : desc.prev === 0})}>
                         <div className={expStyles.title}>
                             <h4>Flow DB</h4>
                             <p>Full-Stack Developer</p>
@@ -90,12 +88,12 @@ export default function Experience() {
                               structure and a modern approach to the user-client experience design philosophy.                      
                             </p>
                             <div className={clsx({
-                                [expStyles.expandContainer]: true,
-                                [expStyles.hideExpander]: showAddOn})}>
+                                [expStyles.expandContainer] : true,
+                                [expStyles.hideExpander] : showAddOn})}>
                               <button onClick={() => setShow(true)}>
                                 <span className={expStyles.expander}>
-                                  <p>What&#39;s our approach?</p>
-                                  <Triangle className={expStyles.expandTriangle} />
+                                    <p>What&#39;s our approach?</p>
+                                    <Triangle className={expStyles.expandTriangle} />
                                 </span>
                               </button>
                             </div>
@@ -103,7 +101,8 @@ export default function Experience() {
                     </div>
                     <div id='pi' className={clsx({
                       [expStyles.pi] : true,
-                      [expStyles.showDesc] : desc.curr === 1})}>
+                      [expStyles.showDesc] : desc.curr === 1,
+                      [expStyles.hideDesc] : desc.prev === 1})}>
                         <div className={expStyles.title}>
                             <h4>Portable Intelligence</h4>
                             <p>Lead Data Analyst</p>
@@ -117,8 +116,8 @@ export default function Experience() {
                               ProMat 2023.
                             </p>
                             <div className={clsx({
-                                [expStyles.expandContainer]: true,
-                                [expStyles.hideExpander]: showAddOn})}>
+                                [expStyles.expandContainer] : true,
+                                [expStyles.hideExpander] : showAddOn})}>
                                 <button onClick={() => setShow(true)}>
                                     <span className={expStyles.expander}>
                                         <p>This was our solution.</p>
@@ -130,7 +129,8 @@ export default function Experience() {
                     </div>
                     <div id='dt' className={clsx({
                       [expStyles.dt] : true,              
-                      [expStyles.showDesc] : desc.curr === 2})}>
+                      [expStyles.showDesc] : desc.curr === 2,
+                      [expStyles.hideDesc] : desc.prev === 2})}>
                         <div className={expStyles.title}>
                             <h4>Derivative Trader</h4>
                             <p>Lead Data Scientist</p>
@@ -142,8 +142,8 @@ export default function Experience() {
                               learning and statistical algorithms.                      
                             </p>
                             <div className={clsx({
-                                [expStyles.expandContainer]: true,
-                                [expStyles.hideExpander]: showAddOn})}>
+                                [expStyles.expandContainer] : true,
+                                [expStyles.hideExpander] : showAddOn})}>
                                 <button onClick={() => setShow(true)}>
                                     <span className={expStyles.expander}>
                                         <p>These were our results.</p>
@@ -168,7 +168,8 @@ export default function Experience() {
             <div className={expStyles.addOns}>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn,
+                  [expStyles.hideAddOnContainer] : desc.curr === 0 && !showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
                           Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
@@ -192,7 +193,8 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn,
+                  [expStyles.hideAddOnContainer] : desc.curr === 1 && !showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                       <p className={expStyles.addOnDesc}>
                         Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
@@ -215,7 +217,8 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] :  desc.curr === 2 && showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 2 && showAddOn,
+                  [expStyles.hideAddOnContainer] : desc.curr === 2 && !showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
                           The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 

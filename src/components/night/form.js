@@ -4,8 +4,13 @@ import { useState, useEffect } from 'react';
 // CSS
 import formStyles from 'src/styles/night/Form.module.css';
 
+//SVGs
+import SendLine from 'public/night/send_line.svg'
+
 // External Libs
 import { clsx } from 'clsx';
+
+const sendLine = () => <SendLine />;
 
 export default function Form() {
     const [submitted, setSubmitted] = useState(false);
@@ -81,7 +86,8 @@ export default function Form() {
                 <button type='submit' className={clsx({
                   [formStyles.submitButton] : true,
                   [formStyles.submittedButton] : submitted})}>
-                    Send
+                      <p>Send</p>
+                      <SendLine className={formStyles.sendLine} />                 
                 </button>
             </div>
           </div>

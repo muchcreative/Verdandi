@@ -115,14 +115,14 @@
 }
 
 .descHide {
-    animation: hideDesc 0.8s ease forwards;
+    animation: hide-desc 0.8s ease forwards;
 }
 
 .descShow {
-    animation: showDesc 0.8s ease 0.7s forwards;
+    animation: show-desc 0.8s ease 0.7s forwards;
 }
 
-@keyframes showDesc {
+@keyframes show-desc {
     from {
       transform: translateX(-40%);
       opacity: 0;
@@ -134,7 +134,7 @@
     }
 }
 
-@keyframes hideDesc {
+@keyframes hide-desc {
     from {
       transform: translateX(5%);
       opacity: 1;

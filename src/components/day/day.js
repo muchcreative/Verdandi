@@ -36,7 +36,7 @@ export default function Day() {
           <div className={styles.content}>
             <Image
               priority
-              src='/day/large.jpg'
+              src='/day/medium.jpg'
               alt='cutlery'
               width={2400}
               height={1600}

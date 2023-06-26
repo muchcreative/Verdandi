@@ -110,7 +110,7 @@
     align-items: center;
     gap: 10%;
 
-    visibility: 0;
+    visibility: hidden;
     opacity: 0;
     transition: all 0.6s ease-in-out;
 }
@@ -125,7 +125,7 @@
     align-items: center;
     gap: 4%;
    
-    visibility: 0;
+    visibility: hidden;
     opacity: 0;
     transition: all 0.6s ease-in-out;
 }
@@ -145,21 +145,50 @@
     align-items: center;
     gap: 4%;
 
-    visibility: 0;
+    visibility: hidden;
     opacity: 0;
     transition: all 0.6s ease-in-out;
 }
 
 .showDesc {
-    opacity: 1;
-    visibility: 1;
-    z-index: 2;
+    animation: slide-in-desc 0.8s ease 0.7s forwards;
+    visibility: visible;
+}
+
+.hideDesc {
+    animation: slide-out-desc 0.8s ease forwards;
+    visibility: hidden;
+}
+
+@keyframes slide-in-desc {
+    from {
+      transform: translateX(-40%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+
+@keyframes slide-out-desc {
+    from {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(40%);
+        opacity: 0;
+    }
 }
 
 
 /* Expand Button
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expandContainer {
+    position: relative;
     display: flex;
     justify-content: flex-end;
 
@@ -168,11 +197,11 @@
 }
 
 .hideExpander {
-    transition: opacity 0.8s;
     opacity: 0;
 }
 
 .expander {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -221,6 +250,7 @@
 /* Add-on Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .addOns {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 2%;
@@ -228,19 +258,47 @@
 
 .addOnContainer {
     position: absolute;
+    left: 7%;
     font-size: 1.3em;
 
-    visibility: 0;
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s linear;
+    transition: all 0.5s linear 0.2s;
 }
 
 .showAddOnContainer {
-    transition: opacity 0.3s linear 1.1s;
+    visibility: visible;
+    animation: show-add-on 0.5s ease-in forwards;
+}
 
-    visibility: 1;
-    opacity: 1;
-    z-index: 2;
+.hideAddOnContainer {
+    visibility: visible;
+    animation: hide-add-on 0.5s ease-in forwards;
+}
+
+@keyframes show-add-on {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide-add-on {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-200px);
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .addOnGrid {

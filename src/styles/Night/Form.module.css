@@ -37,22 +37,9 @@
     margin-top: 5%;
 }
 
-.submitButton {
-    transition: all 0.3s;
-    font-weight: 500;
-}
 
-.submitButton:hover,
-.submitButton:focus {
-    color: var(--night-special-color);
-}
-
-.submittedButton {
-    color: var(--night-special-color);
-    text-decoration: var(--night-special-color) 1px underline;
-    text-underline-offset: 1px;
-}
-
+/* Input Fields
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .nameInput {
     width: 100%;
     height: 100%;
@@ -60,6 +47,10 @@
     border: 1px solid var(--day-bg-color);
 }
   
+.nameInput::placeholder {
+    color: #faf9f680;
+}
+
 .nameInput:focus,
 .nameInput:active {
     border: 2px solid var(--night-special-color);
@@ -71,6 +62,10 @@
     height: 100%;
     padding: 1% 2% 1% 4%;
     border: 1px solid var(--day-bg-color);
+}
+
+.emailInput::placeholder {
+    color: #faf9f680;
 }
 
 .emailInput:focus,
@@ -87,10 +82,52 @@
     border: 1px solid var(--day-bg-color);
 }
 
+.messageInput::placeholder {
+    color: #faf9f680;
+}
+
 .messageInput:focus,
 .messageInput:active {
     border: 2px solid var(--night-special-color);
     border-radius: 4px;
+}
+
+
+/* Submit Button
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.submitButton {
+    transition: all 0.3s;
+    font-weight: 500;
+    margin-left: 27%;
+}
+
+.sendLine {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    margin-top: -20%;
+    margin-left: -20%;
+}
+
+.submitButton:hover .sendLine,
+.submitButton:focus .sendLine {
+    animation: draw 1.2s ease-in forwards;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+    color: var(--night-special-color);
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.submittedButton {
+    color: var(--night-special-color);
+    text-decoration: var(--night-special-color) 1px underline;
+    text-underline-offset: 1px;
 }
 
 
