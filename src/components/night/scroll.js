@@ -33,7 +33,7 @@ export default function Scroll() {
     useEffect(() => {
         const drawOnScroll = () => {
           const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
-            / (5800 - document.documentElement.clientHeight);
+            / (4000 - document.documentElement.clientHeight);
 
           const draw = length * scrollPercent;
           svgElement.style.strokeDashoffset = length - draw;
@@ -58,7 +58,7 @@ export default function Scroll() {
         [scrollStyles.hideDownArrow] : scrolled})}/>
       <div className={scrollStyles.scrollText}>
           <h1>After Hours</h1>
-          <p>5pm - 1am</p>
+          <p>4pm - 1am</p>
       </div>
     </>
   )

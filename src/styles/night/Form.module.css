@@ -97,8 +97,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .submitButton {
     transition: all 0.3s;
-    font-weight: 500;
     margin-left: 27%;
+}
+
+.submitButton p {
+    font-weight: 500;
+    font-size: 1.05em;
 }
 
 .sendLine {

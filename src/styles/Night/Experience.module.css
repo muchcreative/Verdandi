@@ -31,9 +31,31 @@
     height: 180px;
 }
 
+.leftArrow:hover path {
+    animation: alt-stroke-width 1.7s ease-in infinite;
+}
+
+@keyframes alt-stroke-width {
+    0%, 50%, 100% {
+        stroke-width: 2;
+    }
+
+    25% {
+        stroke-width: 3;
+    }
+
+    75% {
+        stroke-width: 1;
+    }
+}
+
 .rightArrow {
     height: 180px;
     transform: rotate(180deg);
+}
+
+.rightArrow:hover path {
+    animation: alt-stroke-width 1.7s ease-in infinite;
 }
 
 
@@ -278,24 +300,20 @@
 
 @keyframes show-add-on {
     from {
-        transform: translateY(-200px);
         opacity: 0;
     }
 
     to {
-        transform: translateY(0);
         opacity: 1;
     }
 }
 
 @keyframes hide-add-on {
     from {
-        transform: translateY(0);
         opacity: 1;
     }
 
     to {
-        transform: translateY(-200px);
         opacity: 0;
         visibility: hidden;
     }
@@ -374,8 +392,10 @@
 /* Horizontal Breaks
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .horizontalBreak {
+    border: 0;
     width: 80%;
-    height: 10%;
+    height: 2px;
+    background-color: var(--day-bg-color);
     margin: 3% 0 0 10%;
 }
 
@@ -387,25 +407,4 @@
     height: 100px;
     width: 100px;
     flex-shrink: 0;
-}
-
-.selectedMotif {
-    animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion) {
-    .selectedMotif {
-        width: 40%;
-        height: 40%;
-        animation: none;
-    }
 }

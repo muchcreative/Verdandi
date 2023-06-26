@@ -20,10 +20,10 @@ const triangle = () => <Triangle />;
 
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
-    const [showAddOn, setShow] = useState(false);
+    const [showAddOn, setShow] = useState({curr: false, prev: false});
 
     useEffect(() => {
-        setShow(false);
+        setShow({curr: false, prev: false});
     }, [desc]);
 
     return (
@@ -39,7 +39,8 @@ export default function Experience() {
             <button
               name='current-desc-indicator' 
               aria-label='current-desc-indicator'
-              onClick={() => setDesc({curr: 0, prev: desc.curr})}>
+              onClick={() => 
+                setDesc({curr: 0, prev: desc.curr})}>
                 <span className={clsx({
                   [expStyles.dot] : true,
                   [expStyles.selectedDot] : desc.curr === 0})}></span>
@@ -178,9 +179,7 @@ export default function Experience() {
                           speed boost over their leading competitors. With a modern UI and a well-designed database, Flow will 
                           completely change the way EDCs are used.
                         </p>
-                        <ExpMotif className={clsx({
-                          [expStyles.motif] : true,
-                          [expStyles.selectedMotif] : desc.curr === 0 && showAddOn})}/>  
+                        <ExpMotif className={expStyles.motif}/>
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>
@@ -202,9 +201,7 @@ export default function Experience() {
                         dashboard. The dashboard enables managers to make key decisions on tasks and driver productivity 
                         during quarterly reports.
                       </p>             
-                      <ExpMotif className={clsx({
-                        [expStyles.motif] : true,
-                        [expStyles.selectedMotif] : desc.curr === 1 && showAddOn})}/>                            
+                      <ExpMotif className={expStyles.motif}/>                     
                       <div className={expStyles.collapseContainer}>
                           <button onClick={() => setShow(false)}>
                               <span className={expStyles.collapser}>
@@ -228,9 +225,7 @@ export default function Experience() {
                           periods due to a lack of data among the SP500. This along with consistent unusually high-weight activations 
                           on the first and last-time timestamps, lead to the project being scrapped.
                         </p> 
-                        <ExpMotif className={clsx({
-                          [expStyles.motif] : true,
-                          [expStyles.selectedMotif] : desc.curr === 2 && showAddOn})}/>    
+                        <ExpMotif className={expStyles.motif}/>  
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>

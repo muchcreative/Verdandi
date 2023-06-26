@@ -93,8 +93,11 @@
 }
 
 .contactBreak {
+    border: 0;
+    height: 2px;
     width: 75%;
-    height: 10%;
+
+    background-color: var(--day-bg-color);
     margin: 0 0 5% 12.5%;
 }
 
