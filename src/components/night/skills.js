@@ -23,7 +23,7 @@ export default function Skills() {
     useEffect(() => {
         const frontSkills = document.querySelector('#front-skills');
         const dataSkills = document.querySelector('#data-skills');
-        const devSkills = document.querySelector('#dev-skills');
+        const backSkills = document.querySelector('#back-skills');
         
         let options0 = {
           root: null,
@@ -73,7 +73,7 @@ export default function Skills() {
         let observer2 = new IntersectionObserver(callback2, options2);
         observer0.observe(frontSkills);
         observer1.observe(dataSkills);
-        observer2.observe(devSkills);
+        observer2.observe(backSkills);
     }, [])
 
     return (
@@ -118,9 +118,9 @@ export default function Skills() {
             <VerticalBreak id='vline2' className={clsx({
               [skillsStyles.vline2] : true,
               [skillsStyles.vline2Show] : show1})} />
-            <div id='dev-skills' className={skillsStyles.dev}>
+            <div id='back-skills' className={skillsStyles.back}>
                 <h3 className={showCol2}>
-                    Development
+                    Back-End
                 </h3>
                 <p className={showCol2}>Rust</p>
                 <p className={showCol2}>C</p>

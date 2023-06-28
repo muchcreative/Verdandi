@@ -24,9 +24,9 @@
     grid-template-areas: 
       "front   .      .    .      ."
       "front vline1 data   .      ."
-      "front vline1 data vline2 dev"
-      ".     vline1 data vline2 dev"
-      ".       .      .  vline2 dev";
+      "front vline1 data vline2 back"
+      ".     vline1 data vline2 back"
+      ".       .      .  vline2 back";
     margin: 0% 8% 5% 8%;
 }
 
@@ -40,13 +40,13 @@
 
 .front > h3,
 .data > h3, 
-.dev > h3 {
+.back > h3 {
     line-height: 1.75em;
 }
 
 .front > p,
 .data > p,
-.dev > p {
+.back > p {
     line-height: 3.5em;
     font-size: 1.7em;  
 }
@@ -112,8 +112,8 @@
 
 /* Dev Column
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.dev {
-    grid-area: dev;
+.back {
+    grid-area: back;
 
     display: flex;
     flex-direction: column;
@@ -122,19 +122,19 @@
     text-align: center;
 }
 
-.dev > * {
+.back > * {
   opacity: 0;
   transform: translateY(-40%);
   transition: all 1s ease-in;
 }
 
-.dev > h3:nth-child(1) { transition-delay: 0.2s; }
-.dev > p:nth-child(2) { transition-delay: 0.4s; }
-.dev > p:nth-child(3) { transition-delay: 0.6s; }
-.dev > h3:nth-child(4) { transition-delay: 0.8s; }
-.dev > p:nth-child(5) { transition-delay: 1.0s; }
-.dev > p:nth-child(6) { transition-delay: 1.2s; }
-.dev > p:nth-child(7) { transition-delay: 1.4s; }
+.back > h3:nth-child(1) { transition-delay: 0.2s; }
+.back > p:nth-child(2) { transition-delay: 0.4s; }
+.back > p:nth-child(3) { transition-delay: 0.6s; }
+.back > h3:nth-child(4) { transition-delay: 0.8s; }
+.back > p:nth-child(5) { transition-delay: 1.0s; }
+.back > p:nth-child(6) { transition-delay: 1.2s; }
+.back > p:nth-child(7) { transition-delay: 1.4s; }
 
 
 /* Vertical Line Breaks

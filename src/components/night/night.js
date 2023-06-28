@@ -20,33 +20,6 @@ const ebGaramond = EB_Garamond({
                     style: ['normal', 'italic'],
                   });
 
-// How to remove the refresh animation
-// prevent issues when someone edges up and down through the header
-
-// Justify left
-// One font only
-// skip a font weight
-// Double point sizes
-
-// Themes and elements should feel shared between sections
-// No cohesion between sections
-
-// More section feels damp
-// Soft transition between more and experience
-
-// More Section
-// Draw both vertical and horizontal line
-
-// Experience
-// Typograpghy changes
-// Spacing and Font sizing
-// Try better spacing requriements between the experiences
-// the addOn descriptions don't feel that great
-
-// Add smile animation on send
-// Consider observer animations on the underlines for the titles
-// And the products hook
-
 export default function Night() {
     return (
       <>

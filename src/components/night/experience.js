@@ -7,23 +7,31 @@ import expStyles from 'src/styles/night/Experience.module.css';
 //SVGs
 import MMS from 'public/night/mms.svg'
 import SideArrow from 'public/night/side_arrow.svg'
-import ExpMotif from 'public/night/exp_motif.svg'
 import Triangle from 'public/night/triangle.svg'
+
+import ExpMotif0 from 'public/night/exp_motif_0.svg'
+import ExpMotif1 from 'public/night/exp_motif_1.svg'
+import ExpMotif2 from 'public/night/exp_motif_2.svg'
 
 // External Libs
 import { clsx } from 'clsx';
 
 const mms = () => <MMS />;
 const sideArrow = () => <SideArrow />;
-const expMotif = () => <ExpMotif />;
 const triangle = () => <Triangle />;
+
+const expMotif0 = () => <ExpMotif0 />;
+const expMotif1 = () => <ExpMotif1 />;
+const expMotif2 = () => <ExpMotif2 />;
+
+// Add observer to underline the hr on observation
 
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
-    const [showAddOn, setShow] = useState({curr: false, prev: false});
+    const [showAddOn, setShow] = useState(false);
 
     useEffect(() => {
-        setShow({curr: false, prev: false});
+        setShow(false);
     }, [desc]);
 
     return (
@@ -169,8 +177,7 @@ export default function Experience() {
             <div className={expStyles.addOns}>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn,
-                  [expStyles.hideAddOnContainer] : desc.curr === 0 && !showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
                           Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
@@ -179,7 +186,7 @@ export default function Experience() {
                           speed boost over their leading competitors. With a modern UI and a well-designed database, Flow will 
                           completely change the way EDCs are used.
                         </p>
-                        <ExpMotif className={expStyles.motif}/>
+                        <ExpMotif0 className={expStyles.motif}/>
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>
@@ -192,8 +199,7 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn,
-                  [expStyles.hideAddOnContainer] : desc.curr === 1 && !showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                       <p className={expStyles.addOnDesc}>
                         Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
@@ -201,7 +207,7 @@ export default function Experience() {
                         dashboard. The dashboard enables managers to make key decisions on tasks and driver productivity 
                         during quarterly reports.
                       </p>             
-                      <ExpMotif className={expStyles.motif}/>                     
+                      <ExpMotif1 className={expStyles.motif}/>                     
                       <div className={expStyles.collapseContainer}>
                           <button onClick={() => setShow(false)}>
                               <span className={expStyles.collapser}>
@@ -214,8 +220,7 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.showAddOnContainer] : desc.curr === 2 && showAddOn,
-                  [expStyles.hideAddOnContainer] : desc.curr === 2 && !showAddOn})}>
+                  [expStyles.showAddOnContainer] : desc.curr === 2 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
                           The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
@@ -225,7 +230,7 @@ export default function Experience() {
                           periods due to a lack of data among the SP500. This along with consistent unusually high-weight activations 
                           on the first and last-time timestamps, lead to the project being scrapped.
                         </p> 
-                        <ExpMotif className={expStyles.motif}/>  
+                        <ExpMotif2 className={expStyles.motif}/>  
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>

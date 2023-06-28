@@ -12,6 +12,10 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
+// How to remove the refresh animation
+// prevent issues when someone edges up and down through the header
+// Consider animation products hook line 
+
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 

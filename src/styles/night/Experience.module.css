@@ -38,10 +38,12 @@
 @keyframes alt-stroke-width {
     0%, 50%, 100% {
         stroke-width: 2;
+        color: var(--day-bg-color);
     }
 
     25% {
         stroke-width: 3;
+        stroke: var(--night-special-color);
     }
 
     75% {
@@ -282,41 +284,13 @@
     position: absolute;
     left: 7%;
     font-size: 1.3em;
-
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s linear 0.2s;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease;
 }
 
 .showAddOnContainer {
-    visibility: visible;
-    animation: show-add-on 0.5s ease-in forwards;
-}
-
-.hideAddOnContainer {
-    visibility: visible;
-    animation: hide-add-on 0.5s ease-in forwards;
-}
-
-@keyframes show-add-on {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes hide-add-on {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+    max-height: 400px;
 }
 
 .addOnGrid {
@@ -400,7 +374,7 @@
 }
 
 
-/* Rotating SVG Motif
+/* SVG Motif
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .motif {
     grid-area: motif;

@@ -33,7 +33,7 @@ export default function More() {
                 <button id='back-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 2)})}
-                onClick={() => setDesc({curr: 2, prev: desc.curr})}>Develop</button>
+                onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
             </div>
             <MoreVB className={moreStyles.verticalBreak}/>
             <hr className={clsx({
