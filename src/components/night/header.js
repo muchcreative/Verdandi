@@ -12,9 +12,9 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
-// How to remove the refresh animation
-// prevent issues when someone edges up and down through the header
-// Consider animation products hook line 
+// use snap positioning
+// might actaully be worth it to remove event listener after completion
+// problem when you refresh you might get the event listener again
 
 export default function Main() {
     const [visible, setVisibility] = useState(false);

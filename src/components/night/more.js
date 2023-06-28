@@ -13,12 +13,36 @@ import { clsx } from 'clsx';
 
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
+    const [seenTitle, setSeen] = useState(false);
+
+    useEffect(() => {
+      const moreTitle = document.querySelector('#more-title');
+
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              setSeen(true);
+          }
+        })
+      };
+
+      let observer = new IntersectionObserver(callback, options);
+      observer.observe(moreTitle);
+    }, [])
 
     return (
       <>
-        <div className={moreStyles.titleContainer}>
+        <div id='more-title' className={moreStyles.titleContainer}>
           <h2>Read More</h2>
-          <hr className={moreStyles.titleUnderline}></hr>
+          <hr className={clsx({
+            [moreStyles.titleLine] : true,
+            [moreStyles.animateTitleLine]: seenTitle})}></hr>
         </div>
         <div className={moreStyles.moreLayout}>
             <div className={moreStyles.buttons}>

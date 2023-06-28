@@ -34,11 +34,36 @@ export default function Experience() {
         setShow(false);
     }, [desc]);
 
+    const [seenTitle, setSeen] = useState(false);
+
+    useEffect(() => {
+      const expTitle = document.querySelector('#exp-title');
+
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              setSeen(true);
+          }
+        })
+      };
+
+      let observer = new IntersectionObserver(callback, options);
+      observer.observe(expTitle);
+    }, [])
+
     return (
       <>
-        <div className={expStyles.titleContainer}>
+        <div id='exp-title' className={expStyles.titleContainer}>
           <h2>Experience</h2>
-          <hr className={expStyles.titleUnderline}></hr>
+          <hr className={clsx({
+            [expStyles.titleLine] : true,
+            [expStyles.animateTitleLine] : seenTitle})}></hr>
         </div>
         <div className={expStyles.art}>
             <MMS className={expStyles.mms}/>

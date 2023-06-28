@@ -33,7 +33,7 @@ export default function Scroll() {
     useEffect(() => {
         const drawOnScroll = () => {
           const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
-            / (4000 - document.documentElement.clientHeight);
+            / (3800 - document.documentElement.clientHeight);
 
           const draw = length * scrollPercent;
           svgElement.style.strokeDashoffset = length - draw;

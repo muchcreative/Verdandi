@@ -6,12 +6,18 @@
     margin: 0 0 5% 10%;
 }
 
-.titleUnderline {
-    width: 20%;
+.titleLine {
     border: none;
     height: 3px;
     background-color: var(--night-special-color);
     margin-top: -10px;
+    
+    width: 0%;
+    transition: width 1s ease;
+}
+
+.animateTitleLine {
+    width: 20%;
 }
 
 

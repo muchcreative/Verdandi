@@ -15,6 +15,7 @@ export default function Skills() {
     const [show0, setShow0] = useState(false);
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
+    const [seenTitle, setSeen] = useState(false);
 
     const showCol0 = clsx({ [skillsStyles.showSkills] : show0 });
     const showCol1 = clsx({ [skillsStyles.showSkills] : show1 });
@@ -76,11 +77,34 @@ export default function Skills() {
         observer2.observe(backSkills);
     }, [])
 
+    useEffect(() => {
+      const skillsTitle = document.querySelector('#skills-title');
+
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+
+      const callback = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              setSeen(true);
+          }
+        })
+      };
+
+      let observer = new IntersectionObserver(callback, options);
+      observer.observe(skillsTitle);
+    }, [])
+
     return (
       <>
-        <div className={skillsStyles.titleContainer}>
-          <h2>Coding</h2>
-          <hr className={skillsStyles.titleUnderline}></hr>
+        <div id='skills-title' className={skillsStyles.titleContainer}>
+          <h2>Skills</h2>
+          <hr className={clsx({
+            [skillsStyles.titleLine] : true,
+            [skillsStyles.animateTitleLine] : seenTitle})}></hr>
         </div>
         <div id='skills-grid' className={skillsStyles.skillsContainer}>
             <div id='front-skills' className={skillsStyles.front}>
