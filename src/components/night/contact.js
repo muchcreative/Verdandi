@@ -1,4 +1,5 @@
 // Next.js
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // CSS
@@ -7,14 +8,43 @@ import Form from 'src/components/night/form.js';
 
 // SVGs
 import GitHubLogo from 'public/night/github_logo.svg';
+
+// External Libs
+import { clsx } from 'clsx';
+
 const githubLogo = () => <GitHubLogo />;
 
 export default function Contact() {
+  const [seenTitle, setSeen] = useState(false);
+
+  useEffect(() => {
+    const contactTitle = document.querySelector('#contact-title');
+
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0,
+    };
+
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            setSeen(true);
+        }
+      })
+    };
+
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(contactTitle);
+  }, [])
+
   return (
     <>
-      <h6>
+      <h6 id='contact-title'>
         Together,<br></br>let&#39;s create something&nbsp;
-        <em className={contactStyles.different}>different.</em>
+        <em className={clsx({
+          [contactStyles.different]: true,
+          [contactStyles.animateDifferent] : seenTitle})}>different.</em>
       </h6>
       <Form />
       <footer>

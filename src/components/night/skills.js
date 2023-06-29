@@ -111,7 +111,7 @@ export default function Skills() {
                 <h3 className={showCol0}>
                     Front-End
                 </h3>
-                <p className={showCol0}>JavaScript</p>
+                <p className={showCol0}>JavaScript / TypeScript</p>
                 <p className={showCol0}>HTML</p>
                 <p className={showCol0}>CSS</p>
                 <h3 className={clsx({
