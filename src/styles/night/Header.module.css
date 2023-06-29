@@ -51,7 +51,7 @@
 
 .bgChange2 {
     position: relative;
-    top: -100%;
+    top: 0%;
     left: 0%;
     height: 100%;
     width: 100%;
@@ -79,7 +79,7 @@
 
 .bgChange3 {
     position: relative;
-    top: -200%;
+    top: 0%;
     left: 0%;
     height: 100%;
     width: 100%;

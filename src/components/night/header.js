@@ -12,9 +12,8 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
-// use snap positioning
-// might actaully be worth it to remove event listener after completion
-// problem when you refresh you might get the event listener again
+// Problem you don't see the second transition
+// We should be able to stack these properly
 
 export default function Main() {
     const [visible, setVisibility] = useState(false);
@@ -26,14 +25,38 @@ export default function Main() {
       const bgChange3 = document.querySelector('#bg-change-3');
   
       const preStart = 50;
+      const afterEnd = 50;
       const whiteSpaceLoc = whiteSpace.getBoundingClientRect();
 
       const bgTransition = () => {
-        if (whiteSpaceLoc.top - preStart <= window.scrollY) {
+        
+        // Scroll in range of the animation and scroll needs to freeze for the animation
+        if (whiteSpaceLoc.top - preStart <= window.scrollY && window.scrollY <= whiteSpaceLoc.bottom + afterEnd) {
             setVisibility(true);
             bgChange1.style.backgroundPosition = 'top';   
             bgChange2.style.backgroundPosition = 'bottom';    
             bgChange3.style.backgroundPosition = 'top';
+
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop + 200);
+            };
+
+            setTimeout(() => {
+              window.onscroll = function() {};
+            }, 1600);
+            
+            document.removeEventListener('scroll', bgTransition);
+
+        // Scroll out of range of animation and scroll should not freeze for the animation
+        } else if (window.scrollY >= whiteSpaceLoc.bottom + afterEnd) {
+            setVisibility(true);
+            bgChange1.style.backgroundPosition = 'top';   
+            bgChange2.style.backgroundPosition = 'bottom';    
+            bgChange3.style.backgroundPosition = 'top';
+
+        // At beginning of page, nothing happens
         } else {
             bgChange3.style.backgroundPosition = 'bottom';
             bgChange2.style.backgroundPosition = 'top';

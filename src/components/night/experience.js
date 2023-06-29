@@ -29,12 +29,11 @@ const expMotif2 = () => <ExpMotif2 />;
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);
+    const [seenTitle, setSeen] = useState(false);
 
     useEffect(() => {
         setShow(false);
     }, [desc]);
-
-    const [seenTitle, setSeen] = useState(false);
 
     useEffect(() => {
       const expTitle = document.querySelector('#exp-title');
