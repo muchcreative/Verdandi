@@ -12,9 +12,6 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
-// Problem you don't see the second transition
-// We should be able to stack these properly
-
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 
@@ -40,7 +37,7 @@ export default function Main() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
             window.onscroll = function() {
-                window.scrollTo(scrollLeft, scrollTop + 200);
+                window.scrollTo(scrollLeft, scrollTop + 150);
             };
 
             setTimeout(() => {

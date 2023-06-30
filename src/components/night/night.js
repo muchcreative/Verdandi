@@ -20,6 +20,13 @@ const ebGaramond = EB_Garamond({
                     style: ['normal', 'italic'],
                   });
 
+// Problem you don't see the second transition
+// We should be able to stack these properly
+// Scroll SVG should line up
+
+// Go through sections and remove rags, windows, and orphans
+// Start checking for responsive design sizes
+
 export default function Night() {
     return (
       <>

@@ -24,8 +24,6 @@ const expMotif0 = () => <ExpMotif0 />;
 const expMotif1 = () => <ExpMotif1 />;
 const expMotif2 = () => <ExpMotif2 />;
 
-// Add observer to underline the hr on observation
-
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);
@@ -111,14 +109,14 @@ export default function Experience() {
                       [expStyles.showDesc] : desc.curr === 0,
                       [expStyles.hideDesc] : desc.prev === 0})}>
                         <div className={expStyles.title}>
-                            <h4>Flow DB</h4>
+                            <h4>Data Mart</h4>
                             <p>Full-Stack Developer</p>
                         </div>
                         <div className={expStyles.desc}>
                             <p>
-                              Flow is a cloud database for small to medium-sized human clinical trials. Flow aims to innovate from 
-                              traditional EDCs (Electronic Data Capture Systems) through an aggressive subscription-based pricing 
-                              structure and a modern approach to the user-client experience design philosophy.                      
+                              Data Mart is a dApp (decentralized application) that facilitates the online selling and trading of information 
+                              and data. It will be the world&#39;s first decentralized marketplace for both buyers and sellers to buy, sell, share,
+                              and trade information from both sensitive data to large datasets for machine learning or market demographics.       
                             </p>
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
@@ -142,11 +140,9 @@ export default function Experience() {
                         </div>
                         <div className={expStyles.desc}>
                             <p>
-                              Wanting to utilize machine learning to help stand out amongst competitors, I was brought in to consult 
-                              on machine learning paths and complete early product data analysis. During my time there I was provided 
-                              with a team of developers to consult with and speak on starting machine learning and data analysis within 
-                              their company. The goal was that in 3 months we would have a product to showcase for Chicago&#39;s 
-                              ProMat 2023.
+                              Seeking opportunities to use machine learning to help bolster their recent product release. I was brought in to 
+                              complete data analysis and consult on machine learning. Provided with a team of developers, the goal was that 
+                              within 3 months we would have a finished product to showcase for Chicago&#39;s ProMat 2023. 
                             </p>
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
@@ -170,9 +166,9 @@ export default function Experience() {
                         </div>
                         <div className={expStyles.desc}>
                             <p>
-                              Lead a team of 3 data scientists for a derivative market trader. Created a NoSQL database set up for over 15mm 
-                              data points on a Google Cloud Bucket server. Utilized Neptune model tracking and tested over 20 different machine 
-                              learning and statistical algorithms.                      
+                              I lead a team of 3 data scientists for a derivative market trader. Together, we created a cloud-based NoSQL 
+                              database set up for over 15mm data points. Developed custom back-testing software for our derivative strategy. 
+                              Utilized various model tracking software to test over 20 different machine learning and statistical algorithms.                   
                             </p>
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
@@ -204,11 +200,11 @@ export default function Experience() {
                   [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
-                          Flow will be built using Rust, Diesel, and PostgreSQL to boast a 5-10x SQL and navigational speed boost 
-                          compared to other leading competitors and benchmarks. An example of Rust&#39;s natural speed comparison 
-                          and GPU concurrency with other top software products is Polars with a 10x speed boost and SWC with a 20x 
-                          speed boost over their leading competitors. With a modern UI and a well-designed database, Flow will 
-                          completely change the way EDCs are used.
+                          When commercializing with data there are many things to consider. The top three are firstly, ensuring the data is used 
+                          correctly and within the expectations of all parties involved. Secondly, ensuring that the data sold between 
+                          all parties is consistent and immutable amongst all copies of it across all computers involved in the network, 
+                          and thirdly ensuring that the data is transparent and the customer understands what is involved in the deal. 
+                          All three of these items can be solved using blockchain with the Near Protocol and Ethereum.
                         </p>
                         <ExpMotif0 className={expStyles.motif}/>
                         <div className={expStyles.collapseContainer}>
@@ -226,10 +222,11 @@ export default function Experience() {
                   [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                       <p className={expStyles.addOnDesc}>
-                        Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, 
-                        a tier-1 automotive supplier. Created a full data processing pipeline and client-facing analysis 
-                        dashboard. The dashboard enables managers to make key decisions on tasks and driver productivity 
-                        during quarterly reports.
+                        Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, a tier-1 
+                        automotive supplier. From there we created a full data processing pipeline and client-facing analysis dashboard. 
+                        The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
+                        Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
+                        product was their key showcase at ProMat and will be their main product focus for 2023.
                       </p>             
                       <ExpMotif1 className={expStyles.motif}/>                     
                       <div className={expStyles.collapseContainer}>
@@ -247,12 +244,11 @@ export default function Experience() {
                   [expStyles.showAddOnContainer] : desc.curr === 2 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
-                          The final model was an ensemble LGBM with an autoencoder to help filter out noise modeled after Makridakis 
-                          Competition winners. Data leakage and survivorship bias was cleared out during the post-processing of the 
-                          data and using time-series validation splits. The ending model had 0.8 AUC and was successful in clearing 
-                          in-house developed backtesting software. However, I was skeptical about overfitting during certain time 
-                          periods due to a lack of data among the SP500. This along with consistent unusually high-weight activations 
-                          on the first and last-time timestamps, lead to the project being scrapped.
+                          The final model was an ensemble LGBM with an autoencoder to help filter out noise. The model drew inspiration 
+                          from Makridakis Competition winners and similar Kaggle competition winners. Key data leakage and survivorship 
+                          bias issues were addressed during the post-processing of the data and using time-series validation splits. 
+                          The ending model had 0.8 AUC and was successful in clearing in-house developed backtesting software. The project 
+                          had to be retired due to time constraints and unusual weight activation patterns during volatile time periods.
                         </p> 
                         <ExpMotif2 className={expStyles.motif}/>  
                         <div className={expStyles.collapseContainer}>

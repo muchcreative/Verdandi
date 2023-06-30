@@ -182,7 +182,7 @@
 }
 
 .showDesc {
-    animation: slide-in-desc 0.8s ease 0.8s forwards;
+    animation: slide-in-desc 0.8s ease 0.75s forwards;
     visibility: visible;
 }
 
@@ -193,7 +193,7 @@
 
 @keyframes slide-in-desc {
     from {
-      transform: translateX(-15%);
+      transform: translateX(-20%);
       opacity: 0;
     }
 
@@ -210,7 +210,7 @@
     }
 
     to {
-        transform: translateX(15%);
+        transform: translateX(20%);
         opacity: 0;
     }
 }

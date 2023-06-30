@@ -70,37 +70,35 @@ export default function More() {
                   [moreStyles.desc] : true,
                   [moreStyles.descShow] : (desc.curr === 0),
                   [moreStyles.descHide] : (desc.prev === 0)})}>
-                  This portfolio website was built in Next.js and all SVG assets were designed in Figma. 
-                  Additionally, I built two other websites for an Ontario-based materials handling company 
-                  and for Renderlabs. Regarding dashboards, I built and lead the design of the 
-                  data analytics dashboard for Portable Intelligence. Currently, designing the human 
-                  clinical trials dashboard and later the website for Flow DB. Over 1 year of experience 
-                  in front-end development.
+                    This portfolio website was built in Next.js and all assets were designed in Figma. 
+                    Besides this website, I have helped design and develop 3 other websites for both small 
+                    businesses and startups. Regarding applications, I have built and led the design 
+                    of the data analytics dashboard for Portable Intelligence. Currently, I am designing the 
+                    data marketplace and later the website information page for Data Mart. I have over 
+                    1 year of experience in both design and front-end development.
                 </p>
                 <p id='data-desc' className={clsx({
                   [moreStyles.desc] : true,
                   [moreStyles.descShow] : (desc.curr === 1),
                   [moreStyles.descHide] : (desc.prev === 1)})}>
-                  Multiple data scientist certificates and courses. Lead multiple teams in machine 
-                  learning-related projects. Consulted for machine learning opportunities at Portable 
-                  Intelligence and created a client-facing analytics dashboard with easy-to-understand 
-                  graphics and data report summaries for users without a background in data. Notable 
-                  ML models trained include, condominium blueprint summary, and room selection with convolutions 
-                  with data augmentation specific to the blueprints. Market derivative trader time-series 
-                  model. Code and markup understanding NLP model. Top game models copied include models from
-                  Connect-4, Go, and Chess. Over 4-5 years of experience building ML and statistical models.
+                    I have led multiple teams in machine learning-related projects and product development. 
+                    I have consulted for machine learning opportunities at Portable Intelligence and created 
+                    a client-facing analytics dashboard with understandable graphics and report summaries 
+                    for users without a background in data analytics. Before that, my other notable ML models 
+                    include a condominium blueprint summary to aid engineering system design and monitor various 
+                    engineering standards, a market derivative trader time-series model, and a code and markdown 
+                    NLP model. I have 4 - 5 years of experience in both data analytics and machine learning development.
                 </p>
                 <p id='back-desc' className={clsx({
                   [moreStyles.desc] : true,
                   [moreStyles.descShow] : (desc.curr === 2),
                   [moreStyles.descHide] : (desc.prev === 2)})}>
-                  Started back-end development with a university project, leading a team 
-                  to develop a robot navigation algorithm in C++ to a 90% score. Developed 
-                  backtesting software for market derivatives and the aggregation/post-processing 
-                  data pipeline to store market data over the Cloud. Currently developing 
-                  a SQL database ORM system with Rust using Diesel. Designing for multi-threaded 
-                  concurrency for page navigation and API requests. Over 1 year of experience in 
-                  back-end development.
+                    I lead a team to develop a robot navigation algorithm in C++ to a 90% score. From there, I 
+                    developed backtesting software for market derivatives and the full ETL pipeline to store 
+                    market data over the Cloud including its aggregation and pre-processing. I am currently 
+                    working with other developers to help write smart contracts that outline the data rules 
+                    for the usage of data commercialized through Data Mart and recorded on the blockchain. 
+                    I have over 1 year of experience in back-end development.
                 </p>
             </div>
         </div>
@@ -123,16 +121,13 @@ export default function More() {
         <div className={moreStyles.current}>
             <h5>Current</h5>
             <p className={moreStyles.about}>
-                My pen name is Iris. I am 25 years old. I aim to be top 100 world-ranked in Kaggle. 
-                But, this year I am currently:
+                My pen name is 	&ldquo;muchcreative&rdquo;. I am 25 years old and I want to be a decent developer. 
+                This year I am:
             </p>
             <ol className={moreStyles.goals}>
-              <li>Focusing on back-end development, especially in Rust proficiency on my free time.</li>
-              <li>Getting AWS certified in Application Architecture.</li>
-              <li>
-                  Networking with more coders through the event and helping out beginner to intermediate-level coders every Saturday in Toronto through TSE (Toronto Stack Exchange). 
-                  I also help organize members and raise awareness for large coding events in Toronto.
-              </li>
+              <li>Focusing on back-end development, especially in Rust proficiency</li>
+              <li>Networking with more coders through events and Toronto technology conferences</li>
+              <li>You can find me on most Saturdays at 1pm for the Morning Code Meetup at Creed&#39;s Coffee in Toronto</li>
             </ol>
         </div>
         <hr className={moreStyles.contactBreak}></hr>
