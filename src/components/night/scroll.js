@@ -14,8 +14,33 @@ import { clsx } from 'clsx';
 const downArrow = () => <DownArrow />;
 const scrollLine = () => <ScrollLine />;
 
+// so you can set properties or 
+// implement directly in javascript with css modules
+// Can we control the viewbox too?
+// Do i have to avoid auto-centering with preserve aspect ratio
+// You can try adding padding
+
 export default function Scroll() {
     const [scrolled, setScrolled]= useState(false)
+
+    useEffect(() => {
+      // Try setting the viewbox to be responsive
+      // So you bring back the viewbox and by adjust youcan get it
+      // HOWEVER, you might need to add to the width or add padding
+      
+      // Or maybe just add padding manually would that work idk LOL
+      // so depending on the viewport size you can adjust the svg size
+      // until padding gets terrible
+      // no if I keep extra length I can scale my width to drop as much as I want
+      // Infinite length capped at 2000 and the viewbox constantly adjusted
+      // Adding overflow idden
+      const svgElement = document.querySelector('#scroll-line');
+      
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      console.log('width:', width, 'height:', height);
+      // svgElement.setAttribute("viewBox", "0 0 647 1800"); 
+    }, [])
     
     // Handles down arrow fade in and fade out
     useEffect(() => {
@@ -43,7 +68,7 @@ export default function Scroll() {
         const svgElement = document.querySelector('#scroll-line');
         const svgPath = svgElement.firstChild;  // indexes SVG path
         const length = svgPath.getTotalLength() - headStart;  // Add head start for scroll hint
-        svgElement.style.strokeDasharray = length + headStart;  // Add back headt start to ensure dash array is equal to original length
+        svgElement.style.strokeDasharray = length + headStart;  // Add back head start to ensure dash array is equal to original length
         svgElement.style.strokeDashoffset = length;        
         document.addEventListener('scroll', drawOnScroll);
    }, [])

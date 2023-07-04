@@ -200,10 +200,10 @@ export default function Experience() {
                   [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
                     <div className={expStyles.addOnGrid}>
                         <p className={expStyles.addOnDesc}>
-                          When commercializing with data there are many things to consider. The top three are firstly, ensuring the data is used 
-                          correctly and within the expectations of all parties involved. Secondly, ensuring that the data sold between 
+                          When commercializing data there are many things to consider. The top three are, firstly, to ensure the data is used 
+                          correctly and within the expectations of all parties involved. Secondly, to ensure that the data sold between 
                           all parties is consistent and immutable amongst all copies of it across all computers involved in the network, 
-                          and thirdly ensuring that the data is transparent and the customer understands what is involved in the deal. 
+                          and thirdly to ensure that the data is transparent and the customer understands what is involved in the transaction.
                           All three of these items can be solved using blockchain with the Near Protocol and Ethereum.
                         </p>
                         <ExpMotif0 className={expStyles.motif}/>
