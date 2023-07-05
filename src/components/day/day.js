@@ -36,26 +36,27 @@ export default function Day() {
           <div className={styles.content}>
             <Image
               priority
-              src='/day/medium.jpg'
+              src='/day/cutlery.jpg'
               alt='cutlery'
               width={2400}
               height={1600}
               className={styles.cutlery}
             />
             <div className={`${allura.className} ${styles.rightContent}`}>
-              <h1 className={styles.line1}>I&#39;m shy in the daytime.</h1>
+              <h1 className={styles.line1}>I&#39;m shy before I eat my lunch.</h1>
               <TextDivider className={`${svgStyles.textDivider} ${svgStyles.topTextDivider}`} />
               <LiveClock />
               <TextDivider className={`${svgStyles.textDivider} ${svgStyles.botTextDivider}`} />
-              <p className={styles.line2}>Can you come back after work, past 4pm?</p>
+              <p className={styles.line2}>Can you come back after lunch, past 1pm?</p>
             </div>
           </div>
           <div className={svgStyles.mainDividerContainer}>
-            <MainDivider className={svgStyles.mainDivider} />
+            <hr className={svgStyles.mobileDivider}></hr>
+            <MainDivider className={svgStyles.deskDivider} />
           </div>
           <div className={styles.whiteContainer}>
-            <div className={styles.whiteLeft}></div>
-            <div className={styles.whiteRight}></div>
+            <div className={styles.firstWhite}></div>
+            <div className={styles.secondWhite}></div>
           </div>
         </main>
       </>

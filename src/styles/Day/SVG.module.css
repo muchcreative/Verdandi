@@ -2,19 +2,50 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .mainDividerContainer {
     position: absolute;
-    top: 0%;
-    left: 50%;
-    z-index: 100;
-
-    height: 100vh;
-    overflow: hidden;    
+    top: 50%;
+    left: 0%;
+    width: 100vw;
+    overflow: hidden;   
+    z-index: 100; 
 }
 
-.mainDivider {
-    height: 100%;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 2.2s ease-in 0.5s forwards;
+.mobileDivider {
+    width: 0%;
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: draw-hr 0.8s ease-in 0.5s forwards;
+}
+
+@keyframes draw-hr {
+    to {
+        width: 100%;
+    }
+}
+
+.deskDivider {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 1366px) {
+    .mainDividerContainer {
+        top: 0%;
+        left: 50%;
+        height: 100vh;
+        width: auto;
+    }
+
+    .mobileDivider {
+        display: none;
+    }
+
+    .deskDivider {
+        visibility: visible;
+        height: 100%;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw 2.2s ease-in 0.5s forwards;
+    }   
 }
 
 @keyframes draw {
@@ -22,6 +53,7 @@
         stroke-dashoffset: 0;
     }
 }
+
 
 /* Two Text Division Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

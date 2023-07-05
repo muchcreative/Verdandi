@@ -3,7 +3,7 @@
 .liveClock {
     position: absolute;
     top: 20%;
-    opacity: 0%;
+    opacity: 0;
     place-self: center;
     font-size: 1.6em;
     font-variant-numeric: tabular-nums;
@@ -12,7 +12,7 @@
 
 @keyframes fade-in {
     to {
-        opacity: 100%;
+        opacity: 1;
     }
 
 }
