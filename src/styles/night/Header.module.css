@@ -150,8 +150,8 @@
 .hook {
     position: absolute;
     top: 25%;
-    font-weight: 500;
-    font-size: 6em;
+    font-weight: 500; 
+    font-size: clamp(2rem, 2vw, 6rem);
 
     margin-left: 7%;
     line-height: 1.5em;
@@ -168,7 +168,14 @@
     font-style: normal;
     font-weight: 800;
 
-    text-decoration: var(--night-special-color) 8px underline;
-    text-underline-offset: 6px;
-    margin-left: 10px;
+    text-decoration: var(--night-special-color) 4px underline;
+    text-underline-offset: 2px;
+}
+
+@media only screen and (min-width: 1366px) {
+    .hookKey {
+        text-decoration: var(--night-special-color) 8px underline;
+        text-underline-offset: 6px;
+        margin-left: 10px;
+    }
 }

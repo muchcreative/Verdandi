@@ -8,16 +8,27 @@
 
 .titleLine {
     border: none;
-    height: 3px;
+    height: 2px;
     background-color: var(--night-special-color);
-    margin-top: -10px;
+    margin-top: -5px;
     
     width: 0%;
     transition: width 1s ease;
 }
 
 .animateTitleLine {
-    width: 20%;
+    width: 30%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .titleLine {
+        height: 3px;
+        margin-top: -10px;
+    }
+
+    .animateTitleLine {
+        width: 20%;
+    }
 }
 
 
@@ -25,23 +36,44 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .skillsContainer {
     display: grid;
-    grid: 1fr 1fr 1fr 1fr 1fr / 
-          32% 2% 32% 2% 32%;
+    grid: 1fr 1fr 1fr 0.2fr 1fr 1fr / 
+          48% 4% 48%;
     grid-template-areas: 
-      "front   .      .    .      ."
-      "front vline1 data   .      ."
-      "front vline1 data vline2 back"
-      ".     vline1 data vline2 back"
-      ".       .      .  vline2 back";
+        "front   .      . "
+        "front vline1 data"
+        ".     vline1 data"
+        "back  vline2   . "
+        "back  vline2   . ";
     margin: 0% 8% 5% 8%;
 }
 
+@media only screen and (min-width: 1366px) {
+    .skillsContainer {
+        display: grid;
+        grid: 1fr 1fr 1fr 1fr 1fr / 
+            32% 2% 32% 2% 32%;
+        grid-template-areas: 
+            "front   .      .    .      ."
+            "front vline1 data   .      ."
+            "front vline1 data vline2 back"
+            ".     vline1 data vline2 back"
+            ".       .      .  vline2 back";
+    }
+}
+
 .libTitle {
-    font-size: 2.2em;
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
     margin-top: 1%;
     color: var(--day-bg-color);
-    text-decoration: 2px underline var(--day-bg-color);
-    text-underline-offset: 3px;
+    text-decoration: 1px underline var(--day-bg-color);
+    text-underline-offset: 2px;
+}
+
+@media only screen and (min-width: 1366px) {
+    .libTitle {
+        text-decoration: 2px underline var(--day-bg-color);
+        text-underline-offset: 3px;
+    }
 }
 
 .front > h3,
@@ -54,7 +86,7 @@
 .data > p,
 .back > p {
     line-height: 3.5em;
-    font-size: 1.7em;  
+    font-size: clamp(1.2rem, 2vw, 1.7rem);  
 }
 
 

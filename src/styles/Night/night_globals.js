@@ -21,38 +21,38 @@ export default function nightGlobals() {
             }
 
             h1 {
-                font-size: 6em;
+                font-size: 3.5rem;
                 font-weight: 400;
             }
 
             h2 {
-                font-size: 3.2em;
+                font-size: clamp(1.5rem, 2vw, 3.2rem);
                 font-weight: 600;
             }
 
             h3 {
                 color: var(--night-special-color);
-                font-size: 2.4em;
+                font-size: clamp(1.5rem, 2vw, 2.4rem);
                 font-weight: 500;
                 font-style: normal;
             }
 
             h4 {
                 color: var(--day-bg-color);
-                font-size: 2.4em;
+                font-size: 2.4rem;
                 font-weight: 500;
             }
             
             h5 {
                 color: var(--night-special-color);
-                font-size: 2.0em;
+                font-size: 2.0rem;
                 font-style: italic;
                 font-weight: 500;
             }
 
             h6 {
                 font-color: inherit;
-                font-size: 3em;
+                font-size: 3rem;
                 font-weight: 500;
                 line-height: 1.7em;
                 margin-left: 15%;
@@ -63,15 +63,14 @@ export default function nightGlobals() {
             a {
                 color: inherit;
                 font-family: 'Times New Roman';
-                font-size: 1em;
                 text-decoration: inherit;
             }
 
             input {
-                font-family: "Times New Roman";
                 color: #ffffffe6;
                 background-color: inherit;
-                font-size: 1.2em;
+                font-family: "Times New Roman";
+                font-size: 1.2rem;                
                 outline: none;
             }
 
@@ -105,7 +104,7 @@ export default function nightGlobals() {
             }
 
             footer {
-                font-size: 3em;
+                font-size: 3rem;
             }
         `}
         </style>

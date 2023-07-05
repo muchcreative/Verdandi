@@ -1,6 +1,6 @@
 // Next.js
 import Head from 'next/head';
-import { EB_Garamond, Lora } from 'next/font/google'
+import { EB_Garamond } from 'next/font/google'
 
 // CSS
 import NightGlobals from 'src/styles/night/night_globals.js';
@@ -20,14 +20,27 @@ const ebGaramond = EB_Garamond({
                     style: ['normal', 'italic'],
                   });
 
+// Base design 360×640 at lowest
+// Desktop design 1366×768 and up
+
 // Problem you don't see the second transition
 // We should be able to stack these properly
 // Scroll SVG should line up
-
 // Go through sections and remove rags, windows, and orphans
 // Start checking for responsive design sizes
 
+// The swapping between day and night still can be cleaner
+
+
+// On Refresh go back to page start
+
+// import { useEffect } from 'react';
+// useEffect(() => {
+    //     document.addEventListener('beforeunload', () => {window.scrollTo(0, 0);});
+    // }, [])
+
 export default function Night() {
+    
     return (
       <>
         <Head>
