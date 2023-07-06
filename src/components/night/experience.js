@@ -24,6 +24,8 @@ const expMotif0 = () => <ExpMotif0 />;
 const expMotif1 = () => <ExpMotif1 />;
 const expMotif2 = () => <ExpMotif2 />;
 
+// You need a way to align both title and initial description
+
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);

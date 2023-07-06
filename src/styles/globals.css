@@ -23,19 +23,3 @@ body {
     background-color: var(--night-bg-color);
   }
 }
-
-h1,
-p {
-  font-size: 1em;
-  font-weight: normal;
-}
-
-@keyframes fade-star {
-    0%, 70%, 100% {
-      opacity: 1;
-    }
-
-    30%, 50% {
-      opacity: 0;
-    }
-}

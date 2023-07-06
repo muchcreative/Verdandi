@@ -105,6 +105,7 @@
     }
 }
 
+
 /* Transition Line
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .verticalContainer {
@@ -151,7 +152,7 @@
     position: absolute;
     top: 25%;
     font-weight: 500; 
-    font-size: clamp(2rem, 2vw, 6rem);
+    font-size: clamp(2rem, 9vw, 6.2rem);
 
     margin-left: 7%;
     line-height: 1.5em;

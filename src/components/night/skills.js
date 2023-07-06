@@ -108,9 +108,7 @@ export default function Skills() {
         </div>
         <div id='skills-grid' className={skillsStyles.skillsContainer}>
             <div id='front-skills' className={skillsStyles.front}>
-                <h3 className={showCol0}>
-                    Front-End
-                </h3>
+                <h3 className={showCol0}>Front-End</h3>
                 <p className={showCol0}>JavaScript / TypeScript</p>
                 <p className={showCol0}>HTML</p>
                 <p className={showCol0}>CSS</p>
@@ -125,9 +123,7 @@ export default function Skills() {
               [skillsStyles.vline1] : true,
               [skillsStyles.vline1Show] : show0})} />
             <div id='data-skills' className={skillsStyles.data}>
-                <h3 className={showCol1}>
-                    Data Analytics
-                </h3>
+                <h3 className={showCol1}>Data Analytics</h3>
                 <p className={showCol1}>Python</p>
                 <p className={showCol1}>SQL / PostgreSQL</p>
                 <p className={showCol1}>MATLAB</p>
@@ -143,9 +139,7 @@ export default function Skills() {
               [skillsStyles.vline2] : true,
               [skillsStyles.vline2Show] : show1})} />
             <div id='back-skills' className={skillsStyles.back}>
-                <h3 className={showCol2}>
-                    Back-End
-                </h3>
+                <h3 className={showCol2}>Back-End</h3>
                 <p className={showCol2}>Rust</p>
                 <p className={showCol2}>C</p>
                 <h3 className={clsx({

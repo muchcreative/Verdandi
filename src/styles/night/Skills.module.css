@@ -17,7 +17,7 @@
 }
 
 .animateTitleLine {
-    width: 30%;
+    width: 36%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -36,13 +36,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .skillsContainer {
     display: grid;
-    grid: 1fr 1fr 1fr 0.2fr 1fr 1fr / 
-          48% 4% 48%;
+    grid: 1fr 1fr 1fr 1fr / 
+          47% 6% 47%;
     grid-template-areas: 
-        "front   .      . "
+        "front vline1   . "
         "front vline1 data"
-        ".     vline1 data"
-        "back  vline2   . "
+        "back  vline2 data"
         "back  vline2   . ";
     margin: 0% 8% 5% 8%;
 }
@@ -62,7 +61,7 @@
 }
 
 .libTitle {
-    font-size: clamp(1.4rem, 2vw, 2.2rem);
+    font-size: clamp(1rem, 2vw, 2.2rem);
     margin-top: 1%;
     color: var(--day-bg-color);
     text-decoration: 1px underline var(--day-bg-color);
@@ -86,7 +85,7 @@
 .data > p,
 .back > p {
     line-height: 3.5em;
-    font-size: clamp(1.2rem, 2vw, 1.7rem);  
+    font-size: clamp(0.9rem, 3vw, 1.7rem);  
 }
 
 
@@ -179,10 +178,9 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .vline1 {
     grid-area: vline1;
-    height: 75%;
+    height: 80%;
     width: 4%;
-    margin-left: 30%;
-
+    margin-top: 30px;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
 }
@@ -191,12 +189,16 @@
   animation: draw 2.2s ease-in 0.5s forwards;
 }
 
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 .vline2 {
     grid-area: vline2;
-    height: 75%;
+    height: 80%;
     width: 4%;
-    margin-left: 70%;
-
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
 }
@@ -205,10 +207,14 @@
   animation: draw 2.2s ease-in 0.5s forwards;
 }
 
-@keyframes draw {
-  to {
-      stroke-dashoffset: 0;
-  }
+@media only screen and (min-width: 1366px) {
+    .vline1 {
+        margin-left: 20px;
+    }
+
+    .vline2 {
+        margin-left: 30px;
+    }
 }
 
 

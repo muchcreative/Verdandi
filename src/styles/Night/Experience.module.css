@@ -17,7 +17,7 @@
 }
 
 .animateTitleLine {
-    width: 30%;
+    width: 36%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -45,7 +45,7 @@
 }
 
 .leftArrow {
-    height: 180px;
+    height: clamp(5.6rem, 13vw, 11.3rem);
 }
 
 .leftArrow:hover path {
@@ -69,7 +69,7 @@
 }
 
 .rightArrow {
-    height: 180px;
+    height: clamp(5.6rem, 13vw, 11.3rem);
     transform: rotate(180deg);
 }
 
@@ -89,9 +89,9 @@
 
 .dot {
     display: inline-block;
-    height: 15px;
-    width: 15px;
-    border: 2px solid var(--day-bg-color);
+    height:  clamp(0.4rem, 1vw, 1rem);
+    width: clamp(0.4rem, 1vw, 1rem);
+    border: clamp(1px, 0.3vw, 2px) solid var(--day-bg-color);
     border-radius: 50%;
 
     background-color: transparent;
@@ -106,7 +106,7 @@
 /* General Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expContainer {
-    margin: 2% 10% 28% 10%;
+    margin: 2% clamp(3%, 3vw, 10%) 28% clamp(3%, 3vw, 10%);
 }
 
 .mainDescs {
@@ -132,13 +132,13 @@
 
 .title > h4 + p {
     color: var(--night-special-color);
-    font-size: 2.2rem;
+    font-size: clamp1(0.8rem, 2vw, 2.2rem);
     font-style: italic;
     font-weight: 500;
 }
 
 .desc {
-    font-size: 1.3rem;
+    font-size: clamp(0.4rem, 2vw, 1.3rem);
     width: 50%;
 }
 
@@ -300,7 +300,7 @@
 .addOnContainer {
     position: absolute;
     left: 7%;
-    font-size: 1.3rem;
+    font-size: clamp(0.4rem, 2vw, 1.3rem);
     max-height: 0px;
     overflow: hidden;
     transition: max-height 1s ease;
@@ -385,17 +385,21 @@
 .horizontalBreak {
     border: 0;
     width: 80%;
-    height: 2px;
+    height: 1px;
     background-color: var(--day-bg-color);
     margin: 3% 0 0 10%;
 }
 
+@media only screen and (min-width: 1366px) {
+    .horizontalBreak {
+        height: 2px;
+    }
+}
 
 /* SVG Motif
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .motif {
     grid-area: motif;
-    height: 100px;
-    width: 100px;
     flex-shrink: 0;
+    width: clamp(2rem, 7vw, 6.3rem);
 }

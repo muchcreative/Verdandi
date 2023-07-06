@@ -17,7 +17,7 @@
 }
 
 .animateTitleLine {
-    width: 30%;
+    width: 36%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -36,26 +36,39 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .moreLayout {
     display: grid;
-    grid: 30% 1% 1% 68%/ 
-        32% 32% 32% 4%;
+    grid: 30% 1% 1% 68% / 
+          32% 32% 32% 4%;
     grid-template-areas:
         "buttons buttons buttons vline"
         "hrDesc  hrDesc  hrDesc  vline"
         "fullHr  fullHr  fullHr  vline"
         "desc    desc    desc    vline";
-    margin: 0% 0% 0% 21%;
-    width: 60%;
+    margin: 10% 0% 50% 5%;
+    width: 90%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .moreLayout {
+        margin: 0% 0% 0% 21%;
+        width: 60%;
+    }
 }
 
 .buttons {
     grid-area: buttons;
-    font-size: 1.9rem;
+    font-size: clamp(1rem, 3vw, 2rem);
     font-weight: 500;
     
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 5%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .buttons {
+        gap: 10%;
+    }
 }
 
 .buttons button:hover,
@@ -77,9 +90,9 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hrDesc {
     grid-area: hrDesc;
-    width: 22%;
+    width: 15%;
     border: none;
-    height: 3px;
+    height: 1px;
     margin: -5% 0 0 12%;
 
     background-color: var(--night-special-color);
@@ -87,11 +100,11 @@
 }
 
 .hrDesc1 {
-    transform: translateX(240px);
+    transform: translateX(clamp(6rem, 5vw, 14.7rem));
 }
 
 .hrDesc2 {
-    transform: translateX(480px);
+    transform: translateX(clamp(11rem, 10vw, 30.3rem));
 }
 
 .fullHr {
@@ -99,14 +112,14 @@
     background-color: var(--day-bg-color);
     
     border: none;
-    height: 2px;
+    height: 1px;
     width: 90%;
     margin: -3% 0 0 5%;
 }
 
 .verticalBreak {
     grid-area: vline;
-    width: 3px;
+    width: 1px;
 }
 
 .contactBreak {
@@ -118,20 +131,35 @@
     margin: 0 0 5% 12.5%;
 }
 
+@media only screen and (min-width: 1366px) {
+    .hrDesc {
+        margin: -5% 0 0 10%;
+        width: 26%;
+        height: 3px;
+    }
+
+    .fullHr {
+        height: 2px;
+    }
+
+    .verticalBreak {
+        width: 3px;
+    }
+}
+
 
 /* Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .descContainer {
     grid-area: desc;
-    font-size: 1.3rem;
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
 }
 
 .desc {
-    opacity: 0;
     position: absolute;
-    width: 50%;
-    left: 24%;
+    width: 80%;
     margin-top: 0.5%;
+    opacity: 0;
 }
 
 .descHide {
@@ -166,6 +194,15 @@
     }
 }
 
+@media only screen and (min-width: 1366px) {
+    .desc {
+        position: absolute;
+        width: 50%;
+        left: 24%;
+        margin-top: 0.5%;
+    }
+}
+
 
 /* Other Practicals
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -175,7 +212,7 @@
 
 .pracicalsList {
     margin: 3% 0 0 10%;
-    font-size: 1.5rem;
+    font-size: clamp(0.6rem, 2vw, 1.5rem);
     list-style-type: circle;
     column-count: 2;
     column-gap: 40%;
@@ -187,13 +224,13 @@
 
 .about {
     margin: 3% 5% 0 8%;
-    font-size: 1.4rem;
+    font-size: clamp(0.6rem, 2vw, 1.4rem);
 }
 
 .goals {
     margin: 2% 5% 0 14%;
     list-style-type: circle;
-    font-size: 1.4rem;
+    font-size: clamp(0.6rem, 2vw, 1.4rem);
 }
 
 .goals li {

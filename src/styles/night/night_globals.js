@@ -26,33 +26,33 @@ export default function nightGlobals() {
             }
 
             h2 {
-                font-size: clamp(1.5rem, 2vw, 3.2rem);
+                font-size: clamp(1.5rem, 4vw, 3.2rem);
                 font-weight: 600;
             }
 
             h3 {
                 color: var(--night-special-color);
-                font-size: clamp(1.5rem, 2vw, 2.4rem);
+                font-size: clamp(1.3rem, 3vw, 2.4rem);
                 font-weight: 500;
                 font-style: normal;
             }
 
             h4 {
                 color: var(--day-bg-color);
-                font-size: 2.4rem;
+                font-size: clamp(1rem, 2vw, 2.4rem);
                 font-weight: 500;
             }
             
             h5 {
                 color: var(--night-special-color);
-                font-size: 2.0rem;
+                font-size: clamp(0.8rem, 2vw, 2.0rem);
                 font-style: italic;
                 font-weight: 500;
             }
 
             h6 {
                 font-color: inherit;
-                font-size: 3rem;
+                font-size: clamp(1rem, 3vw, 3rem);
                 font-weight: 500;
                 line-height: 1.7em;
                 margin-left: 15%;
@@ -105,6 +105,16 @@ export default function nightGlobals() {
 
             footer {
                 font-size: 3rem;
+            }
+
+            @keyframes fade-star {
+                0%, 70%, 100% {
+                  opacity: 1;
+                }
+            
+                30%, 50% {
+                  opacity: 0;
+                }
             }
         `}
         </style>

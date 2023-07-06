@@ -31,6 +31,8 @@ const ebGaramond = EB_Garamond({
 
 // The swapping between day and night still can be cleaner
 
+// Will need to double check fonts after responsiness is completed
+// Reminder to be bold with your typing
 
 // On Refresh go back to page start
 
