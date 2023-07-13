@@ -106,7 +106,7 @@
 /* General Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expContainer {
-    margin: 2% clamp(3%, 3vw, 10%) 28% clamp(3%, 3vw, 10%);
+    margin: 2% clamp(3%, 10vw, 10%) 25% clamp(3%, 10vw, 10%);
 }
 
 .mainDescs {
@@ -132,7 +132,7 @@
 
 .title > h4 + p {
     color: var(--night-special-color);
-    font-size: clamp1(0.8rem, 2vw, 2.2rem);
+    font-size: clamp(0.8rem, 3vw, 2.2rem);
     font-style: italic;
     font-weight: 500;
 }

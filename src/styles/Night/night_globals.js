@@ -21,7 +21,7 @@ export default function nightGlobals() {
             }
 
             h1 {
-                font-size: 3.5rem;
+                font-size: clamp(2rem, 4vw, 3.5rem);
                 font-weight: 400;
             }
 
@@ -39,7 +39,7 @@ export default function nightGlobals() {
 
             h4 {
                 color: var(--day-bg-color);
-                font-size: clamp(1rem, 2vw, 2.4rem);
+                font-size: clamp(1rem, 3vw, 2.4rem);
                 font-weight: 500;
             }
             

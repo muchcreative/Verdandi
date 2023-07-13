@@ -91,8 +91,11 @@ export default function Main() {
           <h1 id='hook' className={clsx({
             [headerStyles.hook] : true,
             [headerStyles.hideHook] : !visible})}>
-              Because nobody wants to<br></br>
-              create the same two<br></br>
+              Because <br className={headerStyles.mobileBr}></br>
+              nobody <br className={headerStyles.mobileBr}></br>
+              wants to <br className={headerStyles.mobileBr}></br><br className={headerStyles.deskBr}></br>
+              create the <br className={headerStyles.mobileBr}></br>
+              same two <br className={headerStyles.mobileBr}></br><br className={headerStyles.deskBr}></br>
               <em className={headerStyles.hookKey}>products.</em>
           </h1>
         </div>

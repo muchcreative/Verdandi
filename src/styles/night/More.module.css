@@ -100,11 +100,11 @@
 }
 
 .hrDesc1 {
-    transform: translateX(clamp(6rem, 5vw, 14.7rem));
+    transform: translateX(clamp(6rem, 16vw, 14.7rem));
 }
 
 .hrDesc2 {
-    transform: translateX(clamp(11rem, 10vw, 30.3rem));
+    transform: translateX(clamp(11rem, 32vw, 30.3rem));
 }
 
 .fullHr {

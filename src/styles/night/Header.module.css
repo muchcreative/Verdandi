@@ -150,11 +150,11 @@
 
 .hook {
     position: absolute;
-    top: 25%;
+    top: 10%;
     font-weight: 500; 
-    font-size: clamp(2rem, 9vw, 6.2rem);
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    margin-left: 10%;
 
-    margin-left: 7%;
     line-height: 1.5em;
     word-spacing: 3px;
     transition: opacity 0.4s ease-in 1.6s;
@@ -174,9 +174,32 @@
 }
 
 @media only screen and (min-width: 1366px) {
+    .hook {
+        top: 25%;
+        margin-left: 7%;
+    }
+
     .hookKey {
         text-decoration: var(--night-special-color) 8px underline;
         text-underline-offset: 6px;
         margin-left: 10px;
     }
+}
+
+
+/* Responsive Breaks
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.deskBr {
+    display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+    .deskBr {
+        display: inline;
+    }
+
+    .mobileBr {
+        display: none;
+    }
+
 }
