@@ -93,12 +93,14 @@ export default function Main() {
             [headerStyles.hideHook] : !visible})}>
               Because <br className={headerStyles.mobileBr}></br>
               nobody <br className={headerStyles.mobileBr}></br>
-              wants to <br className={headerStyles.mobileBr}></br><br className={headerStyles.deskBr}></br>
+              wants to <br className={headerStyles.mobileBr}></br>
+              <br className={headerStyles.deskBr}></br>
               create the <br className={headerStyles.mobileBr}></br>
-              same two <br className={headerStyles.mobileBr}></br><br className={headerStyles.deskBr}></br>
+              same two <br className={headerStyles.mobileBr}></br>
+              <br className={headerStyles.deskBr}></br>
               <em className={headerStyles.hookKey}>products.</em>
           </h1>
         </div>
-      </>
+      </>    
     )   
 }

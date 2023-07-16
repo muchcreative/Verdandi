@@ -38,7 +38,7 @@ export default function Scroll() {
       
       const width = window.innerWidth;
       const height = window.innerHeight;
-      console.log('width:', width, 'height:', height);
+      // console.log('width:', width, 'height:', height);
       // svgElement.setAttribute("viewBox", "0 0 647 1800"); 
     }, [])
     

@@ -4,7 +4,10 @@ import { useState, useEffect } from 'react';
 // CSS
 import expStyles from 'src/styles/night/Experience.module.css';
 
-//SVGs
+// Page Components
+import ExpCircles from 'src/components/night/exp_circles.js';
+
+// SVGs
 import MMS from 'public/night/mms.svg'
 import SideArrow from 'public/night/side_arrow.svg'
 import Triangle from 'public/night/triangle.svg'
@@ -23,8 +26,6 @@ const triangle = () => <Triangle />;
 const expMotif0 = () => <ExpMotif0 />;
 const expMotif1 = () => <ExpMotif1 />;
 const expMotif2 = () => <ExpMotif2 />;
-
-// You need a way to align both title and initial description
 
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
@@ -68,37 +69,14 @@ export default function Experience() {
             <MMS className={expStyles.mms}/>
         </div>
         <div className={expStyles.dotContainer}>
-            <button
-              name='current-desc-indicator' 
-              aria-label='current-desc-indicator'
-              onClick={() => 
-                setDesc({curr: 0, prev: desc.curr})}>
-                <span className={clsx({
-                  [expStyles.dot] : true,
-                  [expStyles.selectedDot] : desc.curr === 0})}></span>
-            </button>
-            <button
-              name='current-desc-indicator'
-              aria-label='current-desc-indicator'
-              onClick={() => setDesc({curr: 1, prev: desc.curr})}>
-                <span className={clsx({
-                  [expStyles.dot] : true,
-                  [expStyles.selectedDot] : desc.curr === 1})}></span>
-            </button>
-            <button
-              name='current-desc-indicator'
-              aria-label='current-desc-indicator'
-              onClick={() => setDesc({curr: 2, prev: desc.curr})}>
-                <span className={clsx({
-                  [expStyles.dot] : true,
-                  [expStyles.selectedDot] : desc.curr === 2})}></span>
-            </button>
+            <ExpCircles desc={desc} setDesc={setDesc}/>
         </div>
         <div className={expStyles.expContainer}>          
             <div className={expStyles.mainDescs}>
                 <button
                   name='left-arrow-btn'
                   aria-label='left-arrow-btn'
+                  className={expStyles.arrowBtn}
                   onClick={() => {
                   const updated = desc.curr - 1;
                   updated === -1 ? setDesc({curr: 2, prev: desc.curr}) : setDesc({curr: updated, prev: desc.curr});
@@ -107,6 +85,7 @@ export default function Experience() {
                 </button>
                 <div className={expStyles.allDesc}>
                     <div className={clsx({
+                      [expStyles.baseDesc] : true,
                       [expStyles.flow] : true,
                       [expStyles.showDesc] : desc.curr === 0,
                       [expStyles.hideDesc] : desc.prev === 0})}>
@@ -133,6 +112,7 @@ export default function Experience() {
                         </div>
                     </div>
                     <div id='pi' className={clsx({
+                      [expStyles.baseDesc] : true,
                       [expStyles.pi] : true,
                       [expStyles.showDesc] : desc.curr === 1,
                       [expStyles.hideDesc] : desc.prev === 1})}>
@@ -159,6 +139,7 @@ export default function Experience() {
                         </div>
                     </div>
                     <div id='dt' className={clsx({
+                      [expStyles.baseDesc] : true,
                       [expStyles.dt] : true,              
                       [expStyles.showDesc] : desc.curr === 2,
                       [expStyles.hideDesc] : desc.prev === 2})}>
@@ -188,6 +169,7 @@ export default function Experience() {
                 <button
                   name='right-arrow-btn'
                   aria-label='right-arrow-btn'
+                  className={expStyles.arrowBtn}
                   onClick={() => {
                   const updated = desc.curr + 1;
                   updated === 3 ? setDesc({curr: 0, prev: desc.curr}) : setDesc({curr: updated, prev: desc.curr});
@@ -264,6 +246,9 @@ export default function Experience() {
                     </div>
                 </div>
             </div>
+        </div>
+        <div className={expStyles.dotContainer2}>
+              <ExpCircles desc={desc} setDesc={setDesc}/>
         </div>
       </>
     )

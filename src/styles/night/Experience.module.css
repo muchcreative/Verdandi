@@ -44,11 +44,25 @@
     width: 80%;
 }
 
-.leftArrow {
-    height: clamp(5.6rem, 13vw, 11.3rem);
+
+/* Arrow Buttons
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.arrowBtn {
+    display: none;
 }
 
-.leftArrow:hover path {
+@media only screen and (min-width: 1366px) {
+    .arrowBtn {
+        display: block;
+    }
+}
+
+.leftArrow {
+    height: 11.3rem;
+}
+
+.leftArrow:hover path
+.leftArrow:focus path {
     animation: alt-stroke-width 1.7s ease-in infinite;
 }
 
@@ -69,29 +83,41 @@
 }
 
 .rightArrow {
-    height: clamp(5.6rem, 13vw, 11.3rem);
+    height: 11.3rem;
     transform: rotate(180deg);
 }
 
-.rightArrow:hover path {
+.rightArrow:hover path,
+.rightArrow:focus path {
     animation: alt-stroke-width 1.7s ease-in infinite;
 }
 
 
 /* Dots
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.dotContainer {
+.dotContainer,
+.dotContainer2 {
     display: flex;
     gap: 2%;
     justify-content: center;
     margin-top: 2%;
 }
 
+.dotContainer2 {
+    margin-bottom: 27%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .dotContainer2 {
+        display: none;
+    }
+}
+
 .dot {
     display: inline-block;
-    height:  clamp(0.4rem, 1vw, 1rem);
-    width: clamp(0.4rem, 1vw, 1rem);
-    border: clamp(1px, 0.3vw, 2px) solid var(--day-bg-color);
+    height: 1rem;
+    width: 1rem;
+    border: 2px solid var(--day-bg-color);
     border-radius: 50%;
 
     background-color: transparent;
@@ -102,11 +128,46 @@
     background-color: var(--day-bg-color);
 }
 
+.circleArrow {
+    display: block;
+}
+
+@media only screen and (min-width: 1366px) {
+    .circleArrow {
+        display: none;
+    }
+}
+
+.leftCircleArrow {
+    height: 14px;
+}
+
+.leftCircleArrow:hover path
+.leftCircleArrow:focus path {
+    animation: alt-stroke-width 1.7s ease-in infinite;
+}
+
+.rightCircleArrow {
+    height: 14px;
+    transform: rotate(180deg);
+}
+
+.rightCircleArrow:hover path
+.rightCircleArrow:focus path {
+    animation: alt-stroke-width 1.7s ease-in infinite;
+}
+
 
 /* General Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expContainer {
-    margin: 2% clamp(3%, 10vw, 10%) 25% clamp(3%, 10vw, 10%);
+    margin: 2% 6% 100% 6%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .expContainer {
+        margin: 2% 10% 25% 10%;
+    }
 }
 
 .mainDescs {
@@ -126,69 +187,78 @@
 
 .title {
     text-align: center;
-    width: 30%;
-    align-self: start;
+    margin-bottom: 3%;
 }
+
+@media only screen and (min-width: 1366px) {
+    .title {
+        width: 30%;
+        align-self: start;
+        margin-bottom: 0%;
+    }
+}
+
 
 .title > h4 + p {
     color: var(--night-special-color);
-    font-size: clamp(0.8rem, 3vw, 2.2rem);
+    font-size: clamp(1.3rem, 3vw, 2.2rem);
     font-style: italic;
     font-weight: 500;
 }
 
 .desc {
-    font-size: clamp(0.4rem, 2vw, 1.3rem);
-    width: 50%;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+@media only screen and (min-width: 1366px) {
+    .baseDesc {
+        width: 50%;
+    }
 }
 
 
 /* Specific Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.flow {
+.baseDesc {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10%;
 
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.6s ease-in-out;
+}
+
+@media only screen and (min-width: 1366px) {
+    .baseDesc {
+        flex-direction: row;
+    }
+}
+
+.flow {
+    gap: 10%;
 }
 
 .pi {
     position: absolute;
     top: 0%;
     left: 0%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 4%;
-   
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.6s ease-in-out;
 }
 
-.pi > .title {
-    /* Accomodate for Portable Intelligence's long title */
-    width: 40%; 
+@media only screen and (min-width: 1366px) {
+    .pi > .title {
+        /* Accomodate for Portable Intelligence's long title */
+        width: 40%; 
+    }
 }
 
 .dt {
     position: absolute;
     top: 0%;
     left: 0%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 4%;
-
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.6s ease-in-out;
 }
 
 .showDesc {
@@ -254,10 +324,17 @@
 }
 
 .expandTriangle {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: auto;
     transform: rotate(180deg);
     transition: all 0.6s;
+}
+
+@media only screen and (min-width: 1366px) {
+    .expandTriangle {
+        width: 20px;
+        height: auto;
+    }
 }
 
 
@@ -299,11 +376,20 @@
 
 .addOnContainer {
     position: absolute;
-    left: 7%;
-    font-size: clamp(0.4rem, 2vw, 1.3rem);
+    left: 0%;
+    top: 0%;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     max-height: 0px;
     overflow: hidden;
     transition: max-height 1s ease;
+}
+
+@media only screen and (min-width: 1366px) {
+    .addOnContainer {
+        position: absolute;
+        top: 0%;
+        left: 7%;
+    }
 }
 
 .showAddOnContainer {
@@ -312,13 +398,24 @@
 
 .addOnGrid {
     display: grid;
-    grid: 60% 40% /
-          70% 30%;
+    grid: 95% 5% /
+          95% 5%;
     grid-template-areas:
-        "addOnDesc motif"
+        "addOnDesc     .    "
         "    .     collapser";
-    margin-left: 8%;
-    gap: 3%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .addOnGrid {
+        display: grid;
+        grid: 60% 40% /
+              70% 30%;
+        grid-template-areas:
+            "addOnDesc motif"
+            "    .     collapser";
+        margin-left: 8%;
+        gap: 3%;
+    }
 }
 
 .addOnDesc {
@@ -346,10 +443,17 @@
 }
 
 .collapseTriangle {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: auto;
     fill: transparent;
     transition: all 0.6s;
+}
+
+@media only screen and (min-width: 1366px) {
+    .collapseTriangle {
+        width: 20px;
+        height: auto;
+    }
 }
 
 
@@ -402,4 +506,10 @@
     grid-area: motif;
     flex-shrink: 0;
     width: clamp(2rem, 7vw, 6.3rem);
+}
+
+@media only screen and (min-width: 1366px) {
+    .motif {
+        display: none;
+    }
 }

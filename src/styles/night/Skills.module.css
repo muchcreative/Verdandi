@@ -88,6 +88,14 @@
     font-size: clamp(0.9rem, 3vw, 1.7rem);  
 }
 
+.data > *,
+.front > *,
+.back > * {
+    opacity: 0;
+    transform: translateY(-40%);
+    transition: all 1s ease-in;
+}
+
 
 /* Front Column
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -99,12 +107,6 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-}
-
-.front > * {
-    opacity: 0;
-    transform: translateY(-40%);
-    transition: all 1s ease-in;
 }
 
 .front > h3:nth-child(1) { transition-delay: 0.2s; }
@@ -129,22 +131,15 @@
     text-align: center;
 }
 
-.data > * {
-    opacity: 0;
-    transform: translateY(40%);
-    transition: all 1s ease-in;
-}
-
-/* Animations are from 9th child to 1st child, floating upwards */
-.data > p:nth-child(9) { transition-delay: 0.2s; }
-.data > p:nth-child(8) { transition-delay: 0.4s; }
-.data > p:nth-child(7) { transition-delay: 0.6s; }
-.data > h3:nth-child(6) { transition-delay: 0.8s; }
+.data > h3:nth-child(1) { transition-delay: 0.2s; }
+.data > p:nth-child(2) { transition-delay: 0.4s; }
+.data > p:nth-child(3) { transition-delay: 0.6s; }
+.data > p:nth-child(4) { transition-delay: 0.8s; }
 .data > p:nth-child(5) { transition-delay: 1.0s; }
-.data > p:nth-child(4) { transition-delay: 1.2s; }
-.data > p:nth-child(3) { transition-delay: 1.4s; }
-.data > p:nth-child(2) { transition-delay: 1.6s; }
-.data > h3:nth-child(1) { transition-delay: 1.8s; }
+.data > h3:nth-child(6) { transition-delay: 1.2s; }
+.data > p:nth-child(7) { transition-delay: 1.4s; }
+.data > p:nth-child(8) { transition-delay: 1.6s; }
+.data > p:nth-child(9) { transition-delay: 1.8s; }
 
 
 /* Dev Column
@@ -157,12 +152,6 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-}
-
-.back > * {
-  opacity: 0;
-  transform: translateY(-40%);
-  transition: all 1s ease-in;
 }
 
 .back > h3:nth-child(1) { transition-delay: 0.2s; }

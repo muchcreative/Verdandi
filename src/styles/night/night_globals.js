@@ -39,7 +39,7 @@ export default function nightGlobals() {
 
             h4 {
                 color: var(--day-bg-color);
-                font-size: clamp(1rem, 3vw, 2.4rem);
+                font-size: clamp(1.5rem, 3vw, 2.4rem);
                 font-weight: 500;
             }
             
