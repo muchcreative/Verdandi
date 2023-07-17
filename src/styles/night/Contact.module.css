@@ -57,13 +57,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 2%;
-    margin: 0 11% 0 0;
+    gap: 7%;
+    margin: 0 5% 0 0;
     padding-bottom: 2%;
 }
 
+@media only screen and (min-width: 1366px) {
+    .logos {
+        gap: 2%;
+        margin: 0 11% 0 0;
+    }
+}
+
 .linkedinText {
-    font-size: 1em;
+    font-size: clamp(0.9em, 2vw, 1em);
     font-weight: 500;
     transition: all 0.3s;
     margin-bottom: 7px;
@@ -75,14 +82,8 @@
 }
 
 .githubLogo {
-    width: 1em; 
+    width: clamp(0.9em, 2vw, 1.2em); 
     transition: transform 2.5s linear;
-}
-
-@media only screen and (min-width: 1366px) {
-    .githubLogo {
-        width: 1.2em; 
-    }
 }
 
 .githubLogo:hover,

@@ -3,7 +3,7 @@
 .formGrid {
     display: grid;
     height: 400px;
-    grid: 0.15fr 0.15fr 0.45fr 0.25fr / 
+    grid: 0.15fr 0.15fr 0.60fr 0.10fr / 
           80% 20%;
     grid-template-areas: 
       "name   ."
@@ -11,7 +11,7 @@
       "message message"
       ". button";
     
-    margin: 4% 0 0 5%;
+    margin: 10% 0 0 6%;
     row-gap: 3%;
     justify-content: start;
 }
@@ -19,7 +19,7 @@
 @media only screen and (min-width: 1366px) {
     .formGrid {
         height: 450px;
-        grid: 0.15fr 0.6fr 0.25fr / 
+        grid: 0.15fr 0.7fr 0.15fr / 
               23% 23%;
         grid-template-areas: 
             "name email"
@@ -51,14 +51,14 @@
 
 .messageArea {
     grid-area: message;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .buttonArea {
     grid-area: button;
     font-size: clamp(1.2rem, 2vw, 1.4rem);
     place-self: start end;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 
@@ -127,7 +127,13 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .submitButton {
     transition: all 0.3s;
-    margin-left: 27%;
+    margin-left: -11%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .submitButton {
+        margin-left: 27%;
+    }
 }
 
 .submitButton p {
@@ -168,11 +174,19 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .submitMessage {
     position: relative;
-    margin-top: -2%;
-    left: 26%;
-    font-size: 1.2rem;
+    left: 10%;
+    margin-top: -10%;
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--night-special-color);
     transition: opacity 0.7s ease-in;
+}
+
+@media only screen and (min-width: 1366px) {
+    .submitMessage {
+        left: 26%;
+        margin-top: -2%;
+    }
 }
 
 .showSubmitMessage {
@@ -181,4 +195,10 @@
 
 .hideSubmitMessage {
     opacity: 0;
+}
+
+@media only screen and (min-width: 1366px) {
+    .mobileBr {
+        display: none;
+    }
 }
