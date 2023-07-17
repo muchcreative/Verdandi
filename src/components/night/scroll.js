@@ -5,43 +5,27 @@ import { useState, useEffect } from 'react';
 import scrollStyles from 'src/styles/night/Scroll.module.css';
 
 // SVGs
-import ScrollLine from 'public/night/scroll_line.svg';
+import MobileLine from 'public/night/scroll_line_mobile.svg';
+import DeskLine from 'public/night/scroll_line_desk.svg';
 import DownArrow from 'public/night/down_arrow.svg';
 
 // External Libs
 import { clsx } from 'clsx';
 
+const mobileLine = () => <MobileLine />;
+const desskLine = () => <DeskLine />;
 const downArrow = () => <DownArrow />;
-const scrollLine = () => <ScrollLine />;
 
-// so you can set properties or 
-// implement directly in javascript with css modules
-// Can we control the viewbox too?
-// Do i have to avoid auto-centering with preserve aspect ratio
-// You can try adding padding
+// ok so this idea doesn't work
+// plus there is still space excess right side
+// good try
+
+// consider removing eventlistener after completed
+// I think if it has a design it should be fine
 
 export default function Scroll() {
     const [scrolled, setScrolled]= useState(false)
 
-    useEffect(() => {
-      // Try setting the viewbox to be responsive
-      // So you bring back the viewbox and by adjust youcan get it
-      // HOWEVER, you might need to add to the width or add padding
-      
-      // Or maybe just add padding manually would that work idk LOL
-      // so depending on the viewport size you can adjust the svg size
-      // until padding gets terrible
-      // no if I keep extra length I can scale my width to drop as much as I want
-      // Infinite length capped at 2000 and the viewbox constantly adjusted
-      // Adding overflow idden
-      const svgElement = document.querySelector('#scroll-line');
-      
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      // console.log('width:', width, 'height:', height);
-      // svgElement.setAttribute("viewBox", "0 0 647 1800"); 
-    }, [])
-    
     // Handles down arrow fade in and fade out
     useEffect(() => {
       const fadeOutMarker = () => {
@@ -65,7 +49,12 @@ export default function Scroll() {
         }
 
         const headStart = 400;
-        const svgElement = document.querySelector('#scroll-line');
+        if (screen.width <= 1366) {
+            var svgElement = document.querySelector('#mobile-line');
+        } else {
+            var svgElement = document.querySelector('#desk-line');
+        }
+
         const svgPath = svgElement.firstChild;  // indexes SVG path
         const length = svgPath.getTotalLength() - headStart;  // Add head start for scroll hint
         svgElement.style.strokeDasharray = length + headStart;  // Add back head start to ensure dash array is equal to original length
@@ -76,7 +65,8 @@ export default function Scroll() {
   return (
     <>
       <div className={scrollStyles.scrollLineContainer}>
-          <ScrollLine id='scroll-line' className={scrollStyles.scrollLine} />
+          <MobileLine id='mobile-line' className={scrollStyles.mobileLine} />
+          <DeskLine id='desk-line' className={scrollStyles.deskLine}/>
       </div>
       <DownArrow className={clsx({
         [scrollStyles.downArrow]: true,

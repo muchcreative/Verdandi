@@ -4,7 +4,9 @@ import Link from 'next/link';
 
 // CSS
 import contactStyles from 'src/styles/night/Contact.module.css';
-import Form from 'src/components/night/form.js';
+
+// Page Components
+import ContactForm from 'src/components/night/contact_form.js';
 
 // SVGs
 import GitHubLogo from 'public/night/github_logo.svg';
@@ -46,7 +48,7 @@ export default function Contact() {
           [contactStyles.different]: true,
           [contactStyles.animateDifferent] : seenTitle})}>different.</em>
       </h6>
-      <Form />
+      <ContactForm />
       <footer>
           <div className={contactStyles.logos}>
               <Link title='To my LinkedIn' href='https://www.linkedin.com/in/robby-lem-14ab97158/'>

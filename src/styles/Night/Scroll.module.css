@@ -17,9 +17,25 @@
     }
 }
 
-.scrollLine {
-    width: 647px;
+.mobileLine {
+    width: 3px;
     height: 1800px;
+}
+
+.deskLine {
+    display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+    .deskLine {
+        display: block;
+        width: 647px;
+        height: 1800px;
+    }
+
+    .mobileLine {
+        display: none;
+    }
 }
 
 .downArrow {

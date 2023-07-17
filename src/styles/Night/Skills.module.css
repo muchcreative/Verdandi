@@ -68,12 +68,23 @@
     text-underline-offset: 2px;
 }
 
+.libTitleExtend {
+    display: none;
+}
+
 @media only screen and (min-width: 1366px) {
     .libTitle {
         text-decoration: 2px underline var(--day-bg-color);
         text-underline-offset: 3px;
     }
+    
+    .libTitleExtend {
+        display: inline-block;
+        text-decoration: inherit;
+        text-underline-offset: inherit;
+    }
 }
+
 
 .front > h3,
 .data > h3, 

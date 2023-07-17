@@ -114,7 +114,7 @@ export default function Skills() {
                 <p className={showCol0}>CSS</p>
                 <h3 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show0})}>Libraries / Frameworks</h3>
+                  [skillsStyles.showSkills] : show0})}>Libraries <span className={skillsStyles.libTitleExtend}>/ Frameworks</span></h3>       
                 <p className={showCol0}>React / Next.js</p>
                 <p className={showCol0}>CSS Modules</p>
                 <p className={showCol0}>Dash</p>

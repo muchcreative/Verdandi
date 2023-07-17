@@ -248,7 +248,7 @@ export default function Experience() {
             </div>
         </div>
         <div className={expStyles.dotContainer2}>
-              <ExpCircles desc={desc} setDesc={setDesc}/>
+            <ExpCircles desc={desc} setDesc={setDesc}/>
         </div>
       </>
     )
