@@ -45,19 +45,15 @@ export default function nightGlobals() {
             
             h5 {
                 color: var(--night-special-color);
-                font-size: clamp(0.8rem, 2vw, 2.0rem);
+                font-size: clamp(1.4rem, 2vw, 2.0rem);
                 font-style: italic;
                 font-weight: 500;
             }
 
             h6 {
                 font-color: inherit;
-                font-size: clamp(1rem, 3vw, 3rem);
+                font-size: clamp(1.4rem, 3vw, 3rem);
                 font-weight: 500;
-                line-height: 1.7em;
-                margin-left: 15%;
-                padding-left: 2.5em; 
-                text-indent: -2.5em;
             }
 
             a {
@@ -70,7 +66,7 @@ export default function nightGlobals() {
                 color: #ffffffe6;
                 background-color: inherit;
                 font-family: "Times New Roman";
-                font-size: 1.2rem;                
+                font-size: clamp(1rem, 2vw, 1.2rem);
                 outline: none;
             }
 

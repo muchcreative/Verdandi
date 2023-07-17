@@ -2,21 +2,21 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .formGrid {
     display: grid;
-    height: 450px;
-    grid: 0.15fr 0.15fr 0.6fr 0.25fr / 
-          60% 23%;
+    height: 400px;
+    grid: 0.15fr 0.15fr 0.45fr 0.25fr / 
+          80% 20%;
     grid-template-areas: 
       "name   ."
       "email  ."
       "message message"
       ". button";
     
-    margin-top: 4%;
+    margin: 4% 0 0 5%;
     row-gap: 3%;
-    justify-content: center;
-  }
+    justify-content: start;
+}
 
-  @media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1366px) {
     .formGrid {
         height: 450px;
         grid: 0.15fr 0.6fr 0.25fr / 
@@ -27,12 +27,21 @@
             ". button";
         row-gap: none;
         column-gap: 3%;
+        row-gap: 3%;
+        margin: 4% 0 0 0%;
+        justify-content: center;
     }
 }
   
 .nameArea {
     grid-area: name;
     padding: 0 5% 0 0;
+}
+
+@media only screen and (min-width: 1366px) {
+    .nameArea {
+        margin: 0%;
+    }
 }
 
 .emailArea {
@@ -47,7 +56,7 @@
 
 .buttonArea {
     grid-area: button;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
     place-self: start end;
     margin-top: 5%;
 }
@@ -91,10 +100,16 @@
 
 .messageInput {
     padding: 2% 2% 2% 2%;
-    font-size: 1.2rem;
-    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    width: 90%;
     height: 100%;
     border: 1px solid var(--day-bg-color);
+}
+
+@media only screen and (min-width: 1366px) {
+    .messageInput {
+        width: 100%;
+    }
 }
 
 .messageInput::placeholder {

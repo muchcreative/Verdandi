@@ -20,9 +20,6 @@ const ebGaramond = EB_Garamond({
                     style: ['normal', 'italic'],
                   });
 
-// Base design 360×640 at lowest
-// Desktop design 1366×768 and up
-
 // Problem you don't see the second transition
 // We should be able to stack these properly
 // Scroll SVG should line up

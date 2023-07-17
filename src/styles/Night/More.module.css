@@ -36,14 +36,14 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .moreLayout {
     display: grid;
-    grid: 30% 1% 1% 68% / 
-          33% 33% 33% 1%;
+    grid: 36% 2% 2% 60% / 
+          33% 33% 34%;
     grid-template-areas:
-        "buttons buttons buttons vline"
-        "hrDesc  hrDesc  hrDesc  vline"
-        "fullHr  fullHr  fullHr  vline"
-        "desc    desc    desc    vline";
-    margin: 0% 2% 40% 2%;
+        "buttons buttons buttons"
+        "hrDesc  hrDesc  hrDesc"
+        "fullHr  fullHr  fullHr"
+        "desc    desc    desc";
+    margin: 15% 2% 75% 2%;
     width: 90%;
 }
 
@@ -51,6 +51,11 @@
     .moreLayout {
         grid: 30% 1% 1% 68% / 
               32% 32% 32% 4%;
+        grid-template-areas:
+            "buttons buttons buttons vline"
+            "hrDesc  hrDesc  hrDesc  vline"
+            "fullHr  fullHr  fullHr  vline"
+            "desc    desc    desc    vline";
         margin: 0% 0% 0% 21%;
         width: 60%;
     }
@@ -87,6 +92,12 @@
     transition: 0.4s;
 }
 
+@media only screen and (min-width: 1366px) {
+    .mobileBr {
+        display: none;
+    }
+}
+
 
 /* Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -95,10 +106,18 @@
     width: 15%;
     border: none;
     height: 1px;
-    margin: -4% 0 0 12%;
+    margin: 5% 0 0 12%;
 
     background-color: var(--night-special-color);
     transition: all 0.8s;
+}
+
+@media only screen and (min-width: 1366px) {
+    .hrDesc {
+        margin: -5% 0 0 9.5%;
+        width: 26%;
+        height: 3px;
+    }
 }
 
 .hrDesc1 {
@@ -116,36 +135,41 @@
     border: none;
     height: 1px;
     width: 90%;
-    margin: -3% 0 0 5%;
+    margin: 5% 0 0 5%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .fullHr {
+        height: 2px;
+        margin: -3% 0 0 5%;
+    }
 }
 
 .verticalBreak {
-    grid-area: vline;
-    width: 1px;
+    display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+    .verticalBreak {
+        display: block;
+        grid-area: vline;
+        width: 3px;
+    }
 }
 
 .contactBreak {
     border: 0;
     height: 2px;
-    width: 75%;
+    width: 85%;
 
     background-color: var(--day-bg-color);
-    margin: 0 0 5% 12.5%;
+    margin: 0 0% 5% 4%;
 }
 
 @media only screen and (min-width: 1366px) {
-    .hrDesc {
-        margin: -5% 0 0 9.5%;
-        width: 26%;
-        height: 3px;
-    }
-
-    .fullHr {
-        height: 2px;
-    }
-
-    .verticalBreak {
-        width: 3px;
+    .contactBreak {
+        width: 75%;
+        margin: 0 0 5% 12.5%;
     }
 }
 
@@ -154,14 +178,24 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .descContainer {
     grid-area: desc;
-    font-size: clamp(0.8rem, 2vw, 1.3rem);
+    font-size: clamp(1em, 2vw, 1.3rem);
 }
 
 .desc {
     position: absolute;
+    left: 5%;
     width: 80%;
-    margin-top: 0.5%;
+    margin-top: 8%;
     opacity: 0;
+}
+
+@media only screen and (min-width: 1366px) {
+    .desc {
+        position: absolute;
+        width: 50%;
+        left: 24%;
+        margin-top: 0.5%;
+    }
 }
 
 .descHide {
@@ -196,45 +230,73 @@
     }
 }
 
-@media only screen and (min-width: 1366px) {
-    .desc {
-        position: absolute;
-        width: 50%;
-        left: 24%;
-        margin-top: 0.5%;
-    }
-}
 
-
-/* Other Practicals
+/* Miscellaneous
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .practicals {
-    margin: 5% 15% 6% 15%;
+    margin: 5% 5% 15% 7%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .practicals {
+        margin: 5% 15% 6% 15%;
+    }
 }
 
 .pracicalsList {
     margin: 3% 0 0 10%;
-    font-size: clamp(0.6rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     list-style-type: circle;
     column-count: 2;
-    column-gap: 40%;
+    column-gap: 20%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .practicalsList {
+        column-gap: 40%;
+    }
 }
 
 .current {
-    margin: 0% 11% 7% 15%;
+    margin: 0% 11% 7% 7%;
 }
 
+@media only screen and (min-width: 1366px) {
+    .current {
+        margin: 0% 11% 7% 15%;
+    }
+}
+
+
 .about {
-    margin: 3% 5% 0 8%;
-    font-size: clamp(0.6rem, 2vw, 1.4rem);
+    margin: 3% 5% 3% 5%;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+@media only screen and (min-width: 1366px) {
+    .about {
+        margin: 3% 5% 0 8%;
+    }
 }
 
 .goals {
-    margin: 2% 5% 0 14%;
+    margin: 2% 5% 0 12%;
     list-style-type: circle;
-    font-size: clamp(0.6rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+@media only screen and (min-width: 1366px) {
+    .goals {
+        margin: 2% 5% 0 14%;
+    }
 }
 
 .goals li {
-    line-height: 35px;
+    line-height: 23px;
+}
+
+@media only screen and (min-width: 1366px) {
+    .goals li {
+        line-height: 35px;
+    }
 }

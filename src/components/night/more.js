@@ -52,15 +52,15 @@ export default function More() {
                 <button id='front-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 0)})}
-                onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-End</button>
+                onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-<br className={moreStyles.mobileBr}></br>End</button>
                 <button id='data-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 1)})}
-                onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data Analytics</button>
+                onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data<br className={moreStyles.mobileBr}></br>Analytics</button>
                 <button id='back-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 2)})}
-                onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
+                onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-<br className={moreStyles.mobileBr}></br>End</button>
             </div>
             <MoreVB className={moreStyles.verticalBreak} />
             <hr className={clsx({
