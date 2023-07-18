@@ -28,8 +28,8 @@ export default function Practicals() {
             </p>
             <ol className={moreStyles.goals}>
               <li>Focusing on back-end development, especially in Rust proficiency</li>
-              <li>Networking with more coders through events and Toronto technology conferences</li>
-              <li>You can find me on most Saturdays at 1pm for the Morning Code Meetup at Creed&#39;s Coffee in Toronto</li>
+              <li>Networking with coders through Toronto technology conferences</li>
+              <li>Attending Toronto developer sessions on Saturdays through meetups.com</li>
             </ol>
         </div>
         <hr className={moreStyles.contactBreak}></hr>

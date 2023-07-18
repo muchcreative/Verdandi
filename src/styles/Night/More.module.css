@@ -17,7 +17,7 @@
 }
 
 .animateTitleLine {
-    width: 36%;
+    width: 40%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -43,8 +43,9 @@
         "hrDesc  hrDesc  hrDesc"
         "fullHr  fullHr  fullHr"
         "desc    desc    desc";
-    margin: 15% 2% 75% 2%;
+    margin: 15% 0% 90% 0%;
     width: 90%;
+    gap: 5%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -58,18 +59,19 @@
             "desc    desc    desc    vline";
         margin: 0% 0% 0% 21%;
         width: 60%;
+        gap: 0%;
     }
 }
 
 .buttons {
     grid-area: buttons;
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 500;
     
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 10%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -103,10 +105,10 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hrDesc {
     grid-area: hrDesc;
-    width: 15%;
+    width: 30%;
     border: none;
-    height: 1px;
-    margin: 5% 0 0 12%;
+    height: 2px;
+    margin: 3% 0 0 6%;
 
     background-color: var(--night-special-color);
     transition: all 0.8s;
@@ -121,11 +123,11 @@
 }
 
 .hrDesc1 {
-    transform: translateX(clamp(6rem, 16vw, 15.2rem));
+    transform: translateX(clamp(6.7rem, 16vw, 15.2rem));
 }
 
 .hrDesc2 {
-    transform: translateX(clamp(11rem, 32vw, 31rem));
+    transform: translateX(clamp(13rem, 32vw, 31rem));
 }
 
 .fullHr {
@@ -133,13 +135,14 @@
     background-color: var(--day-bg-color);
     
     border: none;
-    height: 1px;
-    width: 90%;
-    margin: 5% 0 0 5%;
+    height: 2px;
+    width: 80%;
+    margin: 5% 0 0% 8%;
 }
 
 @media only screen and (min-width: 1366px) {
     .fullHr {
+        width: 90%;
         height: 2px;
         margin: -3% 0 0 5%;
     }
@@ -163,7 +166,7 @@
     width: 85%;
 
     background-color: var(--day-bg-color);
-    margin: 0 0% 5% 4%;
+    margin: 0 0% 5% 7%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -178,12 +181,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .descContainer {
     grid-area: desc;
-    font-size: clamp(1em, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .desc {
     position: absolute;
-    left: 5%;
+    left: 8%;
     width: 80%;
     margin-top: 8%;
     opacity: 0;
@@ -234,7 +237,7 @@
 /* Miscellaneous
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .practicals {
-    margin: 5% 5% 15% 7%;
+    margin: 5% 5% 11% 7%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -258,7 +261,7 @@
 }
 
 .current {
-    margin: 0% 11% 7% 7%;
+    margin: 0% 5% 7% 7%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -266,7 +269,6 @@
         margin: 0% 11% 7% 15%;
     }
 }
-
 
 .about {
     margin: 3% 5% 3% 5%;
@@ -280,7 +282,7 @@
 }
 
 .goals {
-    margin: 2% 5% 0 12%;
+    margin: 2% 2% 0 12%;
     list-style-type: circle;
     font-size: clamp(1rem, 2vw, 1.4rem);
 }

@@ -26,7 +26,7 @@ export default function nightGlobals() {
             }
 
             h2 {
-                font-size: clamp(1.5rem, 4vw, 3.2rem);
+                font-size: clamp(1.7rem, 4vw, 3.2rem);
                 font-weight: 600;
             }
 
