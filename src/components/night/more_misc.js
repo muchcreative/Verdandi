@@ -23,11 +23,11 @@ export default function Practicals() {
         <div className={moreStyles.current}>
             <h5>Current</h5>
             <p className={moreStyles.about}>
-                My pen name is 	&ldquo;muchcreative&rdquo;. I am 25 years old and I want to be a decent developer. 
+                My pen name is 	&ldquo;muchcreative&rdquo;. I am 25 years old and I want to be a strong developer. 
                 This year I am:
             </p>
             <ol className={moreStyles.goals}>
-              <li>Focusing on back-end development, especially in Rust proficiency</li>
+              <li>Focusing on back-end development and improving data ETL pipeline skills, especially in Rust</li>
               <li>Networking with coders through Toronto technology conferences</li>
               <li>Attending Toronto developer sessions on Saturdays through meetups.com</li>
             </ol>

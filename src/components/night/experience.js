@@ -217,7 +217,7 @@ export default function Experience() {
                         automotive supplier. From there we created a full data processing pipeline and client-facing analysis dashboard. 
                         The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
                         Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
-                        product was their key showcase at P roMat and will be their main product focus for 2023.
+                        product was their key showcase at ProMat and will be their main product focus for 2023.
                       </p>             
                       <ExpMotif1 className={expStyles.motif}/>                     
                       <div className={expStyles.collapseContainer}>
