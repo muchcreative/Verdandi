@@ -1,3 +1,6 @@
-<svg viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 1L1 14L13 27" stroke="white" stroke-opacity="0.8"/>
+<svg viewBox='0 0 14 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path
+      d='M13 1L1 14L13 27' 
+      stroke='var(--day-bg-color)'
+      stroke-width='3'/>
 </svg>

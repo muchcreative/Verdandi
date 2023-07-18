@@ -56,7 +56,7 @@ export default function More() {
                 <button id='data-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 1)})}
-                onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data<br className={moreStyles.mobileBr}></br>Analytics</button>
+                onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data <br className={moreStyles.mobileBr}></br>Analytics</button>
                 <button id='back-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 2)})}

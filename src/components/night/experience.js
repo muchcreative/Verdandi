@@ -27,6 +27,13 @@ const expMotif0 = () => <ExpMotif0 />;
 const expMotif1 = () => <ExpMotif1 />;
 const expMotif2 = () => <ExpMotif2 />;
 
+// ok you need to run another fix on experience here
+// then fix the more selection process
+// the layout shifts too much when you pop it out
+// you might need to have a fixed height for all this stuff so
+// it knows how much to expand and avoids layout shift
+// also consider width
+
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);
@@ -210,7 +217,7 @@ export default function Experience() {
                         automotive supplier. From there we created a full data processing pipeline and client-facing analysis dashboard. 
                         The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
                         Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
-                        product was their key showcase at ProMat and will be their main product focus for 2023.
+                        product was their key showcase at P roMat and will be their main product focus for 2023.
                       </p>             
                       <ExpMotif1 className={expStyles.motif}/>                     
                       <div className={expStyles.collapseContainer}>

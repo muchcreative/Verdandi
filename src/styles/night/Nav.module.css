@@ -103,7 +103,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .linkList {
     list-style-type: none;
-    font-size: 1.7rem;
+    font-size: clamp(1.4rem ,2vw, 1.7rem);
     font-weight: 500;
 }
 
