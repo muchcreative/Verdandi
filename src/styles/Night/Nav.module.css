@@ -2,8 +2,8 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hamburger {
     position: fixed;
-    top: 2%;
-    right: 17%;
+    top: 2.5%;
+    right: 10.5%;
     display: block;
     height: 50px;
     width: 35px;
@@ -52,7 +52,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .menu {
     position: fixed;
-    width: 40%; 
+    width: 50%; 
 
     background-color: #212121CC;
     z-index: 50;
@@ -60,9 +60,15 @@
     overflow: hidden;
 }
 
+@media only screen and (min-width: 1366px) {
+    .menu {
+        width: 40%;
+    }
+}
+
 .menuOpen {
     top: 0%;
-    left: 60%;
+    left: 48%;
 }
 
 @media only screen and (min-width: 1366px) {
