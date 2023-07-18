@@ -64,16 +64,17 @@
 
 @media only screen and (min-width: 1366px) {
     .logos {
-        gap: 2%;
+        gap: 2.2%;
         margin: 0 11% 0 0;
     }
 }
 
 .linkedinText {
-    font-size: clamp(0.9em, 2vw, 1em);
     font-weight: 500;
-    transition: all 0.3s;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+
     margin-bottom: 7px;
+    transition: color 0.3s;
 }
 
 .linkedinText:hover,
@@ -82,7 +83,7 @@
 }
 
 .githubLogo {
-    width: clamp(0.9em, 2vw, 1.2em); 
+    width: clamp(2.7rem, 4vw, 3.6rem);
     transition: transform 2.5s linear;
 }
 
