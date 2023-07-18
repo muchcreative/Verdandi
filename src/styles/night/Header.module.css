@@ -111,7 +111,13 @@
 .verticalContainer {
     position: relative;
     top: 0%;
-    left: 50%;
+    left: 25%;
+}
+
+@media only screen and (min-width: 1366px) {
+    .verticalContainer {
+        left: 50%;
+    }
 }
 
 .transitionLine {

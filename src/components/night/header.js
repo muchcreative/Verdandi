@@ -12,6 +12,8 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
+// Can you try 100% width and height again, you are not getting everything
+
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 

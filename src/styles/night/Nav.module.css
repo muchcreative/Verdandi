@@ -57,6 +57,7 @@
     background-color: #212121CC;
     z-index: 50;
     transition: .7s;
+    overflow: hidden;
 }
 
 .menuOpen {

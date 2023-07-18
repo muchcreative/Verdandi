@@ -47,8 +47,7 @@ export default function NavMenu() {
                       <Link onClick={() => openMenu(false)} href='#skills'>Skills</Link>
                       <hr></hr>  
                     </li>
-                    <li><
-                      Link onClick={() => openMenu(false)} href='#experience'>Experience</Link>
+                    <li><Link onClick={() => openMenu(false)} href='#experience'>Experience</Link>
                       <hr></hr>
                     </li>                                       
                     <li>

@@ -173,10 +173,7 @@
 /* Submit Message
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .submitMessage {
-    position: relative;
-    left: 10%;
-    margin-top: -10%;
-
+    margin: -8% 0 6% 6%;
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: var(--night-special-color);
     transition: opacity 0.7s ease-in;
@@ -184,8 +181,7 @@
 
 @media only screen and (min-width: 1366px) {
     .submitMessage {
-        left: 26%;
-        margin-top: -2%;
+        margin: 0 0 1% 25.5%;
     }
 }
 
