@@ -5,8 +5,8 @@
     top: 50%;
     left: 0%;
     width: 100vw;
-    overflow: hidden;   
     z-index: 100; 
+    overflow: hidden;
 }
 
 .mobileDivider {
@@ -24,7 +24,7 @@
 }
 
 .deskDivider {
-    visibility: hidden;
+    display: none;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -40,7 +40,7 @@
     }
 
     .deskDivider {
-        visibility: visible;
+        display: block;
         height: 100%;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
@@ -57,6 +57,20 @@
 
 /* Two Text Division Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.textDivider {
+    align-self: center;
+    overflow: visible;
+    width: 200px;
+    height: 18px;
+}
+
+@media only screen and (min-width: 1366px) {
+    .textDivider {
+        width: 300px;
+        height: 21px;
+    }
+}
+
 .topTextDivider {
     animation: slide-up 1s ease 7s forwards;
 }
@@ -75,11 +89,4 @@
     100% {
         transform: translateY(180%);
     }
-}
-
-.textDivider {
-    align-self: center;
-    overflow: visible;
-    width: 300px;
-    height: 20px;
 }

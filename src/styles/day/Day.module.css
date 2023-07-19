@@ -52,30 +52,61 @@
 .rightContent {
     display: flex;
     flex-direction: column;
-    position: absolute;
-
-    top: 30%;
-    left: 15%;
+    justify-content: center;
     z-index: 1;
-    font-size: 2em;
+    margin-top: -30%;
+    font-size: clamp(2rem, 2vw, 2rem);
     animation: slide-in-text 2s ease 3.4s forwards;
 }
 
 @keyframes slide-in-text {
     to {
-        transform: translateY(180%);
+        transform: translateY(145%);
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    @keyframes slide-in-text {
+        to {
+            transform: translateY(170%);
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    @keyframes slide-in-text {
+        to {
+            transform: translateY(200%);
+        }
     }
 }
 
 @media only screen and (min-width: 1366px) {
     .rightContent {
+        position: absolute;
         top: auto;
+        left: 15%;
+        margin-top: 0%;
     }
 
     @keyframes slide-in-text { 
         to {
-            transform: translateX(138%);
+            transform: translateX(122%);
         }
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    @keyframes slide-in-text { 
+        to {
+            transform: translateX(136%);
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .mobileBr {
+        display: none;
     }
 }
 
@@ -98,10 +129,47 @@
 
 @keyframes slide-down {
     100% {
-        transform: translateY(80%);
+        transform: translateY(50%);
     }
 }
 
+
+@media only screen and (min-width: 1366px) {
+    @keyframes slide-down {
+        100% {
+            transform: translateY(80%);
+        }
+    }
+}
+
+.highlight {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    font-size: inherit;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.highlight::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+        
+    bottom: 25%;
+    left: 0;
+    height: 2px;
+
+    transform: translate3d(-100%, 0, 0);
+    background-color: var(--night-special-color);
+    animation: run-highlight 0.6s ease-in 8.8s forwards;
+}
+
+@keyframes run-highlight {
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
 
 /* White Containers for CSS Animations
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

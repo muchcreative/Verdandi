@@ -47,7 +47,7 @@ export default function Day() {
               <TextDivider className={`${svgStyles.textDivider} ${svgStyles.topTextDivider}`} />
               <LiveClock />
               <TextDivider className={`${svgStyles.textDivider} ${svgStyles.botTextDivider}`} />
-              <p className={styles.line2}>Can you come back past noon, after 3pm?</p>
+              <p className={styles.line2}>Can you come back past noon, <br className={styles.mobileBr}></br><em className={styles.highlight}>after 3pm?</em></p>
             </div>
           </div>
           <div className={svgStyles.mainDividerContainer}>
