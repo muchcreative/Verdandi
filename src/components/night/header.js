@@ -12,8 +12,6 @@ import { clsx } from 'clsx';
 
 const transitionLine = () => <TransitionLine />;
 
-// Can you try 100% width and height again, you are not getting everything
-
 export default function Main() {
     const [visible, setVisibility] = useState(false);
 
@@ -28,7 +26,6 @@ export default function Main() {
       const whiteSpaceLoc = whiteSpace.getBoundingClientRect();
 
       const bgTransition = () => {
-        
         // Scroll in range of the animation and scroll needs to freeze for the animation
         if (whiteSpaceLoc.top - preStart <= window.scrollY && window.scrollY <= whiteSpaceLoc.bottom + afterEnd) {
             setVisibility(true);
@@ -38,9 +35,16 @@ export default function Main() {
 
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
-            window.onscroll = function() {
+
+            if (screen.width >= 1366) {
+              window.onscroll = function() {
                 window.scrollTo(scrollLeft, scrollTop + 150);
-            };
+              };
+            } else {
+              window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop + 60);
+              };
+            }
 
             setTimeout(() => {
               window.onscroll = function() {};
