@@ -2,6 +2,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .liveClock {
     position: absolute;
+    top: 4%;
     opacity: 0;
     place-self: center;
     font-size: clamp(2.9rem, 10vw, 3.3rem);

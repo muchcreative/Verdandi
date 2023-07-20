@@ -61,7 +61,7 @@
 
 @keyframes slide-in-text {
     to {
-        transform: translateY(145%);
+        transform: translateY(45vh);
     }
 }
 
@@ -178,7 +178,7 @@
     align-self: center;
     border: none;
     background: rgba(0, 0, 0, 0.5);
-    width: 200px;
+    width: 300px;
     height: 1px;
 }
 
