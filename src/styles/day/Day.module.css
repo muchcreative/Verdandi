@@ -162,7 +162,7 @@
 
     transform: translate3d(-100%, 0, 0);
     background-color: var(--night-special-color);
-    animation: run-highlight 0.6s ease-in 8.8s forwards;
+    animation: run-highlight 0.8s ease-in 8.8s forwards;
 }
 
 @keyframes run-highlight {
@@ -170,6 +170,44 @@
         transform: translate3d(0, 0, 0);
     }
 }
+
+
+/* Two Text Division Lines
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.textDivider {
+    align-self: center;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 1px;
+}
+
+@media only screen and (min-width: 1366px) {
+    .textDivider {
+        width: 420px;
+    }
+}
+
+.topTextDivider {
+    animation: slide-up 1s ease 7s forwards;
+}
+
+@keyframes slide-up {
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+.botTextDivider {
+    animation: slide-down 1s ease 7s forwards;
+}
+
+@keyframes slide-down {
+    100% {
+        transform: translateY(35px);
+    }
+}
+
 
 /* White Containers for CSS Animations
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/

@@ -2,7 +2,6 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .liveClock {
     position: absolute;
-    top: 15%;
     opacity: 0;
     place-self: center;
     font-size: clamp(2.9rem, 10vw, 3.3rem);
@@ -12,7 +11,7 @@
 
 @media only screen and (min-width: 1366px) {
     .liveClock {
-        top: 15%;
+        top: 2%;
     }
 }
 
