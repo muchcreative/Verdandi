@@ -52,7 +52,7 @@ export default function nightGlobals() {
 
             h6 {
                 font-color: inherit;
-                font-size: clamp(1.4rem, 3vw, 3rem);
+                font-size: clamp(1.4rem, 6vw, 3rem);
                 font-weight: 500;
             }
 

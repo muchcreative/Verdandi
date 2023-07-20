@@ -14,7 +14,9 @@
 @media only screen and (min-width: 1366px) {
     .hamburger {
         top: 5%;
-        right: 4%;
+        right: 6%;
+        height: 60px;
+        width: 42px;
     }
 }
 
@@ -28,6 +30,12 @@
     transition: 0.4s;
 }
 
+@media only screen and (min-width: 1366px) {
+    .hamburger .bar, .hamburger::after, .hamburger::before {
+        margin: 12px;
+    }
+}
+
 .hamburger:hover .bar,
 .hamburger:focus .bar {
     opacity: 0%;
@@ -36,6 +44,13 @@
 .hamburger:hover::before,
 .hamburger:focus::before {
     transform: translateY(10px);
+}
+
+@media only screen and (min-width: 1366px) {
+    .hamburger:hover::before,
+    .hamburger:focus::before {
+        transform: translateY(14px);
+    }
 }
 
 .hamburger:hover::after,

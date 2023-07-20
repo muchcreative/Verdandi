@@ -139,9 +139,13 @@
 /* Hook
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hookContainer {
-    position: relative;
-    height: 120vh;
-    width: 100%;
+    margin: 20% 0 30% 0;
+}
+
+@media only screen and (min-width: 1366px) {
+    .hookContainer {
+        margin: 10% 0 12% 0;
+    }
 }
 
 .showContainer {
@@ -153,15 +157,25 @@
 }
 
 .hook {
-    position: absolute;
-    top: 10%;
     font-weight: 500; 
-    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    font-size: clamp(3.5rem, 11vw, 6.5rem);
     margin-left: 10%;
 
     line-height: 1.5em;
     word-spacing: 3px;
     transition: opacity 0.4s ease-in 1.6s;
+}
+
+@media only screen and (min-width: 500px) {
+    .hook {
+        margin-left: 6%;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .hook {
+        margin-left: 5%;
+    }
 }
 
 .hookHidden {
@@ -178,11 +192,6 @@
 }
 
 @media only screen and (min-width: 1366px) {
-    .hook {
-        top: 25%;
-        margin-left: 7%;
-    }
-
     .hookKey {
         text-decoration: var(--night-special-color) 8px underline;
         text-underline-offset: 6px;
@@ -193,17 +202,38 @@
 
 /* Responsive Breaks
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.tabletkBr {
+    display: none;
+}
+
 .deskBr {
     display: none;
 }
 
-@media only screen and (min-width: 1366px) {
-    .deskBr {
-        display: inline;
-    }
-
+@media only screen and (min-width: 500px) {
     .mobileBr {
         display: none;
     }
 
+    .tabletBr {
+        display: inline;
+    }
+
+    .deskBr {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .mobileBr {
+        display: none;
+    }
+
+    .tabletBr {
+        display: none;
+    }
+
+    .deskBr {
+        display: inline;
+    }
 }

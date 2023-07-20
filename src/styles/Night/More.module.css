@@ -123,11 +123,11 @@
 }
 
 .hrDesc1 {
-    transform: translateX(clamp(6.7rem, 16vw, 15.2rem));
+    transform: translateX(var(--night-translate-da));
 }
 
 .hrDesc2 {
-    transform: translateX(clamp(13rem, 32vw, 31rem));
+    transform: translateX(var(--night-translate-be));
 }
 
 .fullHr {
