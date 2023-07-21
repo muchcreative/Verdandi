@@ -1,11 +1,16 @@
 'use client';
 
-import { format } from 'date-fns';
+// Next.js
 import { useEffect, useState } from 'react'
-
-import clockStyles from '../../styles/day/Clock.module.css';
-
 import { Lora } from 'next/font/google'
+
+// CSS
+import styles from 'src/styles/day/Day.module.css';
+
+// External Libs
+import { clsx } from 'clsx';
+import { format } from 'date-fns';
+
 const lora = Lora({
                 subsets: ['latin'], 
                 weight: ['400']
@@ -22,7 +27,7 @@ export default function LiveClock() {
   }, []);
 
   return (
-    <div className={`${lora.className} ${clockStyles.liveClock}`}>
+    <div className={clsx({[lora.className]: true, [styles.liveClock]: true})}>
       { format(time, 'h:mm:ss a') }
     </div>
   );

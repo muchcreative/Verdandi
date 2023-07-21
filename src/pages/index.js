@@ -8,8 +8,6 @@ import { format } from 'date-fns';
 import Day from 'src/components/day/day.js';
 import Night from 'src/components/night/night.js';
 
-// Consider a loading screen
-
 function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
@@ -18,7 +16,7 @@ function setDayNight() {
 }
 
 export default function Home() {
-  const [page, setPage] = useState(<Night />);
+  const [page, setPage] = useState(<Day />);
   useEffect(() => { setPage(setDayNight()) }, []);
   return (page);
 };
