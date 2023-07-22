@@ -10,54 +10,55 @@
 
 /* White Containers for CSS Animations
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.firstWhite {
+.whiteContainer {
     position: absolute;
     top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 50%;
-
-    background-color: var(--day-bg-color);
-    z-index: 3;
-    animation: left-reduce-z 0.2s ease-in 3.4s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-@keyframes left-reduce-z {
-    to {
-        z-index: 2;
+@media only screen and (min-width: 800px) {
+    .whiteContainer {
+        flex-direction: row;
     }
+}
+
+.firstWhite {
+    width: 100%;
+    height: 50%;
+    background-color: var(--day-bg-color);
+    z-index: 1;
 }
 
 @media only screen and (min-width: 800px) {
     .firstWhite {
-        top: auto;
-        left: 0;
         width: 50%;
         height: 100%;
     }
 }
 
 .secondWhite {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 50%;
-
     background-color: var(--day-bg-color);
-    z-index: 5;
-    animation: right-reduce-z 0.2s linear 3.4s forwards;
+    z-index: 3;
+    visibility: visible;
+    animation: hide-white 0.2s linear 3.4s forwards;
 }
 
-@keyframes right-reduce-z {
+@keyframes hide-white {
     to {
-        z-index: 0;
+        visibility: hidden;
     }
 }
 
 @media only screen and (min-width: 800px) {
     .secondWhite {
-        bottom: auto;
-        right: 0;
-        width: calc(50% + 20px);
+        width: 50%;
         height: 100%;
     }
 }
@@ -70,6 +71,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
+    width: 800px;
     height: 100%;
     overflow: hidden;
 }
@@ -77,6 +79,7 @@
 @media only screen and (min-width: 800px) {
     .content {
         flex-direction: row-reverse;
+        width: 1080px;
         overflow: visible;
     }
 }
@@ -86,7 +89,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .leftContent {
     flex: 1;
-    z-index: 4;
+    z-index: 2;
 }
 
 .cutlery {
@@ -118,7 +121,7 @@
     height: 3px;
     
     background-color: rgba(0, 0, 0, 0.5);   
-    z-index: 5;
+    z-index: 4;
     animation: draw-divider 0.8s ease-in 0.5s forwards;
 }
 
@@ -152,7 +155,7 @@
     flex-direction: column;
     padding: 3rem 0 2.7rem 0;
 
-    z-index: 1;
+    z-index: 0;
     animation: slide-in-text 2s ease 3.4s forwards;
 }
 
@@ -171,6 +174,7 @@
 }
 
 .topLine {
+    width: 350px;
     font-weight: normal;
     font-size: clamp(1.8rem, 2vw, 2.1rem);
     border-bottom: 2px solid rgba(0, 0, 0, 0.70);
@@ -183,7 +187,14 @@
     }
 }
 
+@media only screen and (min-width: 800px) {
+    .topLine {
+        width: 450px;
+    }
+}
+
 .bottomLine {
+    width: 350px;
     font-size: clamp(1.8rem, 2vw, 2.1rem);
     border-top: 2px solid rgba(0, 0, 0, 0.70);
     animation: slide-down 1s ease 7s forwards;
@@ -192,6 +203,12 @@
 @keyframes slide-down {
     100% {
         transform: translateY(2.7rem);
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .bottomLine {
+        width: 450px;
     }
 }
 

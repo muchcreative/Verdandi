@@ -28,8 +28,10 @@ export default function Day() {
           <link rel='icon' href='/favicons/day_tree.png' />
         </Head>
         <main className={styles.main}>
-            <div className={styles.firstWhite}></div>
-            <div className={styles.secondWhite}></div>
+            <div className={styles.whiteContainer}>
+                <div className={styles.firstWhite}></div>
+                <div className={styles.secondWhite}></div>
+            </div>
             <div className={styles.content}>
                 <div className={styles.leftContent}>
                     <Image
