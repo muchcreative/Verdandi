@@ -19,7 +19,7 @@ const ebGaramond = EB_Garamond({
                     weight: ['400', '500', '600', '700', '800'],
                     style: ['normal', 'italic'],
                   });
-
+                  
 // Problem you don't see the second transition
 // We should be able to stack these properly
 // Scroll SVG should line up

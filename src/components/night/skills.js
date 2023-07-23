@@ -4,10 +4,6 @@ import { useState, useEffect } from 'react';
 // CSS
 import skillsStyles from 'src/styles/night/Skills.module.css';
 
-// SVGs
-import VerticalBreak from 'public/night/vertical_break.svg';
-const verticalBreak = () => <VerticalBreak />;
-
 // External Libs
 import { clsx } from 'clsx';
 
@@ -119,9 +115,10 @@ export default function Skills() {
                 <p className={showCol0}>CSS Modules</p>
                 <p className={showCol0}>Dash</p>
             </div>
-            <VerticalBreak id='vline1' className={clsx({
-              [skillsStyles.vline1] : true,
-              [skillsStyles.vline1Show] : show0})} />
+            <div id='first-vline' className={clsx({
+              [skillsStyles.vline] : true,
+              [skillsStyles.firstVline] : true,
+              [skillsStyles.showVline] : show0})} />
             <div id='data-skills' className={skillsStyles.data}>
                 <h3 className={showCol1}>Data Analytics</h3>
                 <p className={showCol1}>Python</p>
@@ -135,9 +132,10 @@ export default function Skills() {
                 <p className={showCol1}>Numpy / Pandas / Polars</p>
                 <p className={showCol1}>Plotly / Seaborn / MatPlotLib</p>
             </div>
-            <VerticalBreak id='vline2' className={clsx({
-              [skillsStyles.vline2] : true,
-              [skillsStyles.vline2Show] : show1})} />
+            <div id='second-vline' className={clsx({
+              [skillsStyles.vline] : true,
+              [skillsStyles.secondVline] : true,
+              [skillsStyles.showVline] : show1})} />
             <div id='back-skills' className={skillsStyles.back}>
                 <h3 className={showCol2}>Back-End</h3>
                 <p className={showCol2}>Rust</p>

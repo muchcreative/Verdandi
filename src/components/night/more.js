@@ -7,10 +7,6 @@ import moreStyles from 'src/styles/night/More.module.css';
 // Page Components
 import MoreMisc from 'src/components/night/more_misc.js';
 
-// SVGs
-import MoreVB from 'public/night/more_vb.svg';
-const more_vb = () => <MoreVB />;
-
 // External Libs
 import { clsx } from 'clsx';
 
@@ -79,7 +75,7 @@ export default function More() {
                   [moreStyles.activeButton] : (desc.curr === 2)})}
                 onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-<br className={moreStyles.mobileBr}></br>End</button>
             </div>
-            <MoreVB className={moreStyles.verticalBreak} />
+            <div className={moreStyles.verticalBreak} />
             <hr className={clsx({
               [moreStyles.hrDesc]: true,
               [moreStyles.hrDesc1] : desc.curr === 1, 

@@ -156,7 +156,9 @@
     .verticalBreak {
         display: block;
         grid-area: vline;
-        width: 3px;
+        background-color: var(--day-bg-color);
+        height: 500px;
+        width: 2px;
     }
 }
 
