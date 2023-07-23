@@ -71,7 +71,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
-    width: 800px;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }
@@ -93,7 +93,7 @@
 }
 
 .cutlery {
-    width: clamp(350px, 30vw, 525px);
+    width: clamp(365px, 30vw, 525px);
     height: auto;
     animation: slide-in-cutlery 1.7s ease 1.7s forwards;
 }
@@ -150,13 +150,20 @@
 /* Right Content and Text
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .rightContent {
-    flex: 1;
+    height: 50%;
     display: flex;
     flex-direction: column;
     padding: 3rem 0 2.7rem 0;
 
     z-index: 0;
     animation: slide-in-text 2s ease 3.4s forwards;
+}
+
+@media only screen and (min-width: 800px) {
+    .rightContent {
+        flex: 1;
+        height: auto
+    }
 }
 
 @keyframes slide-in-text {
@@ -176,7 +183,7 @@
 .topLine {
     width: 350px;
     font-weight: normal;
-    font-size: clamp(1.8rem, 2vw, 2.1rem);
+    font-size: clamp(1.6rem, 2vw, 2.1rem);
     border-bottom: 2px solid rgba(0, 0, 0, 0.70);
     animation: slide-up 1s ease 7s forwards;
 }
@@ -195,7 +202,7 @@
 
 .bottomLine {
     width: 350px;
-    font-size: clamp(1.8rem, 2vw, 2.1rem);
+    font-size: clamp(1.6rem, 2vw, 2.1rem);
     border-top: 2px solid rgba(0, 0, 0, 0.70);
     animation: slide-down 1s ease 7s forwards;
 }
@@ -255,7 +262,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .liveClock {
     position: absolute;
-    font-size: clamp(3rem, 4.1vw, 3.5rem);
+    font-size: clamp(2.8rem, 4.1vw, 3.5rem);
     font-variant-numeric: tabular-nums;
     opacity: 0;
     animation: fade-in 0.5s ease-in 8.3s forwards;

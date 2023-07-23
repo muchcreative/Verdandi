@@ -38,8 +38,8 @@ export default function Day() {
                       priority
                       src='/day/cutlery.jpg'
                       alt='cutlery'
-                      width={2400}
-                      height={1600}
+                      width={1920}
+                      height={1280}
                       className={styles.cutlery}
                     />
                 </div>
