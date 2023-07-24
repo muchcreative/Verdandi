@@ -24,19 +24,19 @@ export default function Skills() {
         
         let options0 = {
           root: null,
-          rootMargin: "0px",
+          rootMargin: '0px',
           threshold: 0.3,
         };
 
         let options1 = {
           root: null,
-          rootMargin: "0px",
+          rootMargin: '0px',
           threshold: 0.45,
         };
 
         let options2 = {
           root: null,
-          rootMargin: "0px",
+          rootMargin: '0px',
           threshold: 0.45,
         };
 
@@ -78,7 +78,7 @@ export default function Skills() {
 
       let options = {
         root: null,
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 1.0,
       };
 

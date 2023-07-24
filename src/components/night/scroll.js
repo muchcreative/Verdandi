@@ -70,10 +70,10 @@ export default function Scroll() {
       <div className={scrollStyles.scrollLineContainer}>
           <MobileLine id='mobile-line' className={scrollStyles.mobileLine} />
           <DeskLine id='desk-line' className={scrollStyles.deskLine}/>
+          <DownArrow id='down-arrow' className={clsx({
+            [scrollStyles.downArrow]: true,
+            [scrollStyles.hideDownArrow] : scrolled})}/>
       </div>
-      <DownArrow id='down-arrow' className={clsx({
-        [scrollStyles.downArrow]: true,
-        [scrollStyles.hideDownArrow] : scrolled})}/>
       <div className={scrollStyles.scrollText}>
           <h1>After Lunch</h1>
           <p>3pm - 1am</p>

@@ -27,13 +27,6 @@ const expMotif0 = () => <ExpMotif0 />;
 const expMotif1 = () => <ExpMotif1 />;
 const expMotif2 = () => <ExpMotif2 />;
 
-// ok you need to run another fix on experience here
-// then fix the more selection process
-// the layout shifts too much when you pop it out
-// you might need to have a fixed height for all this stuff so
-// it knows how much to expand and avoids layout shift
-// also consider width
-
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setShow] = useState(false);

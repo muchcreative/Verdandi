@@ -41,8 +41,8 @@
 .downArrow {
     position: absolute;
     top: var(--svg-head-start);
-    margin-left: 1px;
-
+    left: 1.6%;
+   
     width: 22px; 
     height: 18px;
     transition: all 0.5s;
@@ -52,7 +52,7 @@
 
 @media only screen and (min-width: 1366px) {
     .downArrow {
-        left: 4.3%;
+        left: 4.35%;
     }
 }
 

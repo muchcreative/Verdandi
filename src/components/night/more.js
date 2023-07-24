@@ -13,13 +13,13 @@ import { clsx } from 'clsx';
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [seenTitle, setSeen] = useState(false);
-  
+
     useEffect(() => {
       const moreTitle = document.querySelector('#more-title');
 
       let options = {
         root: null,
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 1.0,
       };
 
