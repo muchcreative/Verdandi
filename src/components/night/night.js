@@ -19,7 +19,9 @@ const ebGaramond = EB_Garamond({
                     weight: ['400', '500', '600', '700', '800'],
                     style: ['normal', 'italic'],
                   });
-                  
+
+// can we remove the barrier break
+
 // Problem you don't see the second transition
 // We should be able to stack these properly
 // Scroll SVG should line up
@@ -46,7 +48,7 @@ export default function Night() {
             <title>Verdandi</title>
             <meta name='description' content='Personal website' />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
-            <link rel='icon' href='/favicons/night_tree.png' />  
+            <link rel='icon' href='/favicons/night_tree.ico' />  
         </Head>
         <NightGlobals />
         <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
