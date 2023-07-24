@@ -40,8 +40,11 @@
 
 .downArrow {
     position: absolute;
-    left: 2.3%;
-    top: 390px;
+    top: var(--svg-head-start);
+    margin-left: 1px;
+
+    width: 22px; 
+    height: 18px;
     transition: all 0.5s;
     opacity: 0;
     animation: line-in 0.7s ease-in 0.1s forwards;

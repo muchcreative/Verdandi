@@ -1,8 +1,8 @@
-<svg width='22' height='15' viewBox='0 0 22 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
+<svg  viewBox='-11 -1 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
-      d='M21.5 0.5
-        L11.5 14
-        L1 0.5'
+      d='M -11 0
+        L 0 15
+        L 11 0'
       stroke='#6a7bcc'
       stroke-width='3'  
     />

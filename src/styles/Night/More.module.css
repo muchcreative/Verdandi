@@ -17,7 +17,7 @@
 }
 
 .animateTitleLine {
-    width: 40%;
+    width: clamp(7.8rem, 40vw, 10rem);
 }
 
 @media only screen and (min-width: 1366px) {
@@ -36,16 +36,16 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .moreLayout {
     display: grid;
-    grid: 36% 2% 2% 60% / 
+    grid: 10% 1% 1% 88% / 
           33% 33% 34%;
     grid-template-areas:
         "buttons buttons buttons"
         "hrDesc  hrDesc  hrDesc"
         "fullHr  fullHr  fullHr"
         "desc    desc    desc";
-    margin: 15% 0% 90% 0%;
+    margin: 15% 5% 5% 5%;
     width: 90%;
-    gap: 5%;
+    gap: 1%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -57,9 +57,8 @@
             "hrDesc  hrDesc  hrDesc  vline"
             "fullHr  fullHr  fullHr  vline"
             "desc    desc    desc    vline";
-        margin: 0% 0% 0% 21%;
+        margin: 0% 0% 5% 21%;
         width: 60%;
-        gap: 0%;
     }
 }
 
@@ -184,6 +183,7 @@
 .descContainer {
     grid-area: desc;
     font-size: clamp(1rem, 2vw, 1.3rem);
+    height: 450px;
 }
 
 .desc {

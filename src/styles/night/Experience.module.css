@@ -17,7 +17,7 @@
 }
 
 .animateTitleLine {
-    width: 40%;
+    width: clamp(7.8rem, 40vw, 10rem);
 }
 
 @media only screen and (min-width: 1366px) {
@@ -166,7 +166,7 @@
 /* General Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expContainer {
-    margin: 2% 6% 85% 6%;
+    margin: 2% 6% 30% 6%;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -211,6 +211,7 @@
 }
 
 .desc {
+    margin-top: 2%;
     font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
@@ -390,6 +391,7 @@
     position: relative;
     flex-direction: column;
     margin-top: 5%;
+    height: 350px;
 }
 
 @media only screen and (min-width: 1366px) {

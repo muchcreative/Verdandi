@@ -24,7 +24,7 @@
 }
 
 .animateTitleLine {
-    width: 40%;
+    width: clamp(7.8rem, 40vw, 10rem);
 }
 
 @media only screen and (min-width: 500px) {

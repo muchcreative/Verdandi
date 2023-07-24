@@ -13,24 +13,7 @@ import { clsx } from 'clsx';
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [seenTitle, setSeen] = useState(false);
-
-    useEffect(() => {
-      let root = document.documentElement;
-      let firstShift;
-      let secondShift
-
-      if (screen.width >= 1366) {
-        firstShift = (screen.width * 0.16);
-        secondShift = (screen.width * 0.32);
-      } else {
-        firstShift = (screen.width * 0.30); 
-        secondShift =  (screen.width * 0.55);
-      }
-
-      root.style.setProperty('--night-translate-da', firstShift + "px");
-      root.style.setProperty('--night-translate-be', secondShift + "px");
-    })
-
+  
     useEffect(() => {
       const moreTitle = document.querySelector('#more-title');
 

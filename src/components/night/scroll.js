@@ -40,15 +40,10 @@ export default function Scroll() {
 
     // Draw SVG on scroll
     useEffect(() => {
-        const drawOnScroll = () => {
-          const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
-            / (3800 - document.documentElement.clientHeight);
-
-          const draw = length * scrollPercent;
-          svgElement.style.strokeDashoffset = length - draw;
-        }
-
         const headStart = 400;
+        const downArrow = document.querySelector('#down-arrow');
+        downArrow.style.setProperty('--svg-head-start', headStart - 12 + 'px');
+
         if (screen.width <= 1366) {
             var svgElement = document.querySelector('#mobile-line');
         } else {
@@ -58,7 +53,15 @@ export default function Scroll() {
         const svgPath = svgElement.firstChild;  // indexes SVG path
         const length = svgPath.getTotalLength() - headStart;  // Add head start for scroll hint
         svgElement.style.strokeDasharray = length + headStart;  // Add back head start to ensure dash array is equal to original length
-        svgElement.style.strokeDashoffset = length;        
+        svgElement.style.strokeDashoffset = length; 
+        
+        const drawOnScroll = () => {
+          const scrollPercent = (window.scrollY + document.documentElement.scrollTop) 
+            / (3800 - document.documentElement.clientHeight);
+
+          const draw = length * scrollPercent;
+          svgElement.style.strokeDashoffset = length - draw;
+        }
         document.addEventListener('scroll', drawOnScroll);
    }, [])
 
@@ -68,7 +71,7 @@ export default function Scroll() {
           <MobileLine id='mobile-line' className={scrollStyles.mobileLine} />
           <DeskLine id='desk-line' className={scrollStyles.deskLine}/>
       </div>
-      <DownArrow className={clsx({
+      <DownArrow id='down-arrow' className={clsx({
         [scrollStyles.downArrow]: true,
         [scrollStyles.hideDownArrow] : scrolled})}/>
       <div className={scrollStyles.scrollText}>

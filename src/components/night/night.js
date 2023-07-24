@@ -40,8 +40,7 @@ const ebGaramond = EB_Garamond({
     //     document.addEventListener('beforeunload', () => {window.scrollTo(0, 0);});
     // }, [])
 
-export default function Night() {
-    
+export default function Night() { 
     return (
       <>
         <Head>

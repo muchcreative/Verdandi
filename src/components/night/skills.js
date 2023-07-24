@@ -37,7 +37,7 @@ export default function Skills() {
         let options2 = {
           root: null,
           rootMargin: "0px",
-          threshold: 0.5,
+          threshold: 0.45,
         };
 
 
