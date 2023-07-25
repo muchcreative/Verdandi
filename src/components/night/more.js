@@ -48,18 +48,18 @@ export default function More() {
                 <button id='front-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 0)})}
-                onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-<br className={moreStyles.mobileBr}></br>End</button>
+                onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-End</button>
                 <button id='data-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 1)})}
-                onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data <br className={moreStyles.mobileBr}></br>Analytics</button>
+                onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data Analytics</button>
                 <button id='back-btn' className={clsx({
                   [moreStyles.button] : true,
                   [moreStyles.activeButton] : (desc.curr === 2)})}
-                onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-<br className={moreStyles.mobileBr}></br>End</button>
+                onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
             </div>
             <div className={moreStyles.verticalBreak} />
-            <hr className={clsx({
+            <hr id='hr-desc' className={clsx({
               [moreStyles.hrDesc]: true,
               [moreStyles.hrDesc1] : desc.curr === 1, 
               [moreStyles.hrDesc2] : desc.curr === 2})} />
@@ -92,12 +92,12 @@ export default function More() {
                   [moreStyles.desc] : true,
                   [moreStyles.descShow] : (desc.curr === 2),
                   [moreStyles.descHide] : (desc.prev === 2)})}>
-                    I lead a team to develop a robot navigation algorithm in C++ to a 90% score. From there, I 
-                    developed backtesting software for market derivatives and the full ETL pipeline to store 
-                    market data over the Cloud including its aggregation and pre-processing. I am currently 
-                    working with other developers to help write smart contracts that outline the data rules 
-                    for the usage of data commercialized through Data Mart and recorded on the blockchain. 
-                    I have over 1 year of experience in back-end development.
+                    I have created backtesting software for market derivative trading and a full ETL pipeline to 
+                    store market data over the Cloud. I am currently working with other developers to help write smart 
+                    contracts that outline the data rules for the usage of data commercialized through Data Mart and 
+                    recorded on the blockchain. During university, I have also led teams and coded in both C++ and C to 
+                    implement robot navigation algorithms and earn a robotics specialization. I have over 1 year of 
+                    experience in back-end development.
                 </p>
             </div>
         </div>

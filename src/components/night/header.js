@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react';
 import headerStyles from 'src/styles/night/Header.module.css';
 
 // SVGs
-import TransitionLine from 'public/night/transition_line.svg';
+import TransLine from 'public/night/trans_line.svg';
 
 // External Libs
 import { clsx } from 'clsx';
 
-const transitionLine = () => <TransitionLine />;
+const transLine = () => <TransLine />;
 
 export default function Main() {
     const [visible, setVisibility] = useState(false);
@@ -78,7 +78,7 @@ export default function Main() {
           [headerStyles.hideFloat] : !visible})}>
             <div id='bg-change-1' className={headerStyles.bgChange1}>
                 <div className={headerStyles.verticalContainer}>
-                    <TransitionLine className={clsx({
+                    <TransLine className={clsx({
                       [headerStyles.transitionLine] : true,
                       [headerStyles.animateLine] : visible})} />
                 </div>

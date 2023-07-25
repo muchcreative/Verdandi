@@ -110,6 +110,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .verticalContainer {
     margin-left: 5%;
+    overflow: hidden;
 }
 
 @media only screen and (min-width: 1366px) {
@@ -120,12 +121,13 @@
 
 .transitionLine {
     height: 100vh;
+    width: auto;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
 }
 
 .animateLine {
-    animation: draw 0.8s ease-in forwards;
+    animation: draw 0.7s ease-in forwards;
 }
 
 @keyframes draw {

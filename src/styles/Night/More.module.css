@@ -20,7 +20,7 @@
     width: clamp(7.8rem, 40vw, 10rem);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .titleLine {
         height: 3px;
         margin-top: -10px;
@@ -48,9 +48,9 @@
     gap: 1%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .moreLayout {
-        grid: 30% 1% 1% 68% / 
+        grid: 12% 2% 2% 84% / 
               32% 32% 32% 4%;
         grid-template-areas:
             "buttons buttons buttons vline"
@@ -70,13 +70,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
-}
-
-@media only screen and (min-width: 1366px) {
-    .buttons {
-        gap: 10%;
-    }
+    column-gap: 10%;
 }
 
 .buttons button:hover,
@@ -93,42 +87,45 @@
     transition: 0.4s;
 }
 
-@media only screen and (min-width: 1366px) {
-    .mobileBr {
-        display: none;
-    }
-}
-
 
 /* Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hrDesc {
     grid-area: hrDesc;
-    width: 100%;
-    margin: 3% 0 0 6%;
     width: 30%;
     border: none;
     height: 2px;
-
+    
     background-color: var(--night-special-color);
     transition: all 0.8s;
 }
 
-@media only screen and (min-width: 1366px) {
-    .hrDesc {
-        margin: -5% 0 0 9.5%;
-        width: 26%;
-        height: 3px;
-    }
-}
-
 .hrDesc1 {
-    transform: translateX(100%);
+    transform: translateX(8.2rem);
 }
 
 .hrDesc2 {
-    transform: translateX(175%);
+    transform: translateX(14rem);
 }
+
+@media only screen and (min-width: 1000px) {
+    .hrDesc {
+        margin-top: -1%;
+        width: 25%;
+        height: 3px;
+        transform: translateX(clamp(4rem, 8vw, 5.5rem));
+    }
+
+    .hrDesc1 {
+        transform: translateX(clamp(21rem, 22vw, 28rem));
+    }
+
+    .hrDesc2 {
+        transform: translateX(clamp(33rem, 44vw, 36.5rem));
+    }
+}
+
+
 
 .fullHr {
     grid-area: fullHr;
@@ -136,15 +133,15 @@
     
     border: none;
     height: 2px;
-    width: 80%;
-    margin: 5% 0 0% 8%;
+    width: 90%;
+    margin: 5% 5% 0% 5%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .fullHr {
         width: 90%;
         height: 2px;
-        margin: -3% 0 0 5%;
+        margin: 0 5% 0 5%;
     }
 }
 
@@ -152,7 +149,7 @@
     display: none;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .verticalBreak {
         display: block;
         grid-area: vline;
@@ -171,7 +168,7 @@
     margin: 0 0% 5% 7%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .contactBreak {
         width: 75%;
         margin: 0 0 5% 12.5%;
@@ -195,7 +192,7 @@
     opacity: 0;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .desc {
         position: absolute;
         width: 50%;
@@ -243,7 +240,7 @@
     margin: 5% 5% 11% 7%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .practicals {
         margin: 5% 15% 6% 15%;
     }
@@ -257,7 +254,7 @@
     column-gap: 20%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .practicalsList {
         column-gap: 40%;
     }
@@ -267,7 +264,7 @@
     margin: 0% 5% 7% 7%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .current {
         margin: 0% 11% 7% 15%;
     }
@@ -278,7 +275,7 @@
     font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .about {
         margin: 3% 5% 0 8%;
     }
@@ -290,7 +287,7 @@
     font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .goals {
         margin: 2% 5% 0 14%;
     }
@@ -300,7 +297,7 @@
     line-height: 23px;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .goals li {
         line-height: 35px;
     }

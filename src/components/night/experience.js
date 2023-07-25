@@ -41,7 +41,7 @@ export default function Experience() {
 
       let options = {
         root: null,
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 1.0,
       };
 
@@ -186,9 +186,9 @@ export default function Experience() {
                         <p className={expStyles.addOnDesc}>
                           When commercializing data there are many things to consider. The top three are, firstly, to ensure the data is used 
                           correctly and within the expectations of all parties involved. Secondly, to ensure that the data sold between 
-                          all parties is consistent and immutable amongst all copies of it across all computers involved in the network, 
-                          and thirdly to ensure that the data is transparent and the customer understands what is involved in the transaction.
-                          All three of these items can be solved using blockchain with the Near Protocol and Ethereum.
+                          all parties is consistent and immutable amongst all copies of it across the network. 
+                          Thirdly, to ensure that the data is transparent and the customer understands what is involved in the transaction.
+                          Built using Rust and Typescript on the Near and Ethereum blockchain, all three of these items can be solved.
                         </p>
                         <ExpMotif0 className={expStyles.motif}/>
                         <div className={expStyles.collapseContainer}>
