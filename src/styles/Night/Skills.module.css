@@ -112,7 +112,7 @@
 .back > * {
     opacity: 0;
     transform: translateY(-40%);
-    transition: all 1s ease-in;
+    transition: opacity 1s ease-in;
 }
 
 
