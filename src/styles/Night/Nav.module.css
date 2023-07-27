@@ -2,8 +2,8 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hamburger {
     position: fixed;
-    top: 4%;
-    right: 20%;
+    top: 3%;
+    right: 10%;
 
     display: block;
     height: 50px;
@@ -70,8 +70,9 @@
 .menu {
     position: fixed;
     top: 0%;
-    width: 30%;
-    height: 80%;
+    width: 55%;
+    height: 60%;
+    
 
     background-color: #212121CC;
     z-index: 50;
@@ -89,6 +90,7 @@
 @media only screen and (min-width: 800px) {
     .menu {
         width: 22%;
+        height: 80%;
     }
 }
 
@@ -123,10 +125,17 @@
 }
 
 .cross {
-    width: 40px;
-    height: 40px;   
+    width: 30px;
+    height: auto;   
     transition: stroke 0.4s;
 }
+
+@media only screen and (min-width: 800px) {
+    .cross {
+        width: 40px;
+    }
+}
+
 
 .cross:hover,
 .cross:focus {
