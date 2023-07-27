@@ -1,0 +1,11 @@
+<svg viewBox='0 0 54 54'
+  fill='none' 
+  xmlns='http://www.w3.org/2000/svg'
+  stroke='var(--day-bg-color)'
+  stroke-width='2'>
+    <path d='
+      M2 2.20746
+      C5.35882 5.97776 35.7882 36.9734 50.583 52'/>
+    <path
+      d='M3.41701 51.7925L52 2'/>
+</svg>

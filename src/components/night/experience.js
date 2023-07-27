@@ -12,20 +12,12 @@ import MMS from 'public/night/mms.svg'
 import SideArrow from 'public/night/side_arrow.svg'
 import Triangle from 'public/night/triangle.svg'
 
-import ExpMotif0 from 'public/night/exp_motif_0.svg'
-import ExpMotif1 from 'public/night/exp_motif_1.svg'
-import ExpMotif2 from 'public/night/exp_motif_2.svg'
-
 // External Libs
 import { clsx } from 'clsx';
 
 const mms = () => <MMS />;
 const sideArrow = () => <SideArrow />;
 const triangle = () => <Triangle />;
-
-const expMotif0 = () => <ExpMotif0 />;
-const expMotif1 = () => <ExpMotif1 />;
-const expMotif2 = () => <ExpMotif2 />;
 
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
@@ -190,7 +182,6 @@ export default function Experience() {
                           Thirdly, to ensure that the data is transparent and the customer understands what is involved in the transaction.
                           Built using Rust and Typescript on the Near and Ethereum blockchain, all three of these items can be solved.
                         </p>
-                        <ExpMotif0 className={expStyles.motif}/>
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>
@@ -211,8 +202,7 @@ export default function Experience() {
                         The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
                         Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
                         product was their key showcase at ProMat and will be their main product focus for 2023.
-                      </p>             
-                      <ExpMotif1 className={expStyles.motif}/>                     
+                      </p>                                 
                       <div className={expStyles.collapseContainer}>
                           <button onClick={() => setShow(false)}>
                               <span className={expStyles.collapser}>
@@ -233,8 +223,7 @@ export default function Experience() {
                           bias issues were addressed during the post-processing of the data and using time-series validation splits. 
                           The ending model had 0.8 AUC and was successful in clearing in-house developed backtesting software. The project 
                           had to be retired due to time constraints and unusual weight activation patterns during volatile time periods.
-                        </p> 
-                        <ExpMotif2 className={expStyles.motif}/>  
+                        </p>  
                         <div className={expStyles.collapseContainer}>
                             <button onClick={() => setShow(false)}>
                                 <span className={expStyles.collapser}>

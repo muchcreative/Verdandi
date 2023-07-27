@@ -3,15 +3,16 @@
 .hamburger {
     position: fixed;
     top: 4%;
-    right: 11%;
+    right: 20%;
+
     display: block;
     height: 50px;
     width: 35px;
-    transition: 0.4s;
+    transition: transform 0.4s ease;
     z-index: 100;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .hamburger {
         top: 5%;
         right: 6%;
@@ -26,13 +27,14 @@
     width: 100%;
     height: 1px;
     background-color: var(--day-bg-color);
-    margin: 9px;
-    transition: 0.4s;
+    margin: 9px 0 9px 0;
+    transition: transform 0.4s;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .hamburger .bar, .hamburger::after, .hamburger::before {
-        margin: 12px;
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
 }
 
@@ -46,7 +48,7 @@
     transform: translateY(10px);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .hamburger:hover::before,
     .hamburger:focus::before {
         transform: translateY(14px);
@@ -67,36 +69,113 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .menu {
     position: fixed;
-    width: 50%; 
+    top: 0%;
+    width: 30%;
+    height: 80%;
 
     background-color: #212121CC;
     z-index: 50;
-    transition: .7s;
-    overflow: hidden;
+
+    display: grid;
+    grid: 10% 90% /
+          5% 64% 21%;
+    /* 10% of dead space */
+    grid-template-areas:
+        "vline  .  cross"
+        "vline nav   nav";
+    transition: left 0.8s ease;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .menu {
-        width: 40%;
+        width: 22%;
     }
 }
 
 .menuOpen {
-    top: 0%;
     left: 48%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .menuOpen {
-        left: 80%;
+        left: 78%;
     }
 }
 
 .menuClosed {
-    top: 0%;
     left: 120%;
 }
 
+
+/* Menu Divs
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.vertical {
+    grid-area: vline;
+    background-color: var(--day-bg-color);
+    width: 2px;
+    height: 90%;
+    margin-top: 25px;
+}
+
+.crossBtn {
+    grid-area: cross;
+    margin-top: 30%;
+}
+
+.cross {
+    width: 40px;
+    height: 40px;   
+    transition: stroke 0.4s;
+}
+
+.cross:hover,
+.cross:focus {
+    stroke: var(--night-special-color);
+}
+
+
+/* Navigation
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.nav {
+    grid-area: nav;
+    width: 100%;
+}
+
+.linkList {
+    height: 100%;
+    margin-left: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    list-style-type: none;
+    font-size: clamp(1.4rem, 2vw, 5rem);
+    font-weight: 500;
+}
+
+.linkList li {
+    height: 20%;
+    margin: 7% 0 5% 0;
+}
+
+.linkList > li:nth-child(1) {
+    margin-top: -6%;
+}
+
+.linkList li a:hover,
+.linkList li a:hover {
+    color: var(--night-special-color);
+    transition: color 0.4s;
+}
+
+.hasUnderline {
+    border-bottom: solid 2px var(--day-bg-color);
+}
+
+
+/* Invisible Background
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .invisibleBgClosed {
     visibility: hidden;
 }
@@ -111,50 +190,4 @@
 
     visibility: visible;
     opacity: 0;
-}
-
-
-/* Link List
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.linkList {
-    list-style-type: none;
-    font-size: clamp(1.4rem ,2vw, 1.7rem);
-    font-weight: 500;
-}
-
-.linkList li {
-    margin: 20% 3% 2% 5%;
-}
-
-@media only screen and (min-width: 1366px) {
-    .linkList li {
-        margin: 10% 3% 2% 5%;
-    }
-}
-
-.linkList li:hover,
-.linkList li:focus {
-    color: var(--night-special-color);
-    transition: 0.4s;
-}
-
-.linkList li:hover hr,
-.linkList li:focus hr {
-    background-color: var(--night-special-color);
-    transition: 0.4s;
-}
-
-.linkList hr {
-    border: none;
-    height: 2px;
-    width: 100%;
-
-    background-color: var(--day-bg-color);
-    margin-right: 55%;
-}
-
-@media only screen and (min-width: 1366px) {
-    .linkList hr {
-        width: auto;
-    }
 }
