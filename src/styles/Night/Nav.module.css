@@ -116,7 +116,13 @@
     background-color: var(--day-bg-color);
     width: 2px;
     height: 90%;
-    margin-top: 25px;
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 800px) {
+    .vertical {
+        margin-top: 25px;
+    }
 }
 
 .crossBtn {
@@ -135,7 +141,6 @@
         width: 40px;
     }
 }
-
 
 .cross:hover,
 .cross:focus {

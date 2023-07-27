@@ -173,73 +173,69 @@ export default function Experience() {
             <div className={expStyles.addOns}>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
+                  [expStyles.selectedAddOn] : desc.curr === 0,
                   [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
-                    <div className={expStyles.addOnGrid}>
-                        <p className={expStyles.addOnDesc}>
-                          When commercializing data there are many things to consider. The top three are, firstly, to ensure the data is used 
-                          correctly and within the expectations of all parties involved. Secondly, to ensure that the data sold between 
-                          all parties is consistent and immutable amongst all copies of it across the network. 
-                          Thirdly, to ensure that the data is transparent and the customer understands what is involved in the transaction.
-                          Built using Rust and Typescript on the Near and Ethereum blockchain, all three of these items can be solved.
-                        </p>
-                        <div className={expStyles.collapseContainer}>
-                            <button onClick={() => setShow(false)}>
-                                <span className={expStyles.collapser}>
-                                    <p>Collapse</p>
-                                    <Triangle className={expStyles.collapseTriangle} />
-                                </span>
-                            </button>
-                        </div>                 
-                    </div>
+                    <p className={expStyles.addOnDesc}>
+                      When commercializing data there are many things to consider. The top three are, firstly, to ensure the data is used 
+                      correctly and within the expectations of all parties involved. Secondly, to ensure that the data sold between 
+                      all parties is consistent and immutable amongst all copies of it across the network. 
+                      Thirdly, to ensure that the data is transparent and the customer understands what is involved in the transaction.
+                      Built using Rust and Typescript on the Near and Ethereum blockchain, all three of these items can be solved.
+                    </p>
+                    <div className={expStyles.collapseContainer}>
+                        <button onClick={() => setShow(false)}>
+                            <span className={expStyles.collapser}>
+                                <p>Collapse</p>
+                                <Triangle className={expStyles.collapseTriangle} />
+                            </span>
+                        </button>
+                    </div>                 
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
+                  [expStyles.selectedAddOn] : desc.curr === 1,
                   [expStyles.showAddOnContainer] : desc.curr === 1 && showAddOn})}>
-                    <div className={expStyles.addOnGrid}>
-                      <p className={expStyles.addOnDesc}>
-                        Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, a tier-1 
-                        automotive supplier. From there we created a full data processing pipeline and client-facing analysis dashboard. 
-                        The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
-                        Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
+                    <p className={expStyles.addOnDesc}>
+                      Early data was provided from their product launch for a warehouse monitoring system for Kumi Canada, a tier-1 
+                      automotive supplier. From there we created a full data processing pipeline and client-facing analysis dashboard. 
+                      The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
+                      Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
                         product was their key showcase at ProMat and will be their main product focus for 2023.
-                      </p>                                 
-                      <div className={expStyles.collapseContainer}>
-                          <button onClick={() => setShow(false)}>
-                              <span className={expStyles.collapser}>
-                                  <p>Collapse</p>
-                                  <Triangle className={expStyles.collapseTriangle} />
-                              </span>
-                          </button>
-                      </div>
+                    </p>                                 
+                    <div className={expStyles.collapseContainer}>
+                        <button onClick={() => setShow(false)}>
+                            <span className={expStyles.collapser}>
+                                <p>Collapse</p>
+                                <Triangle className={expStyles.collapseTriangle} />
+                            </span>
+                        </button>
                     </div>
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
+                  [expStyles.selectedAddOn] : desc.curr === 2,
                   [expStyles.showAddOnContainer] : desc.curr === 2 && showAddOn})}>
-                    <div className={expStyles.addOnGrid}>
-                        <p className={expStyles.addOnDesc}>
-                          The final model was an ensemble LGBM with an autoencoder to help filter out noise. The model drew inspiration 
-                          from Makridakis Competition winners and similar Kaggle competition winners. Key data leakage and survivorship 
-                          bias issues were addressed during the post-processing of the data and using time-series validation splits. 
-                          The ending model had 0.8 AUC and was successful in clearing in-house developed backtesting software. The project 
-                          had to be retired due to time constraints and unusual weight activation patterns during volatile time periods.
-                        </p>  
-                        <div className={expStyles.collapseContainer}>
-                            <button onClick={() => setShow(false)}>
-                                <span className={expStyles.collapser}>
-                                    <p>Collapse</p>
-                                    <Triangle className={expStyles.collapseTriangle} />
-                                </span>
-                            </button>
-                        </div>           
-                    </div>
+                    <p className={expStyles.addOnDesc}>
+                      The final model was an ensemble LGBM with an autoencoder to help filter out noise. The model drew inspiration 
+                      from Makridakis Competition winners and similar Kaggle competition winners. Key data leakage and survivorship 
+                      bias issues were addressed during the post-processing of the data and using time-series validation splits. 
+                      The ending model had 0.8 AUC and was successful in clearing in-house developed backtesting software. The project 
+                      had to be retired due to time constraints and unusual weight activation patterns during volatile time periods.
+                    </p>  
+                    <div className={expStyles.collapseContainer}>
+                        <button onClick={() => setShow(false)}>
+                            <span className={expStyles.collapser}>
+                                <p>Collapse</p>
+                                <Triangle className={expStyles.collapseTriangle} />
+                            </span>
+                        </button>
+                    </div>           
                 </div>
             </div>
-          <div className={expStyles.dotContainer2}>
-            <ExpCircles desc={desc} setDesc={setDesc}/>
-          </div>
+            <div className={expStyles.dotContainer2}>
+              <ExpCircles desc={desc} setDesc={setDesc}/>
+            </div>
         </div>
-        
       </>
     )
 }

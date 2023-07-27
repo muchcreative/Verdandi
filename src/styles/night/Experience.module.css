@@ -95,20 +95,22 @@
 
 /* Dots
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.dotContainer,
+.dotContainer {
+    display: none;
+}
+
 .dotContainer2 {
     display: flex;
     justify-content: center;
     gap: 5%;
-    margin: 4% 0 3% 0;
-}
-
-.dotContainer2 {
     margin: 0 0 15% 0;
+    transition: height 0.8s ease;
 }
 
 @media only screen and (min-width: 1000px) {
     .dotContainer {
+        display: flex;
+        justify-content: center;
         gap: 2%;
         margin: 2% 0 0 0;
     }
@@ -166,7 +168,7 @@
 /* General Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .expContainer {
-    margin: 2% 6% 30% 6%;
+    margin: 2% 6% 15% 6%;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -319,9 +321,15 @@
 .expandContainer {
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0.5%;
     color: var(--night-special-color);
+}
+
+@media only screen and (min-width: 1000px) {
+    .expandContainer {
+        justify-content: flex-end;
+    }
 }
 
 .hideExpander {
@@ -385,21 +393,27 @@
 /* Add-on Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .addOns {
-    display: flex;
     position: relative;
-    flex-direction: column;
+    
+    display: flex;
     margin-top: 5%;
-    height: 350px;
+    
 }
 
 @media only screen and (min-width: 1000px) {
     .addOns {
-        margin-top: 2%;
+        height: 200px;
+        margin: 2% 11% 0 13%;
     }
 }
 
 .addOnContainer {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
     left: 0%;
     top: 0%;
     max-height: 0px;
@@ -411,9 +425,19 @@
 
 @media only screen and (min-width: 1000px) {
     .addOnContainer {
-        position: absolute;
         top: 0%;
         left: 7%;
+        height: 200px;
+    }
+}
+
+.selectedAddOn {
+    position: relative;
+}
+
+@media only screen and (min-width: 1000px) {
+    .selectedAddOn {
+        position: static;
     }
 }
 
@@ -427,36 +451,19 @@
     }
 }
 
-.addOnGrid {
-    display: grid;
-    grid: 0.8fr 0.2fr /
-          0.7fr 0.3fr;
-    grid-template-areas:
-        "addOnDesc addOnDesc"
-        "    .     collapser";
-    row-gap: 5%;
-    max-width: 100%;
-    height: 300px;
-}
-
-@media only screen and (min-width: 1000px) {
-    .addOnGrid {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.addOnDesc {
-    grid-area: addOnDesc;
-}
-
 
 /* Collapse Button
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .collapseContainer {
-    align-self: flex-end;
+    align-self: flex-start;
     color: var(--night-special-color);
     margin-top: 0.5%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .collapseContainer {
+        align-self: flex-end;
+    }
 }
 
 .collapser {
