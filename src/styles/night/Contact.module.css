@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 7%;
-    margin: 0 6% 0 0;
+    margin: 10% 6% 0 0;
     padding-bottom: 2%;
 }
 
@@ -82,12 +82,22 @@
     color: var(--night-special-color);
 }
 
+.githubWrapper {
+    transition: transform 7s linear 0.5s;
+    overflow: hidden;
+}
+
+.githubWrapper:hover,
+.githubWrapper:focus {
+    transform: translateX(400px);
+}
+
 .githubLogo {
     width: clamp(2.7rem, 4vw, 3.6rem);
-    transition: transform 2.5s linear;
+    transition: transform 7s linear;
 }
 
 .githubLogo:hover,
 .githubLogo:focus {
-    transform: rotate(360deg);
+    transform: rotate(1080deg);
 }

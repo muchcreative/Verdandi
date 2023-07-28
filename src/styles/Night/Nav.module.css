@@ -69,11 +69,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .menu {
     position: fixed;
-    top: 0%;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+
     width: 55%;
     height: 60%;
-    
-
     background-color: #212121CC;
     z-index: 50;
 
@@ -84,7 +85,7 @@
     grid-template-areas:
         "vline  .  cross"
         "vline nav   nav";
-    transition: left 0.8s ease;
+    transition: transform 0.8s ease;
 }
 
 @media only screen and (min-width: 800px) {
@@ -95,17 +96,13 @@
 }
 
 .menuOpen {
-    left: 48%;
+    transform: none;
 }
 
 @media only screen and (min-width: 800px) {
     .menuOpen {
-        left: 78%;
+        transform: none;
     }
-}
-
-.menuClosed {
-    left: 120%;
 }
 
 
@@ -117,6 +114,7 @@
     width: 2px;
     height: 90%;
     margin-top: 15px;
+    backface-visibility: hidden;
 }
 
 @media only screen and (min-width: 800px) {
@@ -177,13 +175,14 @@
     margin-top: -6%;
 }
 
-.linkList li a:hover,
-.linkList li a:hover {
+.navLink:hover,
+.navLink:focus {
     color: var(--night-special-color);
     transition: color 0.4s;
 }
 
-.hasUnderline {
+.underline {
+    transition: border 0.4s;
     border-bottom: solid 2px var(--day-bg-color);
 }
 

@@ -35,30 +35,54 @@ export default function NavMenu() {
         <div
           className={clsx({
           [navStyles.menu] : true,
-          [navStyles.menuOpen] : open,
-          [navStyles.menuClosed] : !open})}>
+          [navStyles.menuOpen] : open})}>
             <div className={navStyles.vertical}></div>
             <button className={navStyles.crossBtn} onClick={() => openMenu(!open)}>
                 <X className={navStyles.cross}/>
             </button> 
             <nav className={navStyles.nav}>
-                <ul className={navStyles.linkList}>
-                    <li className={navStyles.hasUnderline}>
-                        <Link onClick={() => openMenu(false)} href='#beginning'>Beginning</Link>
+                <ol className={navStyles.linkList}>
+                    <li className={navStyles.underline}>
+                        <Link
+                          className={navStyles.navLink}
+                          onClick={() => openMenu(false)} 
+                          href='#beginning'>
+                            Beginning
+                        </Link>
                     </li>
-                    <li className={navStyles.hasUnderline}>
-                        <Link onClick={() => openMenu(false)} href='#skills'>Skills</Link>
+                    <li className={navStyles.underline}>
+                        <Link
+                          className={navStyles.navLink}
+                          onClick={() => openMenu(false)}
+                          href='#skills'>
+                            Skills
+                        </Link>
                     </li>
-                    <li className={navStyles.hasUnderline}>
-                        <Link onClick={() => openMenu(false)} href='#experience'>Experience</Link>
+                    <li className={navStyles.underline}>
+                        <Link
+                          className={navStyles.navLink}
+                          onClick={() => openMenu(false)}
+                          href='#experience'>
+                            Experience
+                        </Link>
                     </li>                                       
-                    <li className={navStyles.hasUnderline}>
-                        <Link onClick={() => openMenu(false)} href='#more'>More</Link>
+                    <li className={navStyles.underline}>
+                        <Link
+                          className={navStyles.navLink}
+                          onClick={() => openMenu(false)}
+                          href='#more'>
+                            More
+                        </Link>
                     </li>
                     <li>
-                        <Link onClick={() => openMenu(false)} href='#contact'>Contact</Link>
+                        <Link
+                          className={navStyles.navLink}
+                          onClick={() => openMenu(false)}
+                          href='#contact'>
+                            Contact
+                        </Link>
                     </li>                    
-                </ul>
+                </ol>
             </nav>
         </div>
         <div 

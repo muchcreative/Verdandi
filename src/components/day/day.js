@@ -47,7 +47,7 @@ export default function Day() {
                 <div className={clsx({[allura.className]: true, [styles.rightContent]: true})}>
                     <h1 className={styles.topLine}>I&#39;m shy before I eat my lunch.</h1>
                     <LiveClock />
-                    <p className={styles.bottomLine}>Can you come back past noon, <br className={styles.mobileBr}/><em className={styles.highlight}>after 3pm?</em></p>  
+                    <p className={styles.bottomLine}>Can you come back at noon, <br className={styles.mobileBr}/><em className={styles.highlight}>after 11am?</em></p>  
                 </div>
             </div>
         </main>

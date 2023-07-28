@@ -20,7 +20,7 @@
     width: clamp(7.8rem, 40vw, 10rem);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .titleLine {
         height: 3px;
         margin-top: -10px;
@@ -48,7 +48,7 @@
     gap: 1%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .moreLayout {
         grid: 12% 2% 2% 84% / 
               32% 32% 32% 4%;
@@ -108,7 +108,7 @@
     transform: translateX(14rem);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .hrDesc {
         margin-top: -1%;
         width: 25%;
@@ -137,7 +137,7 @@
     margin: 5% 5% 0% 5%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .fullHr {
         width: 90%;
         height: 2px;
@@ -149,7 +149,7 @@
     display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .verticalBreak {
         display: block;
         grid-area: vline;
@@ -168,7 +168,7 @@
     margin: 0 0% 5% 7%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .contactBreak {
         width: 75%;
         margin: 0 0 5% 12.5%;
@@ -192,7 +192,7 @@
     opacity: 0;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .desc {
         position: absolute;
         width: 50%;
@@ -240,7 +240,7 @@
     margin: 5% 5% 11% 7%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .practicals {
         margin: 5% 15% 6% 15%;
     }
@@ -254,7 +254,7 @@
     column-gap: 20%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .practicalsList {
         column-gap: 40%;
     }
@@ -264,7 +264,7 @@
     margin: 0% 5% 7% 7%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .current {
         margin: 0% 11% 7% 15%;
     }
@@ -275,7 +275,7 @@
     font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .about {
         margin: 3% 5% 0 8%;
     }
@@ -287,7 +287,7 @@
     font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .goals {
         margin: 2% 5% 0 14%;
     }
@@ -297,7 +297,7 @@
     line-height: 23px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .goals li {
         line-height: 35px;
     }

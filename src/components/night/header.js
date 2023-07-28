@@ -36,7 +36,7 @@ export default function Main() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 
-            if (screen.width >= 1366) {
+            if (screen.width >= 1000) {
               window.onscroll = function() {
                 window.scrollTo(scrollLeft, scrollTop + 150);
               };

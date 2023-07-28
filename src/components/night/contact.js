@@ -55,7 +55,9 @@ export default function Contact() {
                   <p className={contactStyles.linkedinText}>in</p>
               </Link>
               <Link title='To my GitHub' href='https://github.com/muchcreative'>
-                  <GitHubLogo className={contactStyles.githubLogo}/>
+                  <div className={contactStyles.githubWrapper}>
+                      <GitHubLogo className={contactStyles.githubLogo}/>
+                  </div>
               </Link>
           </div>
       </footer>

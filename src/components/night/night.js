@@ -22,6 +22,8 @@ const ebGaramond = EB_Garamond({
 
 // can we remove the barrier break
 
+// nav menu left line flicker
+
 // Problem you don't see the second transition
 // We should be able to stack these properly
 // Scroll SVG should line up

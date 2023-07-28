@@ -2,7 +2,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .formGrid {
     display: grid;
-    height: 400px;
+    height: 60vh;
     grid: 0.15fr 0.15fr 0.60fr 0.10fr / 
           80% 20%;
     grid-template-areas: 
@@ -16,9 +16,9 @@
     justify-content: start;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200px) {
     .formGrid {
-        height: 450px;
+        height: 65vh;
         grid: 0.15fr 0.7fr 0.15fr / 
               23% 23%;
         grid-template-areas: 
@@ -38,7 +38,7 @@
     padding: 0 5% 0 0;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200px) {
     .nameArea {
         margin: 0%;
     }
@@ -106,7 +106,7 @@
     border: 1px solid var(--day-bg-color);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200px) {
     .messageInput {
         width: 100%;
     }
@@ -130,7 +130,7 @@
     margin-left: -11%;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200px) {
     .submitButton {
         margin-left: 27%;
     }
@@ -179,7 +179,7 @@
     transition: opacity 0.7s ease-in;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200px) {
     .submitMessage {
         margin: 0 0 1% 25.5%;
     }
@@ -193,7 +193,7 @@
     opacity: 0;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1200px) {
     .mobileBr {
         display: none;
     }
