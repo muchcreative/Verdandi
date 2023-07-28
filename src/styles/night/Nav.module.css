@@ -128,6 +128,11 @@
     margin-top: 30%;
 }
 
+.crossBtn:hover .cross,
+.crossBtn:focus .cross {
+    stroke: var(--night-special-color);
+}
+
 .cross {
     width: 30px;
     height: auto;   
@@ -138,11 +143,6 @@
     .cross {
         width: 40px;
     }
-}
-
-.cross:hover,
-.cross:focus {
-    stroke: var(--night-special-color);
 }
 
 
@@ -184,6 +184,10 @@
 .underline {
     transition: border 0.4s;
     border-bottom: solid 2px var(--day-bg-color);
+}
+
+.highlighted {
+    border-color: var(--night-special-color);
 }
 
 
