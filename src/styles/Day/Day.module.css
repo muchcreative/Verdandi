@@ -88,14 +88,29 @@
 /* Left Content and Cutlery
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .leftContent {
-    flex: 1;
+    height: 50%;
     z-index: 2;
 }
 
+
+@media only screen and (min-width: 800px) {
+    .leftContent {
+        flex: auto;
+        height: auto;
+    }
+}
+
 .cutlery {
-    width: clamp(365px, 30vw, 525px);
-    height: auto;
+    width: auto;
+    height: clamp(200px, 34vh, 320px);
     animation: slide-in-cutlery 1.7s ease 1.7s forwards;
+}
+
+@media only screen and (min-width: 800px) {
+    .cutlery {
+        width: clamp(365px, 30vw, 525px);
+        height: auto;
+    }
 }
 
 @keyframes slide-in-cutlery {

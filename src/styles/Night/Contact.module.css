@@ -94,7 +94,7 @@
 
 .githubLogo {
     width: clamp(2.7rem, 4vw, 3.6rem);
-    transition: transform 7s linear;
+    transition: transform 7.5s linear;
 }
 
 .githubLogo:hover,
