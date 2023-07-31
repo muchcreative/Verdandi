@@ -76,7 +76,7 @@ export default function Scroll() {
       </div>
       <div className={scrollStyles.scrollText}>
           <h1>Afternoon</h1>
-          <p>11am - 11pm</p>
+          <p>11am - 12am</p>
       </div>
     </>
   )

@@ -92,10 +92,9 @@
     z-index: 2;
 }
 
-
 @media only screen and (min-width: 800px) {
     .leftContent {
-        flex: auto;
+        flex: 1;
         height: auto;
     }
 }

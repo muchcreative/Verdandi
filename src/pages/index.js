@@ -11,7 +11,7 @@ import Night from 'src/components/night/night.js';
 function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
-    return (currentHour >= 23 || currentHour < 11 ?
+    return (currentHour < 11 ?
         <Day /> : <Night />);
 }
 
