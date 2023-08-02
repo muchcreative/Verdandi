@@ -16,13 +16,6 @@ const mobileLine = () => <MobileLine />;
 const desskLine = () => <DeskLine />;
 const downArrow = () => <DownArrow />;
 
-// ok so this idea doesn't work
-// plus there is still space excess right side
-// good try
-
-// consider removing eventlistener after completed
-// I think if it has a design it should be fine
-
 export default function Scroll() {
     const [scrolled, setScrolled]= useState(false)
 
@@ -81,3 +74,5 @@ export default function Scroll() {
     </>
   )
 }
+
+// 
