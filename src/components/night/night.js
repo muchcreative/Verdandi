@@ -1,6 +1,5 @@
 // Next.js
 import Head from 'next/head';
-import { EB_Garamond } from 'next/font/google'
 
 // CSS
 import NightGlobals from 'src/styles/night/night_globals.js';
@@ -13,12 +12,6 @@ import Experience from 'src/components/night/experience.js';
 import Skills from 'src/components/night/skills.js';
 import More from 'src/components/night/more.js';
 import Contact from 'src/components/night/contact.js';
-
-const ebGaramond = EB_Garamond({
-                    subsets: ['latin'], 
-                    weight: ['400', '500', '600', '700', '800'],
-                    style: ['normal', 'italic'],
-                  });
 
 // can we remove the barrier break
 
@@ -52,22 +45,22 @@ export default function Night() {
             <link rel='icon' href='/favicons/night_tree.ico' />  
         </Head>
         <NightGlobals />
-        <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <section id='beginning' style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Scroll />
         </section>
-        <div className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <div style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <NavMenu />
         </div>
-        <header className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <header style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Header />
         </header>
-        <section id='skills' className={ebGaramond.className}>
+        <section id='skills'>
             <Skills />
         </section>
-        <main id='experience' className={ebGaramond.className}>
+        <main id='experience'>
             <Experience />
         </main>
-        <section id='more' className={ebGaramond.className}>
+        <section id='more'>
             <More />
         </section>
         <section id='contact'>
