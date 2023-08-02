@@ -139,7 +139,7 @@ export default function Skills() {
             <div id='back-skills' className={skillsStyles.back}>
                 <h3 className={showCol2}>Back-End</h3>
                 <p className={showCol2}>Rust</p>
-                <p className={showCol2}>C</p>
+                <p className={showCol2}>C / C++</p>
                 <h3 className={clsx({
                   [skillsStyles.libTitle] : true,
                   [skillsStyles.showSkills] : show2})}>Crates</h3>

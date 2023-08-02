@@ -37,7 +37,7 @@ export default function Scroll() {
         const downArrow = document.querySelector('#down-arrow');
         downArrow.style.setProperty('--svg-head-start', headStart - 12 + 'px');
 
-        if (screen.width <= 1366) {
+        if (screen.width <= 1000) {
             var svgElement = document.querySelector('#mobile-line');
         } else {
             var svgElement = document.querySelector('#desk-line');
@@ -74,5 +74,3 @@ export default function Scroll() {
     </>
   )
 }
-
-// 
