@@ -396,8 +396,7 @@
     position: relative;
     
     display: flex;
-    margin-top: 5%;
-    
+    margin-top: 5%;   
 }
 
 @media only screen and (min-width: 1000px) {

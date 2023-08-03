@@ -21,12 +21,15 @@ const triangle = () => <Triangle />;
 
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
-    const [showAddOn, setShow] = useState(false);
+    const [showAddOn, setAddOn] = useState(false);
     const [seenTitle, setSeen] = useState(false);
 
-    useEffect(() => {
-        setShow(false);
-    }, [desc]);
+    const closeAddOnFirst = (descNum) => {
+      setAddOn(false);
+      setTimeout(() => {
+          setDesc({curr: descNum, prev: desc.curr});
+      }, 750);
+    }
 
     useEffect(() => {
       const expTitle = document.querySelector('#exp-title');
@@ -71,8 +74,8 @@ export default function Experience() {
                   className={expStyles.arrowBtn}
                   onClick={() => {
                   const updated = desc.curr - 1;
-                  updated === -1 ? setDesc({curr: 2, prev: desc.curr}) : setDesc({curr: updated, prev: desc.curr});
-                  }}>
+                  const descNum = updated === -1 ? 2 : updated;
+                  !showAddOn ?  setDesc({curr: descNum, prev: desc.curr}) : closeAddOnFirst(descNum)}}>
                     <SideArrow className={expStyles.leftArrow}/>
                 </button>
                 <div className={expStyles.allDesc}>
@@ -94,7 +97,7 @@ export default function Experience() {
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
                                 [expStyles.hideExpander] : showAddOn})}>
-                              <button onClick={() => setShow(true)}>
+                              <button onClick={() => setAddOn(true)}>
                                 <span className={expStyles.expander}>
                                     <p>What&#39;s our approach?</p>
                                     <Triangle className={expStyles.expandTriangle} />
@@ -121,7 +124,7 @@ export default function Experience() {
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
                                 [expStyles.hideExpander] : showAddOn})}>
-                                <button onClick={() => setShow(true)}>
+                                <button onClick={() => setAddOn(true)}>
                                     <span className={expStyles.expander}>
                                         <p>This was our solution.</p>
                                         <Triangle className={expStyles.expandTriangle} />
@@ -148,7 +151,7 @@ export default function Experience() {
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
                                 [expStyles.hideExpander] : showAddOn})}>
-                                <button onClick={() => setShow(true)}>
+                                <button onClick={() => setAddOn(true)}>
                                     <span className={expStyles.expander}>
                                         <p>These were our results.</p>
                                         <Triangle className={expStyles.expandTriangle} />
@@ -164,8 +167,8 @@ export default function Experience() {
                   className={expStyles.arrowBtn}
                   onClick={() => {
                   const updated = desc.curr + 1;
-                  updated === 3 ? setDesc({curr: 0, prev: desc.curr}) : setDesc({curr: updated, prev: desc.curr});
-                  }}>
+                  const descNum = updated === 3 ? 0 : updated;
+                  !showAddOn ?  setDesc({curr: descNum, prev: desc.curr}) : closeAddOnFirst(descNum)}}>
                     <SideArrow className={expStyles.rightArrow}/>  
                 </button>
             </div>
@@ -183,7 +186,7 @@ export default function Experience() {
                       Built using Rust and Typescript on the Near and Ethereum blockchain, all three of these items can be solved.
                     </p>
                     <div className={expStyles.collapseContainer}>
-                        <button onClick={() => setShow(false)}>
+                        <button onClick={() => setAddOn(false)}>
                             <span className={expStyles.collapser}>
                                 <p>Collapse</p>
                                 <Triangle className={expStyles.collapseTriangle} />
@@ -203,7 +206,7 @@ export default function Experience() {
                         product was their key showcase at ProMat and will be their main product focus for 2023.
                     </p>                                 
                     <div className={expStyles.collapseContainer}>
-                        <button onClick={() => setShow(false)}>
+                        <button onClick={() => setAddOn(false)}>
                             <span className={expStyles.collapser}>
                                 <p>Collapse</p>
                                 <Triangle className={expStyles.collapseTriangle} />
@@ -223,7 +226,7 @@ export default function Experience() {
                       had to be retired due to time constraints and unusual weight activation patterns during volatile time periods.
                     </p>  
                     <div className={expStyles.collapseContainer}>
-                        <button onClick={() => setShow(false)}>
+                        <button onClick={() => setAddOn(false)}>
                             <span className={expStyles.collapser}>
                                 <p>Collapse</p>
                                 <Triangle className={expStyles.collapseTriangle} />
@@ -233,7 +236,7 @@ export default function Experience() {
                 </div>
             </div>
             <div className={expStyles.dotContainer2}>
-              <ExpCircles desc={desc} setDesc={setDesc}/>
+              <ExpCircles desc={desc} setDesc={setDesc} showAddOn={showAddOn} setAddOn={setAddOn} closeAddOnFirst={closeAddOnFirst}/>
             </div>
         </div>
       </>
