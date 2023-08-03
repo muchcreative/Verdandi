@@ -13,6 +13,15 @@ import Skills from 'src/components/night/skills.js';
 import More from 'src/components/night/more.js';
 import Contact from 'src/components/night/contact.js';
 
+// Fonts
+import { EB_Garamond } from 'next/font/google'
+
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'], 
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+});
+
 // can we remove the barrier break
 
 // nav menu left line flicker
@@ -45,22 +54,22 @@ export default function Night() {
             <link rel='icon' href='/favicons/night_tree.ico' />  
         </Head>
         <NightGlobals />
-        <section id='beginning' style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Scroll />
         </section>
-        <div style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <div className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <NavMenu />
         </div>
-        <header style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <header className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
             <Header />
         </header>
-        <section id='skills'>
+        <section className={ebGaramond.className} id='skills'>
             <Skills />
         </section>
-        <main id='experience'>
+        <main className={ebGaramond.className} id='experience'>
             <Experience />
         </main>
-        <section id='more'>
+        <section className={ebGaramond.className} id='more'>
             <More />
         </section>
         <section id='contact'>

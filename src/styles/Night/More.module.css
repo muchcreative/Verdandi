@@ -43,7 +43,7 @@
         "hrDesc  hrDesc  hrDesc"
         "fullHr  fullHr  fullHr"
         "desc    desc    desc";
-    margin: 15% 5% 5% 5%;
+    margin: 15% 5% 0% 5%;
     width: 90%;
     gap: 1%;
 }
@@ -101,11 +101,11 @@
 }
 
 .hrDesc1 {
-    transform: translateX(8.2rem);
+    transform: translateX(115%);
 }
 
 .hrDesc2 {
-    transform: translateX(14rem);
+    transform: translateX(220%);
 }
 
 @media only screen and (min-width: 1000px) {
@@ -181,7 +181,7 @@
 .descContainer {
     grid-area: desc;
     font-size: clamp(1rem, 2vw, 1.3rem);
-    height: 450px;
+    height: 300px;
 }
 
 .desc {
