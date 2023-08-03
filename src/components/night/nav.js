@@ -6,14 +6,14 @@ import { useState, useEffect } from 'react';
 import navStyles from 'src/styles/night/Nav.module.css';
 
 // SVGs
-import X from 'public/night/x.svg'
+import CrossMark from 'public/night/cross_mark.svg'
 
 // External Libs
 import { clsx } from 'clsx';
 
-const x = () => <X />;
+const crossMark = () => <CrossMark />;
 
-export default function NavMenu() {
+export default function Nav() {
     const [open, openMenu] = useState(false);
     const [highlight, setHighLight] = useState(0);
 
@@ -39,7 +39,7 @@ export default function NavMenu() {
           [navStyles.menuOpen] : open})}>
             <div className={navStyles.vertical}></div>
             <button className={navStyles.crossBtn} onClick={() => openMenu(!open)}>
-                <X className={navStyles.cross}/>
+                <CrossMark className={navStyles.cross}/>
             </button> 
             <nav className={navStyles.nav}>
                 <ol className={navStyles.linkList}>

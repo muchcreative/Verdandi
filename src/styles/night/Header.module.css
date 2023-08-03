@@ -189,7 +189,7 @@
     font-style: normal;
     font-weight: 800;
 
-    text-decoration: var(--night-special-color) 4px underline;
+    text-decoration: var(--night-special-color) 6px underline;
     text-underline-offset: 2px;
 }
 

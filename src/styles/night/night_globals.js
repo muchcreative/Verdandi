@@ -1,6 +1,5 @@
-/**
- * Next.js only accepts one global.css file, NightGlobals component overrides globals.css
- */
+// Next.js only accepts one global.css file, NightGlobals component helps overrides globals.css
+
 export default function nightGlobals() {
     return (
         <style jsx global>{`
