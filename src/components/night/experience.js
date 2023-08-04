@@ -28,7 +28,7 @@ export default function Experience() {
       setAddOn(false);
       setTimeout(() => {
           setDesc({curr: descNum, prev: desc.curr});
-      }, 750);
+      }, 800);
     }
 
     useEffect(() => {

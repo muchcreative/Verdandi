@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react'
 import { format } from 'date-fns';
 
 // Day and Night Pages
-import Day from 'src/components/day/day.js';
-import Night from 'src/components/night/night.js';
+import Day from 'src/pages/day.js';
+import Night from 'src/pages/night.js';
 
 function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
