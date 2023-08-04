@@ -26,10 +26,14 @@ export default function Experience() {
 
     const closeAddOnFirst = (descNum) => {
       setAddOn(false);
-      setTimeout(() => {
+      if (screen.width < 800) { // Timeout only needed when layout shifts on mobile
+        setTimeout(() => {
           setDesc({curr: descNum, prev: desc.curr});
-      }, 800);
-    }
+        }, 800);
+      } else {
+          setDesc({curr: descNum, prev: desc.curr});
+      }
+    };
 
     useEffect(() => {
       const expTitle = document.querySelector('#exp-title');
