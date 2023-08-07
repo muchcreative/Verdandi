@@ -1,5 +1,6 @@
 // Next.js
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 // CSS
 import NightGlobals from 'src/styles/night/night_globals.js';

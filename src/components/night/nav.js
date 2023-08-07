@@ -38,7 +38,9 @@ export default function Nav() {
           [navStyles.menu] : true,
           [navStyles.menuOpen] : open})}>
             <div className={navStyles.vertical}></div>
-            <button className={navStyles.crossBtn} onClick={() => openMenu(!open)}>
+            <button aria-label='close-nav-btn'
+              className={navStyles.crossBtn}
+              onClick={() => openMenu(!open)}>
                 <CrossMark className={navStyles.cross}/>
             </button> 
             <nav className={navStyles.nav}>

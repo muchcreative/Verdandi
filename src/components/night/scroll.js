@@ -16,16 +16,6 @@ const mobileLine = () => <MobileLine />;
 const desskLine = () => <DeskLine />;
 const downArrow = () => <DownArrow />;
 
-// Problem you don't see the second transition
-// We should be able to stack these properly
-// Scroll SVG should line up
-
-// On Refresh go back to page start
-// import { useEffect } from 'react';
-// useEffect(() => {
-    //     document.addEventListener('beforeunload', () => {window.scrollTo(0, 0);});
-    // }, [])
-
 export default function Scroll() {
     const [scrolled, setScrolled]= useState(false)
 

@@ -3,8 +3,7 @@
 .formGrid {
     display: grid;
     height: 60vh;
-    /* width: auto; */
-    grid: 12% 12% 50% 5% 5% / 
+    grid: 12% 12% 50% 10% 5% / 
           70% 10%;
     grid-template-areas: 
       "name   ."
@@ -21,15 +20,13 @@
 @media only screen and (min-width: 1000px) {
     .formGrid {
         height: 65vh;
-        width: auto;
         grid: 15% 70% 5% 5%/ 
-              23% 23%;
+              19% 19% 3%;
         grid-template-areas: 
-            "name email"
-            "message message"
-            ". button"
-            "submit .";
-        row-gap: none;
+            "name     email    ."
+            "message message message"
+            ".          .    button"
+            "submit   submit   .";
         column-gap: 3%;
         row-gap: 3%;
         margin: 3% 0 5% 0;
@@ -59,6 +56,10 @@
 }
 
 .buttonArea {
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+
     grid-area: button;
     font-size: 1.2rem;
     margin-top: 2%;
@@ -67,7 +68,6 @@
 @media only screen and (min-width: 1000px) {
     .buttonArea {
         font-size: 1.4rem;
-        place-self: start end;
     }
 }
 
@@ -80,9 +80,11 @@
 
 @media only screen and (min-width: 1000px) {
     .submitMessage {
+        margin: 0%;
         font-size: 1.4rem;
     }
 }
+
 
 /* Input Fields
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -142,34 +144,22 @@
 /* Submit Button
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .submitButton {
-    transition: all 0.3s;
-}
-
-@media only screen and (min-width: 1000px) {
-    .submitButton {
-        margin-left: 27%;
-    }
-}
-
-.submitButton p {
     font-weight: 500;
+    transition: all 0.3s;
+    z-index: 2;
 }
 
 .sendLine {
+    position: relative;
+    overflow: visible;
+    align-self: center;
+    top: -50%;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    margin-top: -20%;
-    margin-left: -40%;
 }
 
-@media only screen and (min-width: 1000px) {
-    .sendLine {
-        margin-left: -20%;
-    }
-}
-
-.submitButton:hover .sendLine,
-.submitButton:focus .sendLine {
+.submitButton:hover + .sendLine,
+.submitButton:focus + .sendLine {
     animation: draw 1.2s ease-in forwards;
 }
 
@@ -182,12 +172,6 @@
     to {
         stroke-dashoffset: 0;
     }
-}
-
-.submittedButton {
-    color: var(--night-special-color);
-    text-decoration: var(--night-special-color) 1px underline;
-    text-underline-offset: 1px;
 }
 
 

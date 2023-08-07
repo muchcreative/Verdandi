@@ -83,12 +83,13 @@ export default function Form() {
                 </textarea>
             </div>
             <div className={formStyles.buttonArea}>
-                <button type='submit' className={clsx({
-                  [formStyles.submitButton] : true,
-                  [formStyles.submittedButton] : submitted})}>
-                      <p>Send</p>
-                      <SendLine className={formStyles.sendLine} />                 
+                <button
+                  type='submit'
+                  aria-label='contact-submit-btn'
+                  className={formStyles.submitButton}>
+                    <p>Send</p>                                     
                 </button>
+                <SendLine className={formStyles.sendLine} />  
             </div>
             <div className={clsx({
             [formStyles.submitMessage] : true,

@@ -19,9 +19,6 @@ const mms = () => <MMS />;
 const sideArrow = () => <SideArrow />;
 const triangle = () => <Triangle />;
 
-// So an issue when the buttons are clicked twice
-// And the issue when the box should be sized to the largest desc
-
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setAddOn] = useState(false);
@@ -62,7 +59,7 @@ export default function Experience() {
     return (
       <>
         <div id='exp-title' className={expStyles.titleContainer}>
-          <h2>Experience</h2>
+          <h2 id='exp-header'>Experience</h2>
           <hr className={clsx({
             [expStyles.titleLine] : true,
             [expStyles.animateTitleLine] : seenTitle})}></hr>
