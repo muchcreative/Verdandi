@@ -3,7 +3,13 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 0 5% 10%;
+    margin: 0 0 8% 3%;
+}
+
+@media only screen and (min-width: 800px) {
+    .titleContainer {
+        margin: 0 0 5% 5%;
+    }
 }
 
 .titleLine {
@@ -16,7 +22,7 @@
     transition: width 1s ease;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .titleLine {
         height: 3px;
         margin-top: -10px;
@@ -24,16 +30,16 @@
 }
 
 .animateTitleLine {
-    width: clamp(7.8rem, 40vw, 10rem);
+    width: 40%;
 }
 
 @media only screen and (min-width: 500px) {
     .animateTitleLine {
-        width: 10%;
+        width: 30%;
     }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 800px) {
     .animateTitleLine {
         width: 20%;
     }
@@ -44,17 +50,18 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .skillsContainer {
     display: grid;
-    grid: 1fr 1fr 1fr 1fr / 
-          47% 6% 47%;
+    grid: 25% 25% 25% 25% / 
+          49% 2% 49%;
     grid-template-areas: 
         "front vline1   . "
         "front vline1 data"
         "back  vline2 data"
         "back  vline2   . ";
-    margin: 0% 8% 5% 8%;
+    margin: 0% 2% 0% 2%;
+    justify-content: center;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .skillsContainer {
         display: grid;
         grid: 1fr 1fr 1fr 1fr 1fr / 
@@ -65,27 +72,44 @@
             "front vline1 data vline2 back"
             ".     vline1 data vline2 back"
             ".       .      .  vline2 back";
+        margin: 0% 10% 5% 10%;
+    }
+}
+
+.skillTitle {
+    line-height: 2em;
+    text-decoration: 2px underline var(--night-special-color);
+    text-underline-offset: 1px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .skillTitle {
+        text-decoration: 2px underline var(--night-special-color);
+        text-underline-offset: 2px;
     }
 }
 
 .libTitle {
-    font-size: clamp(1rem, 2vw, 2.2rem);
+    font-style: normal;
     margin-top: 1%;
     color: var(--day-bg-color);
-    text-decoration: 1px underline var(--day-bg-color);
-    text-underline-offset: 2px;
+    text-decoration: 2px underline var(--day-bg-color);
+    text-underline-offset: 1px;
+    line-height: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+    .libTitle {
+        text-decoration: 2px underline var(--day-bg-color);
+        text-underline-offset: 2px;
+    }
 }
 
 .libTitleExtend {
     display: none;
 }
 
-@media only screen and (min-width: 1366px) {
-    .libTitle {
-        text-decoration: 2px underline var(--day-bg-color);
-        text-underline-offset: 3px;
-    }
-    
+@media only screen and (min-width: 1000px) {
     .libTitleExtend {
         display: inline-block;
         text-decoration: inherit;
@@ -93,18 +117,19 @@
     }
 }
 
-
-.front > h3,
-.data > h3, 
-.back > h3 {
-    line-height: 1.75em;
-}
-
 .front > p,
 .data > p,
 .back > p {
     line-height: 3.5em;
-    font-size: clamp(0.9rem, 3vw, 1.7rem);  
+    font-size: 1.4rem;  
+}
+
+@media only screen and (min-width: 1000px) {    
+    .front > p,
+    .data > p,
+    .back > p {
+        font-size: 1.7rem;
+    }
 }
 
 .data > *,
@@ -132,7 +157,7 @@
 .front > p:nth-child(2) { transition-delay: 0.4s; }
 .front > p:nth-child(3) { transition-delay: 0.6s; }
 .front > p:nth-child(4) { transition-delay: 0.8s; }
-.front > h3:nth-child(5) { transition-delay: 1.0s; }
+.front > h4:nth-child(5) { transition-delay: 1.0s; }
 .front > p:nth-child(6) { transition-delay: 1.2s; }
 .front > p:nth-child(7) { transition-delay: 1.4s; }
 .front > p:nth-child(8) { transition-delay: 1.6s; }
@@ -155,7 +180,7 @@
 .data > p:nth-child(3) { transition-delay: 0.6s; }
 .data > p:nth-child(4) { transition-delay: 0.8s; }
 .data > p:nth-child(5) { transition-delay: 1.0s; }
-.data > h3:nth-child(6) { transition-delay: 1.2s; }
+.data > h4:nth-child(6) { transition-delay: 1.2s; }
 .data > p:nth-child(7) { transition-delay: 1.4s; }
 .data > p:nth-child(8) { transition-delay: 1.6s; }
 .data > p:nth-child(9) { transition-delay: 1.8s; }
@@ -176,7 +201,7 @@
 .back > h3:nth-child(1) { transition-delay: 0.2s; }
 .back > p:nth-child(2) { transition-delay: 0.4s; }
 .back > p:nth-child(3) { transition-delay: 0.6s; }
-.back > h3:nth-child(4) { transition-delay: 0.8s; }
+.back > h4:nth-child(4) { transition-delay: 0.8s; }
 .back > p:nth-child(5) { transition-delay: 1.0s; }
 .back > p:nth-child(6) { transition-delay: 1.2s; }
 .back > p:nth-child(7) { transition-delay: 1.4s; }
@@ -191,7 +216,7 @@
     width: 1px;
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .vline {
         width: 2px;
     }
@@ -216,7 +241,7 @@
     }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
     .vline1 {
         margin-left: 20px;
     }
@@ -230,6 +255,6 @@
 /* Show Animation
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .showSkills {
-  opacity: 1;
-  transform: translateY(0%);
+    opacity: 1;
+    transform: translateY(0%);
 }

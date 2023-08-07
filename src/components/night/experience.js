@@ -19,6 +19,9 @@ const mms = () => <MMS />;
 const sideArrow = () => <SideArrow />;
 const triangle = () => <Triangle />;
 
+// So an issue when the buttons are clicked twice
+// And the issue when the box should be sized to the largest desc
+
 export default function Experience() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [showAddOn, setAddOn] = useState(false);
@@ -26,7 +29,7 @@ export default function Experience() {
 
     const closeAddOnFirst = (descNum) => {
       setAddOn(false);
-      if (screen.width < 800) { // Timeout only needed when layout shifts on mobile
+      if (screen.width < 1000) { // Timeout only needed when layout shifts on mobile
         setTimeout(() => {
           setDesc({curr: descNum, prev: desc.curr});
         }, 800);
@@ -68,7 +71,11 @@ export default function Experience() {
             <MMS className={expStyles.mms}/>
         </div>
         <div className={expStyles.dotContainer}>
-            <ExpCircles desc={desc} setDesc={setDesc}/>
+            <ExpCircles
+              desc={desc}
+              setDesc={setDesc}
+              showAddOn={showAddOn}
+              closeAddOnFirst={closeAddOnFirst}/>
         </div>
         <div className={expStyles.expContainer}>          
             <div className={expStyles.mainDescs}>
@@ -85,17 +92,17 @@ export default function Experience() {
                 <div className={expStyles.allDesc}>
                     <div className={clsx({
                       [expStyles.baseDesc] : true,
-                      [expStyles.flow] : true,
+                      [expStyles.mart] : true,
                       [expStyles.showDesc] : desc.curr === 0,
                       [expStyles.hideDesc] : desc.prev === 0})}>
                         <div className={expStyles.title}>
-                            <h4>Data Mart</h4>
-                            <p>Full-Stack Developer</p>
+                            <h3>Data Mart</h3>
+                            <h4>Full-Stack Developer</h4>
                         </div>
                         <div className={expStyles.desc}>
                             <p>
                               Data Mart is a dApp (decentralized application) that facilitates the online selling and trading of information 
-                              and data. It will be the world&#39;s first decentralized marketplace for both buyers and sellers to buy, sell, share,
+                              and data. It will is a decentralized marketplace for both buyers and sellers to buy, sell, share,
                               and trade information from both sensitive data to large datasets for machine learning or market demographics.       
                             </p>
                             <div className={clsx({
@@ -116,8 +123,8 @@ export default function Experience() {
                       [expStyles.showDesc] : desc.curr === 1,
                       [expStyles.hideDesc] : desc.prev === 1})}>
                         <div className={expStyles.title}>
-                            <h4>Portable Intelligence</h4>
-                            <p>Lead Data Analyst</p>
+                            <h3>Portable Intelligence</h3>
+                            <h4>Lead Data Analyst</h4>
                         </div>
                         <div className={expStyles.desc}>
                             <p>
@@ -143,8 +150,8 @@ export default function Experience() {
                       [expStyles.showDesc] : desc.curr === 2,
                       [expStyles.hideDesc] : desc.prev === 2})}>
                         <div className={expStyles.title}>
-                            <h4>Derivative Trader</h4>
-                            <p>Lead Data Scientist</p>
+                            <h3>Derivative Trader</h3>
+                            <h4>Lead Data Scientist</h4>
                         </div>
                         <div className={expStyles.desc}>
                             <p>
@@ -178,7 +185,8 @@ export default function Experience() {
             </div>
             <hr className={expStyles.horizontalBreak}></hr>
             <div className={expStyles.addOns}>
-                <div className={clsx({
+                <div
+                  className={clsx({
                   [expStyles.addOnContainer] : true,
                   [expStyles.selectedAddOn] : desc.curr === 0,
                   [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
@@ -207,7 +215,7 @@ export default function Experience() {
                       automotive supplier. From there we created a full data processing pipeline and client-facing analysis dashboard. 
                       The dashboard enables managers to make key decisions on tasks and driver productivity during quarterly reports. 
                       Additionally, future data pipelines were created to help address future machine-learning opportunities. The end 
-                        product was their key showcase at ProMat and will be their main product focus for 2023.
+                      product was their key showcase at ProMat and will be their main product focus for 2023.
                     </p>                                 
                     <div className={expStyles.collapseContainer}>
                         <button onClick={() => setAddOn(false)}>
@@ -220,7 +228,7 @@ export default function Experience() {
                 </div>
                 <div className={clsx({
                   [expStyles.addOnContainer] : true,
-                  [expStyles.selectedAddOn] : desc.curr === 2,
+                  [expStyles.selectedAddOn] : desc.curr === 2,                 
                   [expStyles.showAddOnContainer] : desc.curr === 2 && showAddOn})}>
                     <p className={expStyles.addOnDesc}>
                       The final model was an ensemble LGBM with an autoencoder to help filter out noise. The model drew inspiration 
@@ -240,7 +248,11 @@ export default function Experience() {
                 </div>
             </div>
             <div className={expStyles.dotContainer2}>
-              <ExpCircles desc={desc} setDesc={setDesc} showAddOn={showAddOn} setAddOn={setAddOn} closeAddOnFirst={closeAddOnFirst}/>
+              <ExpCircles
+                desc={desc}
+                setDesc={setDesc}
+                showAddOn={showAddOn}
+                closeAddOnFirst={closeAddOnFirst}/>
             </div>
         </div>
       </>

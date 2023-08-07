@@ -3,7 +3,13 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 0 -2% 10%;
+    margin: 0 0 -3% 3%;
+}
+
+@media only screen and (min-width: 800px) {
+    .titleContainer {
+        margin: 0 0 -3% 5%;
+    }
 }
 
 .titleLine {
@@ -16,16 +22,24 @@
     transition: width 1s ease;
 }
 
-.animateTitleLine {
-    width: clamp(7.8rem, 40vw, 10rem);
-}
-
 @media only screen and (min-width: 800px) {
     .titleLine {
         height: 3px;
         margin-top: -10px;
     }
+}
 
+.animateTitleLine {
+    width: 40%;
+}
+
+@media only screen and (min-width: 500px) {
+    .animateTitleLine {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
     .animateTitleLine {
         width: 20%;
     }
@@ -41,7 +55,7 @@
 
 .mms {
     align-self: center;
-    width: 80%;
+    width: 75%;
 }
 
 
@@ -51,7 +65,7 @@
     display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .arrowBtn {
         display: block;
     }
@@ -107,7 +121,7 @@
     transition: height 0.8s ease;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .dotContainer {
         display: flex;
         justify-content: center;
@@ -139,7 +153,7 @@
     display: block;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .circleArrow {
         display: none;
     }
@@ -171,7 +185,7 @@
     margin: 2% 6% 25% 6%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .expContainer {
         margin: 2% 10% 5% 10%;
     }
@@ -197,7 +211,7 @@
     margin-bottom: 3%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .title {
         width: 30%;
         align-self: start;
@@ -205,12 +219,18 @@
     }
 }
 
-.title > h4 + p {
+.title > h3 {
+    color: var(--day-bg-color);
+    font-weight: 600;
+}
+
+.title > h4 {
     color: var(--night-special-color);
     font-size: clamp(1.3rem, 3vw, 2.2rem);
     font-style: italic;
     font-weight: 500;
 }
+
 
 /* Specific Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -225,22 +245,31 @@
     transition: all 0.6s ease-in-out;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .baseDesc {
         flex-direction: row;
+        margin: 0 5% 0 5%;
     }
 }
 
-.flow {
-    column-gap: 4%;
-}
-
-.pi,
-.dt {
+.mart,
+.pi {
     position: absolute;
     top: 0%;
     left: 0%;
     column-gap: 4%;
+}
+
+/* dt description is the largest so it is set to relative */
+.dt {
+    position: relative;
+    column-gap: 4%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .desc {
+        flex: 1;
+    }
 }
 
 .showDesc {
@@ -255,26 +284,26 @@
 
 @keyframes slide-in-desc {
     from {
-    transform: translateX(-5%);
-    opacity: 0;
+        transform: translateX(-5%);
+        opacity: 0;
     }
 
     to {
-    transform: translateX(0%);
-    opacity: 1;
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     @keyframes slide-in-desc {
         from {
-        transform: translateX(-20%);
-        opacity: 0;
+            transform: translateX(-20%);
+            opacity: 0;
         }
 
         to {
-        transform: translateX(0%);
-        opacity: 1;
+            transform: translateX(0%);
+            opacity: 1;
         }
     }
 }
@@ -291,7 +320,7 @@
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     @keyframes slide-out-desc {
         from {
             transform: translateX(0%);
@@ -302,16 +331,6 @@
             transform: translateX(20%);
             opacity: 0;
         }
-    }
-}
-
-.desc {
-    font-size: clamp(1rem, 2vw, 1.3rem);
-}
-
-@media only screen and (min-width: 800px) {
-    .desc {
-        width: 50%;
     }
 }
 
@@ -326,7 +345,7 @@
     color: var(--night-special-color);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .expandContainer {
         justify-content: flex-end;
     }
@@ -355,7 +374,7 @@
     transition: all 0.6s;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .expandTriangle {
         width: 20px;
         height: auto;
@@ -394,15 +413,14 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .addOns {
     position: relative;
-    
     display: flex;
     margin-top: 5%;   
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .addOns {
         height: 200px;
-        margin: 2% 11% 0 13%;
+        margin: 2% 11% 0 15%;
     }
 }
 
@@ -417,36 +435,32 @@
     top: 0%;
     max-height: 0px;
     overflow: hidden;
-
-    font-size: clamp(1rem, 2vw, 1.3rem);
     transition: max-height 0.8s ease;
-}
-
-@media only screen and (min-width: 800px) {
-    .addOnContainer {
-        top: 0%;
-        left: 7%;
-        height: 200px;
-    }
 }
 
 .selectedAddOn {
     position: relative;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .selectedAddOn {
-        position: static;
+        position: absolute;
     }
 }
 
 .showAddOnContainer {
-    max-height: 300px;
+    max-height: 450px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 500px) {
     .showAddOnContainer {
-        max-height: 200px;
+        max-height: 300px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .showAddOnContainer {
+        max-height: 400px;
     }
 }
 
@@ -459,7 +473,7 @@
     margin-top: 0.5%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .collapseContainer {
         align-self: flex-end;
     }
@@ -483,7 +497,7 @@
     transition: all 0.6s;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .collapseTriangle {
         width: 20px;
         height: auto;
@@ -528,7 +542,7 @@
     margin: 3% 0 0 10%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .horizontalBreak {
         height: 2px;
     }

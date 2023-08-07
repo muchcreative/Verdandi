@@ -1,18 +1,19 @@
 /* Contact Title
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .title {
-    line-height: 1.7em;
-    margin-left: 6%;
-    padding-left: 1em; 
-    text-indent: -1em;
+    line-height: 3rem;
+    padding-left: 1rem; 
+    text-indent: -1rem;
+    font-weight: 500;
+    margin-left: 3%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .title {
-        line-height: 1.7em;
-        margin-left: 15%;
-        padding-left: 2.5em; 
-        text-indent: -2.5em;
+        line-height: 4rem;
+        padding-left: 7.5rem; 
+        text-indent: -7.5rem;
+        margin-left: 17%;
     }
 }
 
@@ -38,7 +39,7 @@
     transition: transform 1s ease-out;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .different::after {
         height: 5px;
         bottom: 3px;
@@ -62,7 +63,7 @@
     padding-bottom: 2%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .logos {
         gap: 2.2%;
         margin: 0 11% 0 0;
@@ -92,7 +93,7 @@
     transform: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .githubWrapper:hover,
     .githubWrapper:focus {
         transform: translateX(400px);

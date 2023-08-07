@@ -102,15 +102,17 @@ export default function Skills() {
             [skillsStyles.titleLine] : true,
             [skillsStyles.animateTitleLine] : seenTitle})}></hr>
         </div>
-        <div id='skills-grid' className={skillsStyles.skillsContainer}>
+        <div id='skills-container' className={skillsStyles.skillsContainer}>
             <div id='front-skills' className={skillsStyles.front}>
-                <h3 className={showCol0}>Front-End</h3>
+                <h3 className={clsx({
+                  [skillsStyles.skillTitle] : true,
+                  [skillsStyles.showSkills] : show0})}>Front-End</h3>
                 <p className={showCol0}>JavaScript / TypeScript</p>
                 <p className={showCol0}>HTML</p>
                 <p className={showCol0}>CSS</p>
-                <h3 className={clsx({
+                <h4 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show0})}>Libraries <span className={skillsStyles.libTitleExtend}>/ Frameworks</span></h3>       
+                  [skillsStyles.showSkills] : show0})}>Libraries <span className={skillsStyles.libTitleExtend}>/ Frameworks</span></h4>       
                 <p className={showCol0}>React / Next.js</p>
                 <p className={showCol0}>CSS Modules</p>
                 <p className={showCol0}>Dash</p>
@@ -120,14 +122,16 @@ export default function Skills() {
               [skillsStyles.firstVline] : true,
               [skillsStyles.showVline] : show0})} />
             <div id='data-skills' className={skillsStyles.data}>
-                <h3 className={showCol1}>Data Analytics</h3>
+                <h3 className={clsx({
+                  [skillsStyles.skillTitle] : true,
+                  [skillsStyles.showSkills] : show1})}>Data Analytics</h3>
                 <p className={showCol1}>Python</p>
                 <p className={showCol1}>SQL / PostgreSQL</p>
                 <p className={showCol1}>MATLAB</p>
                 <p className={showCol1}>R</p>
-                <h3 className={clsx({
+                <h4 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show1})}>Libraries</h3>
+                  [skillsStyles.showSkills] : show1})}>Libraries</h4>
                 <p className={showCol1}>Tensorflow / PyTorch</p>
                 <p className={showCol1}>Numpy / Pandas / Polars</p>
                 <p className={showCol1}>Plotly / Seaborn / MatPlotLib</p>
@@ -137,12 +141,14 @@ export default function Skills() {
               [skillsStyles.secondVline] : true,
               [skillsStyles.showVline] : show1})} />
             <div id='back-skills' className={skillsStyles.back}>
-                <h3 className={showCol2}>Back-End</h3>
+                <h3 className={clsx({
+                  [skillsStyles.skillTitle] : true,
+                  [skillsStyles.showSkills] : show2})}>Back-End</h3>
                 <p className={showCol2}>Rust</p>
                 <p className={showCol2}>C / C++</p>
-                <h3 className={clsx({
+                <h4 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show2})}>Crates</h3>
+                  [skillsStyles.showSkills] : show2})}>Crates</h4>
                 <p className={showCol2}>Diesel</p>
                 <p className={showCol2}>Tokio</p>
                 <p className={showCol2}>Crossbeam</p>

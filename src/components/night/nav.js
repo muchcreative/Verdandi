@@ -50,7 +50,7 @@ export default function Nav() {
                           onMouseOver={() => setHighLight(1)}
                           onMouseOut={() => setHighLight(0)}
                           onFocus={() => setHighLight(1)}
-                          onFocusOut={() => setHighLight(0)}
+                          onBlur={() => setHighLight(0)}
                           className={navStyles.navLink}
                           onClick={() => openMenu(false)} 
                           href='#beginning'>
@@ -65,7 +65,7 @@ export default function Nav() {
                           onMouseOver={() => setHighLight(2)}
                           onMouseOut={() => setHighLight(0)}
                           onFocus={() => setHighLight(2)}
-                          onFocusOut={() => setHighLight(0)}
+                          onBlur={() => setHighLight(0)}
                           onClick={() => openMenu(false)}
                           href='#skills'>
                             Skills
@@ -79,7 +79,7 @@ export default function Nav() {
                           onMouseOver={() => setHighLight(3)}
                           onMouseOut={() => setHighLight(0)}
                           onFocus={() => setHighLight(3)}
-                          onFocusOut={() => setHighLight(0)}
+                          onBlur={() => setHighLight(0)}
                           onClick={() => openMenu(false)}
                           href='#experience'>
                             Experience
@@ -93,7 +93,7 @@ export default function Nav() {
                           onMouseOver={() => setHighLight(4)}
                           onMouseOut={() => setHighLight(0)}
                           onFocus={() => setHighLight(4)}
-                          onFocusOut={() => setHighLight(0)}
+                          onBlur={() => setHighLight(0)}
                           onClick={() => openMenu(false)}
                           href='#more'>
                             More
@@ -105,7 +105,7 @@ export default function Nav() {
                           onMouseOver={() => setHighLight(5)}
                           onMouseOut={() => setHighLight(0)}
                           onFocus={() => setHighLight(5)}
-                          onFocusOut={() => setHighLight(0)}
+                          onBlur={() => setHighLight(0)}
                           onClick={() => openMenu(false)}
                           href='#contact'>
                             Contact

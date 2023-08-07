@@ -3,7 +3,13 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    margin: 0 0 3% 10%;
+    margin: 0 0 8% 3%;
+}
+
+@media only screen and (min-width: 800px) {
+    .titleContainer {
+        margin: 0 0 5% 5%;
+    }
 }
 
 .titleLine {
@@ -16,16 +22,24 @@
     transition: width 1s ease;
 }
 
-.animateTitleLine {
-    width: clamp(7.8rem, 40vw, 10rem);
-}
-
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
     .titleLine {
         height: 3px;
         margin-top: -10px;
     }
+}
 
+.animateTitleLine {
+    width: 40%;
+}
+
+@media only screen and (min-width: 500px) {
+    .animateTitleLine {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
     .animateTitleLine {
         width: 20%;
     }
@@ -34,43 +48,36 @@
 
 /* More Section
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.moreLayout {
-    display: grid;
-    grid: 10% 1% 1% 88% / 
-          33% 33% 34%;
-    grid-template-areas:
-        "buttons buttons buttons"
-        "hrDesc  hrDesc  hrDesc"
-        "fullHr  fullHr  fullHr"
-        "desc    desc    desc";
-    margin: 15% 5% 0% 5%;
+.moreContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+    margin-bottom: 2.5%;
+}
+
+.moreGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 90%;
-    gap: 1%;
 }
 
 @media only screen and (min-width: 1000px) {
-    .moreLayout {
-        grid: 12% 2% 2% 84% / 
-              32% 32% 32% 4%;
-        grid-template-areas:
-            "buttons buttons buttons vline"
-            "hrDesc  hrDesc  hrDesc  vline"
-            "fullHr  fullHr  fullHr  vline"
-            "desc    desc    desc    vline";
-        margin: 0% 0% 5% 21%;
-        width: 60%;
+    .moreGrid {
+        width: 55%;
     }
 }
 
 .buttons {
     grid-area: buttons;
-    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
     font-weight: 500;
-    
+
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    column-gap: 10%;
 }
 
 .buttons button:hover,
@@ -79,7 +86,7 @@
 }
 
 .button {
-    transition: all 0.4s;
+    transition: color 0.4s;
 }
 
 .activeButton {
@@ -91,57 +98,51 @@
 /* Lines
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hrDesc {
-    grid-area: hrDesc;
     width: 30%;
     border: none;
     height: 2px;
-    
     background-color: var(--night-special-color);
-    transition: all 0.8s;
-}
-
-.hrDesc1 {
-    transform: translateX(115%);
-}
-
-.hrDesc2 {
-    transform: translateX(220%);
+    margin-bottom: 2%;
+    transform: translateX(10%);
+    transition: transform 0.8s;
 }
 
 @media only screen and (min-width: 1000px) {
     .hrDesc {
-        margin-top: -1%;
         width: 25%;
         height: 3px;
-        transform: translateX(clamp(4rem, 8vw, 5.5rem));
-    }
-
-    .hrDesc1 {
-        transform: translateX(clamp(21rem, 22vw, 28rem));
-    }
-
-    .hrDesc2 {
-        transform: translateX(clamp(33rem, 44vw, 36.5rem));
+        transform: translateX(30%);
     }
 }
 
+.hrDesc1 {
+    transform: translateX(120%);
+}
 
+.hrDesc2 {
+    transform: translateX(230%);
+}
+
+@media only screen and (min-width: 1000px) {
+    .hrDesc1 {
+        transform: translateX(150%);
+    }
+
+    .hrDesc2 {
+        transform: translateX(275%);
+    }
+}
 
 .fullHr {
-    grid-area: fullHr;
     background-color: var(--day-bg-color);
-    
     border: none;
-    height: 2px;
-    width: 90%;
-    margin: 5% 5% 0% 5%;
+    height: 1px;
+    margin-bottom: 3%;
 }
 
 @media only screen and (min-width: 1000px) {
     .fullHr {
-        width: 90%;
         height: 2px;
-        margin: 0 5% 0 5%;
     }
 }
 
@@ -152,26 +153,12 @@
 @media only screen and (min-width: 1000px) {
     .verticalBreak {
         display: block;
-        grid-area: vline;
+        position: absolute;
+        right: 18%;
+
         background-color: var(--day-bg-color);
-        height: 500px;
+        height: 100%;
         width: 2px;
-    }
-}
-
-.contactBreak {
-    border: 0;
-    height: 2px;
-    width: 85%;
-
-    background-color: var(--day-bg-color);
-    margin: 0 0% 5% 7%;
-}
-
-@media only screen and (min-width: 1000px) {
-    .contactBreak {
-        width: 75%;
-        margin: 0 0 5% 12.5%;
     }
 }
 
@@ -179,26 +166,18 @@
 /* Descriptions
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .descContainer {
-    grid-area: desc;
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    height: 300px;
+    position: relative;
 }
 
 .desc {
     position: absolute;
-    left: 8%;
-    width: 80%;
-    margin-top: 8%;
+    top: 0%;
     opacity: 0;
+    width: 100%;
 }
 
-@media only screen and (min-width: 1000px) {
-    .desc {
-        position: absolute;
-        width: 50%;
-        left: 24%;
-        margin-top: 0.5%;
-    }
+.largestDesc {
+    position: relative;
 }
 
 .descHide {
@@ -216,14 +195,14 @@
     }
 
     to {
-      transform: translateX(5%);
+      transform: translateX(0%);
       opacity: 1;
     }
 }
 
 @keyframes hide-desc {
     from {
-      transform: translateX(5%);
+      transform: translateX(0%);
       opacity: 1;
     }
 
@@ -234,71 +213,127 @@
 }
 
 
-/* Miscellaneous
-––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.practicals {
-    margin: 5% 5% 11% 7%;
-}
-
 @media only screen and (min-width: 1000px) {
-    .practicals {
-        margin: 5% 15% 6% 15%;
+    @keyframes show-desc {
+        from {
+          transform: translateX(-40%);
+          opacity: 0;
+        }
+    
+        to {
+          transform: translateX(5%);
+          opacity: 1;
+        }
+    }
+    
+    @keyframes hide-desc {
+        from {
+          transform: translateX(5%);
+          opacity: 1;
+        }
+    
+        to {
+          transform: translateX(-40%);
+          opacity: 0;
+        }
     }
 }
 
-.pracicalsList {
-    margin: 3% 0 0 10%;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    list-style-type: circle;
-    column-count: 2;
-    column-gap: 20%;
+/* Miscellaneous
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.miscContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    margin: 0 6% 3% 6%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .miscContainer {
+        margin: 0 10% 3% 10%;
+    }
+}
+
+.pracTitle {
+    text-decoration: 2px underline var(--night-special-color);
+    text-underline-offset: 2px;
+    align-self: start;
+    margin: 0% 0% 2% 0%;
+}
+
+.listContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .listContainer {
+        margin: 0;
+    }
+}
+
+.practicalsList {
+    list-style: inside;
+    font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 1000px) {
     .practicalsList {
-        column-gap: 40%;
+        font-size: 1.4rem;
     }
 }
 
+.currTitle {
+    text-decoration: underline;
+    align-self: start;
+    margin: 2% 0% 2% 0%;
+}
+
+.about {
+    margin: 0 3% 3% 0;
+}
+
 .current {
-    margin: 0% 5% 7% 7%;
+    margin: 0 3% 3% 10%;
 }
 
 @media only screen and (min-width: 1000px) {
     .current {
-        margin: 0% 11% 7% 15%;
+        margin: 0 0 0 3%;
     }
 }
 
-.about {
-    margin: 3% 5% 3% 5%;
-    font-size: clamp(1rem, 2vw, 1.4rem);
-}
-
-@media only screen and (min-width: 1000px) {
-    .about {
-        margin: 3% 5% 0 8%;
-    }
-}
-
-.goals {
-    margin: 2% 2% 0 12%;
-    list-style-type: circle;
-    font-size: clamp(1rem, 2vw, 1.4rem);
-}
-
-@media only screen and (min-width: 1000px) {
-    .goals {
-        margin: 2% 5% 0 14%;
-    }
-}
-
-.goals li {
+.current li {
+    font-size: 1.2rem;
     line-height: 23px;
 }
 
 @media only screen and (min-width: 1000px) {
-    .goals li {
+    .current li {
+        font-size: 1.4rem;
         line-height: 35px;
+    }
+}
+
+
+/* Contact Break
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.contactBreak {
+    border: 0;
+    background-color: var(--day-bg-color);
+
+    height: 1px;
+    width: 85%;
+    margin: 0 0% 3% 7.5%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .contactBreak {
+        height: 2px;
+        width: 80%;
+        margin: 0 0 3% 10%;
     }
 }

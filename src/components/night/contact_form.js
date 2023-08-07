@@ -90,12 +90,12 @@ export default function Form() {
                       <SendLine className={formStyles.sendLine} />                 
                 </button>
             </div>
-          </div>
-          <div className={clsx({
+            <div className={clsx({
             [formStyles.submitMessage] : true,
             [formStyles.showSubmitMessage] : submitted,
             [formStyles.hideSubmitMessage] : !submitted})}>
               <p>Thank you for your message. <br className={formStyles.mobileBr}></br> I will get back to you as soon as I can.</p>
+            </div>
           </div>
         </form>
       </>

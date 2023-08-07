@@ -42,12 +42,12 @@ export default function Contact() {
 
   return (
     <>
-      <h6 id='contact-title' className={contactStyles.title}>
+      <h2 id='contact-title' className={contactStyles.title}>
         Together,<br></br>let&#39;s create something&nbsp;
         <em className={clsx({
           [contactStyles.different]: true,
           [contactStyles.animateDifferent] : seenTitle})}>different.</em>
-      </h6>
+      </h2>
       <ContactForm />
       <footer>
           <div className={contactStyles.logos}>

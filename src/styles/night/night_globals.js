@@ -12,6 +12,13 @@ export default function nightGlobals() {
                 overflow-y: scroll;
             }
 
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
             @media (prefers-reduced-motion) {
                 html
                 body {
@@ -20,39 +27,37 @@ export default function nightGlobals() {
             }
 
             h1 {
-                font-size: clamp(2rem, 4vw, 3.5rem);
-                font-weight: 400;
+                font-size: clamp(3.5rem, 11vw, 6.5rem);
+                font-weight: 500;
             }
 
             h2 {
-                font-size: clamp(1.7rem, 4vw, 3.2rem);
+                font-size: clamp(2rem, 4vw, 3.2rem);
                 font-weight: 600;
             }
 
             h3 {
                 color: var(--night-special-color);
-                font-size: clamp(1.3rem, 3vw, 2.4rem);
+                font-size: clamp(1.7rem, 3vw, 2.4rem);
                 font-weight: 500;
                 font-style: normal;
             }
 
             h4 {
-                color: var(--day-bg-color);
-                font-size: clamp(1.5rem, 3vw, 2.4rem);
-                font-weight: 500;
-            }
-            
-            h5 {
                 color: var(--night-special-color);
-                font-size: clamp(1.4rem, 2vw, 2.0rem);
+                font-size: clamp(1.4rem, 3vw, 2.1rem);
                 font-style: italic;
                 font-weight: 500;
             }
 
-            h6 {
-                font-color: inherit;
-                font-size: clamp(1.4rem, 6vw, 3rem);
-                font-weight: 500;
+            p {
+                font-size: 1.2rem;
+            }
+
+            @media only screen and (min-width: 1000px) {
+                p {
+                    font-size: 1.4rem;
+                }
             }
 
             a {

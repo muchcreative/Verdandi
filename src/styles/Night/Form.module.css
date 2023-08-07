@@ -3,32 +3,36 @@
 .formGrid {
     display: grid;
     height: 60vh;
-    grid: 0.15fr 0.15fr 0.60fr 0.10fr / 
-          80% 20%;
+    /* width: auto; */
+    grid: 12% 12% 50% 5% 5% / 
+          70% 10%;
     grid-template-areas: 
       "name   ."
       "email  ."
       "message message"
-      ". button";
+      "  .     button"
+      "submit .";
     
-    margin: 10% 0 0 6%;
+    margin: 3% 0 5% 10%;
     row-gap: 3%;
     justify-content: start;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
     .formGrid {
         height: 65vh;
-        grid: 0.15fr 0.7fr 0.15fr / 
+        width: auto;
+        grid: 15% 70% 5% 5%/ 
               23% 23%;
         grid-template-areas: 
             "name email"
             "message message"
-            ". button";
+            ". button"
+            "submit .";
         row-gap: none;
         column-gap: 3%;
         row-gap: 3%;
-        margin: 4% 0 0 0%;
+        margin: 3% 0 5% 0;
         justify-content: center;
     }
 }
@@ -38,7 +42,7 @@
     padding: 0 5% 0 0;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
     .nameArea {
         margin: 0%;
     }
@@ -56,11 +60,29 @@
 
 .buttonArea {
     grid-area: button;
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
-    place-self: start end;
+    font-size: 1.2rem;
     margin-top: 2%;
 }
 
+@media only screen and (min-width: 1000px) {
+    .buttonArea {
+        font-size: 1.4rem;
+        place-self: start end;
+    }
+}
+
+.submitMessage {
+    grid-area: submit;
+    font-size: 1.2rem;
+    color: var(--night-special-color);
+    transition: opacity 0.7s ease-in;
+}
+
+@media only screen and (min-width: 1000px) {
+    .submitMessage {
+        font-size: 1.4rem;
+    }
+}
 
 /* Input Fields
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
@@ -101,15 +123,9 @@
 .messageInput {
     padding: 2% 2% 2% 2%;
     font-size: clamp(1rem, 2vw, 1.2rem);
-    width: 90%;
     height: 100%;
+    width: 100%;
     border: 1px solid var(--day-bg-color);
-}
-
-@media only screen and (min-width: 1200px) {
-    .messageInput {
-        width: 100%;
-    }
 }
 
 .messageInput::placeholder {
@@ -127,10 +143,9 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .submitButton {
     transition: all 0.3s;
-    margin-left: -11%;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
     .submitButton {
         margin-left: 27%;
     }
@@ -144,7 +159,13 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     margin-top: -20%;
-    margin-left: -20%;
+    margin-left: -40%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .sendLine {
+        margin-left: -20%;
+    }
 }
 
 .submitButton:hover .sendLine,
@@ -172,19 +193,6 @@
 
 /* Submit Message
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
-.submitMessage {
-    margin: -15% 0 2% 6%;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--night-special-color);
-    transition: opacity 0.7s ease-in;
-}
-
-@media only screen and (min-width: 1200px) {
-    .submitMessage {
-        margin: 0 0 1% 25.5%;
-    }
-}
-
 .showSubmitMessage {
     opacity: 1;
 }
@@ -193,7 +201,7 @@
     opacity: 0;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
     .mobileBr {
         display: none;
     }

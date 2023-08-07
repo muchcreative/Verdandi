@@ -12,7 +12,7 @@
     z-index: 100;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .hamburger {
         top: 5%;
         right: 6%;
@@ -31,7 +31,7 @@
     transition: transform 0.4s;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .hamburger .bar, .hamburger::after, .hamburger::before {
         margin-top: 12px;
         margin-bottom: 12px;
@@ -48,7 +48,7 @@
     transform: translateY(10px);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .hamburger:hover::before,
     .hamburger:focus::before {
         transform: translateY(14px);
@@ -81,14 +81,13 @@
     display: grid;
     grid: 10% 90% /
           5% 64% 21%;
-    /* 10% of dead space */
     grid-template-areas:
         "vline  .  cross"
         "vline nav   nav";
     transition: transform 0.8s ease;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .menu {
         width: 22%;
         height: 80%;
@@ -99,7 +98,7 @@
     transform: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .menuOpen {
         transform: none;
     }
@@ -117,7 +116,7 @@
     backface-visibility: hidden;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .vertical {
         margin-top: 25px;
     }
@@ -139,7 +138,7 @@
     transition: stroke 0.4s;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .cross {
         width: 40px;
     }
