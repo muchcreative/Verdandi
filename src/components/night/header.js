@@ -16,6 +16,13 @@ export default function Main() {
     const [visible, setVisibility] = useState(false);
 
     useEffect(() => {
+      // Set transition line position
+      const root = document.querySelector(':root');
+      const svgElement = document.querySelector('#desk-line');
+      root.style.setProperty('--trans-line-pos', svgElement.getBoundingClientRect().right + 'px');
+    }, [])
+
+    useEffect(() => {
       const whiteSpace = document.querySelector('#float');
       const bgChange1 = document.querySelector('#bg-change-1');
       const bgChange2 = document.querySelector('#bg-change-2');

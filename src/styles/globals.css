@@ -2,6 +2,7 @@
   --day-bg-color: #faf9f6;
   --night-bg-color: #212121;
   --night-special-color: #84a8ee;
+  --trans-line-pos: 50%;
 }
 
 * {
