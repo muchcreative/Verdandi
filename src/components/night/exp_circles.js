@@ -27,7 +27,10 @@ export default function ExpCircles({desc, setDesc, showAddOn, closeAddOnFirst}) 
           name='current-desc-indicator' 
           aria-label='current-desc-indicator'
           onClick={() => {
-          !showAddOn ?  setDesc({curr: 0, prev: desc.curr}) : closeAddOnFirst(0)}}>
+            if (desc.curr != 0) {
+              !showAddOn ?  setDesc({curr: 0, prev: desc.curr}) : closeAddOnFirst(0)
+            };
+          }}>
             <span className={clsx({
               [expStyles.dot] : true,
               [expStyles.selectedDot] : desc.curr === 0})}></span>
@@ -36,7 +39,10 @@ export default function ExpCircles({desc, setDesc, showAddOn, closeAddOnFirst}) 
           name='current-desc-indicator'
           aria-label='current-desc-indicator'
           onClick={() => {
-          !showAddOn ?  setDesc({curr: 1, prev: desc.curr}) : closeAddOnFirst(1)}}>
+            if (desc.curr != 1) {
+              !showAddOn ?  setDesc({curr: 1, prev: desc.curr}) : closeAddOnFirst(1)
+            };
+          }}>
             <span className={clsx({
               [expStyles.dot] : true,
               [expStyles.selectedDot] : desc.curr === 1})}></span>
@@ -45,7 +51,10 @@ export default function ExpCircles({desc, setDesc, showAddOn, closeAddOnFirst}) 
           name='current-desc-indicator'
           aria-label='current-desc-indicator'
           onClick={() => {
-          !showAddOn ?  setDesc({curr: 2, prev: desc.curr}) : closeAddOnFirst(2)}}>
+            if (desc.curr != 2) {
+              !showAddOn ?  setDesc({curr: 2, prev: desc.curr}) : closeAddOnFirst(2)
+            };
+          }}>
             <span className={clsx({
               [expStyles.dot] : true,
               [expStyles.selectedDot] : desc.curr === 2})}></span>
