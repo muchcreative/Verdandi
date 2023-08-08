@@ -31,13 +31,13 @@ export default function Skills() {
         let options1 = {
           root: null,
           rootMargin: '0px',
-          threshold: 0.45,
+          threshold: 0.4,
         };
 
         let options2 = {
           root: null,
           rootMargin: '0px',
-          threshold: 0.45,
+          threshold: 0.4,
         };
 
 

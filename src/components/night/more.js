@@ -10,15 +10,6 @@ import MoreMisc from 'src/components/night/more_misc.js';
 // External Libs
 import { clsx } from 'clsx';
 
-// why is there no layout shifts for the rest
-// so for desktop there is a fixed height
-// you should probably set to height of largest heh
-// so that is why experience doesnt show at exactly 1000px
-
-// ok so largest boy gets relative positioning
-// the rest get shafted and boom you have your fixed sideways
-// the same has to be applied to the experience section
-
 export default function More() {
     const [desc, setDesc] = useState({curr: 0, prev: null});
     const [seenTitle, setSeen] = useState(false);
@@ -58,15 +49,15 @@ export default function More() {
                     <button id='front-btn' className={clsx({
                       [moreStyles.button] : true,
                       [moreStyles.activeButton] : (desc.curr === 0)})}
-                    onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-End</button>
+                    onClick={() => setDesc({curr: 0, prev: desc.curr})}>Front-<br className={moreStyles.smallBr}></br>End</button>
                     <button id='data-btn' className={clsx({
                       [moreStyles.button] : true,
                       [moreStyles.activeButton] : (desc.curr === 1)})}
-                    onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data Analytics</button>
+                    onClick={() => setDesc({curr: 1, prev: desc.curr})}>Data <br className={moreStyles.smallBr}></br>Analytics</button>
                     <button id='back-btn' className={clsx({
                       [moreStyles.button] : true,
                       [moreStyles.activeButton] : (desc.curr === 2)})}
-                    onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-End</button>
+                    onClick={() => setDesc({curr: 2, prev: desc.curr})}>Back-<br className={moreStyles.smallBr}></br>End</button>
                 </div>
                 <hr id='hr-desc' className={clsx({
                   [moreStyles.hrDesc]: true,
