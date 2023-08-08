@@ -87,7 +87,7 @@ export default function More() {
                         for users without a background in data analytics. Before that, my other notable ML models 
                         include a condominium blueprint summary to aid engineering system design and monitor various 
                         engineering standards, a market derivative trader time-series model, and a code and markdown 
-                        NLP model. I have 4 - 5 years of experience in both data analytics and machine learning development.
+                        NLP model. I have 3 - 4 years of experience in both data analytics and machine learning development.
                     </p>
                     <p id='back-desc' className={clsx({
                       [moreStyles.desc] : true,
