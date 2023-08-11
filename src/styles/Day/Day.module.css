@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -166,6 +167,7 @@
 .rightContent {
     height: 50%;
     display: flex;
+    flex-grow: 0;   
     flex-direction: column;
     padding: 3rem 0 2.7rem 0;
 
@@ -195,7 +197,7 @@
 }
 
 .topLine {
-    width: 350px;
+    width: min(98vw, 350px);
     font-weight: normal;
     font-size: clamp(1.6rem, 2vw, 2.1rem);
     border-bottom: 2px solid rgba(0, 0, 0, 0.70);
@@ -210,12 +212,12 @@
 
 @media only screen and (min-width: 800px) {
     .topLine {
-        width: 450px;
+        width: min(42vw, 450px);
     }
 }
 
 .bottomLine {
-    width: 350px;
+    width: min(98vw, 350px);
     font-size: clamp(1.6rem, 2vw, 2.1rem);
     border-top: 2px solid rgba(0, 0, 0, 0.70);
     animation: slide-down 1s ease 7s forwards;
@@ -229,7 +231,7 @@
 
 @media only screen and (min-width: 800px) {
     .bottomLine {
-        width: 450px;
+        width: min(42vw, 450px);
     }
 }
 

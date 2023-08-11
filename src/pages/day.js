@@ -22,7 +22,7 @@ export default function Day() {
     return (
       <>
         <Head>
-          <title>Verdandi | Day</title>
+          <title>Verdandi | Absent</title>
           <meta name='description' content='Personal website' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicons/day_tree.ico' />
@@ -45,9 +45,9 @@ export default function Day() {
                 </div>
                 <div className={styles.mainDivider}></div>
                 <div className={clsx({[allura.className]: true, [styles.rightContent]: true})}>
-                    <h1 className={styles.topLine}>I&#39;m shy before I eat my lunch.</h1>
+                    <h1 className={styles.topLine}>Sorry, I&#39;m unexpectedly absent.</h1>
                     <LiveClock />
-                    <p className={styles.bottomLine}>Can you come back at noon, <br className={styles.mobileBr}/><em className={styles.highlight}>after 11am?</em></p>  
+                    <p className={styles.bottomLine}>Can you come back later, <br className={styles.mobileBr}/><em className={styles.highlight}>after 9am?</em></p>  
                 </div>
             </div>
         </main>
