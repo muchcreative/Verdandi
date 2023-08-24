@@ -13,7 +13,7 @@ function setDayNight() {
     // Returns Day Page if daytime and Night Page if nighttime.
     const currentHour = format(new Date(), 'H');
     return (currentHour < 9 || currentHour >= 19 ?
-        <Day /> : <Night />);
+        <Day /> : <Day />);
 }
 
 export default function Home() {
