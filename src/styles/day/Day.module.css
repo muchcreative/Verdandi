@@ -234,6 +234,12 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .topLine {
+        border-top: 2px solid rgba(255, 255, 255, 0.70);
+    }
+}
+
 .bottomLine {
     width: min(98vw, 350px);
     font-size: clamp(1.6rem, 2vw, 2.1rem);
@@ -250,6 +256,12 @@
 @media only screen and (min-width: 800px) {
     .bottomLine {
         width: min(42vw, 450px);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .bottomLine {
+        border-top: 2px solid rgba(255, 255, 255, 0.70);
     }
 }
 
