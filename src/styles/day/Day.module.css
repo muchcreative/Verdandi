@@ -4,8 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     min-height: 100vh;
-    max-height: 100vh;
     overflow: hidden;
 }
 
@@ -148,9 +148,15 @@
     width: 0%;
     height: 3px;
     
-    background-color: rgba(0, 0, 0, 0.5);   
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 4;
     animation: draw-divider 0.8s ease-in 0.5s forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+    .mainDivider {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 }
 
 @keyframes draw-divider {
@@ -171,12 +177,6 @@
         to {
             max-height: 100%;
         }
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .mainDivider {
-        background-color: rgba(255, 255, 255, 0.5);   
     }
 }
 
@@ -237,7 +237,7 @@
 
 @media (prefers-color-scheme: dark) {
     .topLine {
-        border-top: 2px solid rgba(255, 255, 255, 0.70);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.70);
     }
 }
 
