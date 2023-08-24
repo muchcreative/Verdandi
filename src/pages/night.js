@@ -32,13 +32,13 @@ export default function Night() {
             <link rel='icon' href='/favicons/night_tree.ico' />  
         </Head>
         <NightGlobals />
-        <section id='beginning' className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <section id='beginning' className={ebGaramond.className}>
             <Scroll />
         </section>
-        <div className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <div className={ebGaramond.className}>
             <Nav />
         </div>
-        <header className={ebGaramond.className} style={{'backgroundColor': 'var(--day-bg-color)'}}>
+        <header className={ebGaramond.className}>
             <Header />
         </header>
         <section className={ebGaramond.className} id='skills'>

@@ -41,6 +41,16 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .deskLine > path {
+        stroke: var(--day-bg-color);
+    }
+
+    .mobileLine > path {
+        stroke: var(--day-bg-color);
+    }
+}
+
 .downArrow {
     position: absolute;
     top: var(--svg-head-start);
@@ -51,6 +61,12 @@
     transition: all 0.5s;
     opacity: 0;
     animation: line-in 0.7s ease-in 0.1s forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+    .downArrow > path {
+        stroke: #84a8ee;
+    }
 }
 
 .hideDownArrow {
@@ -85,6 +101,12 @@
     .scrollText {
         top: 10%;
         right: 15%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .scrollText {
+        color: var(--day-bg-color);
     }
 }
 

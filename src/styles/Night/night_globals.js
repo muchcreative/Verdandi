@@ -26,6 +26,16 @@ export default function nightGlobals() {
                 }
             }
 
+            #beginning {
+                background-color: var(--day-bg-color);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                #beginning {
+                    background-color: var(--dark-scheme-color);
+                }
+            }
+
             h1 {
                 font-size: clamp(3.5rem, 11vw, 6.5rem);
                 font-weight: 500;
