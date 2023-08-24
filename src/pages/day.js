@@ -18,6 +18,9 @@ const allura = Allura({
                 weight: ['400']
               });
 
+// Height 100vh not working on mobile
+// Color scheme dark must change stroke colors too 
+
 export default function Day() {
     return (
       <>
