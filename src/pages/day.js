@@ -1,10 +1,10 @@
 // Next.js
 import Head from 'next/head';
 import Image from 'next/image';
-import { Allura } from 'next/font/google'
 
 // CSS
 import styles from 'src/styles/day/Day.module.css';
+import { allura } from 'src/styles/fonts.js';
 
 // Components
 import dynamic from 'next/dynamic';
@@ -12,11 +12,6 @@ const LiveClock = dynamic(() => import('src/components/day/live_clock.js'), {ssr
 
 // External Libs
 import { clsx } from 'clsx';
-
-const allura = Allura({
-                subsets: ['latin'], 
-                weight: ['400']
-              });
               
 export default function Day() {
     return (

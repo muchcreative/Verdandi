@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 // CSS
 import navStyles from 'src/styles/night/Nav.module.css';
+import { ebGaramond } from 'src/styles/fonts.js';
 
 // SVGs
 import CrossMark from 'public/night/cross_mark.svg'
@@ -25,7 +26,7 @@ export default function Nav() {
     }, [open])
 
     return (
-      <>
+      <div className={ebGaramond.className}>
         <button id='hamburger' name='nav-menu-btn' aria-label='nav-menu-btn'
           onClick={() => openMenu(!open)}
           className={clsx({
@@ -122,6 +123,6 @@ export default function Nav() {
             [navStyles.invisibleBgClosed] : !open,
             [navStyles.invisibleBgOpen] : open})}>
         </div>
-      </>
+      </div>
     )
   }
