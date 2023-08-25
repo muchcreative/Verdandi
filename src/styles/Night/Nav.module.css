@@ -100,6 +100,13 @@
     }
 }
 
+@media only screen and (min-width: 2000px) {
+    .menu {
+        width: 450px;
+        height: 700px;
+    }
+}
+
 .menuOpen {
     transform: none;
 }
@@ -161,7 +168,7 @@
     justify-content: space-around;
 
     list-style-type: none;
-    font-size: clamp(1.4rem, 2vw, 5rem);
+    font-size: clamp(1.4rem, 2vw, 2.5rem);
     font-weight: 500;
 }
 
