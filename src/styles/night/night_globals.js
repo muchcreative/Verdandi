@@ -26,12 +26,7 @@ export default function nightGlobals() {
                 }
             }
 
-            #scroll-wrapper {
-                background-color: var(--day-bg-color);
-            }
-
             #beginning {
-                // max-width: 2000px;?
                 background-color: var(--day-bg-color);
             }
 
