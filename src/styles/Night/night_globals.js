@@ -66,7 +66,7 @@ export default function nightGlobals() {
 
             @media only screen and (min-width: 1000px) {
                 p {
-                    font-size: 1.33rem;
+                    font-size: 1.32rem;
                 }
             }
 

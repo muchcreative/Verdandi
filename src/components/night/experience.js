@@ -99,8 +99,8 @@ export default function Experience() {
                         <div className={expStyles.desc}>
                             <p>
                               Data Mart is a dApp (decentralized application) that facilitates the online selling and trading of information 
-                              and data. It will is a decentralized marketplace for both buyers and sellers to buy, sell, share,
-                              and trade information from both sensitive data to large datasets for machine learning or market demographics.       
+                              and data. It is a decentralized marketplace for both buyers and sellers to share and sell
+                              information from both sensitive data to large datasets for machine learning or market advantages.   
                             </p>
                             <div className={clsx({
                                 [expStyles.expandContainer] : true,
@@ -188,11 +188,11 @@ export default function Experience() {
                   [expStyles.selectedAddOn] : desc.curr === 0,
                   [expStyles.showAddOnContainer] : desc.curr === 0 && showAddOn})}>
                     <p className={expStyles.addOnDesc}>
-                      When commercializing data there are many things to consider. The top three are, firstly, to ensure the data is used 
-                      correctly and within the expectations of all parties involved. Secondly, to ensure that the data sold between 
-                      all parties is consistent and immutable amongst all copies of it across the network. 
-                      Thirdly, to ensure that the data is transparent and the customer understands what is involved in the transaction.
-                      Built using Rust and Typescript on the Near and Ethereum blockchain, all three of these items can be solved.
+                      Built using Rust (smart contracts) and Typescript (front-end) on the NEAR Blockchain. NEAR ensures that the data 
+                      can be stored and safely viewed through controlled sampling on the blockchain. Additionally, its block-sharding
+                      algorithm allows for high computation speeds with low storage and gas costs. Data Mart is a combination of Web 2.0 
+                      and 3.0 which ensures user familiarity and that both the data and cryptocurrency can be exchanged safely as determined 
+                      by their smart contract.
                     </p>
                     <div className={expStyles.collapseContainer}>
                         <button onClick={() => setAddOn(false)}>
