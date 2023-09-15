@@ -93,15 +93,11 @@
 /* Header
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hookContainer {
-    padding-top: 10%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
     background-color: var(--day-bg-color);
     transition: background-color 0.1s ease 0.5s;
-}
-
-@media only screen and (min-width: 1000px) {
-    .hookContainer {
-        padding-top: 4%;
-    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -115,10 +111,8 @@
 }
 
 .hook {
-    height: 100vh;
     opacity: 0;
-    margin-left: 10%;
-
+    margin: 0 0 10% 10%;
     line-height: 1.5em;
     word-spacing: 3px;
     transition: opacity 0.25s ease-in 1.5s;
@@ -132,7 +126,7 @@
 
 @media only screen and (min-width: 500px) {
     .hook { 
-        margin-left: 5%;
+        margin: 0 0 5% 5%;
     }
 }
 
