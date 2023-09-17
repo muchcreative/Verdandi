@@ -26,8 +26,10 @@ export default function Nav() {
     }, [open])
 
     return (
-      <div className={ebGaramond.className}>
-        <button id='hamburger' name='nav-menu-btn' aria-label='nav-menu-btn'
+      <div id='full-nav' className={clsx({
+        [ebGaramond.className]: true,
+        [navStyles.fullNav]: true})}>
+        <button name='nav-menu-btn' aria-label='nav-menu-btn'
           onClick={() => openMenu(!open)}
           className={clsx({
           [navStyles.hamburger] : true,

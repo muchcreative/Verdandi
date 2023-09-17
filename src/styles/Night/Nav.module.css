@@ -1,3 +1,10 @@
+/* Full Nav Component
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.fullNav {
+    visibility: hidden;  /* Visbility turns on after main animation */
+}
+
+
 /* Hamburger Icon
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 .hamburger {
@@ -21,7 +28,9 @@
     }
 }
 
-.hamburger .bar, .hamburger::after, .hamburger::before {
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
     content: '';
     display: block;
     width: 100%;
@@ -32,7 +41,9 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    .hamburger .bar, .hamburger::after, .hamburger::before {
+    .hamburger .bar,
+    .hamburger::after,
+    .hamburger::before {
         margin-top: 12px;
         margin-bottom: 12px;
     }

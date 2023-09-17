@@ -46,6 +46,8 @@ export default function Header() {
 
       const content = document.querySelector('#header-content');
       const contentLoc = content.getBoundingClientRect();
+
+      const navComponent = document.querySelector('#full-nav');
       
       const bgTransition = () => {
         // Scroll in range of the animation and scroll needs to freeze for the animation
@@ -58,6 +60,7 @@ export default function Header() {
             };
 
             setTimeout(() => {
+              navComponent.style.visibility = 'visible';
               window.onscroll = function() {};
             }, 1600);
 
@@ -66,6 +69,7 @@ export default function Header() {
         } else if (window.scrollY >= contentLoc.bottom + afterEnd) {
             // Scroll out of range of animation and scroll should not freeze for the animation  
             setVisibility(true);
+
             document.removeEventListener('scroll', bgTransition);
         }
       }
