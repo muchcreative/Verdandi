@@ -18,7 +18,7 @@ export default function Night() {
     return (
       <>
         <Head>
-            <title>Verdandi | Present</title>
+            <title>Verdandi | In-Office</title>
             <meta name='description' content='Personal website' />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
             <link rel='icon' href='/favicons/night_tree.ico' />  

@@ -68,7 +68,7 @@ export default function Scroll() {
             [scrollStyles.hideDownArrow] : scrolled})}/>
       </div>
       <div className={scrollStyles.scrollText}>
-          <h1>Present Hours</h1>
+          <h1>Office Hours</h1>
           <p>9am - 7pm</p>
       </div>
     </>
