@@ -146,11 +146,12 @@ export default function Skills() {
                   [skillsStyles.showSkills] : show2})}>Back-End</h3>
                 <p className={showCol2}>Rust</p>
                 <p className={showCol2}>C / C++</p>
+                <p className={showCol2}>Node.js</p>
                 <h4 className={clsx({
                   [skillsStyles.libTitle] : true,
-                  [skillsStyles.showSkills] : show2})}>Crates</h4>
-                <p className={showCol2}>Diesel</p>
-                <p className={showCol2}>Tokio</p>
+                  [skillsStyles.showSkills] : show2})}>Libraries <span className={skillsStyles.libTitleExtend}>/ Crates</span></h4>
+                <p className={showCol2}>Express</p>
+                <p className={showCol2}>Diseal</p>
                 <p className={showCol2}>Crossbeam</p>
             </div>
         </div>
